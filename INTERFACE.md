@@ -75,5 +75,5 @@
 
 >* 样例：
 ```json
-{"status": true, "forecast": 72, "accuracy": 60%, "complete": 326}
+{"status": true, "forecast": 72, "accuracy": "60%", "complete": 326}
 ```
