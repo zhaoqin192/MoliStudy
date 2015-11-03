@@ -43,7 +43,8 @@
 >>* token:必须（登陆接口返回token,用于区别不同用户)
 
 >* 成功返回：
->>* {status, items[{name, finished, total}]}
+>>* {status, items[{id, name, finished, total}]}
+>>* id为项目编号，根绝相应的编号获取训练题目
 >>* name为项目名称
 >>* finished为完成该项目的学习次数
 >>* total为该项目的总次数
@@ -53,7 +54,7 @@
 
 >* 样例：
 ```json
-{"status": true, "items":[{"name":"词汇", "finished": 34, "total": 100}, {"name":"动词", "finished": 52, "total": 100}, {"name":"形容词", "finished": 34, "total": 100}]}
+{"status": true, "items":[{"id":"326423", "name":"词汇", "finished": 34, "total": 100}, {"id":"719341", "name":"动词", "finished": 52, "total": 100}, {"id":"072883", "name":"形容词", "finished": 34, "total": 100}]}
 ```
 
 ##成绩报告
