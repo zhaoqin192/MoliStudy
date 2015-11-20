@@ -20,11 +20,17 @@ PODS:
   - AFNetworking/UIKit (2.6.3):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - JazzHands (2.0.0)
+  - Masonry (0.5.3)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
+  - JazzHands (= 2.0.0)
+  - Masonry (= 0.5.3)
 
 SPEC CHECKSUMS:
   AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
+  JazzHands: 00002e9b1284e7fc1ac6555012e81b8942477242
+  Masonry: 9f515466afe48632562342a40a1c224071a1a022
 
 COCOAPODS: 0.39.0
