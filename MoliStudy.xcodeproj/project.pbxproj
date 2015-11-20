@@ -1,0 +1,536 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AC39B90B1BFF649A001CE453 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AC39B90A1BFF649A001CE453 /* main.m */; };
+		AC39B90E1BFF649A001CE453 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AC39B90D1BFF649A001CE453 /* AppDelegate.m */; };
+		AC39B9111BFF649A001CE453 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC39B9101BFF649A001CE453 /* ViewController.m */; };
+		AC39B9141BFF649A001CE453 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC39B9121BFF649A001CE453 /* Main.storyboard */; };
+		AC39B9171BFF649A001CE453 /* MoliStudy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC39B9151BFF649A001CE453 /* MoliStudy.xcdatamodeld */; };
+		AC39B9191BFF649A001CE453 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC39B9181BFF649A001CE453 /* Assets.xcassets */; };
+		AC39B91C1BFF649A001CE453 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC39B91A1BFF649A001CE453 /* LaunchScreen.storyboard */; };
+		AC39B9271BFF649B001CE453 /* MoliStudyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AC39B9261BFF649B001CE453 /* MoliStudyTests.m */; };
+		AC39B9321BFF649B001CE453 /* MoliStudyUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AC39B9311BFF649B001CE453 /* MoliStudyUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AC39B9231BFF649B001CE453 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC39B8FE1BFF649A001CE453 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC39B9051BFF649A001CE453;
+			remoteInfo = MoliStudy;
+		};
+		AC39B92E1BFF649B001CE453 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC39B8FE1BFF649A001CE453 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC39B9051BFF649A001CE453;
+			remoteInfo = MoliStudy;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AC39B9061BFF649A001CE453 /* MoliStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoliStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC39B90A1BFF649A001CE453 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AC39B90C1BFF649A001CE453 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AC39B90D1BFF649A001CE453 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AC39B90F1BFF649A001CE453 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		AC39B9101BFF649A001CE453 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		AC39B9131BFF649A001CE453 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AC39B9161BFF649A001CE453 /* MoliStudy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MoliStudy.xcdatamodel; sourceTree = "<group>"; };
+		AC39B9181BFF649A001CE453 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AC39B91B1BFF649A001CE453 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AC39B91D1BFF649A001CE453 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC39B9221BFF649B001CE453 /* MoliStudyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoliStudyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC39B9261BFF649B001CE453 /* MoliStudyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoliStudyTests.m; sourceTree = "<group>"; };
+		AC39B9281BFF649B001CE453 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC39B92D1BFF649B001CE453 /* MoliStudyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoliStudyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC39B9311BFF649B001CE453 /* MoliStudyUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoliStudyUITests.m; sourceTree = "<group>"; };
+		AC39B9331BFF649B001CE453 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AC39B9031BFF649A001CE453 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC39B91F1BFF649B001CE453 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC39B92A1BFF649B001CE453 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AC39B8FD1BFF649A001CE453 = {
+			isa = PBXGroup;
+			children = (
+				AC39B9081BFF649A001CE453 /* MoliStudy */,
+				AC39B9251BFF649B001CE453 /* MoliStudyTests */,
+				AC39B9301BFF649B001CE453 /* MoliStudyUITests */,
+				AC39B9071BFF649A001CE453 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AC39B9071BFF649A001CE453 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AC39B9061BFF649A001CE453 /* MoliStudy.app */,
+				AC39B9221BFF649B001CE453 /* MoliStudyTests.xctest */,
+				AC39B92D1BFF649B001CE453 /* MoliStudyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AC39B9081BFF649A001CE453 /* MoliStudy */ = {
+			isa = PBXGroup;
+			children = (
+				AC39B90C1BFF649A001CE453 /* AppDelegate.h */,
+				AC39B90D1BFF649A001CE453 /* AppDelegate.m */,
+				AC39B90F1BFF649A001CE453 /* ViewController.h */,
+				AC39B9101BFF649A001CE453 /* ViewController.m */,
+				AC39B9121BFF649A001CE453 /* Main.storyboard */,
+				AC39B9181BFF649A001CE453 /* Assets.xcassets */,
+				AC39B91A1BFF649A001CE453 /* LaunchScreen.storyboard */,
+				AC39B91D1BFF649A001CE453 /* Info.plist */,
+				AC39B9151BFF649A001CE453 /* MoliStudy.xcdatamodeld */,
+				AC39B9091BFF649A001CE453 /* Supporting Files */,
+			);
+			path = MoliStudy;
+			sourceTree = "<group>";
+		};
+		AC39B9091BFF649A001CE453 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AC39B90A1BFF649A001CE453 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AC39B9251BFF649B001CE453 /* MoliStudyTests */ = {
+			isa = PBXGroup;
+			children = (
+				AC39B9261BFF649B001CE453 /* MoliStudyTests.m */,
+				AC39B9281BFF649B001CE453 /* Info.plist */,
+			);
+			path = MoliStudyTests;
+			sourceTree = "<group>";
+		};
+		AC39B9301BFF649B001CE453 /* MoliStudyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AC39B9311BFF649B001CE453 /* MoliStudyUITests.m */,
+				AC39B9331BFF649B001CE453 /* Info.plist */,
+			);
+			path = MoliStudyUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AC39B9051BFF649A001CE453 /* MoliStudy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC39B9361BFF649B001CE453 /* Build configuration list for PBXNativeTarget "MoliStudy" */;
+			buildPhases = (
+				AC39B9021BFF649A001CE453 /* Sources */,
+				AC39B9031BFF649A001CE453 /* Frameworks */,
+				AC39B9041BFF649A001CE453 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MoliStudy;
+			productName = MoliStudy;
+			productReference = AC39B9061BFF649A001CE453 /* MoliStudy.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AC39B9211BFF649B001CE453 /* MoliStudyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC39B9391BFF649B001CE453 /* Build configuration list for PBXNativeTarget "MoliStudyTests" */;
+			buildPhases = (
+				AC39B91E1BFF649B001CE453 /* Sources */,
+				AC39B91F1BFF649B001CE453 /* Frameworks */,
+				AC39B9201BFF649B001CE453 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AC39B9241BFF649B001CE453 /* PBXTargetDependency */,
+			);
+			name = MoliStudyTests;
+			productName = MoliStudyTests;
+			productReference = AC39B9221BFF649B001CE453 /* MoliStudyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AC39B92C1BFF649B001CE453 /* MoliStudyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC39B93C1BFF649B001CE453 /* Build configuration list for PBXNativeTarget "MoliStudyUITests" */;
+			buildPhases = (
+				AC39B9291BFF649B001CE453 /* Sources */,
+				AC39B92A1BFF649B001CE453 /* Frameworks */,
+				AC39B92B1BFF649B001CE453 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AC39B92F1BFF649B001CE453 /* PBXTargetDependency */,
+			);
+			name = MoliStudyUITests;
+			productName = MoliStudyUITests;
+			productReference = AC39B92D1BFF649B001CE453 /* MoliStudyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AC39B8FE1BFF649A001CE453 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = MoliStudy;
+				TargetAttributes = {
+					AC39B9051BFF649A001CE453 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					AC39B9211BFF649B001CE453 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = AC39B9051BFF649A001CE453;
+					};
+					AC39B92C1BFF649B001CE453 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = AC39B9051BFF649A001CE453;
+					};
+				};
+			};
+			buildConfigurationList = AC39B9011BFF649A001CE453 /* Build configuration list for PBXProject "MoliStudy" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AC39B8FD1BFF649A001CE453;
+			productRefGroup = AC39B9071BFF649A001CE453 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AC39B9051BFF649A001CE453 /* MoliStudy */,
+				AC39B9211BFF649B001CE453 /* MoliStudyTests */,
+				AC39B92C1BFF649B001CE453 /* MoliStudyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AC39B9041BFF649A001CE453 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC39B91C1BFF649A001CE453 /* LaunchScreen.storyboard in Resources */,
+				AC39B9191BFF649A001CE453 /* Assets.xcassets in Resources */,
+				AC39B9141BFF649A001CE453 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC39B9201BFF649B001CE453 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC39B92B1BFF649B001CE453 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AC39B9021BFF649A001CE453 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC39B9171BFF649A001CE453 /* MoliStudy.xcdatamodeld in Sources */,
+				AC39B9111BFF649A001CE453 /* ViewController.m in Sources */,
+				AC39B90E1BFF649A001CE453 /* AppDelegate.m in Sources */,
+				AC39B90B1BFF649A001CE453 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC39B91E1BFF649B001CE453 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC39B9271BFF649B001CE453 /* MoliStudyTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC39B9291BFF649B001CE453 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC39B9321BFF649B001CE453 /* MoliStudyUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AC39B9241BFF649B001CE453 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AC39B9051BFF649A001CE453 /* MoliStudy */;
+			targetProxy = AC39B9231BFF649B001CE453 /* PBXContainerItemProxy */;
+		};
+		AC39B92F1BFF649B001CE453 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AC39B9051BFF649A001CE453 /* MoliStudy */;
+			targetProxy = AC39B92E1BFF649B001CE453 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AC39B9121BFF649A001CE453 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC39B9131BFF649A001CE453 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AC39B91A1BFF649A001CE453 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC39B91B1BFF649A001CE453 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AC39B9341BFF649B001CE453 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		AC39B9351BFF649B001CE453 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AC39B9371BFF649B001CE453 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MoliStudy/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.molistudy.MoliStudy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		AC39B9381BFF649B001CE453 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MoliStudy/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.molistudy.MoliStudy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		AC39B93A1BFF649B001CE453 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MoliStudyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.molistudy.MoliStudyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MoliStudy.app/MoliStudy";
+			};
+			name = Debug;
+		};
+		AC39B93B1BFF649B001CE453 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MoliStudyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.molistudy.MoliStudyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MoliStudy.app/MoliStudy";
+			};
+			name = Release;
+		};
+		AC39B93D1BFF649B001CE453 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MoliStudyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.molistudy.MoliStudyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MoliStudy;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		AC39B93E1BFF649B001CE453 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MoliStudyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.molistudy.MoliStudyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MoliStudy;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AC39B9011BFF649A001CE453 /* Build configuration list for PBXProject "MoliStudy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC39B9341BFF649B001CE453 /* Debug */,
+				AC39B9351BFF649B001CE453 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC39B9361BFF649B001CE453 /* Build configuration list for PBXNativeTarget "MoliStudy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC39B9371BFF649B001CE453 /* Debug */,
+				AC39B9381BFF649B001CE453 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		AC39B9391BFF649B001CE453 /* Build configuration list for PBXNativeTarget "MoliStudyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC39B93A1BFF649B001CE453 /* Debug */,
+				AC39B93B1BFF649B001CE453 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		AC39B93C1BFF649B001CE453 /* Build configuration list for PBXNativeTarget "MoliStudyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC39B93D1BFF649B001CE453 /* Debug */,
+				AC39B93E1BFF649B001CE453 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AC39B9151BFF649A001CE453 /* MoliStudy.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AC39B9161BFF649A001CE453 /* MoliStudy.xcdatamodel */,
+			);
+			currentVersion = AC39B9161BFF649A001CE453 /* MoliStudy.xcdatamodel */;
+			path = MoliStudy.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = AC39B8FE1BFF649A001CE453 /* Project object */;
+}
