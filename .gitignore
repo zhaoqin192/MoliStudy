@@ -1,6 +1,5 @@
 *~.nib
 *.swp
 .DS_Store
-*.xcworkspace
 build/*
 *.xcodeproj/project.pbxproj
