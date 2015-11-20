@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7BFB8F4343390DAA1FE273AA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60A0CAC4C28DE69D69868F29 /* libPods.a */; };
 		AC39B90B1BFF649A001CE453 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AC39B90A1BFF649A001CE453 /* main.m */; };
 		AC39B90E1BFF649A001CE453 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AC39B90D1BFF649A001CE453 /* AppDelegate.m */; };
 		AC39B9111BFF649A001CE453 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC39B9101BFF649A001CE453 /* ViewController.m */; };
-		AC39B9141BFF649A001CE453 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC39B9121BFF649A001CE453 /* Main.storyboard */; };
 		AC39B9171BFF649A001CE453 /* MoliStudy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC39B9151BFF649A001CE453 /* MoliStudy.xcdatamodeld */; };
 		AC39B9191BFF649A001CE453 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC39B9181BFF649A001CE453 /* Assets.xcassets */; };
 		AC39B91C1BFF649A001CE453 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC39B91A1BFF649A001CE453 /* LaunchScreen.storyboard */; };
@@ -36,13 +36,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		023B0FA0A76EAEEB884B9ABD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		60A0CAC4C28DE69D69868F29 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		95456BA8E0DB14D551D3A063 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		AC39B9061BFF649A001CE453 /* MoliStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoliStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC39B90A1BFF649A001CE453 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AC39B90C1BFF649A001CE453 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AC39B90D1BFF649A001CE453 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		AC39B90F1BFF649A001CE453 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		AC39B9101BFF649A001CE453 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		AC39B9131BFF649A001CE453 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AC39B9161BFF649A001CE453 /* MoliStudy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MoliStudy.xcdatamodel; sourceTree = "<group>"; };
 		AC39B9181BFF649A001CE453 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC39B91B1BFF649A001CE453 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BFB8F4343390DAA1FE273AA /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +83,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22909630EDA94688B975943C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				95456BA8E0DB14D551D3A063 /* Pods.debug.xcconfig */,
+				023B0FA0A76EAEEB884B9ABD /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		AC39B8FD1BFF649A001CE453 = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +99,8 @@
 				AC39B9251BFF649B001CE453 /* MoliStudyTests */,
 				AC39B9301BFF649B001CE453 /* MoliStudyUITests */,
 				AC39B9071BFF649A001CE453 /* Products */,
+				22909630EDA94688B975943C /* Pods */,
+				BD3408EB1F0BE4F6E6952F84 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,15 +117,12 @@
 		AC39B9081BFF649A001CE453 /* MoliStudy */ = {
 			isa = PBXGroup;
 			children = (
-				AC39B90C1BFF649A001CE453 /* AppDelegate.h */,
-				AC39B90D1BFF649A001CE453 /* AppDelegate.m */,
-				AC39B90F1BFF649A001CE453 /* ViewController.h */,
-				AC39B9101BFF649A001CE453 /* ViewController.m */,
-				AC39B9121BFF649A001CE453 /* Main.storyboard */,
+				AC39B9411BFF6802001CE453 /* PresentationLayer */,
+				AC39B9401BFF67F9001CE453 /* PersistenceLayer */,
+				AC39B93F1BFF67E8001CE453 /* BusinessLogicLayer */,
 				AC39B9181BFF649A001CE453 /* Assets.xcassets */,
 				AC39B91A1BFF649A001CE453 /* LaunchScreen.storyboard */,
 				AC39B91D1BFF649A001CE453 /* Info.plist */,
-				AC39B9151BFF649A001CE453 /* MoliStudy.xcdatamodeld */,
 				AC39B9091BFF649A001CE453 /* Supporting Files */,
 			);
 			path = MoliStudy;
@@ -143,6 +154,40 @@
 			path = MoliStudyUITests;
 			sourceTree = "<group>";
 		};
+		AC39B93F1BFF67E8001CE453 /* BusinessLogicLayer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = BusinessLogicLayer;
+			sourceTree = "<group>";
+		};
+		AC39B9401BFF67F9001CE453 /* PersistenceLayer */ = {
+			isa = PBXGroup;
+			children = (
+				AC39B9151BFF649A001CE453 /* MoliStudy.xcdatamodeld */,
+			);
+			name = PersistenceLayer;
+			sourceTree = "<group>";
+		};
+		AC39B9411BFF6802001CE453 /* PresentationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				AC39B90C1BFF649A001CE453 /* AppDelegate.h */,
+				AC39B90D1BFF649A001CE453 /* AppDelegate.m */,
+				AC39B90F1BFF649A001CE453 /* ViewController.h */,
+				AC39B9101BFF649A001CE453 /* ViewController.m */,
+			);
+			name = PresentationLayer;
+			sourceTree = "<group>";
+		};
+		BD3408EB1F0BE4F6E6952F84 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				60A0CAC4C28DE69D69868F29 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -150,9 +195,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AC39B9361BFF649B001CE453 /* Build configuration list for PBXNativeTarget "MoliStudy" */;
 			buildPhases = (
+				56BE5958B1C8D8191C8B90F1 /* Check Pods Manifest.lock */,
 				AC39B9021BFF649A001CE453 /* Sources */,
 				AC39B9031BFF649A001CE453 /* Frameworks */,
 				AC39B9041BFF649A001CE453 /* Resources */,
+				343E754C0DC30E51EC5342AE /* Embed Pods Frameworks */,
+				E7993D93FE8E478FF72B4FC6 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -248,7 +296,6 @@
 			files = (
 				AC39B91C1BFF649A001CE453 /* LaunchScreen.storyboard in Resources */,
 				AC39B9191BFF649A001CE453 /* Assets.xcassets in Resources */,
-				AC39B9141BFF649A001CE453 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +314,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		343E754C0DC30E51EC5342AE /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		56BE5958B1C8D8191C8B90F1 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E7993D93FE8E478FF72B4FC6 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AC39B9021BFF649A001CE453 /* Sources */ = {
@@ -312,14 +407,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		AC39B9121BFF649A001CE453 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AC39B9131BFF649A001CE453 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		AC39B91A1BFF649A001CE453 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -413,6 +500,7 @@
 		};
 		AC39B9371BFF649B001CE453 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95456BA8E0DB14D551D3A063 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MoliStudy/Info.plist;
@@ -424,6 +512,7 @@
 		};
 		AC39B9381BFF649B001CE453 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 023B0FA0A76EAEEB884B9ABD /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MoliStudy/Info.plist;
@@ -500,6 +589,7 @@
 				AC39B9381BFF649B001CE453 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AC39B9391BFF649B001CE453 /* Build configuration list for PBXNativeTarget "MoliStudyTests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +598,7 @@
 				AC39B93B1BFF649B001CE453 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AC39B93C1BFF649B001CE453 /* Build configuration list for PBXNativeTarget "MoliStudyUITests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +607,7 @@
 				AC39B93E1BFF649B001CE453 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
