@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7BFB8F4343390DAA1FE273AA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60A0CAC4C28DE69D69868F29 /* libPods.a */; };
+		AC18EA651BFF76960092F7D9 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AC18EA641BFF76960092F7D9 /* NetworkManager.m */; };
 		AC39B90B1BFF649A001CE453 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AC39B90A1BFF649A001CE453 /* main.m */; };
 		AC39B90E1BFF649A001CE453 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AC39B90D1BFF649A001CE453 /* AppDelegate.m */; };
 		AC39B9111BFF649A001CE453 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC39B9101BFF649A001CE453 /* ViewController.m */; };
@@ -39,6 +40,8 @@
 		023B0FA0A76EAEEB884B9ABD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		60A0CAC4C28DE69D69868F29 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		95456BA8E0DB14D551D3A063 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		AC18EA631BFF76960092F7D9 /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
+		AC18EA641BFF76960092F7D9 /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
 		AC39B9061BFF649A001CE453 /* MoliStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoliStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC39B90A1BFF649A001CE453 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AC39B90C1BFF649A001CE453 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -157,6 +160,8 @@
 		AC39B93F1BFF67E8001CE453 /* BusinessLogicLayer */ = {
 			isa = PBXGroup;
 			children = (
+				AC18EA631BFF76960092F7D9 /* NetworkManager.h */,
+				AC18EA641BFF76960092F7D9 /* NetworkManager.m */,
 			);
 			name = BusinessLogicLayer;
 			sourceTree = "<group>";
@@ -371,6 +376,7 @@
 				AC39B9171BFF649A001CE453 /* MoliStudy.xcdatamodeld in Sources */,
 				AC39B9111BFF649A001CE453 /* ViewController.m in Sources */,
 				AC39B90E1BFF649A001CE453 /* AppDelegate.m in Sources */,
+				AC18EA651BFF76960092F7D9 /* NetworkManager.m in Sources */,
 				AC39B90B1BFF649A001CE453 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
