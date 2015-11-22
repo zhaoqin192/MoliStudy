@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TestViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="USd-5L-taX">
+                    <rect key="frame" x="132" y="82" width="57" height="30"/>
+                    <animations/>
+                    <state key="normal" title="Register"/>
+                    <connections>
+                        <action selector="registerIB:" destination="-1" eventType="touchUpInside" id="68h-gG-WLR"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7of-5W-QLT">
+                    <rect key="frame" x="143" y="137" width="34" height="30"/>
+                    <animations/>
+                    <state key="normal" title="login"/>
+                    <connections>
+                        <action selector="login:" destination="-1" eventType="touchUpInside" id="5u6-oM-36Y"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AdL-eV-u2T">
+                    <rect key="frame" x="119" y="187" width="83" height="30"/>
+                    <animations/>
+                    <state key="normal" title="findAccount"/>
+                    <connections>
+                        <action selector="findAccount:" destination="-1" eventType="touchUpInside" id="2Iq-sv-Cfz"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lrH-7M-9DT">
+                    <rect key="frame" x="115" y="236" width="90" height="30"/>
+                    <animations/>
+                    <state key="normal" title="completeInfo"/>
+                    <connections>
+                        <action selector="completeInfo:" destination="-1" eventType="touchUpInside" id="qD7-tf-duM"/>
+                        <action selector="findAccount:" destination="-1" eventType="touchUpInside" id="oEo-2D-7YL"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yY6-kY-ucq">
+                    <rect key="frame" x="121" y="290" width="79" height="30"/>
+                    <animations/>
+                    <state key="normal" title="Send Verify"/>
+                    <connections>
+                        <action selector="verify:" destination="-1" eventType="touchUpInside" id="oJ7-1X-Nmx"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nK3-J7-nSy">
+                    <rect key="frame" x="114" y="354" width="92" height="30"/>
+                    <animations/>
+                    <state key="normal" title="Submit Verify"/>
+                    <connections>
+                        <action selector="submitVerify:" destination="-1" eventType="touchUpInside" id="fLF-WN-FSr"/>
+                    </connections>
+                </button>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="USd-5L-taX" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="82" id="ZGC-ny-NAY"/>
+                <constraint firstItem="USd-5L-taX" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="wqE-O1-rED"/>
+            </constraints>
+            <point key="canvasLocation" x="221" y="407"/>
+        </view>
+    </objects>
+</document>
