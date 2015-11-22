@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "39AB749F7BD5354DC639AF6D2D63B04CAEA5D186",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "39AB749F7BD5354DC639AF6D2D63B04CAEA5D186" : 0,
+    "E364360972234A18445094D97B5E8401C0CC9241" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "3BB6286B-80FF-4A36-B315-8F384CB14A6E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "39AB749F7BD5354DC639AF6D2D63B04CAEA5D186" : "MoliStudy\/",
+    "E364360972234A18445094D97B5E8401C0CC9241" : "..\/Bitbucket\/molistudy111111"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "MoliStudy",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "MoliStudy.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/zhaoqin192\/MoliStudy.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "39AB749F7BD5354DC639AF6D2D63B04CAEA5D186"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/molistudy1\/molistudy111111.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E364360972234A18445094D97B5E8401C0CC9241"
+    }
+  ]
+}

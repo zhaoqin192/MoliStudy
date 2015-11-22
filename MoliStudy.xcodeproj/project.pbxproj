@@ -17,6 +17,38 @@
 		AC39B91C1BFF649A001CE453 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC39B91A1BFF649A001CE453 /* LaunchScreen.storyboard */; };
 		AC39B9271BFF649B001CE453 /* MoliStudyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AC39B9261BFF649B001CE453 /* MoliStudyTests.m */; };
 		AC39B9321BFF649B001CE453 /* MoliStudyUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AC39B9311BFF649B001CE453 /* MoliStudyUITests.m */; };
+		AC53B78C1C0146FC007D3FE8 /* Report+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = AC53B77D1C0146FC007D3FE8 /* Report+CoreDataProperties.m */; };
+		AC53B78D1C0146FC007D3FE8 /* Report.m in Sources */ = {isa = PBXBuildFile; fileRef = AC53B77F1C0146FC007D3FE8 /* Report.m */; };
+		AC53B78E1C0146FC007D3FE8 /* Practice+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = AC53B7811C0146FC007D3FE8 /* Practice+CoreDataProperties.m */; };
+		AC53B78F1C0146FC007D3FE8 /* Practice.m in Sources */ = {isa = PBXBuildFile; fileRef = AC53B7831C0146FC007D3FE8 /* Practice.m */; };
+		AC53B7901C0146FC007D3FE8 /* Account+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = AC53B7851C0146FC007D3FE8 /* Account+CoreDataProperties.m */; };
+		AC53B7911C0146FC007D3FE8 /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = AC53B7871C0146FC007D3FE8 /* Account.m */; };
+		AC53B7921C0146FC007D3FE8 /* Record+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = AC53B7891C0146FC007D3FE8 /* Record+CoreDataProperties.m */; };
+		AC53B7931C0146FC007D3FE8 /* Record.m in Sources */ = {isa = PBXBuildFile; fileRef = AC53B78B1C0146FC007D3FE8 /* Record.m */; };
+		AC53B79E1C01474B007D3FE8 /* PracticeDao.m in Sources */ = {isa = PBXBuildFile; fileRef = AC53B7951C01474B007D3FE8 /* PracticeDao.m */; };
+		AC53B79F1C01474B007D3FE8 /* RecordDao.m in Sources */ = {isa = PBXBuildFile; fileRef = AC53B7971C01474B007D3FE8 /* RecordDao.m */; };
+		AC53B7A01C01474B007D3FE8 /* AccountDao.m in Sources */ = {isa = PBXBuildFile; fileRef = AC53B7991C01474B007D3FE8 /* AccountDao.m */; };
+		AC53B7A11C01474B007D3FE8 /* DAOContext.m in Sources */ = {isa = PBXBuildFile; fileRef = AC53B79B1C01474B007D3FE8 /* DAOContext.m */; };
+		AC53B7A21C01474B007D3FE8 /* ReportDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = AC53B79D1C01474B007D3FE8 /* ReportDAO.m */; };
+		AC53B7A61C014AA8007D3FE8 /* UtilityBL.m in Sources */ = {isa = PBXBuildFile; fileRef = AC53B7A51C014AA8007D3FE8 /* UtilityBL.m */; };
+		AC53B7B11C014BFE007D3FE8 /* PracticeBL.m in Sources */ = {isa = PBXBuildFile; fileRef = AC53B7AA1C014BFE007D3FE8 /* PracticeBL.m */; };
+		AC53B7B21C014BFE007D3FE8 /* RecordBL.m in Sources */ = {isa = PBXBuildFile; fileRef = AC53B7AC1C014BFE007D3FE8 /* RecordBL.m */; };
+		AC53B7B31C014BFE007D3FE8 /* AccountBL.m in Sources */ = {isa = PBXBuildFile; fileRef = AC53B7AE1C014BFE007D3FE8 /* AccountBL.m */; };
+		AC53B7B41C014BFE007D3FE8 /* ReportBL.m in Sources */ = {isa = PBXBuildFile; fileRef = AC53B7B01C014BFE007D3FE8 /* ReportBL.m */; };
+		AC53B7B71C014C42007D3FE8 /* RSA.m in Sources */ = {isa = PBXBuildFile; fileRef = AC53B7B61C014C42007D3FE8 /* RSA.m */; };
+		AC53B7BB1C014CE7007D3FE8 /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = AC53B7B91C014CE7007D3FE8 /* GTMBase64.m */; };
+		AC53B7C11C014E26007D3FE8 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC53B7BF1C014E26007D3FE8 /* TestViewController.m */; };
+		AC53B7C21C014E26007D3FE8 /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC53B7C01C014E26007D3FE8 /* TestViewController.xib */; };
+		AC53B7C51C01518A007D3FE8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC53B7C41C01518A007D3FE8 /* Security.framework */; };
+		AC53B7CA1C015577007D3FE8 /* public_key.der in Resources */ = {isa = PBXBuildFile; fileRef = AC53B7C71C0153FC007D3FE8 /* public_key.der */; };
+		AC53B7D11C016122007D3FE8 /* SMS_SDKLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AC53B7CC1C016122007D3FE8 /* SMS_SDKLocalizable.strings */; };
+		AC53B7D21C016122007D3FE8 /* MOBFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC53B7CE1C016122007D3FE8 /* MOBFoundation.framework */; };
+		AC53B7D31C016122007D3FE8 /* SMS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC53B7CF1C016122007D3FE8 /* SMS_SDK.framework */; };
+		AC53B7D51C016777007D3FE8 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC53B7D41C016777007D3FE8 /* MessageUI.framework */; };
+		AC53B7D71C016783007D3FE8 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC53B7D61C016783007D3FE8 /* JavaScriptCore.framework */; };
+		AC53B7D91C016851007D3FE8 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AC53B7D81C016851007D3FE8 /* libicucore.tbd */; };
+		AC53B7DB1C01685E007D3FE8 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AC53B7DA1C01685E007D3FE8 /* libz.tbd */; };
+		AC53B7DD1C01686B007D3FE8 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AC53B7DC1C01686B007D3FE8 /* libstdc++.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +90,61 @@
 		AC39B92D1BFF649B001CE453 /* MoliStudyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoliStudyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC39B9311BFF649B001CE453 /* MoliStudyUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoliStudyUITests.m; sourceTree = "<group>"; };
 		AC39B9331BFF649B001CE453 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC53B77C1C0146FC007D3FE8 /* Report+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Report+CoreDataProperties.h"; sourceTree = "<group>"; };
+		AC53B77D1C0146FC007D3FE8 /* Report+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Report+CoreDataProperties.m"; sourceTree = "<group>"; };
+		AC53B77E1C0146FC007D3FE8 /* Report.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Report.h; sourceTree = "<group>"; };
+		AC53B77F1C0146FC007D3FE8 /* Report.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Report.m; sourceTree = "<group>"; };
+		AC53B7801C0146FC007D3FE8 /* Practice+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Practice+CoreDataProperties.h"; sourceTree = "<group>"; };
+		AC53B7811C0146FC007D3FE8 /* Practice+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Practice+CoreDataProperties.m"; sourceTree = "<group>"; };
+		AC53B7821C0146FC007D3FE8 /* Practice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Practice.h; sourceTree = "<group>"; };
+		AC53B7831C0146FC007D3FE8 /* Practice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Practice.m; sourceTree = "<group>"; };
+		AC53B7841C0146FC007D3FE8 /* Account+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Account+CoreDataProperties.h"; sourceTree = "<group>"; };
+		AC53B7851C0146FC007D3FE8 /* Account+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Account+CoreDataProperties.m"; sourceTree = "<group>"; };
+		AC53B7861C0146FC007D3FE8 /* Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Account.h; sourceTree = "<group>"; };
+		AC53B7871C0146FC007D3FE8 /* Account.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Account.m; sourceTree = "<group>"; };
+		AC53B7881C0146FC007D3FE8 /* Record+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Record+CoreDataProperties.h"; sourceTree = "<group>"; };
+		AC53B7891C0146FC007D3FE8 /* Record+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Record+CoreDataProperties.m"; sourceTree = "<group>"; };
+		AC53B78A1C0146FC007D3FE8 /* Record.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Record.h; sourceTree = "<group>"; };
+		AC53B78B1C0146FC007D3FE8 /* Record.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Record.m; sourceTree = "<group>"; };
+		AC53B7941C01474B007D3FE8 /* PracticeDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PracticeDao.h; sourceTree = "<group>"; };
+		AC53B7951C01474B007D3FE8 /* PracticeDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PracticeDao.m; sourceTree = "<group>"; };
+		AC53B7961C01474B007D3FE8 /* RecordDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordDao.h; sourceTree = "<group>"; };
+		AC53B7971C01474B007D3FE8 /* RecordDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordDao.m; sourceTree = "<group>"; };
+		AC53B7981C01474B007D3FE8 /* AccountDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountDao.h; sourceTree = "<group>"; };
+		AC53B7991C01474B007D3FE8 /* AccountDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountDao.m; sourceTree = "<group>"; };
+		AC53B79A1C01474B007D3FE8 /* DAOContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAOContext.h; sourceTree = "<group>"; };
+		AC53B79B1C01474B007D3FE8 /* DAOContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAOContext.m; sourceTree = "<group>"; };
+		AC53B79C1C01474B007D3FE8 /* ReportDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportDAO.h; sourceTree = "<group>"; };
+		AC53B79D1C01474B007D3FE8 /* ReportDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportDAO.m; sourceTree = "<group>"; };
+		AC53B7A41C014AA8007D3FE8 /* UtilityBL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UtilityBL.h; sourceTree = "<group>"; };
+		AC53B7A51C014AA8007D3FE8 /* UtilityBL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UtilityBL.m; sourceTree = "<group>"; };
+		AC53B7A91C014BFE007D3FE8 /* PracticeBL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PracticeBL.h; sourceTree = "<group>"; };
+		AC53B7AA1C014BFE007D3FE8 /* PracticeBL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PracticeBL.m; sourceTree = "<group>"; };
+		AC53B7AB1C014BFE007D3FE8 /* RecordBL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordBL.h; sourceTree = "<group>"; };
+		AC53B7AC1C014BFE007D3FE8 /* RecordBL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordBL.m; sourceTree = "<group>"; };
+		AC53B7AD1C014BFE007D3FE8 /* AccountBL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountBL.h; sourceTree = "<group>"; };
+		AC53B7AE1C014BFE007D3FE8 /* AccountBL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountBL.m; sourceTree = "<group>"; };
+		AC53B7AF1C014BFE007D3FE8 /* ReportBL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportBL.h; sourceTree = "<group>"; };
+		AC53B7B01C014BFE007D3FE8 /* ReportBL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportBL.m; sourceTree = "<group>"; };
+		AC53B7B51C014C42007D3FE8 /* RSA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSA.h; sourceTree = "<group>"; };
+		AC53B7B61C014C42007D3FE8 /* RSA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSA.m; sourceTree = "<group>"; };
+		AC53B7B81C014CE7007D3FE8 /* GTMBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMBase64.h; sourceTree = "<group>"; };
+		AC53B7B91C014CE7007D3FE8 /* GTMBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMBase64.m; sourceTree = "<group>"; };
+		AC53B7BA1C014CE7007D3FE8 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
+		AC53B7BE1C014E26007D3FE8 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		AC53B7BF1C014E26007D3FE8 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		AC53B7C01C014E26007D3FE8 /* TestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
+		AC53B7C41C01518A007D3FE8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		AC53B7C71C0153FC007D3FE8 /* public_key.der */ = {isa = PBXFileReference; lastKnownFileType = file; name = public_key.der; path = ../../../Bitbucket/molistudy111111/public_key.der; sourceTree = "<group>"; };
+		AC53B7CD1C016122007D3FE8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SMS_SDKLocalizable.strings; sourceTree = "<group>"; };
+		AC53B7CE1C016122007D3FE8 /* MOBFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOBFoundation.framework; sourceTree = "<group>"; };
+		AC53B7CF1C016122007D3FE8 /* SMS_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SMS_SDK.framework; sourceTree = "<group>"; };
+		AC53B7D01C016122007D3FE8 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/SMS_SDKLocalizable.strings"; sourceTree = "<group>"; };
+		AC53B7D41C016777007D3FE8 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		AC53B7D61C016783007D3FE8 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		AC53B7D81C016851007D3FE8 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		AC53B7DA1C01685E007D3FE8 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		AC53B7DC1C01686B007D3FE8 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +152,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC53B7DD1C01686B007D3FE8 /* libstdc++.tbd in Frameworks */,
+				AC53B7DB1C01685E007D3FE8 /* libz.tbd in Frameworks */,
+				AC53B7D91C016851007D3FE8 /* libicucore.tbd in Frameworks */,
+				AC53B7D71C016783007D3FE8 /* JavaScriptCore.framework in Frameworks */,
+				AC53B7D51C016777007D3FE8 /* MessageUI.framework in Frameworks */,
+				AC53B7D21C016122007D3FE8 /* MOBFoundation.framework in Frameworks */,
+				AC53B7D31C016122007D3FE8 /* SMS_SDK.framework in Frameworks */,
+				AC53B7C51C01518A007D3FE8 /* Security.framework in Frameworks */,
 				7BFB8F4343390DAA1FE273AA /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -126,6 +221,7 @@
 				AC39B9181BFF649A001CE453 /* Assets.xcassets */,
 				AC39B91A1BFF649A001CE453 /* LaunchScreen.storyboard */,
 				AC39B91D1BFF649A001CE453 /* Info.plist */,
+				AC53B7C71C0153FC007D3FE8 /* public_key.der */,
 				AC39B9091BFF649A001CE453 /* Supporting Files */,
 			);
 			path = MoliStudy;
@@ -160,8 +256,9 @@
 		AC39B93F1BFF67E8001CE453 /* BusinessLogicLayer */ = {
 			isa = PBXGroup;
 			children = (
-				AC18EA631BFF76960092F7D9 /* NetworkManager.h */,
-				AC18EA641BFF76960092F7D9 /* NetworkManager.m */,
+				AC53B7A81C014B7F007D3FE8 /* dataManager */,
+				AC53B7A71C014AB9007D3FE8 /* networkManager */,
+				AC53B7A31C014A98007D3FE8 /* utility */,
 			);
 			name = BusinessLogicLayer;
 			sourceTree = "<group>";
@@ -169,7 +266,8 @@
 		AC39B9401BFF67F9001CE453 /* PersistenceLayer */ = {
 			isa = PBXGroup;
 			children = (
-				AC39B9151BFF649A001CE453 /* MoliStudy.xcdatamodeld */,
+				AC53B77B1C01456F007D3FE8 /* dao */,
+				AC53B77A1C014560007D3FE8 /* data */,
 			);
 			name = PersistenceLayer;
 			sourceTree = "<group>";
@@ -177,6 +275,7 @@
 		AC39B9411BFF6802001CE453 /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				AC53B7BD1C014E16007D3FE8 /* apiTest */,
 				AC39B90C1BFF649A001CE453 /* AppDelegate.h */,
 				AC39B90D1BFF649A001CE453 /* AppDelegate.m */,
 				AC39B90F1BFF649A001CE453 /* ViewController.h */,
@@ -185,9 +284,123 @@
 			name = PresentationLayer;
 			sourceTree = "<group>";
 		};
+		AC53B77A1C014560007D3FE8 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				AC39B9151BFF649A001CE453 /* MoliStudy.xcdatamodeld */,
+				AC53B77C1C0146FC007D3FE8 /* Report+CoreDataProperties.h */,
+				AC53B77D1C0146FC007D3FE8 /* Report+CoreDataProperties.m */,
+				AC53B77E1C0146FC007D3FE8 /* Report.h */,
+				AC53B77F1C0146FC007D3FE8 /* Report.m */,
+				AC53B7801C0146FC007D3FE8 /* Practice+CoreDataProperties.h */,
+				AC53B7811C0146FC007D3FE8 /* Practice+CoreDataProperties.m */,
+				AC53B7821C0146FC007D3FE8 /* Practice.h */,
+				AC53B7831C0146FC007D3FE8 /* Practice.m */,
+				AC53B7841C0146FC007D3FE8 /* Account+CoreDataProperties.h */,
+				AC53B7851C0146FC007D3FE8 /* Account+CoreDataProperties.m */,
+				AC53B7861C0146FC007D3FE8 /* Account.h */,
+				AC53B7871C0146FC007D3FE8 /* Account.m */,
+				AC53B7881C0146FC007D3FE8 /* Record+CoreDataProperties.h */,
+				AC53B7891C0146FC007D3FE8 /* Record+CoreDataProperties.m */,
+				AC53B78A1C0146FC007D3FE8 /* Record.h */,
+				AC53B78B1C0146FC007D3FE8 /* Record.m */,
+			);
+			name = data;
+			sourceTree = "<group>";
+		};
+		AC53B77B1C01456F007D3FE8 /* dao */ = {
+			isa = PBXGroup;
+			children = (
+				AC53B7941C01474B007D3FE8 /* PracticeDao.h */,
+				AC53B7951C01474B007D3FE8 /* PracticeDao.m */,
+				AC53B7961C01474B007D3FE8 /* RecordDao.h */,
+				AC53B7971C01474B007D3FE8 /* RecordDao.m */,
+				AC53B7981C01474B007D3FE8 /* AccountDao.h */,
+				AC53B7991C01474B007D3FE8 /* AccountDao.m */,
+				AC53B79A1C01474B007D3FE8 /* DAOContext.h */,
+				AC53B79B1C01474B007D3FE8 /* DAOContext.m */,
+				AC53B79C1C01474B007D3FE8 /* ReportDAO.h */,
+				AC53B79D1C01474B007D3FE8 /* ReportDAO.m */,
+			);
+			name = dao;
+			sourceTree = "<group>";
+		};
+		AC53B7A31C014A98007D3FE8 /* utility */ = {
+			isa = PBXGroup;
+			children = (
+				AC53B7CB1C016122007D3FE8 /* SMS_SDK */,
+				AC53B7BC1C014DFC007D3FE8 /* rsa */,
+				AC53B7A41C014AA8007D3FE8 /* UtilityBL.h */,
+				AC53B7A51C014AA8007D3FE8 /* UtilityBL.m */,
+			);
+			name = utility;
+			sourceTree = "<group>";
+		};
+		AC53B7A71C014AB9007D3FE8 /* networkManager */ = {
+			isa = PBXGroup;
+			children = (
+				AC18EA631BFF76960092F7D9 /* NetworkManager.h */,
+				AC18EA641BFF76960092F7D9 /* NetworkManager.m */,
+			);
+			name = networkManager;
+			sourceTree = "<group>";
+		};
+		AC53B7A81C014B7F007D3FE8 /* dataManager */ = {
+			isa = PBXGroup;
+			children = (
+				AC53B7A91C014BFE007D3FE8 /* PracticeBL.h */,
+				AC53B7AA1C014BFE007D3FE8 /* PracticeBL.m */,
+				AC53B7AB1C014BFE007D3FE8 /* RecordBL.h */,
+				AC53B7AC1C014BFE007D3FE8 /* RecordBL.m */,
+				AC53B7AD1C014BFE007D3FE8 /* AccountBL.h */,
+				AC53B7AE1C014BFE007D3FE8 /* AccountBL.m */,
+				AC53B7AF1C014BFE007D3FE8 /* ReportBL.h */,
+				AC53B7B01C014BFE007D3FE8 /* ReportBL.m */,
+			);
+			name = dataManager;
+			sourceTree = "<group>";
+		};
+		AC53B7BC1C014DFC007D3FE8 /* rsa */ = {
+			isa = PBXGroup;
+			children = (
+				AC53B7B51C014C42007D3FE8 /* RSA.h */,
+				AC53B7B61C014C42007D3FE8 /* RSA.m */,
+				AC53B7B81C014CE7007D3FE8 /* GTMBase64.h */,
+				AC53B7B91C014CE7007D3FE8 /* GTMBase64.m */,
+				AC53B7BA1C014CE7007D3FE8 /* GTMDefines.h */,
+			);
+			name = rsa;
+			sourceTree = "<group>";
+		};
+		AC53B7BD1C014E16007D3FE8 /* apiTest */ = {
+			isa = PBXGroup;
+			children = (
+				AC53B7BE1C014E26007D3FE8 /* TestViewController.h */,
+				AC53B7BF1C014E26007D3FE8 /* TestViewController.m */,
+				AC53B7C01C014E26007D3FE8 /* TestViewController.xib */,
+			);
+			name = apiTest;
+			sourceTree = "<group>";
+		};
+		AC53B7CB1C016122007D3FE8 /* SMS_SDK */ = {
+			isa = PBXGroup;
+			children = (
+				AC53B7CC1C016122007D3FE8 /* SMS_SDKLocalizable.strings */,
+				AC53B7CE1C016122007D3FE8 /* MOBFoundation.framework */,
+				AC53B7CF1C016122007D3FE8 /* SMS_SDK.framework */,
+			);
+			path = SMS_SDK;
+			sourceTree = "<group>";
+		};
 		BD3408EB1F0BE4F6E6952F84 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AC53B7DC1C01686B007D3FE8 /* libstdc++.tbd */,
+				AC53B7DA1C01685E007D3FE8 /* libz.tbd */,
+				AC53B7D81C016851007D3FE8 /* libicucore.tbd */,
+				AC53B7D61C016783007D3FE8 /* JavaScriptCore.framework */,
+				AC53B7D41C016777007D3FE8 /* MessageUI.framework */,
+				AC53B7C41C01518A007D3FE8 /* Security.framework */,
 				60A0CAC4C28DE69D69868F29 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -281,6 +494,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = AC39B8FD1BFF649A001CE453;
 			productRefGroup = AC39B9071BFF649A001CE453 /* Products */;
@@ -300,6 +514,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC39B91C1BFF649A001CE453 /* LaunchScreen.storyboard in Resources */,
+				AC53B7CA1C015577007D3FE8 /* public_key.der in Resources */,
+				AC53B7D11C016122007D3FE8 /* SMS_SDKLocalizable.strings in Resources */,
+				AC53B7C21C014E26007D3FE8 /* TestViewController.xib in Resources */,
 				AC39B9191BFF649A001CE453 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -373,11 +590,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC53B7921C0146FC007D3FE8 /* Record+CoreDataProperties.m in Sources */,
+				AC53B78F1C0146FC007D3FE8 /* Practice.m in Sources */,
+				AC53B7931C0146FC007D3FE8 /* Record.m in Sources */,
+				AC53B7A61C014AA8007D3FE8 /* UtilityBL.m in Sources */,
+				AC53B7B41C014BFE007D3FE8 /* ReportBL.m in Sources */,
+				AC53B7A11C01474B007D3FE8 /* DAOContext.m in Sources */,
+				AC53B7B71C014C42007D3FE8 /* RSA.m in Sources */,
+				AC53B7B21C014BFE007D3FE8 /* RecordBL.m in Sources */,
+				AC53B7901C0146FC007D3FE8 /* Account+CoreDataProperties.m in Sources */,
 				AC39B9171BFF649A001CE453 /* MoliStudy.xcdatamodeld in Sources */,
+				AC53B7A21C01474B007D3FE8 /* ReportDAO.m in Sources */,
+				AC53B79E1C01474B007D3FE8 /* PracticeDao.m in Sources */,
+				AC53B7BB1C014CE7007D3FE8 /* GTMBase64.m in Sources */,
+				AC53B78D1C0146FC007D3FE8 /* Report.m in Sources */,
+				AC53B7C11C014E26007D3FE8 /* TestViewController.m in Sources */,
 				AC39B9111BFF649A001CE453 /* ViewController.m in Sources */,
+				AC53B7A01C01474B007D3FE8 /* AccountDao.m in Sources */,
 				AC39B90E1BFF649A001CE453 /* AppDelegate.m in Sources */,
 				AC18EA651BFF76960092F7D9 /* NetworkManager.m in Sources */,
 				AC39B90B1BFF649A001CE453 /* main.m in Sources */,
+				AC53B78E1C0146FC007D3FE8 /* Practice+CoreDataProperties.m in Sources */,
+				AC53B7B11C014BFE007D3FE8 /* PracticeBL.m in Sources */,
+				AC53B7911C0146FC007D3FE8 /* Account.m in Sources */,
+				AC53B78C1C0146FC007D3FE8 /* Report+CoreDataProperties.m in Sources */,
+				AC53B79F1C01474B007D3FE8 /* RecordDao.m in Sources */,
+				AC53B7B31C014BFE007D3FE8 /* AccountBL.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +657,15 @@
 				AC39B91B1BFF649A001CE453 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		AC53B7CC1C016122007D3FE8 /* SMS_SDKLocalizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC53B7CD1C016122007D3FE8 /* en */,
+				AC53B7D01C016122007D3FE8 /* zh-Hans */,
+			);
+			name = SMS_SDKLocalizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -509,6 +756,10 @@
 			baseConfigurationReference = 95456BA8E0DB14D551D3A063 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MoliStudy/SMS_SDK",
+				);
 				INFOPLIST_FILE = MoliStudy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.molistudy.MoliStudy;
@@ -521,6 +772,10 @@
 			baseConfigurationReference = 023B0FA0A76EAEEB884B9ABD /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MoliStudy/SMS_SDK",
+				);
 				INFOPLIST_FILE = MoliStudy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.molistudy.MoliStudy;

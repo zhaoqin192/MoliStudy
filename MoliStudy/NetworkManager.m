@@ -1,9 +1,9 @@
 //
 //  NetworkManager.m
-//  MoliStudy1
+//  MoliStudy
 //
-//  Created by zhaoqin on 11/17/15.
-//  Copyright © 2015 张鹏. All rights reserved.
+//  Created by zhaoqin on 11/22/15.
+//  Copyright © 2015 MoliStudy. All rights reserved.
 //
 
 #import "NetworkManager.h"
@@ -12,6 +12,10 @@
 #import "Account.h"
 #import "RecordBL.h"
 #import "PracticeBL.h"
+#import <SMS_SDK/SMSSDK.h>
+#import <SMS_SDK/SMSSDKCountryAndAreaCode.h>
+#import <SMS_SDK/SMSSDK+DeprecatedMethods.h>
+#import <SMS_SDK/SMSSDK+ExtexdMethods.h>
 
 @implementation NetworkManager
 
@@ -71,7 +75,7 @@ static bool debug = YES;
             [[NSNotificationCenter defaultCenter] postNotificationName:@"NSNotification NETWORKREQUEST_LOGIN_ERROR_DUPLICATE" object:nil];
         }
     } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"NETWORKREQUEST_LOGIN_ERROR_FAILURE" object:nil];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"NETWORKREQUEST_LOGIN_FAILURE" object:nil];
     }];
 }
 
@@ -90,6 +94,7 @@ static bool debug = YES;
         NSDictionary *responseInfo = responseObject;
         NSString *errorCode = [responseInfo objectForKey:@"err_code"];
         if([errorCode intValue] == 0){
+            [accountBL completeInfoWithUserName:userName withCurrentSchool:currentSchool withTargetSchool:targetSchool];
             [[NSNotificationCenter defaultCenter] postNotificationName:@"NETWORKREQUEST_INFO_SUCCESS" object:nil];
         }else if ([errorCode intValue] == 40000){
             [[NSNotificationCenter defaultCenter] postNotificationName:@"NETWORKREQUEST_INFO_ERROR_INVALID" object:nil];
@@ -97,7 +102,7 @@ static bool debug = YES;
             [[NSNotificationCenter defaultCenter] postNotificationName:@"NETWORKREQUEST_INFO_ERROR_USERNAME" object:nil];
         }
     } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"NETWORKREQUEST_INFO_ERROR_FAILURE" object:nil];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"NETWORKREQUEST_INFO_AILURE" object:nil];
 
     }];
 }
@@ -122,7 +127,7 @@ static bool debug = YES;
             [[NSNotificationCenter defaultCenter] postNotificationName:@"NETWORKREQUEST_UPLOAD_ERROR_INVALID" object:nil];
         }
     } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"NETWORKREQUEST_UPLOAD_ERROR_FAILURE" object:nil];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"NETWORKREQUEST_UPLOAD_FAILURE" object:nil];
     }];
 }
 
@@ -144,7 +149,7 @@ static bool debug = YES;
             [[NSNotificationCenter defaultCenter] postNotificationName:@"NETWORKREQUEST_REPORT_ERROR_INVALID" object:nil];
         }
     } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"NETWORKREQUEST_REPORT_ERROR_FAILURE" object:nil];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"NETWORKREQUEST_REPORT_FAILURE" object:nil];
     }];
 }
 
@@ -169,7 +174,7 @@ static bool debug = YES;
             [[NSNotificationCenter defaultCenter] postNotificationName:@"NETWORKREQUEST_REPORT_ERROR_INVALID" object:nil];
         }
     } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"NETWORKREQUEST_REPORT_ERROR_FAILURE" object:nil];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"NETWORKREQUEST_REPORT_FAILURE" object:nil];
     }];
 }
 
@@ -193,7 +198,7 @@ static bool debug = YES;
             [[NSNotificationCenter defaultCenter] postNotificationName:@"NETWORKREQUEST_TRAIN_ERROR_INVALID" object:nil];
         }
     } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"NETWORKREQUEST_TRAIN_ERROR_FAILURE" object:nil];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"NETWORKREQUEST_TRAIN_FAILURE" object:nil];
     }];
 }
 
@@ -217,8 +222,47 @@ static bool debug = YES;
             [[NSNotificationCenter defaultCenter] postNotificationName:@"NETWORKREQUEST_SUBJECTBYID_ERROR_INVALID" object:nil];
         }
     } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"NETWORKREQUEST_SUBJECTBYID_ERROR_FAILURE" object:nil];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"NETWORKREQUEST_SUBJECTBYID_FAILURE" object:nil];
     }];
+}
+
++ (void)sendVerificationCode:(NSString *)phone{
+    NSString* str = [@"86" stringByReplacingOccurrencesOfString:@"+" withString:@""];
+    [SMSSDK getVerificationCodeByMethod:SMSGetCodeMethodSMS phoneNumber:phone
+                                   zone:str
+                       customIdentifier:nil
+                                 result:^(NSError *error){
+         if (!error)
+         {
+             if(debug){
+                 NSLog(@"验证码发送成功");
+             }
+             [[NSNotificationCenter defaultCenter] postNotificationName:@"NETWORKREQUEST_SENDCODE_SUCCESS" object:nil];
+         }else{
+             if(debug) {
+                 NSLog(@"验证码发送失败");
+             }
+             [[NSNotificationCenter defaultCenter] postNotificationName:@"NETWORKREQUEST_SENDCODE_FAILURE" object:nil];
+         }
+     }];
+}
+
++ (void)verifyWithCode:(NSString *)code withPhone:(NSString *)phone{
+    NSString* str = [@"86" stringByReplacingOccurrencesOfString:@"+" withString:@""];
+    [SMSSDK commitVerificationCode:code phoneNumber:phone zone:str result:^(NSError *error) {
+        if (!error) {
+            if(debug) {
+                NSLog(@"验证成功");
+            }
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"NETWORKREQUEST_VERIFY_SUCCESS" object:nil];
+        }else{
+            if(debug){
+                NSLog(@"验证失败");
+            }
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"NETWORKREQUEST_VERIFY_FAILURE" object:nil];
+        }
+    }];
+
 }
 
 @end

@@ -1,12 +1,13 @@
 //
 //  NetworkManager.h
-//  MoliStudy1
+//  MoliStudy
 //
-//  Created by zhaoqin on 11/17/15.
-//  Copyright © 2015 张鹏. All rights reserved.
+//  Created by zhaoqin on 11/22/15.
+//  Copyright © 2015 MoliStudy. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
+#import "AFNetworking.h"
 
 @interface NetworkManager : NSObject
 
@@ -39,7 +40,7 @@
  *  success: NSNotification NETWORKREQUEST_LOGIN_SUCCESS
  *  error: a.NSNotification NETWORKREQUEST_LOGIN_ERROR_USERNAME 用户名未找到
  *  error: b.NSNotification NETWORKREQUEST_LOGIN_ERROR_PASSWORD 密码错误
-*         c.NSNotification NETWORKREQUEST_LOGIN_ERROR_FAILURE 网络请求失败
+*         c.NSNotification NETWORKREQUEST_LOGIN_FAILURE 网络请求失败
  *
  */
 + (void)loginRequestWithUserName:(NSString *)userName withPassword:(NSString *)password;
@@ -54,7 +55,7 @@
  *  success: NSNotification NETWORKREQUEST_INFO_SUCCESS
  *  error: a.NSNotification NETWORKREQUEST_INFO_ERROR_INVALID 用户ID错误，请重新登录
  *         b.NSNotification NETWORKREQUEST_INFO_ERROR_USERNAME 用户名重复
- *         c.NSNotification NETWORKREQUEST_INFO_ERROR_FAILURE 网络请求失败
+ *         c.NSNotification NETWORKREQUEST_INFO_FAILURE 网络请求失败
  *
  */
 + (void)completeUserInfoWithUserName:(NSString *)userName withCurrentSchool:(NSString *)currentSchool withTargetSchool:(NSString *)targetSchool;
@@ -68,7 +69,7 @@
  *  @param time       time withformat seconds
  *  success: NSNotification NETWORKREQUEST_UPLOAD_SUCCESS
  *  error: a.NSNotification NETWORKREQUEST_UPLOAD_ERROR_INVALID 用户ID错误，请重新登录
- *         b.NSNotification NETWORKREQUEST_UPLOAD_ERROR_FAILURE 网络请求失败
+ *         b.NSNotification NETWORKREQUEST_UPLOAD_FAILURE 网络请求失败
  */
 + (void)uploadSubjectSituationWithQuestionID:(int)questionID withAnswer:(NSString *)answer withTime:(int)time;
 
@@ -80,7 +81,7 @@
  *
  *  success: NSNotification NETWORKREQUEST_REPORT_SUCCESS
  *  error: a.NSNotification NETWORKREQUEST_REPORT_ERROR_INVALID 用户ID错误，请重新登录
- *         b.NSNotification NETWORKREQUEST_REPORT_ERROR_FAILURE 网络请求失败
+ *         b.NSNotification NETWORKREQUEST_REPORT_FAILURE 网络请求失败
  */
 + (void)getReportWithQuestionID:(NSString *)questionID;
 
@@ -99,7 +100,7 @@
  *
  *  success: NSNotification NETWORKREQUEST_TRAIN_SUCCESS
  *  error: a.NSNotification NETWORKREQUEST_TRAIN_ERROR_INVALID
- *         b.NSNotification NETWORKREQUEST_TRAIN_ERROR_FALIURE
+ *         b.NSNotification NETWORKREQUEST_TRAIN_FALIURE
  */
 + (void)requestTrainList;
 
@@ -110,8 +111,29 @@
  *  
  *  success: NSNotification NETWORKREQUEST_SUBJECTBYID_SUCCESS
  *  error:  a.NSNotification NETWORKREQUEST_SUBJECTBYID_ERROR_INVALID
- *          b.NSNotification NETWORKREQUEST_SUBJECTBYID_ERROR_FAILURE
+ *          b.NSNotification NETWORKREQUEST_SUBJECTBYID_FAILURE
  */
 + (void)requestSubjectByID:(NSString *)knowledgeID;
+
+/**
+ *  send verification code to phone
+ *
+ *  @param phone 中国大陆11位手机号
+ *  
+ *  success: NETWORKREQUEST_SENDCODE_SUCCESS 发送验证码成功
+ *  error:  a.NETWORKREQUEST_SENDCODE_FAILURE 发送验证码失败
+ */
++ (void)sendVerificationCode:(NSString*)phone;
+
+/**
+ *  verify code and phone
+ *
+ *  @param code  4位验证码
+ *  @param phone 中国大陆11位手机号
+ *
+ *  success: NETWORKREQUEST_VERIFY_SUCCESS 验证成功
+ *  error: NETWORKREQUEST_VERIFY_FAILURE
+ */
++ (void)verifyWithCode:(NSString*)code withPhone:(NSString*)phone;
 
 @end

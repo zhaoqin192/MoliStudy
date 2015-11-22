@@ -7,6 +7,13 @@
 //
 
 #import "AppDelegate.h"
+#import "TestViewController.h"
+#import <SMS_SDK/SMSSDK.h>
+#import <SMS_SDK/SMSSDK+AddressBookMethods.h>
+
+#define appKey @"c8b4e339e542"
+#define appSecret @"49617537f7c2b6df0a6b3010f49e23b2"
+
 
 @interface AppDelegate ()
 
@@ -17,6 +24,17 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    [self.window makeKeyAndVisible];
+    
+    //短信验证
+    [SMSSDK registerApp:appKey withSecret:appSecret];
+    
+    
+    TestViewController *testViewContorller = [[TestViewController alloc] initWithNibName:@"TestViewController" bundle:nil];
+    self.window.rootViewController = testViewContorller;
+    
     return YES;
 }
 
