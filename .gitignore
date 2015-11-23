@@ -3,3 +3,6 @@
 .DS_Store
 build/*
 *.xcodeproj/project.pbxproj
+*.xcworkspace/
+xcuserdata/
+
