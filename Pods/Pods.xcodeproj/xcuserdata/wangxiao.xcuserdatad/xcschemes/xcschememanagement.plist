@@ -19,6 +19,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>NYXImagesKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,6 +32,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>207FCA348A5C0F480C85BDC512E0E110</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>29852B71914AA2E261D18F89DE5A907F</key>
 		<dict>
 			<key>primary</key>
@@ -37,12 +47,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>949FBB4A8DE606BBEE66851211049E68</key>
+		<key>47308D215E955802E16DFACCBC62839E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AE7578A3B03BBF99446255C4021F13FA</key>
+		<key>949FBB4A8DE606BBEE66851211049E68</key>
 		<dict>
 			<key>primary</key>
 			<true/>

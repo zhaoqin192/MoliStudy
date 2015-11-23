@@ -12,6 +12,7 @@
 #import <SMS_SDK/SMSSDK+AddressBookMethods.h>
 #import "YFStartView.h"
 #import "StartButtomView.h"
+#import "IntroductionViewController.h"
 
 #define appKey @"c8b4e339e542"
 #define appSecret @"49617537f7c2b6df0a6b3010f49e23b2"
@@ -33,9 +34,11 @@
     //短信验证
     [SMSSDK registerApp:appKey withSecret:appSecret];
     
+    IntroductionViewController *introductionVC = [[IntroductionViewController alloc] init];
+    self.window.rootViewController = introductionVC;
+//    TestViewController *testViewContorller = [[TestViewController alloc] initWithNibName:@"TestViewController" bundle:nil];
+//    self.window.rootViewController = testViewContorller;
     
-    TestViewController *testViewContorller = [[TestViewController alloc] initWithNibName:@"TestViewController" bundle:nil];
-    self.window.rootViewController = testViewContorller;
     [self configureStartView];
     return YES;
 }
