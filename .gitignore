@@ -1,8 +1,12 @@
+.DS_Store
 *~.nib
 *.swp
-.DS_Store
 build/*
 *.xcodeproj/project.pbxproj
 *.xcworkspace/
+*.xcuserdata/
+project.xcworkspace/
+xcuserdata
+UserInterfaceState.xcuserstate
+UserInterface.xcuserstate
 xcuserdata/
-

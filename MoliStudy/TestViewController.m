@@ -10,6 +10,7 @@
 #import "NetworkManager.h"
 #import "AccountBL.h"
 #import "Account.h"
+#import "ModelManager.h"
 
 @interface TestViewController ()
 - (IBAction)registerIB:(id)sender;
@@ -29,6 +30,7 @@
 - (IBAction)report:(id)sender;
 - (IBAction)getTrainList:(id)sender;
 - (IBAction)getSpecialSub:(id)sender;
+- (IBAction)localSub:(id)sender;
 
 @end
 
@@ -94,7 +96,6 @@
 }
 
 - (IBAction)upload:(id)sender {
-//    NSLog(@"upload");
     [NetworkManager uploadSubjectSituationWithQuestionID:@"69" withAnswer:@"a" withTime:10];
 }
 
@@ -109,6 +110,11 @@
 
 - (IBAction)getSpecialSub:(id)sender {
     [NetworkManager requestSubjectByID:@"19"];
+}
+
+- (IBAction)localSub:(id)sender {
+//    [[ModelManager getInstance].subjectArray];
+    NSLog(@"%@", [ModelManager getInstance].subjectArray[0]);
 }
 
 @end

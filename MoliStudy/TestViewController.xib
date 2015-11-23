@@ -113,6 +113,14 @@
                         <action selector="getSpecialSub:" destination="-1" eventType="touchUpInside" id="hxI-11-P0s"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RZB-T7-XTo">
+                    <rect key="frame" x="132" y="470" width="59" height="30"/>
+                    <animations/>
+                    <state key="normal" title="localSub"/>
+                    <connections>
+                        <action selector="localSub:" destination="-1" eventType="touchUpInside" id="BnS-bB-82u"/>
+                    </connections>
+                </button>
             </subviews>
             <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
