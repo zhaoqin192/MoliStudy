@@ -23,7 +23,7 @@
     NSManagedObjectContext *appContext = [DAOContext getInstance].appContext;
     Record *record = [NSEntityDescription insertNewObjectForEntityForName:@"Record" inManagedObjectContext:appContext];
     record.forecast = forecast;
-    record.complete = total;
+    record.complete = [NSNumber numberWithInt:[total intValue]];
     record.accuracy = [NSString stringWithFormat:@"%f", correct.floatValue / total.floatValue];
     [dao add:record];
 }

@@ -61,6 +61,15 @@
 + (void)completeUserInfoWithUserName:(NSString *)userName withCurrentSchool:(NSString *)currentSchool withTargetSchool:(NSString *)targetSchool;
 
 /**
+ *  get subject without knowledge_id
+ *
+ *  success: NETWORKREQUEST_SUBJECT_SUCCESS
+ *  error:  a.NETWORKREQUEST_SUBJECT_ERROR_INVALID  用户ID错误，请重新登录
+ *          b.NETWORKREQUEST_SUBJECT_FAILURE    网络请求失败
+ */
++ (void)getSubjects;
+
+/**
  *  uploadSituationAPI
  *  after completing 1 question, post the result to Server
  *
@@ -71,7 +80,7 @@
  *  error: a.NSNotification NETWORKREQUEST_UPLOAD_ERROR_INVALID 用户ID错误，请重新登录
  *         b.NSNotification NETWORKREQUEST_UPLOAD_FAILURE 网络请求失败
  */
-+ (void)uploadSubjectSituationWithQuestionID:(int)questionID withAnswer:(NSString *)answer withTime:(int)time;
++ (void)uploadSubjectSituationWithQuestionID:(NSString *)questionID withAnswer:(NSString *)answer withTime:(int)time;
 
 /**
  *  getReportAPI

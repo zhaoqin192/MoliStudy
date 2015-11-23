@@ -15,8 +15,8 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="USd-5L-taX">
-                    <rect key="frame" x="132" y="82" width="57" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="USd-5L-taX">
+                    <rect key="frame" x="132" y="14" width="57" height="30"/>
                     <animations/>
                     <state key="normal" title="Register"/>
                     <connections>
@@ -24,7 +24,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7of-5W-QLT">
-                    <rect key="frame" x="143" y="137" width="34" height="30"/>
+                    <rect key="frame" x="132" y="52" width="34" height="30"/>
                     <animations/>
                     <state key="normal" title="login"/>
                     <connections>
@@ -32,7 +32,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AdL-eV-u2T">
-                    <rect key="frame" x="119" y="187" width="83" height="30"/>
+                    <rect key="frame" x="132" y="90" width="83" height="30"/>
                     <animations/>
                     <state key="normal" title="findAccount"/>
                     <connections>
@@ -40,7 +40,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lrH-7M-9DT">
-                    <rect key="frame" x="115" y="236" width="90" height="30"/>
+                    <rect key="frame" x="132" y="128" width="90" height="30"/>
                     <animations/>
                     <state key="normal" title="completeInfo"/>
                     <connections>
@@ -49,28 +49,73 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yY6-kY-ucq">
-                    <rect key="frame" x="121" y="290" width="79" height="30"/>
+                    <rect key="frame" x="132" y="166" width="79" height="30"/>
                     <animations/>
                     <state key="normal" title="Send Verify"/>
                     <connections>
+                        <action selector="uploadSubject:" destination="-1" eventType="touchUpInside" id="7kP-ce-Fd7"/>
                         <action selector="verify:" destination="-1" eventType="touchUpInside" id="oJ7-1X-Nmx"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nK3-J7-nSy">
-                    <rect key="frame" x="114" y="354" width="92" height="30"/>
+                    <rect key="frame" x="132" y="204" width="92" height="30"/>
                     <animations/>
                     <state key="normal" title="Submit Verify"/>
                     <connections>
                         <action selector="submitVerify:" destination="-1" eventType="touchUpInside" id="fLF-WN-FSr"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dxh-nz-swq">
+                    <rect key="frame" x="132" y="242" width="37" height="30"/>
+                    <animations/>
+                    <state key="normal" title="Index"/>
+                    <connections>
+                        <action selector="getIndex:" destination="-1" eventType="touchUpInside" id="llw-vj-DKI"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cyZ-Ym-S3X">
+                    <rect key="frame" x="132" y="280" width="77" height="30"/>
+                    <animations/>
+                    <state key="normal" title="GetSubject"/>
+                    <connections>
+                        <action selector="getSubject:" destination="-1" eventType="touchUpInside" id="8DT-db-bUP"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fx6-82-V6q">
+                    <rect key="frame" x="132" y="318" width="47" height="30"/>
+                    <animations/>
+                    <state key="normal" title="upload"/>
+                    <connections>
+                        <action selector="upload:" destination="-1" eventType="touchUpInside" id="hOT-yK-0Gh"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D87-3D-0BE">
+                    <rect key="frame" x="132" y="356" width="69" height="30"/>
+                    <animations/>
+                    <state key="normal" title="getReport"/>
+                    <connections>
+                        <action selector="report:" destination="-1" eventType="touchUpInside" id="afj-bO-WXu"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ecZ-Tm-6CF">
+                    <rect key="frame" x="132" y="394" width="81" height="30"/>
+                    <animations/>
+                    <state key="normal" title="getTrainList"/>
+                    <connections>
+                        <action selector="getTrainList:" destination="-1" eventType="touchUpInside" id="iQ2-l9-M4U"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hLn-Pe-wvX">
+                    <rect key="frame" x="132" y="432" width="100" height="30"/>
+                    <animations/>
+                    <state key="normal" title="getSpecialSub"/>
+                    <connections>
+                        <action selector="getSpecialSub:" destination="-1" eventType="touchUpInside" id="hxI-11-P0s"/>
+                    </connections>
+                </button>
             </subviews>
             <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-            <constraints>
-                <constraint firstItem="USd-5L-taX" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="82" id="ZGC-ny-NAY"/>
-                <constraint firstItem="USd-5L-taX" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="wqE-O1-rED"/>
-            </constraints>
             <point key="canvasLocation" x="221" y="407"/>
         </view>
     </objects>

@@ -16,6 +16,9 @@
  *
  *  @return a string as param for network
  */
-+ (NSString*) encryptPassword:(NSString*)password;
++ (NSString *) encryptPassword:(NSString *)password;
+
++ (NSString *) removeHTMLTag:(NSString *)input;
+
 
 @end

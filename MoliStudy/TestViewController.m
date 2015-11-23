@@ -22,6 +22,13 @@
 
 - (IBAction)verify:(id)sender;
 - (IBAction)submitVerify:(id)sender;
+- (IBAction)getIndex:(id)sender;
+- (IBAction)getSubject:(id)sender;
+- (IBAction)upload:(id)sender;
+
+- (IBAction)report:(id)sender;
+- (IBAction)getTrainList:(id)sender;
+- (IBAction)getSpecialSub:(id)sender;
 
 @end
 
@@ -52,7 +59,7 @@
 }
 
 - (IBAction)completeInfo:(id)sender {
-    [NetworkManager completeUserInfoWithUserName:@"Muggins_" withCurrentSchool:@"北邮" withTargetSchool:@"北邮"];
+    [NetworkManager completeUserInfoWithUserName:@"muggins" withCurrentSchool:@"北邮" withTargetSchool:@"北邮"];
 }
 
 - (IBAction)login:(id)sender {
@@ -77,4 +84,31 @@
 - (IBAction)submitVerify:(id)sender {
     [NetworkManager verifyWithCode:@"8297" withPhone:@"18810541665"];
 }
+
+- (IBAction)getIndex:(id)sender {
+    [NetworkManager getRecordIndex];
+}
+
+- (IBAction)getSubject:(id)sender {
+    [NetworkManager getSubjects];
+}
+
+- (IBAction)upload:(id)sender {
+//    NSLog(@"upload");
+    [NetworkManager uploadSubjectSituationWithQuestionID:@"69" withAnswer:@"a" withTime:10];
+}
+
+- (IBAction)report:(id)sender {
+    [NetworkManager getReportWithQuestionID:@"121,122,123,124,125"];
+
+}
+
+- (IBAction)getTrainList:(id)sender {
+    [NetworkManager requestTrainList];
+}
+
+- (IBAction)getSpecialSub:(id)sender {
+    [NetworkManager requestSubjectByID:@"19"];
+}
+
 @end

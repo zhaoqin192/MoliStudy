@@ -49,6 +49,13 @@
 		AC53B7D91C016851007D3FE8 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AC53B7D81C016851007D3FE8 /* libicucore.tbd */; };
 		AC53B7DB1C01685E007D3FE8 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AC53B7DA1C01685E007D3FE8 /* libz.tbd */; };
 		AC53B7DD1C01686B007D3FE8 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AC53B7DC1C01686B007D3FE8 /* libstdc++.tbd */; };
+		AC7439171C02B272004BE2A8 /* Subject.m in Sources */ = {isa = PBXBuildFile; fileRef = AC74390A1C02B272004BE2A8 /* Subject.m */; };
+		AC7439181C02B272004BE2A8 /* QuestionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AC74390C1C02B272004BE2A8 /* QuestionModel.m */; };
+		AC7439191C02B272004BE2A8 /* Think-LabelModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AC74390E1C02B272004BE2A8 /* Think-LabelModel.m */; };
+		AC74391A1C02B272004BE2A8 /* thinklabellist_model.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7439101C02B272004BE2A8 /* thinklabellist_model.m */; };
+		AC74391B1C02B272004BE2A8 /* ModelManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7439121C02B272004BE2A8 /* ModelManager.m */; };
+		AC74391C1C02B272004BE2A8 /* ThinkLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7439141C02B272004BE2A8 /* ThinkLabel.m */; };
+		AC74391D1C02B272004BE2A8 /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7439161C02B272004BE2A8 /* Note.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -145,6 +152,20 @@
 		AC53B7D81C016851007D3FE8 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		AC53B7DA1C01685E007D3FE8 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		AC53B7DC1C01686B007D3FE8 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		AC7439091C02B272004BE2A8 /* Subject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Subject.h; sourceTree = "<group>"; };
+		AC74390A1C02B272004BE2A8 /* Subject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Subject.m; sourceTree = "<group>"; };
+		AC74390B1C02B272004BE2A8 /* QuestionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionModel.h; sourceTree = "<group>"; };
+		AC74390C1C02B272004BE2A8 /* QuestionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionModel.m; sourceTree = "<group>"; };
+		AC74390D1C02B272004BE2A8 /* Think-LabelModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Think-LabelModel.h"; sourceTree = "<group>"; };
+		AC74390E1C02B272004BE2A8 /* Think-LabelModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Think-LabelModel.m"; sourceTree = "<group>"; };
+		AC74390F1C02B272004BE2A8 /* thinklabellist_model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = thinklabellist_model.h; sourceTree = "<group>"; };
+		AC7439101C02B272004BE2A8 /* thinklabellist_model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = thinklabellist_model.m; sourceTree = "<group>"; };
+		AC7439111C02B272004BE2A8 /* ModelManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelManager.h; sourceTree = "<group>"; };
+		AC7439121C02B272004BE2A8 /* ModelManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelManager.m; sourceTree = "<group>"; };
+		AC7439131C02B272004BE2A8 /* ThinkLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThinkLabel.h; sourceTree = "<group>"; };
+		AC7439141C02B272004BE2A8 /* ThinkLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThinkLabel.m; sourceTree = "<group>"; };
+		AC7439151C02B272004BE2A8 /* Note.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Note.h; sourceTree = "<group>"; };
+		AC7439161C02B272004BE2A8 /* Note.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Note.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -304,6 +325,18 @@
 				AC53B7891C0146FC007D3FE8 /* Record+CoreDataProperties.m */,
 				AC53B78A1C0146FC007D3FE8 /* Record.h */,
 				AC53B78B1C0146FC007D3FE8 /* Record.m */,
+				AC7439091C02B272004BE2A8 /* Subject.h */,
+				AC74390A1C02B272004BE2A8 /* Subject.m */,
+				AC74390B1C02B272004BE2A8 /* QuestionModel.h */,
+				AC74390C1C02B272004BE2A8 /* QuestionModel.m */,
+				AC74390D1C02B272004BE2A8 /* Think-LabelModel.h */,
+				AC74390E1C02B272004BE2A8 /* Think-LabelModel.m */,
+				AC74390F1C02B272004BE2A8 /* thinklabellist_model.h */,
+				AC7439101C02B272004BE2A8 /* thinklabellist_model.m */,
+				AC7439131C02B272004BE2A8 /* ThinkLabel.h */,
+				AC7439141C02B272004BE2A8 /* ThinkLabel.m */,
+				AC7439151C02B272004BE2A8 /* Note.h */,
+				AC7439161C02B272004BE2A8 /* Note.m */,
 			);
 			name = data;
 			sourceTree = "<group>";
@@ -356,6 +389,8 @@
 				AC53B7AE1C014BFE007D3FE8 /* AccountBL.m */,
 				AC53B7AF1C014BFE007D3FE8 /* ReportBL.h */,
 				AC53B7B01C014BFE007D3FE8 /* ReportBL.m */,
+				AC7439111C02B272004BE2A8 /* ModelManager.h */,
+				AC7439121C02B272004BE2A8 /* ModelManager.m */,
 			);
 			name = dataManager;
 			sourceTree = "<group>";
@@ -595,10 +630,15 @@
 				AC53B7931C0146FC007D3FE8 /* Record.m in Sources */,
 				AC53B7A61C014AA8007D3FE8 /* UtilityBL.m in Sources */,
 				AC53B7B41C014BFE007D3FE8 /* ReportBL.m in Sources */,
+				AC74391C1C02B272004BE2A8 /* ThinkLabel.m in Sources */,
 				AC53B7A11C01474B007D3FE8 /* DAOContext.m in Sources */,
 				AC53B7B71C014C42007D3FE8 /* RSA.m in Sources */,
 				AC53B7B21C014BFE007D3FE8 /* RecordBL.m in Sources */,
+				AC7439171C02B272004BE2A8 /* Subject.m in Sources */,
+				AC74391B1C02B272004BE2A8 /* ModelManager.m in Sources */,
 				AC53B7901C0146FC007D3FE8 /* Account+CoreDataProperties.m in Sources */,
+				AC7439191C02B272004BE2A8 /* Think-LabelModel.m in Sources */,
+				AC74391A1C02B272004BE2A8 /* thinklabellist_model.m in Sources */,
 				AC39B9171BFF649A001CE453 /* MoliStudy.xcdatamodeld in Sources */,
 				AC53B7A21C01474B007D3FE8 /* ReportDAO.m in Sources */,
 				AC53B79E1C01474B007D3FE8 /* PracticeDao.m in Sources */,
@@ -606,8 +646,10 @@
 				AC53B78D1C0146FC007D3FE8 /* Report.m in Sources */,
 				AC53B7C11C014E26007D3FE8 /* TestViewController.m in Sources */,
 				AC39B9111BFF649A001CE453 /* ViewController.m in Sources */,
+				AC74391D1C02B272004BE2A8 /* Note.m in Sources */,
 				AC53B7A01C01474B007D3FE8 /* AccountDao.m in Sources */,
 				AC39B90E1BFF649A001CE453 /* AppDelegate.m in Sources */,
+				AC7439181C02B272004BE2A8 /* QuestionModel.m in Sources */,
 				AC18EA651BFF76960092F7D9 /* NetworkManager.m in Sources */,
 				AC39B90B1BFF649A001CE453 /* main.m in Sources */,
 				AC53B78E1C0146FC007D3FE8 /* Practice+CoreDataProperties.m in Sources */,
