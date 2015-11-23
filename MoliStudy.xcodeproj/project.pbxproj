@@ -7,11 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30AAE3BA1C02B5E100CD94D5 /* public_key.der in Resources */ = {isa = PBXBuildFile; fileRef = 30AAE3B91C02B5E100CD94D5 /* public_key.der */; };
+		30AAE3C21C02BA7F00CD94D5 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 30AAE3BD1C02BA7F00CD94D5 /* logo.png */; };
+		30AAE3C31C02BA7F00CD94D5 /* startImage1.png in Resources */ = {isa = PBXBuildFile; fileRef = 30AAE3BE1C02BA7F00CD94D5 /* startImage1.png */; };
+		30AAE3C41C02BA7F00CD94D5 /* startImage2.png in Resources */ = {isa = PBXBuildFile; fileRef = 30AAE3BF1C02BA7F00CD94D5 /* startImage2.png */; };
+		30AAE3C51C02BA7F00CD94D5 /* startImage3.png in Resources */ = {isa = PBXBuildFile; fileRef = 30AAE3C01C02BA7F00CD94D5 /* startImage3.png */; };
+		30AAE3C61C02BA7F00CD94D5 /* startImage4.png in Resources */ = {isa = PBXBuildFile; fileRef = 30AAE3C11C02BA7F00CD94D5 /* startImage4.png */; };
+		30AAE3C91C02BB7D00CD94D5 /* YFStartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AAE3C81C02BB7D00CD94D5 /* YFStartView.m */; };
+		30AAE3CE1C02BBFB00CD94D5 /* StartButtomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AAE3CC1C02BBFB00CD94D5 /* StartButtomView.m */; };
+		30AAE3CF1C02BBFB00CD94D5 /* StartButtomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30AAE3CD1C02BBFB00CD94D5 /* StartButtomView.xib */; };
 		7BFB8F4343390DAA1FE273AA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60A0CAC4C28DE69D69868F29 /* libPods.a */; };
 		AC18EA651BFF76960092F7D9 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AC18EA641BFF76960092F7D9 /* NetworkManager.m */; };
 		AC39B90B1BFF649A001CE453 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AC39B90A1BFF649A001CE453 /* main.m */; };
 		AC39B90E1BFF649A001CE453 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AC39B90D1BFF649A001CE453 /* AppDelegate.m */; };
-		AC39B9111BFF649A001CE453 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC39B9101BFF649A001CE453 /* ViewController.m */; };
 		AC39B9171BFF649A001CE453 /* MoliStudy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC39B9151BFF649A001CE453 /* MoliStudy.xcdatamodeld */; };
 		AC39B9191BFF649A001CE453 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC39B9181BFF649A001CE453 /* Assets.xcassets */; };
 		AC39B91C1BFF649A001CE453 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC39B91A1BFF649A001CE453 /* LaunchScreen.storyboard */; };
@@ -40,7 +48,6 @@
 		AC53B7C11C014E26007D3FE8 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC53B7BF1C014E26007D3FE8 /* TestViewController.m */; };
 		AC53B7C21C014E26007D3FE8 /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC53B7C01C014E26007D3FE8 /* TestViewController.xib */; };
 		AC53B7C51C01518A007D3FE8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC53B7C41C01518A007D3FE8 /* Security.framework */; };
-		AC53B7CA1C015577007D3FE8 /* public_key.der in Resources */ = {isa = PBXBuildFile; fileRef = AC53B7C71C0153FC007D3FE8 /* public_key.der */; };
 		AC53B7D11C016122007D3FE8 /* SMS_SDKLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AC53B7CC1C016122007D3FE8 /* SMS_SDKLocalizable.strings */; };
 		AC53B7D21C016122007D3FE8 /* MOBFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC53B7CE1C016122007D3FE8 /* MOBFoundation.framework */; };
 		AC53B7D31C016122007D3FE8 /* SMS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC53B7CF1C016122007D3FE8 /* SMS_SDK.framework */; };
@@ -70,6 +77,17 @@
 
 /* Begin PBXFileReference section */
 		023B0FA0A76EAEEB884B9ABD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		30AAE3B91C02B5E100CD94D5 /* public_key.der */ = {isa = PBXFileReference; lastKnownFileType = file; name = public_key.der; path = ../public_key.der; sourceTree = "<group>"; };
+		30AAE3BD1C02BA7F00CD94D5 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		30AAE3BE1C02BA7F00CD94D5 /* startImage1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = startImage1.png; sourceTree = "<group>"; };
+		30AAE3BF1C02BA7F00CD94D5 /* startImage2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = startImage2.png; sourceTree = "<group>"; };
+		30AAE3C01C02BA7F00CD94D5 /* startImage3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = startImage3.png; sourceTree = "<group>"; };
+		30AAE3C11C02BA7F00CD94D5 /* startImage4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = startImage4.png; sourceTree = "<group>"; };
+		30AAE3C71C02BB7D00CD94D5 /* YFStartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YFStartView.h; path = Resource/YFStartView.h; sourceTree = "<group>"; };
+		30AAE3C81C02BB7D00CD94D5 /* YFStartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YFStartView.m; path = Resource/YFStartView.m; sourceTree = "<group>"; };
+		30AAE3CB1C02BBFB00CD94D5 /* StartButtomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartButtomView.h; sourceTree = "<group>"; };
+		30AAE3CC1C02BBFB00CD94D5 /* StartButtomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartButtomView.m; sourceTree = "<group>"; };
+		30AAE3CD1C02BBFB00CD94D5 /* StartButtomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StartButtomView.xib; sourceTree = "<group>"; };
 		60A0CAC4C28DE69D69868F29 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		95456BA8E0DB14D551D3A063 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		AC18EA631BFF76960092F7D9 /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
@@ -78,8 +96,6 @@
 		AC39B90A1BFF649A001CE453 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AC39B90C1BFF649A001CE453 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AC39B90D1BFF649A001CE453 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		AC39B90F1BFF649A001CE453 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		AC39B9101BFF649A001CE453 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		AC39B9161BFF649A001CE453 /* MoliStudy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MoliStudy.xcdatamodel; sourceTree = "<group>"; };
 		AC39B9181BFF649A001CE453 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC39B91B1BFF649A001CE453 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -135,7 +151,6 @@
 		AC53B7BF1C014E26007D3FE8 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		AC53B7C01C014E26007D3FE8 /* TestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
 		AC53B7C41C01518A007D3FE8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		AC53B7C71C0153FC007D3FE8 /* public_key.der */ = {isa = PBXFileReference; lastKnownFileType = file; name = public_key.der; path = ../../../Bitbucket/molistudy111111/public_key.der; sourceTree = "<group>"; };
 		AC53B7CD1C016122007D3FE8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SMS_SDKLocalizable.strings; sourceTree = "<group>"; };
 		AC53B7CE1C016122007D3FE8 /* MOBFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOBFoundation.framework; sourceTree = "<group>"; };
 		AC53B7CF1C016122007D3FE8 /* SMS_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SMS_SDK.framework; sourceTree = "<group>"; };
@@ -190,6 +205,54 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		30AAE3BB1C02B79900CD94D5 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				AC39B90C1BFF649A001CE453 /* AppDelegate.h */,
+				AC39B90D1BFF649A001CE453 /* AppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		30AAE3BC1C02BA7F00CD94D5 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				30AAE3BD1C02BA7F00CD94D5 /* logo.png */,
+				30AAE3BE1C02BA7F00CD94D5 /* startImage1.png */,
+				30AAE3BF1C02BA7F00CD94D5 /* startImage2.png */,
+				30AAE3C01C02BA7F00CD94D5 /* startImage3.png */,
+				30AAE3C11C02BA7F00CD94D5 /* startImage4.png */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		30AAE3CA1C02BB9000CD94D5 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				30AAE3D11C02BE5D00CD94D5 /* YFStartView */,
+			);
+			name = Vendor;
+			sourceTree = "<group>";
+		};
+		30AAE3D01C02BC2300CD94D5 /* StartButtonView */ = {
+			isa = PBXGroup;
+			children = (
+				30AAE3CB1C02BBFB00CD94D5 /* StartButtomView.h */,
+				30AAE3CC1C02BBFB00CD94D5 /* StartButtomView.m */,
+				30AAE3CD1C02BBFB00CD94D5 /* StartButtomView.xib */,
+			);
+			name = StartButtonView;
+			sourceTree = "<group>";
+		};
+		30AAE3D11C02BE5D00CD94D5 /* YFStartView */ = {
+			isa = PBXGroup;
+			children = (
+				30AAE3C71C02BB7D00CD94D5 /* YFStartView.h */,
+				30AAE3C81C02BB7D00CD94D5 /* YFStartView.m */,
+			);
+			name = YFStartView;
+			sourceTree = "<group>";
+		};
 		AC39B8FD1BFF649A001CE453 = {
 			isa = PBXGroup;
 			children = (
@@ -218,10 +281,8 @@
 				AC39B9411BFF6802001CE453 /* PresentationLayer */,
 				AC39B9401BFF67F9001CE453 /* PersistenceLayer */,
 				AC39B93F1BFF67E8001CE453 /* BusinessLogicLayer */,
-				AC39B9181BFF649A001CE453 /* Assets.xcassets */,
-				AC39B91A1BFF649A001CE453 /* LaunchScreen.storyboard */,
-				AC39B91D1BFF649A001CE453 /* Info.plist */,
-				AC53B7C71C0153FC007D3FE8 /* public_key.der */,
+				30AAE3BC1C02BA7F00CD94D5 /* Resource */,
+				30AAE3CA1C02BB9000CD94D5 /* Vendor */,
 				AC39B9091BFF649A001CE453 /* Supporting Files */,
 			);
 			path = MoliStudy;
@@ -230,6 +291,10 @@
 		AC39B9091BFF649A001CE453 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AC39B9181BFF649A001CE453 /* Assets.xcassets */,
+				30AAE3B91C02B5E100CD94D5 /* public_key.der */,
+				AC39B91A1BFF649A001CE453 /* LaunchScreen.storyboard */,
+				AC39B91D1BFF649A001CE453 /* Info.plist */,
 				AC39B90A1BFF649A001CE453 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -276,10 +341,8 @@
 			isa = PBXGroup;
 			children = (
 				AC53B7BD1C014E16007D3FE8 /* apiTest */,
-				AC39B90C1BFF649A001CE453 /* AppDelegate.h */,
-				AC39B90D1BFF649A001CE453 /* AppDelegate.m */,
-				AC39B90F1BFF649A001CE453 /* ViewController.h */,
-				AC39B9101BFF649A001CE453 /* ViewController.m */,
+				30AAE3BB1C02B79900CD94D5 /* AppDelegate */,
+				30AAE3D01C02BC2300CD94D5 /* StartButtonView */,
 			);
 			name = PresentationLayer;
 			sourceTree = "<group>";
@@ -514,10 +577,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC39B91C1BFF649A001CE453 /* LaunchScreen.storyboard in Resources */,
-				AC53B7CA1C015577007D3FE8 /* public_key.der in Resources */,
+				30AAE3C61C02BA7F00CD94D5 /* startImage4.png in Resources */,
+				30AAE3CF1C02BBFB00CD94D5 /* StartButtomView.xib in Resources */,
+				30AAE3C31C02BA7F00CD94D5 /* startImage1.png in Resources */,
 				AC53B7D11C016122007D3FE8 /* SMS_SDKLocalizable.strings in Resources */,
+				30AAE3C21C02BA7F00CD94D5 /* logo.png in Resources */,
+				30AAE3C51C02BA7F00CD94D5 /* startImage3.png in Resources */,
 				AC53B7C21C014E26007D3FE8 /* TestViewController.xib in Resources */,
+				30AAE3C41C02BA7F00CD94D5 /* startImage2.png in Resources */,
 				AC39B9191BFF649A001CE453 /* Assets.xcassets in Resources */,
+				30AAE3BA1C02B5E100CD94D5 /* public_key.der in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -590,10 +659,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30AAE3CE1C02BBFB00CD94D5 /* StartButtomView.m in Sources */,
 				AC53B7921C0146FC007D3FE8 /* Record+CoreDataProperties.m in Sources */,
 				AC53B78F1C0146FC007D3FE8 /* Practice.m in Sources */,
 				AC53B7931C0146FC007D3FE8 /* Record.m in Sources */,
 				AC53B7A61C014AA8007D3FE8 /* UtilityBL.m in Sources */,
+				30AAE3C91C02BB7D00CD94D5 /* YFStartView.m in Sources */,
 				AC53B7B41C014BFE007D3FE8 /* ReportBL.m in Sources */,
 				AC53B7A11C01474B007D3FE8 /* DAOContext.m in Sources */,
 				AC53B7B71C014C42007D3FE8 /* RSA.m in Sources */,
@@ -605,7 +676,6 @@
 				AC53B7BB1C014CE7007D3FE8 /* GTMBase64.m in Sources */,
 				AC53B78D1C0146FC007D3FE8 /* Report.m in Sources */,
 				AC53B7C11C014E26007D3FE8 /* TestViewController.m in Sources */,
-				AC39B9111BFF649A001CE453 /* ViewController.m in Sources */,
 				AC53B7A01C01474B007D3FE8 /* AccountDao.m in Sources */,
 				AC39B90E1BFF649A001CE453 /* AppDelegate.m in Sources */,
 				AC18EA651BFF76960092F7D9 /* NetworkManager.m in Sources */,

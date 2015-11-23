@@ -10,6 +10,8 @@
 #import "TestViewController.h"
 #import <SMS_SDK/SMSSDK.h>
 #import <SMS_SDK/SMSSDK+AddressBookMethods.h>
+#import "YFStartView.h"
+#import "StartButtomView.h"
 
 #define appKey @"c8b4e339e542"
 #define appSecret @"49617537f7c2b6df0a6b3010f49e23b2"
@@ -34,8 +36,18 @@
     
     TestViewController *testViewContorller = [[TestViewController alloc] initWithNibName:@"TestViewController" bundle:nil];
     self.window.rootViewController = testViewContorller;
-    
+    [self configureStartView];
     return YES;
+}
+
+- (void)configureStartView{
+    YFStartView *startView = [YFStartView startView];
+    startView.isAllowRandomImage = YES;
+    startView.randomImages = [NSMutableArray arrayWithObjects:@"startImage4", @"startImage2", @"startImage1", @"startImage3", nil];
+    startView.logoPosition = LogoPositionButtom;
+    StartButtomView *startButtomView = [[[NSBundle mainBundle] loadNibNamed:@"StartButtomView" owner:self options:nil] lastObject];
+    startView.logoView = startButtomView;
+    [startView configYFStartView];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
