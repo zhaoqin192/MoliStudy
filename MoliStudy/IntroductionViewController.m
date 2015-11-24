@@ -230,10 +230,9 @@
 
 #pragma mark Action
 - (void)registerButtonClicked{
-//    RegisterViewController *vc = [[RegisterViewController alloc] init];
-//    UINavigationController *nav = [[BaseNavigationController alloc] initWithRootViewController:vc];
-//    [self presentViewController:nav animated:YES completion:nil];
-    NSLog(@"regitster btn clicked");
+    UIStoryboard *newProjectStoryboard = [UIStoryboard storyboardWithName:@"NewProject" bundle:nil];
+    UINavigationController *newProjectVC = [newProjectStoryboard instantiateViewControllerWithIdentifier:@"NewProjectVC"];
+    [self presentViewController:newProjectVC animated:YES completion:nil];
 }
 
 - (void)loginButtonClicked{

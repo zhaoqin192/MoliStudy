@@ -396,6 +396,10 @@
 		30AAFB131C04817600CD94D5 /* xtsegment_bordor_left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30AAF99F1C04817600CD94D5 /* xtsegment_bordor_left@2x.png */; };
 		30AAFB141C04817600CD94D5 /* xtsegment_bordor_right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30AAF9A01C04817600CD94D5 /* xtsegment_bordor_right@2x.png */; };
 		30AAFB171C048D0200CD94D5 /* Login.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AAFB161C048D0200CD94D5 /* Login.m */; };
+		30AAFB2B1C04A50100CD94D5 /* NewProject.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30AAFB261C04A50100CD94D5 /* NewProject.storyboard */; };
+		30AAFB2C1C04A50100CD94D5 /* NewProjectTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AAFB281C04A50100CD94D5 /* NewProjectTypeViewController.m */; };
+		30AAFB2D1C04A50100CD94D5 /* NewProjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AAFB2A1C04A50100CD94D5 /* NewProjectViewController.m */; };
+		30AAFB301C04A78A00CD94D5 /* UIBarButtonItem+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AAFB2F1C04A78A00CD94D5 /* UIBarButtonItem+Common.m */; };
 		7BFB8F4343390DAA1FE273AA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60A0CAC4C28DE69D69868F29 /* libPods.a */; };
 		AC18EA651BFF76960092F7D9 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AC18EA641BFF76960092F7D9 /* NetworkManager.m */; };
 		AC39B90B1BFF649A001CE453 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AC39B90A1BFF649A001CE453 /* main.m */; };
@@ -863,6 +867,13 @@
 		30AAF9A01C04817600CD94D5 /* xtsegment_bordor_right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "xtsegment_bordor_right@2x.png"; sourceTree = "<group>"; };
 		30AAFB151C048D0200CD94D5 /* Login.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Login.h; sourceTree = "<group>"; };
 		30AAFB161C048D0200CD94D5 /* Login.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Login.m; sourceTree = "<group>"; };
+		30AAFB261C04A50100CD94D5 /* NewProject.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NewProject.storyboard; sourceTree = "<group>"; };
+		30AAFB271C04A50100CD94D5 /* NewProjectTypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewProjectTypeViewController.h; sourceTree = "<group>"; };
+		30AAFB281C04A50100CD94D5 /* NewProjectTypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewProjectTypeViewController.m; sourceTree = "<group>"; };
+		30AAFB291C04A50100CD94D5 /* NewProjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewProjectViewController.h; sourceTree = "<group>"; };
+		30AAFB2A1C04A50100CD94D5 /* NewProjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewProjectViewController.m; sourceTree = "<group>"; };
+		30AAFB2E1C04A78A00CD94D5 /* UIBarButtonItem+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Common.h"; sourceTree = "<group>"; };
+		30AAFB2F1C04A78A00CD94D5 /* UIBarButtonItem+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Common.m"; sourceTree = "<group>"; };
 		60A0CAC4C28DE69D69868F29 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		95456BA8E0DB14D551D3A063 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		AC18EA631BFF76960092F7D9 /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
@@ -1044,6 +1055,8 @@
 		30AAE3D61C02C0A200CD94D5 /* OC_Category */ = {
 			isa = PBXGroup;
 			children = (
+				30AAFB2E1C04A78A00CD94D5 /* UIBarButtonItem+Common.h */,
+				30AAFB2F1C04A78A00CD94D5 /* UIBarButtonItem+Common.m */,
 				30AAE3D31C02C08F00CD94D5 /* UIColor+expanded.h */,
 				30AAE3D41C02C08F00CD94D5 /* UIColor+expanded.m */,
 				30AAF8081C047E4300CD94D5 /* UIButton+Bootstrap.h */,
@@ -1740,6 +1753,18 @@
 			path = userInfo;
 			sourceTree = "<group>";
 		};
+		30AAFB1B1C049D1A00CD94D5 /* RegisterView */ = {
+			isa = PBXGroup;
+			children = (
+				30AAFB261C04A50100CD94D5 /* NewProject.storyboard */,
+				30AAFB291C04A50100CD94D5 /* NewProjectViewController.h */,
+				30AAFB2A1C04A50100CD94D5 /* NewProjectViewController.m */,
+				30AAFB271C04A50100CD94D5 /* NewProjectTypeViewController.h */,
+				30AAFB281C04A50100CD94D5 /* NewProjectTypeViewController.m */,
+			);
+			name = RegisterView;
+			sourceTree = "<group>";
+		};
 		AC39B8FD1BFF649A001CE453 = {
 			isa = PBXGroup;
 			children = (
@@ -1834,6 +1859,7 @@
 				30AAE3D01C02BC2300CD94D5 /* StartButtonView */,
 				30AAE41C1C02C20300CD94D5 /* IntroductionView */,
 				30AAF8071C047B4B00CD94D5 /* LoginView */,
+				30AAFB1B1C049D1A00CD94D5 /* RegisterView */,
 			);
 			name = PresentationLayer;
 			sourceTree = "<group>";
@@ -2333,6 +2359,7 @@
 				30AAFAD01C04817600CD94D5 /* checkbox_checked@2x.png in Resources */,
 				30AAFAA01C04817600CD94D5 /* project_item_readme@2x.png in Resources */,
 				30AAF9E91C04817600CD94D5 /* coding_emoji_22@2x.png in Resources */,
+				30AAFB2B1C04A50100CD94D5 /* NewProject.storyboard in Resources */,
 				30AAF9A41C04817600CD94D5 /* banner__page_unselected@2x.png in Resources */,
 				30AAFA041C04817600CD94D5 /* file_changeType_COPY@2x.png in Resources */,
 				30AAE3C41C02BA7F00CD94D5 /* startImage2.png in Resources */,
@@ -2564,7 +2591,9 @@
 				AC53B7B41C014BFE007D3FE8 /* ReportBL.m in Sources */,
 				AC74391C1C02B272004BE2A8 /* ThinkLabel.m in Sources */,
 				AC53B7A11C01474B007D3FE8 /* DAOContext.m in Sources */,
+				30AAFB2C1C04A50100CD94D5 /* NewProjectTypeViewController.m in Sources */,
 				AC53B7B71C014C42007D3FE8 /* RSA.m in Sources */,
+				30AAFB301C04A78A00CD94D5 /* UIBarButtonItem+Common.m in Sources */,
 				AC901DF91C03F555001B8090 /* SubjectBL.m in Sources */,
 				AC53B7B21C014BFE007D3FE8 /* RecordBL.m in Sources */,
 				AC7439171C02B272004BE2A8 /* Subject.m in Sources */,
@@ -2594,6 +2623,7 @@
 				AC53B78C1C0146FC007D3FE8 /* Report+CoreDataProperties.m in Sources */,
 				AC53B79F1C01474B007D3FE8 /* RecordDao.m in Sources */,
 				AC53B7B31C014BFE007D3FE8 /* AccountBL.m in Sources */,
+				30AAFB2D1C04A50100CD94D5 /* NewProjectViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
