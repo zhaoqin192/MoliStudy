@@ -16,7 +16,7 @@
 
 + (ReportBL*)getInstance;
 
-- (void)add:(Report*) report;
 - (NSMutableArray *)findAll;
+- (void)addArray:(NSArray *)array;
 
 @end

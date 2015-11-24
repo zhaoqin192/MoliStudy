@@ -10,4 +10,8 @@
 
 @interface SubjectBL : NSObject
 
+- (void)addArray:(NSArray *)response;
+
+- (void)addArrayByID:(NSArray *)response;
+
 @end

@@ -121,6 +121,14 @@
                         <action selector="localSub:" destination="-1" eventType="touchUpInside" id="BnS-bB-82u"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G0G-FA-2k9">
+                    <rect key="frame" x="130" y="508" width="59" height="30"/>
+                    <animations/>
+                    <state key="normal" title="localRep"/>
+                    <connections>
+                        <action selector="getLocalReport:" destination="-1" eventType="touchUpInside" id="AYt-Ka-hMF"/>
+                    </connections>
+                </button>
             </subviews>
             <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

@@ -16,7 +16,7 @@ static ModelManager *manager = nil;
     if(manager == nil){
         manager = [[ModelManager alloc] init];
         manager.subjectArray = [[NSMutableArray alloc] init];
-        
+        manager.reportArray = [[NSMutableArray alloc] init];
     }
     return manager;
 }

@@ -10,8 +10,21 @@
 
 @interface ModelManager : NSObject
 
+/**
+ *  Subject of array
+ */
 @property(strong, nonatomic) NSMutableArray *subjectArray;
 
+/**
+ *  Report of array
+ */
+@property(strong, nonatomic) NSMutableArray *reportArray;
+
+/**
+ *  get Singleton of ModelManager
+ *
+ *  @return Singleton
+ */
 + (ModelManager *) getInstance;
 
 @end

@@ -32,6 +32,7 @@
     }else{
         [dao modified:account];
     }
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"NETWORKREQUEST_LOGIN_SUCCESS" object:nil];
 }
 
 - (Account*) findAccount{
@@ -49,7 +50,7 @@
         account.targetAcademy = target;
         [dao modified:account];
     }
-
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"NETWORKREQUEST_LOGIN_SUCCESS" object:nil];
 }
 
 @end

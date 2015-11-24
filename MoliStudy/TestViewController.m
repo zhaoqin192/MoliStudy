@@ -11,6 +11,7 @@
 #import "AccountBL.h"
 #import "Account.h"
 #import "ModelManager.h"
+#import "ReportBL.h"
 
 @interface TestViewController ()
 - (IBAction)registerIB:(id)sender;
@@ -31,6 +32,7 @@
 - (IBAction)getTrainList:(id)sender;
 - (IBAction)getSpecialSub:(id)sender;
 - (IBAction)localSub:(id)sender;
+- (IBAction)getLocalReport:(id)sender;
 
 @end
 
@@ -109,12 +111,17 @@
 }
 
 - (IBAction)getSpecialSub:(id)sender {
-    [NetworkManager requestSubjectByID:@"19"];
+    [NetworkManager requestSubjectByID:@"26"];
 }
 
 - (IBAction)localSub:(id)sender {
-//    [[ModelManager getInstance].subjectArray];
-    NSLog(@"%@", [ModelManager getInstance].subjectArray[0]);
+//    NSLog(@"%@", [ModelManager getInstance].subjectArray[0]);
+//    ModelManager *modelmanager = [ModelManager getInstance];
+    NSLog(@"fucyou");
+}
+
+- (IBAction)getLocalReport:(id)sender {
+    NSLog(@"%@", [[ModelManager getInstance].reportArray[0] name]);
 }
 
 @end

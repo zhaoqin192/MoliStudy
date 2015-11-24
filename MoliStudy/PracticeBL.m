@@ -38,11 +38,11 @@
             Practice *practice = [NSEntityDescription insertNewObjectForEntityForName:@"Practice" inManagedObjectContext:appContext];
             practice.itemID = [array[i] objectForKey:@"id"];
             practice.name = [array[i] objectForKey:@"name"];
-            practice.finished = [array[i] objectForKey:@"question_studied"];
-            practice.total = [array[i] objectForKey:@"question_count"];
+            practice.finished = [NSNumber numberWithInt:[[array[i] objectForKey:@"question_studied"] intValue]];
+            practice.total = [NSNumber numberWithInt:[[array[i] objectForKey:@"question_count"] intValue]];
             [dao add:practice];
         }else{
-            Practice *practice = array[0];
+            Practice *practice = requestArray[0];
             [dao modifiy:practice];
         }
     }

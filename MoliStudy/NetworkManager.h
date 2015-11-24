@@ -92,7 +92,7 @@
  *  error: a.NSNotification NETWORKREQUEST_REPORT_ERROR_INVALID 用户ID错误，请重新登录
  *         b.NSNotification NETWORKREQUEST_REPORT_FAILURE 网络请求失败
  */
-+ (void)getReportWithQuestionID:(NSString *)questionID;
++ (void)getReportWithQuestionID:(NSString *)questionsID;
 
 
 /**
@@ -130,7 +130,7 @@
  *  @param phone 中国大陆11位手机号
  *  
  *  success: NETWORKREQUEST_SENDCODE_SUCCESS 发送验证码成功
- *  error:  a.NETWORKREQUEST_SENDCODE_FAILURE 发送验证码失败
+ *  error:  NETWORKREQUEST_SENDCODE_FAILURE 发送验证码失败
  */
 + (void)sendVerificationCode:(NSString*)phone;
 
@@ -141,7 +141,7 @@
  *  @param phone 中国大陆11位手机号
  *
  *  success: NETWORKREQUEST_VERIFY_SUCCESS 验证成功
- *  error: NETWORKREQUEST_VERIFY_FAILURE
+ *  error: NETWORKREQUEST_VERIFY_FAILURE 验证失败
  */
 + (void)verifyWithCode:(NSString*)code withPhone:(NSString*)phone;
 

@@ -11,8 +11,10 @@
 #import "AccountBL.h"
 #import "Account.h"
 #import "RecordBL.h"
+#import "ReportBL.h"
 #import "PracticeBL.h"
 #import "Subject.h"
+#import "SubjectBL.h"
 #import "ModelManager.h"
 #import "ThinkLabel.h"
 #import "Note.h"
@@ -125,73 +127,9 @@ static bool debug = YES;
         NSDictionary *responseInfo = responseObject;
         NSString *errorCode = [responseInfo objectForKey:@"err_code"];
         if([errorCode intValue] == 0){
-            
             NSArray *response = [responseInfo objectForKey:@"question_info"];
-
-            
-            ModelManager *modelManager = [ModelManager getInstance];
-            
-            for(NSDictionary *array in response){
-                
-                //get Subject
-                Subject *subject = [[Subject alloc] init];
-                [subject initData];
-                NSArray *modelarr = [array objectForKey:@"modelarr"];
-                NSArray *names = [modelarr[0] objectForKey:@"name"];
-
-                for(NSString *name in names){
-                    [subject.content addObject:[UtilityBL removeHTMLTag:name]];
-                }
-                
-                //get Answers
-                NSArray *answers = [modelarr[0] objectForKey:@"answers"];
-                for(NSArray *answer in answers){
-                    NSString *detail = [[NSString alloc] init];
-                    for(NSString *answerDetail in answer){
-                        detail = [[detail stringByAppendingString:answerDetail] stringByAppendingString:@" "];
-                    }
-                    [subject.answers addObject:detail];
-                }
-                subject.correctAnswer = [modelarr[0] objectForKey:@"correct_answer"];
-                NSArray *thinkLabelsIDs = [modelarr[0] objectForKey:@"think_label_id"];
-                for(NSString *thinkLabelID in thinkLabelsIDs){
-                    [subject.thinkLabelID addObject:thinkLabelID];
-                }
-                //get ThinkLabel
-                NSArray *thinkLabels = [modelarr[0] objectForKey:@"think_labels"];
-                NSArray *thinkLists = [array objectForKey:@"thinklabellist"];
-                NSArray *thinkList = thinkLists[0];
-
-                NSMutableArray *labelName = [[NSMutableArray alloc] init];
-                for(NSDictionary *dic in thinkList){
-                    [labelName addObject:[dic objectForKey:@"name"]];
-                }
-                for(int i = 0; i < [thinkLabels count]; i++){
-                    BOOL flag = NO;
-                    NSArray *thinkLabel = thinkLabels[i];
-                    ThinkLabel *label = [[ThinkLabel alloc] init];
-                    [label initData];
-                    for(NSDictionary *noteDictionary in thinkLabel){
-                        if([[noteDictionary objectForKey:@"think_label_type_id"] intValue] == 0){
-                            flag = YES;
-                            break;
-                        }
-                        Note *note = [[Note alloc] init];
-                        note.positionStart = [noteDictionary objectForKey:@"position_start"];
-                        note.positionEnd = [noteDictionary objectForKey:@"position_end"];
-                        note.style = [noteDictionary objectForKey:@"style"];
-                        note.noteContent = [UtilityBL removeHTMLTag:[noteDictionary objectForKey:@"note"]];
-                        [[label noteArray] addObject:note];
-                    }
-                    if(!flag){
-                        NSDictionary *think = thinkList[i];
-                        label.name = [think objectForKey:@"name"];
-                        [subject.thinkLabel addObject:label];
-                    }
-                }
-                [modelManager.subjectArray addObject:subject];
-                [[NSNotificationCenter defaultCenter] postNotificationName:@"NETWORKREQUEST_SUBJECT_SUCCESS" object:nil];
-            }
+            SubjectBL *subjectBL = [[SubjectBL alloc] init];
+            [subjectBL addArray:response];
         }else{
             [[NSNotificationCenter defaultCenter] postNotificationName:@"NETWORKREQUEST_SUBJECT_ERROR_INVALID" object:nil];
         }
@@ -224,12 +162,12 @@ static bool debug = YES;
     }];
 }
 
-+ (void)getReportWithQuestionID:(NSString *)questionID{
++ (void)getReportWithQuestionID:(NSString *)questionsID{
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     AccountBL *accountBL = [[AccountBL alloc] init];
     Account *account = accountBL.findAccount;
     [params setObject:account.userID forKey:@"user_id"];
-    [params setObject:questionID forKey:@"question_id"];
+    [params setObject:questionsID forKey:@"question_id"];
     [[self getInstance] POST:@"http://www.molistudy.com/frontend/IOSAPI/getReport" parameters:params success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
         if(debug) {
             NSLog(@"getReportAPI---%@", responseObject);
@@ -237,7 +175,8 @@ static bool debug = YES;
         NSDictionary *responseInfo = responseObject;
         NSString *errorCode = [responseInfo objectForKey:@"err_code"];
         if([errorCode intValue] == 0){
-            
+            ReportBL *reportBL = [ReportBL getInstance];
+            [reportBL addArray:[responseInfo objectForKey:@"study_report"]];
         }else{
             [[NSNotificationCenter defaultCenter] postNotificationName:@"NETWORKREQUEST_REPORT_ERROR_INVALID" object:nil];
         }
@@ -301,6 +240,7 @@ static bool debug = YES;
     Account *account = accountBL.findAccount;
     [params setObject:account.userID forKey:@"user_id"];
     [params setObject:knowledgeID forKey:@"knowledge_id"];
+    [params setObject:@"1" forKey:@"question_type"];
     [[self getInstance] POST:@"http://www.molistudy.com/frontend/IOSAPI/getQuesByKnowId" parameters:params success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
         if(debug) {
             NSLog(@"requestSubjectByID---%@", responseObject);
@@ -308,9 +248,10 @@ static bool debug = YES;
         NSDictionary *responseInfo = responseObject;
         NSString *errorCode = [responseInfo objectForKey:@"err_code"];
         if([errorCode intValue] == 0){
+            NSArray *response = [responseInfo objectForKey:@"question_info"];
+            SubjectBL *subjectBL = [[SubjectBL alloc] init];
+            [subjectBL addArrayByID:response];
             
-            
-            [[NSNotificationCenter defaultCenter] postNotificationName:@"NETWORKREQUEST_SUBJECTBYID_SUCCESS" object:nil];
         }else{
             [[NSNotificationCenter defaultCenter] postNotificationName:@"NETWORKREQUEST_SUBJECTBYID_ERROR_INVALID" object:nil];
         }

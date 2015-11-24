@@ -44,7 +44,6 @@ static PracticeDao* sharedManager = nil;
                 [sharedManager.listData addObject:practice];
             }
         }
-        
     });
     return sharedManager;
 }

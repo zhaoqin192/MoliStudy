@@ -15,6 +15,5 @@
 @property(strong, nonatomic) NSString *style;
 @property(strong, nonatomic) NSString *noteContent;
 
-//- (void) initData;
 
 @end

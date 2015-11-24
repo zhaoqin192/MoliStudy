@@ -7,7 +7,9 @@
 //
 
 #import "ReportBL.h"
-#import "Record.h"
+#import "Report.h"
+#import "DAOContext.h"
+#import "ModelManager.h"
 
 @implementation ReportBL
 
@@ -22,12 +24,22 @@ static ReportBL *sharedManager = nil;
     return sharedManager;
 }
 
-- (void)add:(Report *)report{
-    [self.reportArray addObject:report];
-}
-
 - (NSMutableArray *)findAll{
     return self.reportArray;
+}
+
+- (void)addArray:(NSArray *)array{
+    NSManagedObjectContext *appContext = [DAOContext getInstance].appContext;
+    for(NSDictionary *reportDic in array){
+        Report *report = [NSEntityDescription insertNewObjectForEntityForName:@"Report" inManagedObjectContext:appContext];
+        report.name = [reportDic objectForKey:@"name"];
+        report.knowledgeID = [reportDic objectForKey:@"id"];
+        report.score = [NSNumber numberWithInt:[[reportDic objectForKey:@"cur_score"] intValue]];
+        report.variety = [NSNumber numberWithInt:[[reportDic objectForKey:@"change"] intValue]];
+        [self.reportArray addObject:report];
+    }
+    [ModelManager getInstance].reportArray = self.reportArray;
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"NETWORKREQUEST_REPORT_SUCCESS" object:nil];
 }
 
 @end

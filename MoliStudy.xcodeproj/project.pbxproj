@@ -90,12 +90,12 @@
 		AC53B7DB1C01685E007D3FE8 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AC53B7DA1C01685E007D3FE8 /* libz.tbd */; };
 		AC53B7DD1C01686B007D3FE8 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AC53B7DC1C01686B007D3FE8 /* libstdc++.tbd */; };
 		AC7439171C02B272004BE2A8 /* Subject.m in Sources */ = {isa = PBXBuildFile; fileRef = AC74390A1C02B272004BE2A8 /* Subject.m */; };
-		AC7439181C02B272004BE2A8 /* QuestionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AC74390C1C02B272004BE2A8 /* QuestionModel.m */; };
 		AC7439191C02B272004BE2A8 /* Think-LabelModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AC74390E1C02B272004BE2A8 /* Think-LabelModel.m */; };
 		AC74391A1C02B272004BE2A8 /* thinklabellist_model.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7439101C02B272004BE2A8 /* thinklabellist_model.m */; };
 		AC74391B1C02B272004BE2A8 /* ModelManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7439121C02B272004BE2A8 /* ModelManager.m */; };
 		AC74391C1C02B272004BE2A8 /* ThinkLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7439141C02B272004BE2A8 /* ThinkLabel.m */; };
 		AC74391D1C02B272004BE2A8 /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7439161C02B272004BE2A8 /* Note.m */; };
+		AC901DF91C03F555001B8090 /* SubjectBL.m in Sources */ = {isa = PBXBuildFile; fileRef = AC901DF81C03F555001B8090 /* SubjectBL.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -239,8 +239,6 @@
 		AC53B7DC1C01686B007D3FE8 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		AC7439091C02B272004BE2A8 /* Subject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Subject.h; sourceTree = "<group>"; };
 		AC74390A1C02B272004BE2A8 /* Subject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Subject.m; sourceTree = "<group>"; };
-		AC74390B1C02B272004BE2A8 /* QuestionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionModel.h; sourceTree = "<group>"; };
-		AC74390C1C02B272004BE2A8 /* QuestionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionModel.m; sourceTree = "<group>"; };
 		AC74390D1C02B272004BE2A8 /* Think-LabelModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Think-LabelModel.h"; sourceTree = "<group>"; };
 		AC74390E1C02B272004BE2A8 /* Think-LabelModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Think-LabelModel.m"; sourceTree = "<group>"; };
 		AC74390F1C02B272004BE2A8 /* thinklabellist_model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = thinklabellist_model.h; sourceTree = "<group>"; };
@@ -251,6 +249,8 @@
 		AC7439141C02B272004BE2A8 /* ThinkLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThinkLabel.m; sourceTree = "<group>"; };
 		AC7439151C02B272004BE2A8 /* Note.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Note.h; sourceTree = "<group>"; };
 		AC7439161C02B272004BE2A8 /* Note.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Note.m; sourceTree = "<group>"; };
+		AC901DF71C03F555001B8090 /* SubjectBL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubjectBL.h; sourceTree = "<group>"; };
+		AC901DF81C03F555001B8090 /* SubjectBL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubjectBL.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -519,35 +519,8 @@
 		AC53B77A1C014560007D3FE8 /* data */ = {
 			isa = PBXGroup;
 			children = (
-				AC39B9151BFF649A001CE453 /* MoliStudy.xcdatamodeld */,
-				AC53B77C1C0146FC007D3FE8 /* Report+CoreDataProperties.h */,
-				AC53B77D1C0146FC007D3FE8 /* Report+CoreDataProperties.m */,
-				AC53B77E1C0146FC007D3FE8 /* Report.h */,
-				AC53B77F1C0146FC007D3FE8 /* Report.m */,
-				AC53B7801C0146FC007D3FE8 /* Practice+CoreDataProperties.h */,
-				AC53B7811C0146FC007D3FE8 /* Practice+CoreDataProperties.m */,
-				AC53B7821C0146FC007D3FE8 /* Practice.h */,
-				AC53B7831C0146FC007D3FE8 /* Practice.m */,
-				AC53B7841C0146FC007D3FE8 /* Account+CoreDataProperties.h */,
-				AC53B7851C0146FC007D3FE8 /* Account+CoreDataProperties.m */,
-				AC53B7861C0146FC007D3FE8 /* Account.h */,
-				AC53B7871C0146FC007D3FE8 /* Account.m */,
-				AC53B7881C0146FC007D3FE8 /* Record+CoreDataProperties.h */,
-				AC53B7891C0146FC007D3FE8 /* Record+CoreDataProperties.m */,
-				AC53B78A1C0146FC007D3FE8 /* Record.h */,
-				AC53B78B1C0146FC007D3FE8 /* Record.m */,
-				AC7439091C02B272004BE2A8 /* Subject.h */,
-				AC74390A1C02B272004BE2A8 /* Subject.m */,
-				AC74390B1C02B272004BE2A8 /* QuestionModel.h */,
-				AC74390C1C02B272004BE2A8 /* QuestionModel.m */,
-				AC74390D1C02B272004BE2A8 /* Think-LabelModel.h */,
-				AC74390E1C02B272004BE2A8 /* Think-LabelModel.m */,
-				AC74390F1C02B272004BE2A8 /* thinklabellist_model.h */,
-				AC7439101C02B272004BE2A8 /* thinklabellist_model.m */,
-				AC7439131C02B272004BE2A8 /* ThinkLabel.h */,
-				AC7439141C02B272004BE2A8 /* ThinkLabel.m */,
-				AC7439151C02B272004BE2A8 /* Note.h */,
-				AC7439161C02B272004BE2A8 /* Note.m */,
+				ACA5F2871C02FDBD0038243F /* subject */,
+				ACA5F2861C02FDAB0038243F /* coredata */,
 			);
 			name = data;
 			sourceTree = "<group>";
@@ -602,6 +575,8 @@
 				AC53B7B01C014BFE007D3FE8 /* ReportBL.m */,
 				AC7439111C02B272004BE2A8 /* ModelManager.h */,
 				AC7439121C02B272004BE2A8 /* ModelManager.m */,
+				AC901DF71C03F555001B8090 /* SubjectBL.h */,
+				AC901DF81C03F555001B8090 /* SubjectBL.m */,
 			);
 			name = dataManager;
 			sourceTree = "<group>";
@@ -636,6 +611,47 @@
 				AC53B7CF1C016122007D3FE8 /* SMS_SDK.framework */,
 			);
 			path = SMS_SDK;
+			sourceTree = "<group>";
+		};
+		ACA5F2861C02FDAB0038243F /* coredata */ = {
+			isa = PBXGroup;
+			children = (
+				AC39B9151BFF649A001CE453 /* MoliStudy.xcdatamodeld */,
+				AC53B77C1C0146FC007D3FE8 /* Report+CoreDataProperties.h */,
+				AC53B77D1C0146FC007D3FE8 /* Report+CoreDataProperties.m */,
+				AC53B77E1C0146FC007D3FE8 /* Report.h */,
+				AC53B77F1C0146FC007D3FE8 /* Report.m */,
+				AC53B7801C0146FC007D3FE8 /* Practice+CoreDataProperties.h */,
+				AC53B7811C0146FC007D3FE8 /* Practice+CoreDataProperties.m */,
+				AC53B7821C0146FC007D3FE8 /* Practice.h */,
+				AC53B7831C0146FC007D3FE8 /* Practice.m */,
+				AC53B7841C0146FC007D3FE8 /* Account+CoreDataProperties.h */,
+				AC53B7851C0146FC007D3FE8 /* Account+CoreDataProperties.m */,
+				AC53B7861C0146FC007D3FE8 /* Account.h */,
+				AC53B7871C0146FC007D3FE8 /* Account.m */,
+				AC53B7881C0146FC007D3FE8 /* Record+CoreDataProperties.h */,
+				AC53B7891C0146FC007D3FE8 /* Record+CoreDataProperties.m */,
+				AC53B78A1C0146FC007D3FE8 /* Record.h */,
+				AC53B78B1C0146FC007D3FE8 /* Record.m */,
+			);
+			name = coredata;
+			sourceTree = "<group>";
+		};
+		ACA5F2871C02FDBD0038243F /* subject */ = {
+			isa = PBXGroup;
+			children = (
+				AC7439091C02B272004BE2A8 /* Subject.h */,
+				AC74390A1C02B272004BE2A8 /* Subject.m */,
+				AC74390D1C02B272004BE2A8 /* Think-LabelModel.h */,
+				AC74390E1C02B272004BE2A8 /* Think-LabelModel.m */,
+				AC74390F1C02B272004BE2A8 /* thinklabellist_model.h */,
+				AC7439101C02B272004BE2A8 /* thinklabellist_model.m */,
+				AC7439131C02B272004BE2A8 /* ThinkLabel.h */,
+				AC7439141C02B272004BE2A8 /* ThinkLabel.m */,
+				AC7439151C02B272004BE2A8 /* Note.h */,
+				AC7439161C02B272004BE2A8 /* Note.m */,
+			);
+			name = subject;
 			sourceTree = "<group>";
 		};
 		BD3408EB1F0BE4F6E6952F84 /* Frameworks */ = {
@@ -882,6 +898,7 @@
 				AC74391C1C02B272004BE2A8 /* ThinkLabel.m in Sources */,
 				AC53B7A11C01474B007D3FE8 /* DAOContext.m in Sources */,
 				AC53B7B71C014C42007D3FE8 /* RSA.m in Sources */,
+				AC901DF91C03F555001B8090 /* SubjectBL.m in Sources */,
 				AC53B7B21C014BFE007D3FE8 /* RecordBL.m in Sources */,
 				AC7439171C02B272004BE2A8 /* Subject.m in Sources */,
 				AC74391B1C02B272004BE2A8 /* ModelManager.m in Sources */,
@@ -899,7 +916,6 @@
 				AC74391D1C02B272004BE2A8 /* Note.m in Sources */,
 				AC53B7A01C01474B007D3FE8 /* AccountDao.m in Sources */,
 				AC39B90E1BFF649A001CE453 /* AppDelegate.m in Sources */,
-				AC7439181C02B272004BE2A8 /* QuestionModel.m in Sources */,
 				AC18EA651BFF76960092F7D9 /* NetworkManager.m in Sources */,
 				AC39B90B1BFF649A001CE453 /* main.m in Sources */,
 				AC53B78E1C0146FC007D3FE8 /* Practice+CoreDataProperties.m in Sources */,
