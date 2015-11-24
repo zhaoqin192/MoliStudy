@@ -10,7 +10,10 @@
 #define MoliStudy_pch
 
 #import <Masonry/Masonry.h>
+#import <ReactiveCocoa/ReactiveCocoa.h>
+#import <ReactiveCocoa/RACEXTScope.h>
 #import "UIColor+expanded.h"
+#import "UIButton+Bootstrap.h"
 
 #define kScreen_Bounds [UIScreen mainScreen].bounds
 #define kScreen_Height [UIScreen mainScreen].bounds.size.height
@@ -21,4 +24,9 @@
 #define kDevice_Is_iPhone6 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(750, 1334), [[UIScreen mainScreen] currentMode].size) : NO)
 #define kDevice_Is_iPhone6Plus ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242, 2208), [[UIScreen mainScreen] currentMode].size) : NO)
 
+#define kPaddingLeftWidth 15.0
+#define kLoginPaddingLeftWidth 18.0
+
+#define LoginBackgroundColor [UIColor colorWithRed:0.90 green:0.80 blue:0.60 alpha:1.0]
+#define LoginButtonColor [UIColor colorWithRed:0.40 green:0.80 blue:0.57 alpha:1.0]
 #endif /* MoliStudy_pch */

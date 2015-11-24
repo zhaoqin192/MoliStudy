@@ -23,17 +23,29 @@ PODS:
   - JazzHands (2.0.0)
   - Masonry (0.5.3)
   - NYXImagesKit (2.3)
+  - ReactiveCocoa (2.3.1):
+    - ReactiveCocoa/UI (= 2.3.1)
+  - ReactiveCocoa/Core (2.3.1):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.3.1)
+  - ReactiveCocoa/UI (2.3.1):
+    - ReactiveCocoa/Core
+  - TPKeyboardAvoiding (1.2.4)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
   - JazzHands (= 2.0.0)
   - Masonry (= 0.5.3)
   - NYXImagesKit (= 2.3)
+  - ReactiveCocoa (= 2.3.1)
+  - TPKeyboardAvoiding (= 1.2.4)
 
 SPEC CHECKSUMS:
   AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
   JazzHands: 00002e9b1284e7fc1ac6555012e81b8942477242
   Masonry: 9f515466afe48632562342a40a1c224071a1a022
   NYXImagesKit: 8163e3335a40eaa173ca5bbbf81fafb57d3947eb
+  ReactiveCocoa: 334468a83b2c5f669f7cfb9a084415ee23219b4f
+  TPKeyboardAvoiding: 0a40dfbb0af7c8bdae1dd457496dccfd217d85f6
 
 COCOAPODS: 0.39.0

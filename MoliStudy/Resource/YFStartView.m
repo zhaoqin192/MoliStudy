@@ -161,16 +161,16 @@
     [[UIApplication sharedApplication].keyWindow bringSubviewToFront:self];
     
     __weak YFStartView *weakself = self;
-    [UIView animateWithDuration:3.0 animations:^{
+    [UIView animateWithDuration:2.0 animations:^{
         weakself.bgImageView.alpha = 1.0;
     } completion:^(BOOL finished) {
         [UIView animateWithDuration:1.0 animations:^{
+            weakself.bgImageView.alpha = 0.0;
             //关掉了动画
 //            CGAffineTransform newTransform = CGAffineTransformMakeScale(1.2, 1.2);
 //            [weakself.bgImageView setTransform:newTransform];
         } completion:^(BOOL finished) {
             [UIView animateWithDuration:2.0 animations:^{
-                weakself.bgImageView.alpha = 0.0;
                 [weakself removeFromSuperview];
 //                [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:YES];
             }];

@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '06EFD6281D258BA8DA619BDC'
+               BlueprintIdentifier = '913E722198B009A6555BC32D'
                BlueprintName = 'JazzHands'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libJazzHands.a'>

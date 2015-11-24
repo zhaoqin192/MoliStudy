@@ -34,10 +34,10 @@
     //短信验证
     [SMSSDK registerApp:appKey withSecret:appSecret];
     
-//    IntroductionViewController *introductionVC = [[IntroductionViewController alloc] init];
-//    self.window.rootViewController = introductionVC;
-    TestViewController *testViewContorller = [[TestViewController alloc] initWithNibName:@"TestViewController" bundle:nil];
-    self.window.rootViewController = testViewContorller;
+    IntroductionViewController *introductionVC = [[IntroductionViewController alloc] init];
+    self.window.rootViewController = introductionVC;
+//    TestViewController *testViewContorller = [[TestViewController alloc] initWithNibName:@"TestViewController" bundle:nil];
+//    self.window.rootViewController = testViewContorller;
     
     [self configureStartView];
     return YES;

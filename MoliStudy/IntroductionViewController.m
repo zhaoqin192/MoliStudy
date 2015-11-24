@@ -9,6 +9,7 @@
 #import "IntroductionViewController.h"
 #import "SMPageControl.h"
 #import <NYXImagesKit/NYXImagesKit.h>
+#import "LoginViewController.h"
 
 @interface IntroductionViewController ()
 
@@ -225,6 +226,20 @@
             }];
         }
     }
+}
+
+#pragma mark Action
+- (void)registerButtonClicked{
+//    RegisterViewController *vc = [[RegisterViewController alloc] init];
+//    UINavigationController *nav = [[BaseNavigationController alloc] initWithRootViewController:vc];
+//    [self presentViewController:nav animated:YES completion:nil];
+    NSLog(@"regitster btn clicked");
+}
+
+- (void)loginButtonClicked{
+    LoginViewController *vc = [[LoginViewController alloc] init];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    [self presentViewController:nav animated:YES completion:nil];
 }
 
 #pragma mark Super
