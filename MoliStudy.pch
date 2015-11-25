@@ -18,7 +18,9 @@
 #import "ProgressHUD.h"
 
 #define kScreen_Bounds [UIScreen mainScreen].bounds
+#define ScreenHeight    [UIScreen mainScreen].bounds.size.height
 #define kScreen_Height [UIScreen mainScreen].bounds.size.height
+#define ScreenWidth  [UIScreen mainScreen].bounds.size.width
 #define kScreen_Width [UIScreen mainScreen].bounds.size.width
 #define kScaleFrom_iPhone5_Desgin(_X_) (_X_ * (kScreen_Width/320))
 
@@ -31,4 +33,6 @@
 
 #define LoginBackgroundColor [UIColor colorWithRed:0.90 green:0.80 blue:0.60 alpha:1.0]
 #define LoginButtonColor [UIColor colorWithRed:0.40 green:0.80 blue:0.57 alpha:1.0]
+#define myColor(r,g,b,a)  [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
+
 #endif /* MoliStudy_pch */

@@ -55,6 +55,7 @@
 + (UIColor *)colorWithHexString:(NSString *)stringToConvert andAlpha:(CGFloat)alpha;
 
 + (UIColor *)colorWithName:(NSString *)cssColorName;
++ (UIColor *)colorWithHexString:(NSString *)color alpha:(CGFloat)alpha;
 
 @end
 

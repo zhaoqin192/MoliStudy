@@ -11,6 +11,9 @@
 #import <NYXImagesKit/NYXImagesKit.h>
 #import "Login.h"
 #import "NetworkManager.h"
+#import "LeftTableViewController.h"
+#import "DrawerViewController.h"
+#import "MainViewController.h"
 
 @interface LoginViewController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -19,7 +22,7 @@
 @property (strong, nonatomic) UIImageView *iconUserView;
 @property (strong, nonatomic) UIButton *dismissButton;
 @property (strong, nonatomic) Login *myLogin;
-
+@property (nonatomic, strong) DrawerViewController *sideViewController;
 @end
 
 @implementation LoginViewController
@@ -127,6 +130,18 @@
     
     [[[NSNotificationCenter defaultCenter] rac_addObserverForName:@"NETWORKREQUEST_LOGIN_SUCCESS" object:nil] subscribeNext:^(id x) {
         [ProgressHUD showSuccess:@"登录成功！"];
+        
+        self.sideViewController = [[DrawerViewController alloc] init];
+        //抽屉
+        MainViewController *mainVC = [[MainViewController alloc] init];
+        UINavigationController *mainNC = [[UINavigationController alloc] initWithRootViewController:mainVC];
+        LeftTableViewController *leftVC = [[LeftTableViewController alloc] init];
+        _sideViewController.rootViewController = mainNC;
+        _sideViewController.leftViewController = leftVC;
+        _sideViewController.leftViewShowWidth = 300.0/375 *kScreen_Width;
+        _sideViewController.rightViewShowWidth = 300.0/375 *kScreen_Width;
+        _sideViewController.needSwipeShowMenu = YES;
+        [self.navigationController pushViewController:_sideViewController animated:YES];
     }];
     [[[NSNotificationCenter defaultCenter] rac_addObserverForName:@"NSNotification NETWORKREQUEST_LOGIN_ERROR_INVALID" object:nil] subscribeNext:^(id x) {
         [ProgressHUD showError:@"用户ID错误，请重新登录."];
