@@ -119,7 +119,7 @@ static bool debug = YES;
     Account *account = accountBL.findAccount;
     [params setObject:account.userID forKey:@"user_id"];
     [params setObject:@"1" forKey:@"main_course_id"];
-    [params setObject:@"1" forKey:@"question_type"];
+    [params setObject:@"1,11" forKey:@"question_type"];
     [[self getInstance] POST:@"http://www.molistudy.com/frontend/IOSAPI/getQuestion" parameters:params success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
         if(debug) {
             NSLog(@"getSubjects--%@", responseObject);

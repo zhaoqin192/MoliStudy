@@ -20,8 +20,8 @@
 		30AA1C4A1C05A3AF00CD94D5 /* MZTimerLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AA1C491C05A3AF00CD94D5 /* MZTimerLabel.m */; };
 		30AA1C501C05A88500CD94D5 /* QuestionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AA1C4F1C05A88500CD94D5 /* QuestionModel.m */; };
 		30AA1C531C05A96D00CD94D5 /* TextStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AA1C521C05A96D00CD94D5 /* TextStyle.m */; };
-		30AA1C591C05B05500CD94D5 /* StudyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AA1C581C05B05500CD94D5 /* StudyViewController.m */; };
 		30AA1C5C1C05B39100CD94D5 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AA1C5B1C05B39100CD94D5 /* UIView+Frame.m */; };
+		30AA1C5F1C05C0C100CD94D5 /* StudyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AA1C5E1C05C0C100CD94D5 /* StudyViewController.m */; };
 		30AAE3BA1C02B5E100CD94D5 /* public_key.der in Resources */ = {isa = PBXBuildFile; fileRef = 30AAE3B91C02B5E100CD94D5 /* public_key.der */; };
 		30AAE3C21C02BA7F00CD94D5 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 30AAE3BD1C02BA7F00CD94D5 /* logo.png */; };
 		30AAE3C31C02BA7F00CD94D5 /* startImage1.png in Resources */ = {isa = PBXBuildFile; fileRef = 30AAE3BE1C02BA7F00CD94D5 /* startImage1.png */; };
@@ -558,10 +558,10 @@
 		30AA1C4F1C05A88500CD94D5 /* QuestionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionModel.m; sourceTree = "<group>"; };
 		30AA1C511C05A96D00CD94D5 /* TextStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextStyle.h; sourceTree = "<group>"; };
 		30AA1C521C05A96D00CD94D5 /* TextStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextStyle.m; sourceTree = "<group>"; };
-		30AA1C571C05B05500CD94D5 /* StudyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudyViewController.h; sourceTree = "<group>"; };
-		30AA1C581C05B05500CD94D5 /* StudyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudyViewController.m; sourceTree = "<group>"; };
 		30AA1C5A1C05B39100CD94D5 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		30AA1C5B1C05B39100CD94D5 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		30AA1C5D1C05C0C100CD94D5 /* StudyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudyViewController.h; sourceTree = "<group>"; };
+		30AA1C5E1C05C0C100CD94D5 /* StudyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudyViewController.m; sourceTree = "<group>"; };
 		30AAE3B91C02B5E100CD94D5 /* public_key.der */ = {isa = PBXFileReference; lastKnownFileType = file; name = public_key.der; path = ../public_key.der; sourceTree = "<group>"; };
 		30AAE3BD1C02BA7F00CD94D5 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		30AAE3BE1C02BA7F00CD94D5 /* startImage1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = startImage1.png; sourceTree = "<group>"; };
@@ -1179,8 +1179,8 @@
 				30AA1C2D1C05A2A300CD94D5 /* TableViewHeader.m */,
 				30AA1C511C05A96D00CD94D5 /* TextStyle.h */,
 				30AA1C521C05A96D00CD94D5 /* TextStyle.m */,
-				30AA1C571C05B05500CD94D5 /* StudyViewController.h */,
-				30AA1C581C05B05500CD94D5 /* StudyViewController.m */,
+				30AA1C5D1C05C0C100CD94D5 /* StudyViewController.h */,
+				30AA1C5E1C05C0C100CD94D5 /* StudyViewController.m */,
 			);
 			name = StudyView;
 			sourceTree = "<group>";
@@ -3001,7 +3001,6 @@
 				30AAF80A1C047E4300CD94D5 /* UIButton+Bootstrap.m in Sources */,
 				30AAFB911C0594F600CD94D5 /* MainViewController.m in Sources */,
 				30AA1C4A1C05A3AF00CD94D5 /* MZTimerLabel.m in Sources */,
-				30AA1C591C05B05500CD94D5 /* StudyViewController.m in Sources */,
 				30AAF8061C047B4300CD94D5 /* LoginViewController.m in Sources */,
 				AC53B78F1C0146FC007D3FE8 /* Practice.m in Sources */,
 				30AA1C361C05A2D600CD94D5 /* AKPickerView.m in Sources */,
@@ -3049,6 +3048,7 @@
 				30AA1C461C05A37B00CD94D5 /* DXPopover.m in Sources */,
 				30AAFBA31C0595EC00CD94D5 /* MDRadialProgressLabel.m in Sources */,
 				30AA1C301C05A2A300CD94D5 /* ScrollerView.m in Sources */,
+				30AA1C5F1C05C0C100CD94D5 /* StudyViewController.m in Sources */,
 				AC53B7A01C01474B007D3FE8 /* AccountDao.m in Sources */,
 				AC39B90E1BFF649A001CE453 /* AppDelegate.m in Sources */,
 				30AAFB9B1C05959200CD94D5 /* HeadView.m in Sources */,

@@ -36,6 +36,7 @@
     if (attributeString) {
         _textLabel.attributedText = attributeString;
     }
+    self.contentSize = CGSizeMake(ScreenWidth,CGRectGetMaxY(self.textLabel.frame) + 20);
 }
 
 
