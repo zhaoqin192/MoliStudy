@@ -402,6 +402,8 @@
 		30AAFB301C04A78A00CD94D5 /* UIBarButtonItem+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AAFB2F1C04A78A00CD94D5 /* UIBarButtonItem+Common.m */; };
 		30AAFB321C05400E00CD94D5 /* University.plist in Resources */ = {isa = PBXBuildFile; fileRef = 30AAFB311C05400E00CD94D5 /* University.plist */; };
 		30AAFB381C0567E700CD94D5 /* PhoneRegisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AAFB371C0567E700CD94D5 /* PhoneRegisterController.m */; };
+		30AAFB3D1C05850500CD94D5 /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 30AAFB3A1C05850500CD94D5 /* ProgressHUD.bundle */; };
+		30AAFB3E1C05850500CD94D5 /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AAFB3C1C05850500CD94D5 /* ProgressHUD.m */; };
 		7BFB8F4343390DAA1FE273AA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60A0CAC4C28DE69D69868F29 /* libPods.a */; };
 		AC18EA651BFF76960092F7D9 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AC18EA641BFF76960092F7D9 /* NetworkManager.m */; };
 		AC39B90B1BFF649A001CE453 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AC39B90A1BFF649A001CE453 /* main.m */; };
@@ -879,6 +881,9 @@
 		30AAFB311C05400E00CD94D5 /* University.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = University.plist; sourceTree = "<group>"; };
 		30AAFB361C0567E700CD94D5 /* PhoneRegisterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneRegisterController.h; sourceTree = "<group>"; };
 		30AAFB371C0567E700CD94D5 /* PhoneRegisterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneRegisterController.m; sourceTree = "<group>"; };
+		30AAFB3A1C05850500CD94D5 /* ProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ProgressHUD.bundle; sourceTree = "<group>"; };
+		30AAFB3B1C05850500CD94D5 /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
+		30AAFB3C1C05850500CD94D5 /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
 		60A0CAC4C28DE69D69868F29 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		95456BA8E0DB14D551D3A063 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		AC18EA631BFF76960092F7D9 /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
@@ -1032,6 +1037,7 @@
 		30AAE3CA1C02BB9000CD94D5 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				30AAFB391C05850500CD94D5 /* ProgressHUD */,
 				30AAE3DA1C02C11700CD94D5 /* SMPageControl */,
 				30AAE3D11C02BE5D00CD94D5 /* YFStartView */,
 			);
@@ -1772,6 +1778,16 @@
 			name = RegisterView;
 			sourceTree = "<group>";
 		};
+		30AAFB391C05850500CD94D5 /* ProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				30AAFB3A1C05850500CD94D5 /* ProgressHUD.bundle */,
+				30AAFB3B1C05850500CD94D5 /* ProgressHUD.h */,
+				30AAFB3C1C05850500CD94D5 /* ProgressHUD.m */,
+			);
+			path = ProgressHUD;
+			sourceTree = "<group>";
+		};
 		AC39B8FD1BFF649A001CE453 = {
 			isa = PBXGroup;
 			children = (
@@ -2496,6 +2512,7 @@
 				30AAFAB81C04817600CD94D5 /* sex_man_icon@2x.png in Resources */,
 				30AAFAEC1C04817600CD94D5 /* time_clock_icon@2x.png in Resources */,
 				30AAFAA61C04817600CD94D5 /* placeholder_monkey_round_25@2x.png in Resources */,
+				30AAFB3D1C05850500CD94D5 /* ProgressHUD.bundle in Resources */,
 				30AAFAFF1C04817600CD94D5 /* tipIcon_TweetLike@2x.png in Resources */,
 				30AAFA791C04817600CD94D5 /* messageLeft_bg_highlight_img@2x.png in Resources */,
 				30AAFB051C04817600CD94D5 /* tweet_btn_liked@2x.png in Resources */,
@@ -2597,6 +2614,7 @@
 				AC53B7931C0146FC007D3FE8 /* Record.m in Sources */,
 				AC53B7A61C014AA8007D3FE8 /* UtilityBL.m in Sources */,
 				30AAE3C91C02BB7D00CD94D5 /* YFStartView.m in Sources */,
+				30AAFB3E1C05850500CD94D5 /* ProgressHUD.m in Sources */,
 				AC53B7B41C014BFE007D3FE8 /* ReportBL.m in Sources */,
 				AC74391C1C02B272004BE2A8 /* ThinkLabel.m in Sources */,
 				AC53B7A11C01474B007D3FE8 /* DAOContext.m in Sources */,

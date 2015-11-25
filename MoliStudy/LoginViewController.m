@@ -126,16 +126,16 @@
 - (void)configureNotification{
     
     [[[NSNotificationCenter defaultCenter] rac_addObserverForName:@"NETWORKREQUEST_LOGIN_SUCCESS" object:nil] subscribeNext:^(id x) {
-        NSLog(@"成功");
+        [ProgressHUD showSuccess:@"登录成功！"];
     }];
     [[[NSNotificationCenter defaultCenter] rac_addObserverForName:@"NSNotification NETWORKREQUEST_LOGIN_ERROR_INVALID" object:nil] subscribeNext:^(id x) {
-        NSLog(@"用户ID错误，请重新登录");
+        [ProgressHUD showError:@"用户ID错误，请重新登录."];
     }];
     [[[NSNotificationCenter defaultCenter] rac_addObserverForName:@"NSNotification NETWORKREQUEST_LOGIN_ERROR_DUPLICATE" object:nil] subscribeNext:^(id x) {
-        NSLog(@"用户名重复");
+        [ProgressHUD showError:@"用户名重复."];
     }];
     [[[NSNotificationCenter defaultCenter] rac_addObserverForName:@"NETWORKREQUEST_LOGIN_FAILURE" object:nil] subscribeNext:^(id x) {
-        NSLog(@"网络请求失败");
+        [ProgressHUD showError:@"网络请求失败"];
     }];
     
 }
@@ -224,7 +224,10 @@
 #pragma mark Btn Clicked
 - (void)sendLogin{
     NSLog(@"btn clicked");
-    [NetworkManager loginRequestWithUserName:self.myLogin.email withPassword:self.myLogin.password];
+    [ProgressHUD show:@"Please wait..."];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+       [NetworkManager loginRequestWithUserName:self.myLogin.email withPassword:self.myLogin.password];
+    });
 }
 
 
