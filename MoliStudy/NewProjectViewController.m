@@ -9,7 +9,7 @@
 #import "NewProjectViewController.h"
 #import "NewProjectTypeViewController.h"
 
-@interface NewProjectViewController ()<NewProjectTypeDelegate,UITextFieldDelegate>
+@interface NewProjectViewController ()<NewProjectTypeDelegate>
 
 @property (nonatomic, assign) NewProjectType projectType;
 @property (nonatomic, strong) UIBarButtonItem *submitButtonItem;
@@ -25,33 +25,17 @@
     [self.tableView setSeparatorColor:[UIColor colorWithRGBHex:0xe5e5e5]];
 
     self.submitButtonItem = [UIBarButtonItem itemWithBtnTitle:@"下一步" target:self action:@selector(submit)];
-    self.submitButtonItem.enabled = NO;
     self.navigationItem.rightBarButtonItem = self.submitButtonItem;
     
-    // 默认类型
-    self.projectType = NewProjectTypePrivate;
-
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithBtnTitle:@"取消" target:self action:@selector(dismiss)];
 }
 
--(void)selectProjectImage{
-    NSLog(@"select");
+- (void)dismiss{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 -(void)submit{
     NSLog(@"submit");
-}
-
-
--(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
-    NSString *str = [textField.text stringByReplacingCharactersInRange:range withString:string];
-    
-    if ([str length] > 0) {
-        self.submitButtonItem.enabled = YES;
-    }else{
-        self.submitButtonItem.enabled = NO;
-    }
-    
-    return YES;
 }
 
 
@@ -64,31 +48,47 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    if (indexPath.section == 0 && indexPath.row == 0) {
+    if (indexPath.section == 0 && indexPath.row == NewProjectTypeAim) {
         // 类型
         NewProjectTypeViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"NewProjectTypeVC"];
-        vc.projectType = self.projectType;
+        vc.projectType = NewProjectTypeAim;
         vc.delegate = self;
         [self.navigationController pushViewController:vc animated:YES];
     }
+    else if (indexPath.section == 0 && indexPath.row == NewProjectTypeSchool) {
+        // 类型
+        NewProjectTypeViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"NewProjectTypeVC"];
+        vc.projectType = NewProjectTypeSchool;
+        vc.delegate = self;
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+    else if (indexPath.section == 0 && indexPath.row == NewProjectTypeTime) {
+        // 类型
+        NewProjectTypeViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"NewProjectTypeVC"];
+        vc.projectType = NewProjectTypeTime;
+        vc.delegate = self;
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+    
 }
 
 
 
 #pragma mark NewProjectTypeViewController Delegate
 
--(void)newProjectType:(NewProjectTypeViewController *)newProjectVC didSelectType:(NewProjectType)type{
+-(void)newProjectType:(NewProjectTypeViewController *)newProjectVC didSelectTime:(NSString*)time{
     [newProjectVC.navigationController popViewControllerAnimated:YES];
-    
-    //
-    self.projectType = type;
-    
-    if (self.projectType == NewProjectTypePublic) {
-        self.projectTypeLabel.text = @"公开";
-    }else{
-        self.projectTypeLabel.text = @"私有";
-    }
+    self.timeLabel.text = time;
 }
 
+-(void)newProjectType:(NewProjectTypeViewController *)newProjectVC didSelectAim:(NSString*)aim{
+    [newProjectVC.navigationController popViewControllerAnimated:YES];
+    self.aimLabel.text = aim;
+}
+
+-(void)newProjectType:(NewProjectTypeViewController *)newProjectVC didSelectSchool:(NSString *)school{
+    [newProjectVC.navigationController popViewControllerAnimated:YES];
+    self.schoolLabel.text = school;
+}
 
 @end

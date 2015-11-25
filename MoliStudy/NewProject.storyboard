@@ -18,7 +18,7 @@
                         <sections>
                             <tableViewSection headerTitle=" " id="QmN-Gz-eLn">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Vxv-hb-Gy3">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="Vxv-hb-Gy3">
                                         <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vxv-hb-Gy3" id="539-D8-tG7">
@@ -265,6 +265,12 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="z6g-F2-J7c"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="aimLabel" destination="Ri6-Ib-0qu" id="VQ6-Wg-QrA"/>
+                        <outlet property="nameTextField" destination="dFR-vP-Dy6" id="XtL-6N-cSc"/>
+                        <outlet property="schoolLabel" destination="hhD-CC-8qT" id="Of4-H9-hHX"/>
+                        <outlet property="timeLabel" destination="v6M-4P-nBe" id="Njn-QV-ORo"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f41-ib-nma" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

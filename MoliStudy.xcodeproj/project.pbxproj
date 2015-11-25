@@ -400,6 +400,7 @@
 		30AAFB2C1C04A50100CD94D5 /* NewProjectTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AAFB281C04A50100CD94D5 /* NewProjectTypeViewController.m */; };
 		30AAFB2D1C04A50100CD94D5 /* NewProjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AAFB2A1C04A50100CD94D5 /* NewProjectViewController.m */; };
 		30AAFB301C04A78A00CD94D5 /* UIBarButtonItem+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AAFB2F1C04A78A00CD94D5 /* UIBarButtonItem+Common.m */; };
+		30AAFB321C05400E00CD94D5 /* University.plist in Resources */ = {isa = PBXBuildFile; fileRef = 30AAFB311C05400E00CD94D5 /* University.plist */; };
 		7BFB8F4343390DAA1FE273AA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60A0CAC4C28DE69D69868F29 /* libPods.a */; };
 		AC18EA651BFF76960092F7D9 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AC18EA641BFF76960092F7D9 /* NetworkManager.m */; };
 		AC39B90B1BFF649A001CE453 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AC39B90A1BFF649A001CE453 /* main.m */; };
@@ -874,6 +875,7 @@
 		30AAFB2A1C04A50100CD94D5 /* NewProjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewProjectViewController.m; sourceTree = "<group>"; };
 		30AAFB2E1C04A78A00CD94D5 /* UIBarButtonItem+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Common.h"; sourceTree = "<group>"; };
 		30AAFB2F1C04A78A00CD94D5 /* UIBarButtonItem+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Common.m"; sourceTree = "<group>"; };
+		30AAFB311C05400E00CD94D5 /* University.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = University.plist; sourceTree = "<group>"; };
 		60A0CAC4C28DE69D69868F29 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		95456BA8E0DB14D551D3A063 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		AC18EA631BFF76960092F7D9 /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
@@ -1804,6 +1806,7 @@
 		AC39B9091BFF649A001CE453 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				30AAFB311C05400E00CD94D5 /* University.plist */,
 				30AAE3D21C02C01600CD94D5 /* MoliStudy.pch */,
 				AC39B9181BFF649A001CE453 /* Assets.xcassets */,
 				30AAE3B91C02B5E100CD94D5 /* public_key.der */,
@@ -2435,6 +2438,7 @@
 				30AAF9C51C04817600CD94D5 /* btn_privateMsg_stranger@2x.png in Resources */,
 				30AAFAD81C04817600CD94D5 /* taskPriority1_small@2x.png in Resources */,
 				30AAFA691C04817600CD94D5 /* keyboard_photo@2x.png in Resources */,
+				30AAFB321C05400E00CD94D5 /* University.plist in Resources */,
 				30AAFAD51C04817600CD94D5 /* taskPriority0@2x.png in Resources */,
 				30AAE40E1C02C1F600CD94D5 /* intro_icon_6@2x.png in Resources */,
 				30AAF9EE1C04817600CD94D5 /* coding_emoji_27@2x.png in Resources */,

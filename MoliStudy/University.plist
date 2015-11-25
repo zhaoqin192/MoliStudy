@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>北京大学</string>
+	<string>清华大学</string>
+	<string>北京航空航天大学</string>
+	<string>中国人民大学</string>
+	<string>北京理工大学</string>
+	<string>北京交通大学</string>
+	<string>北京工业大学</string>
+	<string>北京科技大学</string>
+	<string>北方工业大学</string>
+	<string>北京化工大学</string>
+	<string>北京工商大学</string>
+	<string>北京服装学院</string>
+	<string>北京邮电大学</string>
+	<string>北京印刷学院</string>
+	<string>北京建筑大学</string>
+	<string>北京石油化工学院</string>
+	<string>北京电子科技学院</string>
+	<string>中国农业大学</string>
+	<string>北京农学院</string>
+	<string>北京林业大学</string>
+	<string>北京协和医学院</string>
+	<string>首都医科大学</string>
+	<string>北京中医药大学</string>
+	<string>北京师范大学</string>
+	<string>首都师范大学</string>
+	<string>首都体育学院</string>
+	<string>北京外国语大学</string>
+	<string>北京第二外国语学院</string>
+</array>
+</plist>

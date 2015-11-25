@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface NewProjectViewController : UITableViewController
-
-@property (strong, nonatomic) IBOutlet UITextField *projectNameTextField;
-@property (strong, nonatomic) IBOutlet UILabel *projectTypeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *schoolLabel;
+@property (weak, nonatomic) IBOutlet UILabel *aimLabel;
+@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
+@property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 
 @end

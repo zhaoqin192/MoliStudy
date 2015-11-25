@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 
 typedef NS_ENUM(NSUInteger, NewProjectType) {
-    NewProjectTypePrivate = 0,
-    NewProjectTypePublic = 1,
+    NewProjectTypeSchool = 1,
+    NewProjectTypeAim = 2,
+    NewProjectTypeTime = 3
 };
 
 @class NewProjectTypeViewController;
@@ -19,7 +20,11 @@ typedef NS_ENUM(NSUInteger, NewProjectType) {
 
 // 选中回调
 -(void)newProjectType:(NewProjectTypeViewController *)newProjectVC
-        didSelectType:(NewProjectType)type;
+        didSelectSchool:(NSString*)school;
+-(void)newProjectType:(NewProjectTypeViewController *)newProjectVC
+      didSelectAim:(NSString*)aim;
+-(void)newProjectType:(NewProjectTypeViewController *)newProjectVC
+      didSelectTime:(NSString*)time;
 
 @end
 
