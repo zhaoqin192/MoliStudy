@@ -67,7 +67,7 @@
  *  error:  a.NETWORKREQUEST_SUBJECT_ERROR_INVALID  用户ID错误，请重新登录
  *          b.NETWORKREQUEST_SUBJECT_FAILURE    网络请求失败
  */
-+ (void)getSubjects;
++ (void)getSubjects:(void (^)())completion;
 
 /**
  *  uploadSituationAPI

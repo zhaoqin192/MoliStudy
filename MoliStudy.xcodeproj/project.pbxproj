@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30AA1C2E1C05A2A300CD94D5 /* AnswerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AA1C251C05A2A300CD94D5 /* AnswerTableViewCell.m */; };
+		30AA1C2F1C05A2A300CD94D5 /* tabView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AA1C271C05A2A300CD94D5 /* tabView.m */; };
+		30AA1C301C05A2A300CD94D5 /* ScrollerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AA1C291C05A2A300CD94D5 /* ScrollerView.m */; };
+		30AA1C311C05A2A300CD94D5 /* PickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AA1C2B1C05A2A300CD94D5 /* PickerView.m */; };
+		30AA1C321C05A2A300CD94D5 /* TableViewHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AA1C2D1C05A2A300CD94D5 /* TableViewHeader.m */; };
+		30AA1C361C05A2D600CD94D5 /* AKPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AA1C351C05A2D600CD94D5 /* AKPickerView.m */; };
+		30AA1C3D1C05A30A00CD94D5 /* PickerLeftArrow.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AA1C391C05A30A00CD94D5 /* PickerLeftArrow.m */; };
+		30AA1C3E1C05A30A00CD94D5 /* PickerRightArrow.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AA1C3C1C05A30A00CD94D5 /* PickerRightArrow.m */; };
+		30AA1C421C05A33A00CD94D5 /* MCTopAligningLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AA1C411C05A33A00CD94D5 /* MCTopAligningLabel.m */; };
+		30AA1C461C05A37B00CD94D5 /* DXPopover.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AA1C451C05A37B00CD94D5 /* DXPopover.m */; };
+		30AA1C4A1C05A3AF00CD94D5 /* MZTimerLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AA1C491C05A3AF00CD94D5 /* MZTimerLabel.m */; };
+		30AA1C501C05A88500CD94D5 /* QuestionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AA1C4F1C05A88500CD94D5 /* QuestionModel.m */; };
+		30AA1C531C05A96D00CD94D5 /* TextStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AA1C521C05A96D00CD94D5 /* TextStyle.m */; };
+		30AA1C591C05B05500CD94D5 /* StudyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AA1C581C05B05500CD94D5 /* StudyViewController.m */; };
+		30AA1C5C1C05B39100CD94D5 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AA1C5B1C05B39100CD94D5 /* UIView+Frame.m */; };
 		30AAE3BA1C02B5E100CD94D5 /* public_key.der in Resources */ = {isa = PBXBuildFile; fileRef = 30AAE3B91C02B5E100CD94D5 /* public_key.der */; };
 		30AAE3C21C02BA7F00CD94D5 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 30AAE3BD1C02BA7F00CD94D5 /* logo.png */; };
 		30AAE3C31C02BA7F00CD94D5 /* startImage1.png in Resources */ = {isa = PBXBuildFile; fileRef = 30AAE3BE1C02BA7F00CD94D5 /* startImage1.png */; };
@@ -517,6 +532,36 @@
 
 /* Begin PBXFileReference section */
 		023B0FA0A76EAEEB884B9ABD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		30AA1C241C05A2A300CD94D5 /* AnswerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnswerTableViewCell.h; sourceTree = "<group>"; };
+		30AA1C251C05A2A300CD94D5 /* AnswerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnswerTableViewCell.m; sourceTree = "<group>"; };
+		30AA1C261C05A2A300CD94D5 /* tabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tabView.h; sourceTree = "<group>"; };
+		30AA1C271C05A2A300CD94D5 /* tabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tabView.m; sourceTree = "<group>"; };
+		30AA1C281C05A2A300CD94D5 /* ScrollerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollerView.h; sourceTree = "<group>"; };
+		30AA1C291C05A2A300CD94D5 /* ScrollerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollerView.m; sourceTree = "<group>"; };
+		30AA1C2A1C05A2A300CD94D5 /* PickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerView.h; sourceTree = "<group>"; };
+		30AA1C2B1C05A2A300CD94D5 /* PickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickerView.m; sourceTree = "<group>"; };
+		30AA1C2C1C05A2A300CD94D5 /* TableViewHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewHeader.h; sourceTree = "<group>"; };
+		30AA1C2D1C05A2A300CD94D5 /* TableViewHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewHeader.m; sourceTree = "<group>"; };
+		30AA1C341C05A2D600CD94D5 /* AKPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKPickerView.h; sourceTree = "<group>"; };
+		30AA1C351C05A2D600CD94D5 /* AKPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKPickerView.m; sourceTree = "<group>"; };
+		30AA1C381C05A30A00CD94D5 /* PickerLeftArrow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerLeftArrow.h; sourceTree = "<group>"; };
+		30AA1C391C05A30A00CD94D5 /* PickerLeftArrow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickerLeftArrow.m; sourceTree = "<group>"; };
+		30AA1C3B1C05A30A00CD94D5 /* PickerRightArrow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerRightArrow.h; sourceTree = "<group>"; };
+		30AA1C3C1C05A30A00CD94D5 /* PickerRightArrow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickerRightArrow.m; sourceTree = "<group>"; };
+		30AA1C401C05A33A00CD94D5 /* MCTopAligningLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCTopAligningLabel.h; sourceTree = "<group>"; };
+		30AA1C411C05A33A00CD94D5 /* MCTopAligningLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCTopAligningLabel.m; sourceTree = "<group>"; };
+		30AA1C441C05A37B00CD94D5 /* DXPopover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXPopover.h; sourceTree = "<group>"; };
+		30AA1C451C05A37B00CD94D5 /* DXPopover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXPopover.m; sourceTree = "<group>"; };
+		30AA1C481C05A3AF00CD94D5 /* MZTimerLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZTimerLabel.h; sourceTree = "<group>"; };
+		30AA1C491C05A3AF00CD94D5 /* MZTimerLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZTimerLabel.m; sourceTree = "<group>"; };
+		30AA1C4E1C05A88500CD94D5 /* QuestionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionModel.h; sourceTree = "<group>"; };
+		30AA1C4F1C05A88500CD94D5 /* QuestionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionModel.m; sourceTree = "<group>"; };
+		30AA1C511C05A96D00CD94D5 /* TextStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextStyle.h; sourceTree = "<group>"; };
+		30AA1C521C05A96D00CD94D5 /* TextStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextStyle.m; sourceTree = "<group>"; };
+		30AA1C571C05B05500CD94D5 /* StudyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudyViewController.h; sourceTree = "<group>"; };
+		30AA1C581C05B05500CD94D5 /* StudyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudyViewController.m; sourceTree = "<group>"; };
+		30AA1C5A1C05B39100CD94D5 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		30AA1C5B1C05B39100CD94D5 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		30AAE3B91C02B5E100CD94D5 /* public_key.der */ = {isa = PBXFileReference; lastKnownFileType = file; name = public_key.der; path = ../public_key.der; sourceTree = "<group>"; };
 		30AAE3BD1C02BA7F00CD94D5 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		30AAE3BE1C02BA7F00CD94D5 /* startImage1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = startImage1.png; sourceTree = "<group>"; };
@@ -1117,6 +1162,83 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		30AA1C231C05A29200CD94D5 /* StudyView */ = {
+			isa = PBXGroup;
+			children = (
+				30AA1C4E1C05A88500CD94D5 /* QuestionModel.h */,
+				30AA1C4F1C05A88500CD94D5 /* QuestionModel.m */,
+				30AA1C241C05A2A300CD94D5 /* AnswerTableViewCell.h */,
+				30AA1C251C05A2A300CD94D5 /* AnswerTableViewCell.m */,
+				30AA1C261C05A2A300CD94D5 /* tabView.h */,
+				30AA1C271C05A2A300CD94D5 /* tabView.m */,
+				30AA1C281C05A2A300CD94D5 /* ScrollerView.h */,
+				30AA1C291C05A2A300CD94D5 /* ScrollerView.m */,
+				30AA1C2A1C05A2A300CD94D5 /* PickerView.h */,
+				30AA1C2B1C05A2A300CD94D5 /* PickerView.m */,
+				30AA1C2C1C05A2A300CD94D5 /* TableViewHeader.h */,
+				30AA1C2D1C05A2A300CD94D5 /* TableViewHeader.m */,
+				30AA1C511C05A96D00CD94D5 /* TextStyle.h */,
+				30AA1C521C05A96D00CD94D5 /* TextStyle.m */,
+				30AA1C571C05B05500CD94D5 /* StudyViewController.h */,
+				30AA1C581C05B05500CD94D5 /* StudyViewController.m */,
+			);
+			name = StudyView;
+			sourceTree = "<group>";
+		};
+		30AA1C331C05A2D600CD94D5 /* AKPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				30AA1C341C05A2D600CD94D5 /* AKPickerView.h */,
+				30AA1C351C05A2D600CD94D5 /* AKPickerView.m */,
+			);
+			path = AKPickerView;
+			sourceTree = "<group>";
+		};
+		30AA1C371C05A30A00CD94D5 /* StudyPagePickerLeftArrow */ = {
+			isa = PBXGroup;
+			children = (
+				30AA1C381C05A30A00CD94D5 /* PickerLeftArrow.h */,
+				30AA1C391C05A30A00CD94D5 /* PickerLeftArrow.m */,
+			);
+			path = StudyPagePickerLeftArrow;
+			sourceTree = "<group>";
+		};
+		30AA1C3A1C05A30A00CD94D5 /* StudyPagePickerRightArrow */ = {
+			isa = PBXGroup;
+			children = (
+				30AA1C3B1C05A30A00CD94D5 /* PickerRightArrow.h */,
+				30AA1C3C1C05A30A00CD94D5 /* PickerRightArrow.m */,
+			);
+			path = StudyPagePickerRightArrow;
+			sourceTree = "<group>";
+		};
+		30AA1C3F1C05A33A00CD94D5 /* MCtopAligingLabel */ = {
+			isa = PBXGroup;
+			children = (
+				30AA1C401C05A33A00CD94D5 /* MCTopAligningLabel.h */,
+				30AA1C411C05A33A00CD94D5 /* MCTopAligningLabel.m */,
+			);
+			path = MCtopAligingLabel;
+			sourceTree = "<group>";
+		};
+		30AA1C431C05A37B00CD94D5 /* DXPopover */ = {
+			isa = PBXGroup;
+			children = (
+				30AA1C441C05A37B00CD94D5 /* DXPopover.h */,
+				30AA1C451C05A37B00CD94D5 /* DXPopover.m */,
+			);
+			path = DXPopover;
+			sourceTree = "<group>";
+		};
+		30AA1C471C05A3AF00CD94D5 /* MZTimerLabel */ = {
+			isa = PBXGroup;
+			children = (
+				30AA1C481C05A3AF00CD94D5 /* MZTimerLabel.h */,
+				30AA1C491C05A3AF00CD94D5 /* MZTimerLabel.m */,
+			);
+			path = MZTimerLabel;
+			sourceTree = "<group>";
+		};
 		30AAE3BB1C02B79900CD94D5 /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -1140,6 +1262,12 @@
 		30AAE3CA1C02BB9000CD94D5 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				30AA1C471C05A3AF00CD94D5 /* MZTimerLabel */,
+				30AA1C431C05A37B00CD94D5 /* DXPopover */,
+				30AA1C3F1C05A33A00CD94D5 /* MCtopAligingLabel */,
+				30AA1C371C05A30A00CD94D5 /* StudyPagePickerLeftArrow */,
+				30AA1C3A1C05A30A00CD94D5 /* StudyPagePickerRightArrow */,
+				30AA1C331C05A2D600CD94D5 /* AKPickerView */,
 				30AAFB9C1C0595EC00CD94D5 /* MDRadialProgress */,
 				30AAFB391C05850500CD94D5 /* ProgressHUD */,
 				30AAE3DA1C02C11700CD94D5 /* SMPageControl */,
@@ -1170,6 +1298,8 @@
 		30AAE3D61C02C0A200CD94D5 /* OC_Category */ = {
 			isa = PBXGroup;
 			children = (
+				30AA1C5A1C05B39100CD94D5 /* UIView+Frame.h */,
+				30AA1C5B1C05B39100CD94D5 /* UIView+Frame.m */,
 				30AAFB2E1C04A78A00CD94D5 /* UIBarButtonItem+Common.h */,
 				30AAFB2F1C04A78A00CD94D5 /* UIBarButtonItem+Common.m */,
 				30AAE3D31C02C08F00CD94D5 /* UIColor+expanded.h */,
@@ -2107,6 +2237,7 @@
 				30AAFB921C05951E00CD94D5 /* MainView */,
 				30AAFB421C058D4B00CD94D5 /* LeftView */,
 				30AAFBAC1C059CDE00CD94D5 /* ReportView */,
+				30AA1C231C05A29200CD94D5 /* StudyView */,
 			);
 			name = PresentationLayer;
 			sourceTree = "<group>";
@@ -2865,22 +2996,30 @@
 				30AAFBA41C0595EC00CD94D5 /* MDRadialProgressTheme.m in Sources */,
 				30AAE3CE1C02BBFB00CD94D5 /* StartButtomView.m in Sources */,
 				AC53B7921C0146FC007D3FE8 /* Record+CoreDataProperties.m in Sources */,
+				30AA1C501C05A88500CD94D5 /* QuestionModel.m in Sources */,
+				30AA1C531C05A96D00CD94D5 /* TextStyle.m in Sources */,
 				30AAF80A1C047E4300CD94D5 /* UIButton+Bootstrap.m in Sources */,
 				30AAFB911C0594F600CD94D5 /* MainViewController.m in Sources */,
+				30AA1C4A1C05A3AF00CD94D5 /* MZTimerLabel.m in Sources */,
+				30AA1C591C05B05500CD94D5 /* StudyViewController.m in Sources */,
 				30AAF8061C047B4300CD94D5 /* LoginViewController.m in Sources */,
 				AC53B78F1C0146FC007D3FE8 /* Practice.m in Sources */,
+				30AA1C361C05A2D600CD94D5 /* AKPickerView.m in Sources */,
 				AC53B7931C0146FC007D3FE8 /* Record.m in Sources */,
 				AC53B7A61C014AA8007D3FE8 /* UtilityBL.m in Sources */,
+				30AA1C3E1C05A30A00CD94D5 /* PickerRightArrow.m in Sources */,
 				30AAE3C91C02BB7D00CD94D5 /* YFStartView.m in Sources */,
 				30AAFB3E1C05850500CD94D5 /* ProgressHUD.m in Sources */,
 				30AAFB411C058D3800CD94D5 /* LeftTableViewController.m in Sources */,
 				AC53B7B41C014BFE007D3FE8 /* ReportBL.m in Sources */,
+				30AA1C3D1C05A30A00CD94D5 /* PickerLeftArrow.m in Sources */,
 				AC74391C1C02B272004BE2A8 /* ThinkLabel.m in Sources */,
 				30AAFB461C058D7500CD94D5 /* leftTableViewCell.m in Sources */,
 				AC53B7A11C01474B007D3FE8 /* DAOContext.m in Sources */,
 				30AAFB2C1C04A50100CD94D5 /* NewProjectTypeViewController.m in Sources */,
 				AC53B7B71C014C42007D3FE8 /* RSA.m in Sources */,
 				30AAFB301C04A78A00CD94D5 /* UIBarButtonItem+Common.m in Sources */,
+				30AA1C421C05A33A00CD94D5 /* MCTopAligningLabel.m in Sources */,
 				AC901DF91C03F555001B8090 /* SubjectBL.m in Sources */,
 				30AAFB8D1C058F2A00CD94D5 /* DrawerViewController.m in Sources */,
 				AC53B7B21C014BFE007D3FE8 /* RecordBL.m in Sources */,
@@ -2889,13 +3028,16 @@
 				30AAE3D51C02C08F00CD94D5 /* UIColor+expanded.m in Sources */,
 				30AAF8021C047B2300CD94D5 /* Input_OnlyText_Cell.m in Sources */,
 				AC53B7901C0146FC007D3FE8 /* Account+CoreDataProperties.m in Sources */,
+				30AA1C2F1C05A2A300CD94D5 /* tabView.m in Sources */,
 				AC7439191C02B272004BE2A8 /* Think-LabelModel.m in Sources */,
 				30AAFB991C05959200CD94D5 /* MainTableViewCell.m in Sources */,
 				30AAFB381C0567E700CD94D5 /* PhoneRegisterController.m in Sources */,
 				AC74391A1C02B272004BE2A8 /* thinklabellist_model.m in Sources */,
 				30AAFB171C048D0200CD94D5 /* Login.m in Sources */,
+				30AA1C311C05A2A300CD94D5 /* PickerView.m in Sources */,
 				AC39B9171BFF649A001CE453 /* MoliStudy.xcdatamodeld in Sources */,
 				AC53B7A21C01474B007D3FE8 /* ReportDAO.m in Sources */,
+				30AA1C2E1C05A2A300CD94D5 /* AnswerTableViewCell.m in Sources */,
 				AC53B79E1C01474B007D3FE8 /* PracticeDao.m in Sources */,
 				30AAE3D91C02C11100CD94D5 /* SMPageControl.m in Sources */,
 				AC53B7BB1C014CE7007D3FE8 /* GTMBase64.m in Sources */,
@@ -2904,15 +3046,19 @@
 				30AAFBA51C0595EC00CD94D5 /* MDRadialProgressView.m in Sources */,
 				AC74391D1C02B272004BE2A8 /* Note.m in Sources */,
 				30AAFBAB1C059CD600CD94D5 /* ReportViewController.m in Sources */,
+				30AA1C461C05A37B00CD94D5 /* DXPopover.m in Sources */,
 				30AAFBA31C0595EC00CD94D5 /* MDRadialProgressLabel.m in Sources */,
+				30AA1C301C05A2A300CD94D5 /* ScrollerView.m in Sources */,
 				AC53B7A01C01474B007D3FE8 /* AccountDao.m in Sources */,
 				AC39B90E1BFF649A001CE453 /* AppDelegate.m in Sources */,
 				30AAFB9B1C05959200CD94D5 /* HeadView.m in Sources */,
 				AC18EA651BFF76960092F7D9 /* NetworkManager.m in Sources */,
+				30AA1C5C1C05B39100CD94D5 /* UIView+Frame.m in Sources */,
 				AC39B90B1BFF649A001CE453 /* main.m in Sources */,
 				30AAFB9A1C05959200CD94D5 /* setFootView.m in Sources */,
 				AC53B78E1C0146FC007D3FE8 /* Practice+CoreDataProperties.m in Sources */,
 				AC53B7B11C014BFE007D3FE8 /* PracticeBL.m in Sources */,
+				30AA1C321C05A2A300CD94D5 /* TableViewHeader.m in Sources */,
 				AC53B7911C0146FC007D3FE8 /* Account.m in Sources */,
 				30AAE3DD1C02C15D00CD94D5 /* IntroductionViewController.m in Sources */,
 				AC53B78C1C0146FC007D3FE8 /* Report+CoreDataProperties.m in Sources */,

@@ -16,6 +16,7 @@
 #import "UIButton+Bootstrap.h"
 #import "UIBarButtonItem+Common.h"
 #import "ProgressHUD.h"
+#import "UIView+Frame.h"
 
 #define kScreen_Bounds [UIScreen mainScreen].bounds
 #define ScreenHeight    [UIScreen mainScreen].bounds.size.height

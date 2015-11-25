@@ -113,7 +113,7 @@ static bool debug = YES;
     }];
 }
 
-+ (void)getSubjects{
++ (void)getSubjects:(void (^)())completion{
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     AccountBL *accountBL = [[AccountBL alloc] init];
     Account *account = accountBL.findAccount;
@@ -132,6 +132,9 @@ static bool debug = YES;
             [subjectBL addArray:response];
         }else{
             [[NSNotificationCenter defaultCenter] postNotificationName:@"NETWORKREQUEST_SUBJECT_ERROR_INVALID" object:nil];
+        }
+        if (completion) {
+            completion();
         }
     } failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {
         [[NSNotificationCenter defaultCenter] postNotificationName:@"NETWORKREQUEST_SUBJECT_FAILURE" object:nil];

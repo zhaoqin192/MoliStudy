@@ -11,7 +11,7 @@
 #import "ReportViewController.h"
 #import "HeadView.h"
 #import "setFootView.h"
-//#import "StudyViewController.h"
+#import "StudyViewController.h"
 
 @interface MainViewController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -226,20 +226,14 @@
 }
 
 - (void)reportButtonAction{
-
-    
    ReportViewController *reportVC = [[ReportViewController alloc] init];
-    
    [self.navigationController pushViewController:reportVC animated:YES];
-    NSLog(@"reportButton");
 }
 
 - (void)studyButtonAction
 {
-//    StudyViewController *studyVC = [[StudyViewController alloc] init];
-//    
-//    [self.navigationController pushViewController:studyVC animated:YES];
-    NSLog(@"studyButton");
+    StudyViewController *studyVC = [[StudyViewController alloc] init];
+    [self.navigationController pushViewController:studyVC animated:YES];
 }
 /*
 #pragma mark - Navigation

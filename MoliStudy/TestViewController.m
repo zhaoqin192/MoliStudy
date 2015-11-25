@@ -93,9 +93,9 @@
     [NetworkManager getRecordIndex];
 }
 
-- (IBAction)getSubject:(id)sender {
-    [NetworkManager getSubjects];
-}
+//- (IBAction)getSubject:(id)sender {
+//    [NetworkManager getSubjects];
+//}
 
 - (IBAction)upload:(id)sender {
     [NetworkManager uploadSubjectSituationWithQuestionID:@"69" withAnswer:@"a" withTime:10];
