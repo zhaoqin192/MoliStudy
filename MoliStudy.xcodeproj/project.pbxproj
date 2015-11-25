@@ -447,6 +447,8 @@
 		30AAFBA31C0595EC00CD94D5 /* MDRadialProgressLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AAFB9E1C0595EC00CD94D5 /* MDRadialProgressLabel.m */; };
 		30AAFBA41C0595EC00CD94D5 /* MDRadialProgressTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AAFBA01C0595EC00CD94D5 /* MDRadialProgressTheme.m */; };
 		30AAFBA51C0595EC00CD94D5 /* MDRadialProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AAFBA21C0595EC00CD94D5 /* MDRadialProgressView.m */; };
+		30AAFBAB1C059CD600CD94D5 /* ReportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AAFBAA1C059CD600CD94D5 /* ReportViewController.m */; };
+		30AAFBAF1C059CED00CD94D5 /* ReportTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AAFBAE1C059CED00CD94D5 /* ReportTableViewCell.m */; };
 		7BFB8F4343390DAA1FE273AA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60A0CAC4C28DE69D69868F29 /* libPods.a */; };
 		AC18EA651BFF76960092F7D9 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AC18EA641BFF76960092F7D9 /* NetworkManager.m */; };
 		AC39B90B1BFF649A001CE453 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AC39B90A1BFF649A001CE453 /* main.m */; };
@@ -980,6 +982,10 @@
 		30AAFBA01C0595EC00CD94D5 /* MDRadialProgressTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDRadialProgressTheme.m; sourceTree = "<group>"; };
 		30AAFBA11C0595EC00CD94D5 /* MDRadialProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDRadialProgressView.h; sourceTree = "<group>"; };
 		30AAFBA21C0595EC00CD94D5 /* MDRadialProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDRadialProgressView.m; sourceTree = "<group>"; };
+		30AAFBA91C059CD600CD94D5 /* ReportViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportViewController.h; sourceTree = "<group>"; };
+		30AAFBAA1C059CD600CD94D5 /* ReportViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportViewController.m; sourceTree = "<group>"; };
+		30AAFBAD1C059CED00CD94D5 /* ReportTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportTableViewCell.h; sourceTree = "<group>"; };
+		30AAFBAE1C059CED00CD94D5 /* ReportTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportTableViewCell.m; sourceTree = "<group>"; };
 		60A0CAC4C28DE69D69868F29 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		95456BA8E0DB14D551D3A063 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		AC18EA631BFF76960092F7D9 /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
@@ -1990,6 +1996,17 @@
 			path = MDRadialProgress;
 			sourceTree = "<group>";
 		};
+		30AAFBAC1C059CDE00CD94D5 /* ReportView */ = {
+			isa = PBXGroup;
+			children = (
+				30AAFBA91C059CD600CD94D5 /* ReportViewController.h */,
+				30AAFBAA1C059CD600CD94D5 /* ReportViewController.m */,
+				30AAFBAD1C059CED00CD94D5 /* ReportTableViewCell.h */,
+				30AAFBAE1C059CED00CD94D5 /* ReportTableViewCell.m */,
+			);
+			name = ReportView;
+			sourceTree = "<group>";
+		};
 		AC39B8FD1BFF649A001CE453 = {
 			isa = PBXGroup;
 			children = (
@@ -2089,6 +2106,7 @@
 				30AAFB8E1C058F2F00CD94D5 /* DrawerView */,
 				30AAFB921C05951E00CD94D5 /* MainView */,
 				30AAFB421C058D4B00CD94D5 /* LeftView */,
+				30AAFBAC1C059CDE00CD94D5 /* ReportView */,
 			);
 			name = PresentationLayer;
 			sourceTree = "<group>";
@@ -2885,6 +2903,7 @@
 				AC53B7C11C014E26007D3FE8 /* TestViewController.m in Sources */,
 				30AAFBA51C0595EC00CD94D5 /* MDRadialProgressView.m in Sources */,
 				AC74391D1C02B272004BE2A8 /* Note.m in Sources */,
+				30AAFBAB1C059CD600CD94D5 /* ReportViewController.m in Sources */,
 				30AAFBA31C0595EC00CD94D5 /* MDRadialProgressLabel.m in Sources */,
 				AC53B7A01C01474B007D3FE8 /* AccountDao.m in Sources */,
 				AC39B90E1BFF649A001CE453 /* AppDelegate.m in Sources */,
@@ -2898,6 +2917,7 @@
 				30AAE3DD1C02C15D00CD94D5 /* IntroductionViewController.m in Sources */,
 				AC53B78C1C0146FC007D3FE8 /* Report+CoreDataProperties.m in Sources */,
 				AC53B79F1C01474B007D3FE8 /* RecordDao.m in Sources */,
+				30AAFBAF1C059CED00CD94D5 /* ReportTableViewCell.m in Sources */,
 				AC53B7B31C014BFE007D3FE8 /* AccountBL.m in Sources */,
 				30AAFB2D1C04A50100CD94D5 /* NewProjectViewController.m in Sources */,
 			);

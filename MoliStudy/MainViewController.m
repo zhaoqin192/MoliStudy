@@ -8,7 +8,7 @@
 
 #import "MainViewController.h"
 #import "MainTableViewCell.h"
-//#import "ReportViewController.h"
+#import "ReportViewController.h"
 #import "HeadView.h"
 #import "setFootView.h"
 //#import "StudyViewController.h"
@@ -228,9 +228,9 @@
 - (void)reportButtonAction{
 
     
-//   ReportViewController *reportVC = [[ReportViewController alloc] init];
-//    
-//   [self.navigationController pushViewController:reportVC animated:YES];
+   ReportViewController *reportVC = [[ReportViewController alloc] init];
+    
+   [self.navigationController pushViewController:reportVC animated:YES];
     NSLog(@"reportButton");
 }
 

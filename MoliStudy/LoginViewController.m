@@ -14,6 +14,8 @@
 #import "LeftTableViewController.h"
 #import "DrawerViewController.h"
 #import "MainViewController.h"
+#import "AccountBL.h"
+#import "Account.h"
 
 @interface LoginViewController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -30,8 +32,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    AccountBL *accountBL = [[AccountBL alloc] init];
+    Account* account = [accountBL findAccount];
     self.myLogin = [[Login alloc] init];
-    self.myLogin.email = [Login preUserEmail];
+    self.myLogin.email = account.accountName;
+    self.myLogin.password = account.password;
     //    添加myTableView
     _myTableView = ({
         TPKeyboardAvoidingTableView *tableView = [[TPKeyboardAvoidingTableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
