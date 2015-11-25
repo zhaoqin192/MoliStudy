@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface NewProjectViewController : UITableViewController
+
 @property (weak, nonatomic) IBOutlet UILabel *schoolLabel;
 @property (weak, nonatomic) IBOutlet UILabel *aimLabel;
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;

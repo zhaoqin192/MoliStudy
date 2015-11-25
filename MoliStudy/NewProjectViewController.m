@@ -8,6 +8,7 @@
 
 #import "NewProjectViewController.h"
 #import "NewProjectTypeViewController.h"
+#import "PhoneRegisterController.h"
 
 @interface NewProjectViewController ()<NewProjectTypeDelegate>
 
@@ -35,7 +36,8 @@
 }
 
 -(void)submit{
-    NSLog(@"submit");
+    PhoneRegisterController *phoneVC = [self.storyboard instantiateViewControllerWithIdentifier:@"phoneRegitser"];
+    [self.navigationController pushViewController:phoneVC animated:YES];
 }
 
 

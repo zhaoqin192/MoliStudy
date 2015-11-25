@@ -401,6 +401,7 @@
 		30AAFB2D1C04A50100CD94D5 /* NewProjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AAFB2A1C04A50100CD94D5 /* NewProjectViewController.m */; };
 		30AAFB301C04A78A00CD94D5 /* UIBarButtonItem+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AAFB2F1C04A78A00CD94D5 /* UIBarButtonItem+Common.m */; };
 		30AAFB321C05400E00CD94D5 /* University.plist in Resources */ = {isa = PBXBuildFile; fileRef = 30AAFB311C05400E00CD94D5 /* University.plist */; };
+		30AAFB381C0567E700CD94D5 /* PhoneRegisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AAFB371C0567E700CD94D5 /* PhoneRegisterController.m */; };
 		7BFB8F4343390DAA1FE273AA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60A0CAC4C28DE69D69868F29 /* libPods.a */; };
 		AC18EA651BFF76960092F7D9 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AC18EA641BFF76960092F7D9 /* NetworkManager.m */; };
 		AC39B90B1BFF649A001CE453 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AC39B90A1BFF649A001CE453 /* main.m */; };
@@ -876,6 +877,8 @@
 		30AAFB2E1C04A78A00CD94D5 /* UIBarButtonItem+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Common.h"; sourceTree = "<group>"; };
 		30AAFB2F1C04A78A00CD94D5 /* UIBarButtonItem+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Common.m"; sourceTree = "<group>"; };
 		30AAFB311C05400E00CD94D5 /* University.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = University.plist; sourceTree = "<group>"; };
+		30AAFB361C0567E700CD94D5 /* PhoneRegisterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneRegisterController.h; sourceTree = "<group>"; };
+		30AAFB371C0567E700CD94D5 /* PhoneRegisterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneRegisterController.m; sourceTree = "<group>"; };
 		60A0CAC4C28DE69D69868F29 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		95456BA8E0DB14D551D3A063 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		AC18EA631BFF76960092F7D9 /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
@@ -1763,6 +1766,8 @@
 				30AAFB2A1C04A50100CD94D5 /* NewProjectViewController.m */,
 				30AAFB271C04A50100CD94D5 /* NewProjectTypeViewController.h */,
 				30AAFB281C04A50100CD94D5 /* NewProjectTypeViewController.m */,
+				30AAFB361C0567E700CD94D5 /* PhoneRegisterController.h */,
+				30AAFB371C0567E700CD94D5 /* PhoneRegisterController.m */,
 			);
 			name = RegisterView;
 			sourceTree = "<group>";
@@ -2606,6 +2611,7 @@
 				30AAF8021C047B2300CD94D5 /* Input_OnlyText_Cell.m in Sources */,
 				AC53B7901C0146FC007D3FE8 /* Account+CoreDataProperties.m in Sources */,
 				AC7439191C02B272004BE2A8 /* Think-LabelModel.m in Sources */,
+				30AAFB381C0567E700CD94D5 /* PhoneRegisterController.m in Sources */,
 				AC74391A1C02B272004BE2A8 /* thinklabellist_model.m in Sources */,
 				30AAFB171C048D0200CD94D5 /* Login.m in Sources */,
 				AC39B9171BFF649A001CE453 /* MoliStudy.xcdatamodeld in Sources */,
