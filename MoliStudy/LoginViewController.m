@@ -7,10 +7,10 @@
 //
 
 #import "LoginViewController.h"
-//#import "RegisterViewController.h"
 #import "Input_OnlyText_Cell.h"
 #import <NYXImagesKit/NYXImagesKit.h>
 #import "Login.h"
+#import "NetworkManager.h"
 
 @interface LoginViewController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -55,6 +55,11 @@
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES animated:YES];
 //    [self refreshIconUserImage];
+    [self configureNotification];
+}
+
+- (void)didReceiveMemoryWarning{
+    [self removeNotification];
 }
 
 
@@ -114,6 +119,29 @@
 //            [self.iconUserView sd_setImageWithURL:[curUser.avatar urlImageWithCodePathResizeToView:self.iconUserView] placeholderImage:[UIImage imageNamed:@"icon_user_monkey"]];
 //        }
 //    }
+}
+
+#pragma mark - Register Notification
+
+- (void)configureNotification{
+    
+    [[[NSNotificationCenter defaultCenter] rac_addObserverForName:@"NETWORKREQUEST_LOGIN_SUCCESS" object:nil] subscribeNext:^(id x) {
+        NSLog(@"成功");
+    }];
+    [[[NSNotificationCenter defaultCenter] rac_addObserverForName:@"NSNotification NETWORKREQUEST_LOGIN_ERROR_INVALID" object:nil] subscribeNext:^(id x) {
+        NSLog(@"用户ID错误，请重新登录");
+    }];
+    [[[NSNotificationCenter defaultCenter] rac_addObserverForName:@"NSNotification NETWORKREQUEST_LOGIN_ERROR_DUPLICATE" object:nil] subscribeNext:^(id x) {
+        NSLog(@"用户名重复");
+    }];
+    [[[NSNotificationCenter defaultCenter] rac_addObserverForName:@"NETWORKREQUEST_LOGIN_FAILURE" object:nil] subscribeNext:^(id x) {
+        NSLog(@"网络请求失败");
+    }];
+    
+}
+
+- (void)removeNotification{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 #pragma mark - Table view Header Footer
@@ -196,6 +224,7 @@
 #pragma mark Btn Clicked
 - (void)sendLogin{
     NSLog(@"btn clicked");
+    [NetworkManager loginRequestWithUserName:self.myLogin.email withPassword:self.myLogin.password];
 }
 
 
