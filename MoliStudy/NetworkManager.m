@@ -122,7 +122,7 @@ static bool debug = YES;
     [params setObject:@"1,11" forKey:@"question_type"];
     [[self getInstance] POST:@"http://www.molistudy.com/frontend/IOSAPI/getQuestion" parameters:params success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
         if(debug) {
-            NSLog(@"getSubjects--%@", responseObject);
+            NSLog(@"getSubjects");
         }
         NSDictionary *responseInfo = responseObject;
         NSString *errorCode = [responseInfo objectForKey:@"err_code"];
@@ -133,9 +133,11 @@ static bool debug = YES;
         }else{
             [[NSNotificationCenter defaultCenter] postNotificationName:@"NETWORKREQUEST_SUBJECT_ERROR_INVALID" object:nil];
         }
-        if (completion) {
-            completion();
-        }
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (completion) {
+                completion();
+            }
+        });
     } failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {
         [[NSNotificationCenter defaultCenter] postNotificationName:@"NETWORKREQUEST_SUBJECT_FAILURE" object:nil];
     }];

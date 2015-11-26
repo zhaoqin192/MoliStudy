@@ -11,7 +11,6 @@
 		30AA1C2F1C05A2A300CD94D5 /* tabView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AA1C271C05A2A300CD94D5 /* tabView.m */; };
 		30AA1C301C05A2A300CD94D5 /* ScrollerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AA1C291C05A2A300CD94D5 /* ScrollerView.m */; };
 		30AA1C311C05A2A300CD94D5 /* PickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AA1C2B1C05A2A300CD94D5 /* PickerView.m */; };
-		30AA1C321C05A2A300CD94D5 /* TableViewHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AA1C2D1C05A2A300CD94D5 /* TableViewHeader.m */; };
 		30AA1C361C05A2D600CD94D5 /* AKPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AA1C351C05A2D600CD94D5 /* AKPickerView.m */; };
 		30AA1C3D1C05A30A00CD94D5 /* PickerLeftArrow.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AA1C391C05A30A00CD94D5 /* PickerLeftArrow.m */; };
 		30AA1C3E1C05A30A00CD94D5 /* PickerRightArrow.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AA1C3C1C05A30A00CD94D5 /* PickerRightArrow.m */; };
@@ -22,6 +21,7 @@
 		30AA1C531C05A96D00CD94D5 /* TextStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AA1C521C05A96D00CD94D5 /* TextStyle.m */; };
 		30AA1C5C1C05B39100CD94D5 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AA1C5B1C05B39100CD94D5 /* UIView+Frame.m */; };
 		30AA1C5F1C05C0C100CD94D5 /* StudyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AA1C5E1C05C0C100CD94D5 /* StudyViewController.m */; };
+		30AA1CA81C06D34000CD94D5 /* TableViewHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AA1CA71C06D34000CD94D5 /* TableViewHeader.m */; };
 		30AAE3BA1C02B5E100CD94D5 /* public_key.der in Resources */ = {isa = PBXBuildFile; fileRef = 30AAE3B91C02B5E100CD94D5 /* public_key.der */; };
 		30AAE3C21C02BA7F00CD94D5 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 30AAE3BD1C02BA7F00CD94D5 /* logo.png */; };
 		30AAE3C31C02BA7F00CD94D5 /* startImage1.png in Resources */ = {isa = PBXBuildFile; fileRef = 30AAE3BE1C02BA7F00CD94D5 /* startImage1.png */; };
@@ -540,8 +540,6 @@
 		30AA1C291C05A2A300CD94D5 /* ScrollerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollerView.m; sourceTree = "<group>"; };
 		30AA1C2A1C05A2A300CD94D5 /* PickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerView.h; sourceTree = "<group>"; };
 		30AA1C2B1C05A2A300CD94D5 /* PickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickerView.m; sourceTree = "<group>"; };
-		30AA1C2C1C05A2A300CD94D5 /* TableViewHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewHeader.h; sourceTree = "<group>"; };
-		30AA1C2D1C05A2A300CD94D5 /* TableViewHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewHeader.m; sourceTree = "<group>"; };
 		30AA1C341C05A2D600CD94D5 /* AKPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKPickerView.h; sourceTree = "<group>"; };
 		30AA1C351C05A2D600CD94D5 /* AKPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKPickerView.m; sourceTree = "<group>"; };
 		30AA1C381C05A30A00CD94D5 /* PickerLeftArrow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerLeftArrow.h; sourceTree = "<group>"; };
@@ -562,6 +560,8 @@
 		30AA1C5B1C05B39100CD94D5 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		30AA1C5D1C05C0C100CD94D5 /* StudyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudyViewController.h; sourceTree = "<group>"; };
 		30AA1C5E1C05C0C100CD94D5 /* StudyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudyViewController.m; sourceTree = "<group>"; };
+		30AA1CA61C06D34000CD94D5 /* TableViewHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewHeader.h; sourceTree = "<group>"; };
+		30AA1CA71C06D34000CD94D5 /* TableViewHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewHeader.m; sourceTree = "<group>"; };
 		30AAE3B91C02B5E100CD94D5 /* public_key.der */ = {isa = PBXFileReference; lastKnownFileType = file; name = public_key.der; path = ../public_key.der; sourceTree = "<group>"; };
 		30AAE3BD1C02BA7F00CD94D5 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		30AAE3BE1C02BA7F00CD94D5 /* startImage1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = startImage1.png; sourceTree = "<group>"; };
@@ -1175,12 +1175,12 @@
 				30AA1C291C05A2A300CD94D5 /* ScrollerView.m */,
 				30AA1C2A1C05A2A300CD94D5 /* PickerView.h */,
 				30AA1C2B1C05A2A300CD94D5 /* PickerView.m */,
-				30AA1C2C1C05A2A300CD94D5 /* TableViewHeader.h */,
-				30AA1C2D1C05A2A300CD94D5 /* TableViewHeader.m */,
 				30AA1C511C05A96D00CD94D5 /* TextStyle.h */,
 				30AA1C521C05A96D00CD94D5 /* TextStyle.m */,
 				30AA1C5D1C05C0C100CD94D5 /* StudyViewController.h */,
 				30AA1C5E1C05C0C100CD94D5 /* StudyViewController.m */,
+				30AA1CA61C06D34000CD94D5 /* TableViewHeader.h */,
+				30AA1CA71C06D34000CD94D5 /* TableViewHeader.m */,
 			);
 			name = StudyView;
 			sourceTree = "<group>";
@@ -3056,9 +3056,9 @@
 				30AA1C5C1C05B39100CD94D5 /* UIView+Frame.m in Sources */,
 				AC39B90B1BFF649A001CE453 /* main.m in Sources */,
 				30AAFB9A1C05959200CD94D5 /* setFootView.m in Sources */,
+				30AA1CA81C06D34000CD94D5 /* TableViewHeader.m in Sources */,
 				AC53B78E1C0146FC007D3FE8 /* Practice+CoreDataProperties.m in Sources */,
 				AC53B7B11C014BFE007D3FE8 /* PracticeBL.m in Sources */,
-				30AA1C321C05A2A300CD94D5 /* TableViewHeader.m in Sources */,
 				AC53B7911C0146FC007D3FE8 /* Account.m in Sources */,
 				30AAE3DD1C02C15D00CD94D5 /* IntroductionViewController.m in Sources */,
 				AC53B78C1C0146FC007D3FE8 /* Report+CoreDataProperties.m in Sources */,
