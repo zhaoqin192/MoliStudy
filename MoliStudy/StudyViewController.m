@@ -37,8 +37,11 @@
 @property (nonatomic, strong) NSArray *noteArray; //样式数组
 @property (nonatomic, strong, readonly) NSString* answer; //正确答案
 @property (nonatomic, strong) NSMutableArray *tableHeadViewArray;
-@property (nonatomic, assign) NSInteger currentSection;
-@property (nonatomic, strong) NSMutableArray *cicleButtonArray;
+@property (nonatomic, assign) NSInteger currentSection;//当前选中的tableView的section
+@property (nonatomic, strong) NSMutableArray *cicleButtonArray;//选项按钮数组
+@property (nonatomic, assign) BOOL isSubmit;
+//记录时间数组
+@property (nonatomic, strong) NSMutableArray *timeArray;
 
 @end
 
@@ -48,6 +51,8 @@
     [super viewDidLoad];
     _questionId = 0;
     _ABCDarray = @[@"A", @"B", @"C", @"D"];
+    _isSubmit = NO;
+    _timeArray = [[NSMutableArray alloc] init];
     [self loadTimeLabel];
     [self setScrollerView];
 }
@@ -133,11 +138,44 @@
 }
 
 - (void)buttonSelect: (UIButton*)button{
-    for(UIButton* Btn in _cicleButtonArray){
-        [Btn setSelected:NO];
+    if (!_isSubmit) {
+        for(UIButton* Btn in _cicleButtonArray){
+            [Btn setSelected:NO];
+        }
+        [button setSelected:YES];
+        _groupId = (int)button.tag;
     }
-    [button setSelected:YES];
-    _groupId = (int)button.tag;
+}
+
+- (void)configureCicleButton{
+    if (_ABCDarray[_groupId] == _answer) {
+        for (UIButton *button in _cicleButtonArray) {
+            if (button.tag == _groupId){
+                [button setImage:[UIImage imageNamed:@"Correct"] forState:UIControlStateNormal];
+                [button setImage:[UIImage imageNamed:@"Correct"] forState:UIControlStateSelected];
+            }
+            else{
+                [button setImage:[UIImage imageNamed:@"RadioButton-Unselected"] forState:UIControlStateNormal];
+                [button setImage:[UIImage imageNamed:@"RadioButton-Unselected"] forState:UIControlStateSelected];
+            }
+        }
+    }
+    else{
+        for (UIButton *button in _cicleButtonArray) {
+            if (button.tag == _groupId) {
+                [button setImage:[UIImage imageNamed:@"Faulse"] forState:UIControlStateNormal];
+                [button setImage:[UIImage imageNamed:@"Faulse"] forState:UIControlStateSelected];
+            }
+            else if ([_answer isEqualToString: _ABCDarray[button.tag]]){
+                [button setImage:[UIImage imageNamed:@"Correct"] forState:UIControlStateNormal];
+                [button setImage:[UIImage imageNamed:@"Correct"] forState:UIControlStateSelected];
+            }
+            else{
+                [button setImage:[UIImage imageNamed:@"RadioButton-Unselected"] forState:UIControlStateNormal];
+                [button setImage:[UIImage imageNamed:@"RadioButton-Unselected"] forState:UIControlStateSelected];
+            }
+        }
+    }
 }
 
 #pragma mark tableView
@@ -200,19 +238,23 @@
 #pragma mark - HeadViewdelegate
 
 -(void)selectedWith:(TableViewHeader *)view{
-    [self buttonSelect:view.cicleButton];
-    _currentSection = -1;
-    if (view.open) {
-        for(int i = 0;i<[_tableHeadViewArray count];i++)
-        {
-            TableViewHeader *head = [_tableHeadViewArray objectAtIndex:i];
-            head.open = NO;
+    if (_isSubmit) {
+        _currentSection = -1;
+        if (view.open) {
+            for(int i = 0;i<[_tableHeadViewArray count];i++)
+            {
+                TableViewHeader *head = [_tableHeadViewArray objectAtIndex:i];
+                head.open = NO;
+            }
+            [_tableview reloadData];
+            return;
         }
-        [_tableview reloadData];
-        return;
+        _currentSection = view.section;
+        [self reset];
     }
-    _currentSection = view.section;
-    [self reset];
+    else{
+        [self buttonSelect:view.cicleButton];
+    }
 }
 
 - (void)reset
@@ -241,14 +283,33 @@
     //点拔方法
     [tabView1.dianboButton addTarget:self action:@selector(dianboButtonAction) forControlEvents:UIControlEventTouchUpInside];
     //提交方法
-    //    if (self.submitSel == NO) {
-    //        [tabView1.submitButton addTarget:self action:@selector(submitButtonAction:) forControlEvents:UIControlEventTouchUpInside];
-    //    } else if (self.submitSel == YES && self.groupId != nil) {
-    //        [tabView1.submitButton setTitle:@"下一题" forState:UIControlStateNormal];
-    //        [tabView1.submitButton addTarget:self action:@selector(submitButtonAction1:) forControlEvents:UIControlEventTouchUpInside];
-    //        self.submitSel = NO;
-    //    }
+
+    if (_isSubmit == NO) {
+        [tabView1.submitButton addTarget:self action:@selector(submitButtonAction) forControlEvents:UIControlEventTouchUpInside];
+    } else {
+        [tabView1.submitButton setTitle:@"下一题" forState:UIControlStateNormal];
+        [tabView1.submitButton addTarget:self action:@selector(nextButtonAction) forControlEvents:UIControlEventTouchUpInside];
+    }
 }
+
+- (void)submitButtonAction{
+    if (_groupId == -1) {
+        [ProgressHUD showError:@"请选择答案后再提交~"];
+        return;
+    }
+    _isSubmit = YES;
+    [_TimeCountLabel pause];
+    //把做题时间时间数组
+    [self.timeArray addObject:_TimeCountLabel.text];
+    [self configureCicleButton];
+    [self loadTabView];
+    [self loadAKPicker];
+}
+
+- (void)nextButtonAction{
+    _isSubmit = NO;
+}
+
 
 - (void)dianboButtonAction{
     NSLog(@"dianbo");
@@ -258,7 +319,6 @@
     else{
         self.pickerView.hidden = YES;
     }
-    
 }
 
 
