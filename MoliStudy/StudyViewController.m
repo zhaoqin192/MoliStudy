@@ -126,6 +126,7 @@
         tableViewHeader.section = i;
         [tableViewHeader.cicleButton addTarget:self action:@selector(buttonSelect:) forControlEvents:UIControlEventTouchUpInside];
         tableViewHeader.cicleButton.tag = i;
+        tableViewHeader.titleLabel.text = _answers[i];
         [_tableHeadViewArray addObject:tableViewHeader];
         [_cicleButtonArray addObject:tableViewHeader.cicleButton];
     }

@@ -25,6 +25,17 @@
         [_cicleButton setImage:[UIImage imageNamed:@"RadioButton-Unselected"] forState:UIControlStateNormal];
         [_cicleButton setImage:[UIImage imageNamed:@"RadioButton-Selected"] forState:UIControlStateSelected];
         [_button addSubview:_cicleButton];
+        
+        self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, self.height)];
+        [_titleLabel setX:_cicleButton.right];
+        [_titleLabel setCenterY:self.centerY];
+        [_titleLabel setWidth:ScreenWidth - _titleLabel.frame.origin.x-5];
+        _titleLabel.numberOfLines = 0;
+        _titleLabel.textColor = [UIColor grayColor];
+        _titleLabel.font = [UIFont fontWithName:@"Helvetica" size:16];
+        _titleLabel.text = @"";
+        [_button addSubview:_titleLabel];
+
     }
     return self;
 }
