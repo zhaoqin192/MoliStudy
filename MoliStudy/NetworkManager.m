@@ -143,7 +143,7 @@ static bool debug = YES;
     }];
 }
 
-+ (void)uploadSubjectSituationWithQuestionID:(NSString *)questionID withAnswer:(NSString *)answer withTime:(int)time{
++ (void)uploadSubjectSituationWithQuestionID:(NSString *)questionID withAnswer:(NSString *)answer withTime:(int)time completion:(void (^)())completion{
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     AccountBL *accountBL = [[AccountBL alloc] init];
     Account *account = accountBL.findAccount;
@@ -153,12 +153,15 @@ static bool debug = YES;
     [params setObject:[NSString stringWithFormat:@"%d", time] forKey:@"study_time"];
     [[self getInstance] POST:@"http://www.molistudy.com/frontend/IOSAPI/saveLog" parameters:params success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
         if(debug) {
-            NSLog(@"uploadSubjectAPI——%@", responseObject);
+            NSLog(@"uploadSubjectAPI");
         }
         NSDictionary *responseInfo = responseObject;
         NSString *errorCode = [responseInfo objectForKey:@"err_code"];
         if([errorCode intValue] == 0){
             [[NSNotificationCenter defaultCenter] postNotificationName:@"NETWORKREQUEST_UPLOAD_SUCCESS" object:nil];
+            if (completion) {
+                completion();
+            }
         }else{
             [[NSNotificationCenter defaultCenter] postNotificationName:@"NETWORKREQUEST_UPLOAD_ERROR_INVALID" object:nil];
         }
@@ -167,7 +170,7 @@ static bool debug = YES;
     }];
 }
 
-+ (void)getReportWithQuestionID:(NSString *)questionsID{
++ (void)getReportWithQuestionID:(NSString *)questionsID completion:(void (^)())completion{
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     AccountBL *accountBL = [[AccountBL alloc] init];
     Account *account = accountBL.findAccount;
@@ -182,6 +185,9 @@ static bool debug = YES;
         if([errorCode intValue] == 0){
             ReportBL *reportBL = [ReportBL getInstance];
             [reportBL addArray:[responseInfo objectForKey:@"study_report"]];
+            if (completion) {
+                completion();
+            }
         }else{
             [[NSNotificationCenter defaultCenter] postNotificationName:@"NETWORKREQUEST_REPORT_ERROR_INVALID" object:nil];
         }

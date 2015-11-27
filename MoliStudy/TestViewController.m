@@ -98,11 +98,11 @@
 //}
 
 - (IBAction)upload:(id)sender {
-    [NetworkManager uploadSubjectSituationWithQuestionID:@"69" withAnswer:@"a" withTime:10];
+    [NetworkManager uploadSubjectSituationWithQuestionID:@"69" withAnswer:@"a" withTime:10 completion:nil];
 }
 
 - (IBAction)report:(id)sender {
-    [NetworkManager getReportWithQuestionID:@"121,122,123,124,125"];
+    [NetworkManager getReportWithQuestionID:@"121,122,123,124,125" completion:nil];
 
 }
 

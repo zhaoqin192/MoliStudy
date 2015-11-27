@@ -80,7 +80,7 @@
  *  error: a.NSNotification NETWORKREQUEST_UPLOAD_ERROR_INVALID 用户ID错误，请重新登录
  *         b.NSNotification NETWORKREQUEST_UPLOAD_FAILURE 网络请求失败
  */
-+ (void)uploadSubjectSituationWithQuestionID:(NSString *)questionID withAnswer:(NSString *)answer withTime:(int)time;
++ (void)uploadSubjectSituationWithQuestionID:(NSString *)questionID withAnswer:(NSString *)answer withTime:(int)time completion:(void (^)())completion;
 
 /**
  *  getReportAPI
@@ -92,7 +92,7 @@
  *  error: a.NSNotification NETWORKREQUEST_REPORT_ERROR_INVALID 用户ID错误，请重新登录
  *         b.NSNotification NETWORKREQUEST_REPORT_FAILURE 网络请求失败
  */
-+ (void)getReportWithQuestionID:(NSString *)questionsID;
++ (void)getReportWithQuestionID:(NSString *)questionsID completion:(void (^)())completion;
 
 
 /**

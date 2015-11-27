@@ -21,6 +21,7 @@
 #import "TextStyle.h"
 #import "AnswerTableViewCell.h"
 #import "TableViewHeader.h"
+#import "LoginViewController.h"
 
 @interface StudyViewController ()<UITableViewDelegate, UITableViewDataSource,MZTimerLabelDelegate,AKPickerViewDataSource, AKPickerViewDelegate,TableViewHeaderDelegate>
 
@@ -31,6 +32,7 @@
 
 @property (nonatomic, copy) NSArray *flagArray;//存储底部标签
 @property (nonatomic, assign) int questionId; //当前题号（0-4）
+@property (nonatomic, strong) NSMutableArray *questionIdArray;//后台id号
 @property (nonatomic, assign) int groupId; //用户选择的答案
 @property (nonatomic, strong) NSMutableArray *groupIdArray;//用户选择答案数组
 @property (nonatomic, copy, readonly) NSArray *ABCDarray;//ABCD数组
@@ -54,8 +56,10 @@
     _isSubmit = NO;
     _timeArray = [[NSMutableArray alloc] init];
     _groupIdArray = [[NSMutableArray alloc] init];
+    _questionIdArray = [[NSMutableArray alloc] init];
     [self loadTimeLabel];
     [self setScrollerView];
+    [self confiureNotification];
 }
 
 - (void)viewDidAppear:(BOOL)animated{
@@ -63,11 +67,6 @@
     [NetworkManager getSubjects:^{
         [self loadData];
     }];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (void)loadData{
@@ -94,6 +93,7 @@
         [tempNoteArray addObject:label.noteArray];
     }
     self.noteArray = tempNoteArray;
+    [self resetTimeLabel];
     [self configureTableHeaderView];
     [self configureTableView];
     [self loadTabView];
@@ -113,6 +113,20 @@
     [_TimeCountLabel start];
     self.navigationItem.titleView = _TimeCountLabel;
     [_TimeCountLabel setCenterX:self.view.centerX];
+}
+
+- (void)resetTimeLabel{
+    [_TimeCountLabel reset];
+    [_TimeCountLabel start];
+}
+
+- (int)countTime:(NSString *)timeLabelText{
+    NSString *str = [NSString stringWithFormat:@"%@",timeLabelText];
+    int a = [[str substringWithRange:NSMakeRange(0, 2)] intValue];
+    int b = [[str substringWithRange:NSMakeRange(3, 2)] intValue];
+    int c = [[str substringWithRange:NSMakeRange(6, 2)] intValue];
+    int s = a*3600 + b*60 + c*1;
+    return s;
 }
 
 #pragma mark scrollview
@@ -302,21 +316,31 @@
         [ProgressHUD showError:@"请选择答案后再提交~"];
         return;
     }
-    _isSubmit = YES;
+
     [_TimeCountLabel pause];
-    //把做题时间时间数组
-    [self.timeArray addObject:_TimeCountLabel.text];
-    [self.groupIdArray addObject:self.ABCDarray[_groupId]];
-    [self configureCicleButton];
-    [self loadTabView];
-    [self loadAKPicker];
+    int time = [self countTime:_TimeCountLabel.text];
+    ModelManager *model = [ModelManager getInstance];
+    Subject *subject = model.subjectArray[self.questionId];
+    [_questionIdArray addObject:subject.questionID];
+    [NetworkManager uploadSubjectSituationWithQuestionID:subject.questionID withAnswer:self.ABCDarray[_groupId] withTime:time completion:^{
+        _isSubmit = YES;
+        NSNumber *timeNumber = [NSNumber numberWithInt:time];
+        [self.timeArray addObject:timeNumber];
+        [self.groupIdArray addObject:self.ABCDarray[_groupId]];
+        [self configureCicleButton];
+        [self loadTabView];
+        [self loadAKPicker];
+    }];
 }
 
 - (void)nextButtonAction{
     _isSubmit = NO;
     _questionId++;
     if (_questionId > [_answers count]) {
-        NSLog(@"go into report view");
+        NSString *id = [_questionIdArray componentsJoinedByString:@","];
+        [NetworkManager getReportWithQuestionID:id completion:^{
+            NSLog(@"problem report view"); 
+        }];
     }
     else{
         [self loadData];
@@ -424,6 +448,39 @@
     
     DXPopover *popover = [DXPopover popover];
     [popover showAtView:pickerView withContentView:textSignLabel];
+}
+
+#pragma mark Notification
+
+- (void)confiureNotification{
+    [[[NSNotificationCenter defaultCenter] rac_addObserverForName:@"NETWORKREQUEST_REPORT_ERROR_INVALID" object:nil] subscribeNext:^(id x) {
+        [ProgressHUD showError:@"用户ID错误，请重新登录"];
+        LoginViewController *vc = [[LoginViewController alloc] init];
+        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+        [self presentViewController:nav animated:YES completion:nil];
+    }];
+    [[[NSNotificationCenter defaultCenter] rac_addObserverForName:@"NETWORKREQUEST_REPORT_FAILURE" object:nil] subscribeNext:^(id x) {
+        [ProgressHUD showError:@"网络请求失败"];
+    }];
+
+    [[[NSNotificationCenter defaultCenter] rac_addObserverForName:@"NETWORKREQUEST_UPLOAD_ERROR_INVALID" object:nil] subscribeNext:^(id x) {
+        [ProgressHUD showError:@"用户ID错误，请重新登录"];
+        LoginViewController *vc = [[LoginViewController alloc] init];
+        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+        [self presentViewController:nav animated:YES completion:nil];
+    }];
+    [[[NSNotificationCenter defaultCenter] rac_addObserverForName:@"NETWORKREQUEST_UPLOAD_FAILURE" object:nil] subscribeNext:^(id x) {
+        [ProgressHUD showError:@"网络请求失败"];
+    }];
+}
+
+- (void)removeNotification{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (void)didReceiveMemoryWarning{
+    [super didReceiveMemoryWarning];
+    [self removeNotification];
 }
 
 @end

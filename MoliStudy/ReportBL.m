@@ -30,6 +30,7 @@ static ReportBL *sharedManager = nil;
 
 - (void)addArray:(NSArray *)array{
     NSManagedObjectContext *appContext = [DAOContext getInstance].appContext;
+    [[[ModelManager getInstance] reportArray] removeAllObjects];
     for(NSDictionary *reportDic in array){
         Report *report = [NSEntityDescription insertNewObjectForEntityForName:@"Report" inManagedObjectContext:appContext];
         report.name = [reportDic objectForKey:@"name"];
