@@ -15,6 +15,7 @@
 @property(copy, nonatomic) NSString *correctAnswer;
 @property(strong, nonatomic) NSMutableArray *thinkLabelID;
 @property(strong, nonatomic) NSMutableArray *thinkLabel;
+@property(strong, nonatomic) NSString *questionID;
 
 - (void) initData;
 

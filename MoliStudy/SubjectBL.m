@@ -26,6 +26,8 @@
         NSArray *modelarr = [array objectForKey:@"modelarr"];
         NSArray *names = [modelarr[0] objectForKey:@"name"];
         
+        subject.questionID = [modelarr[0] objectForKey:@"question_total_id"];
+        
         for(NSString *name in names){
             [subject.content addObject:[UtilityBL removeHTMLTag:name]];
         }
@@ -89,6 +91,8 @@
         NSArray *modelarr = [array objectForKey:@"modelarr"];
         NSLog(@"modellarr---%@", modelarr[0]);
         NSArray *names = [modelarr[0] objectForKey:@"name"];
+        
+        subject.questionID = [modelarr[0] objectForKey:@"question_total_id"];
         
         for(NSString *name in names){
             [subject.content addObject:[UtilityBL removeHTMLTag:name]];

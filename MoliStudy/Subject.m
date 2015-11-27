@@ -16,6 +16,7 @@
     self.correctAnswer = [[NSString alloc] init];
     self.thinkLabelID = [[NSMutableArray alloc] init];
     self.thinkLabel = [[NSMutableArray alloc] init];
+    self.questionID = [[NSString alloc] init];
 }
 
 @end
