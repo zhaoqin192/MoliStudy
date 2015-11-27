@@ -22,7 +22,7 @@
 #import "AnswerTableViewCell.h"
 #import "TableViewHeader.h"
 #import "LoginViewController.h"
-
+#import "ProblemReportViewController.h"
 @interface StudyViewController ()<UITableViewDelegate, UITableViewDataSource,MZTimerLabelDelegate,AKPickerViewDataSource, AKPickerViewDelegate,TableViewHeaderDelegate>
 
 @property(nonatomic, strong) MZTimerLabel *TimeCountLabel;
@@ -57,7 +57,6 @@
     _timeArray = [[NSMutableArray alloc] init];
     _groupIdArray = [[NSMutableArray alloc] init];
     _questionIdArray = [[NSMutableArray alloc] init];
-    [self loadTimeLabel];
     [self setScrollerView];
     [self confiureNotification];
 }
@@ -66,6 +65,7 @@
     [super viewDidAppear:animated];
     [NetworkManager getSubjects:^{
         [self loadData];
+        [self loadTimeLabel];
     }];
 }
 
@@ -339,7 +339,8 @@
     if (_questionId > [_answers count]) {
         NSString *id = [_questionIdArray componentsJoinedByString:@","];
         [NetworkManager getReportWithQuestionID:id completion:^{
-            NSLog(@"problem report view"); 
+            ProblemReportViewController *proReportViewController = [[ProblemReportViewController alloc] init];
+            [self.navigationController pushViewController:proReportViewController animated:YES];
         }];
     }
     else{

@@ -22,6 +22,12 @@
 		30AA1C5C1C05B39100CD94D5 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AA1C5B1C05B39100CD94D5 /* UIView+Frame.m */; };
 		30AA1C5F1C05C0C100CD94D5 /* StudyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AA1C5E1C05C0C100CD94D5 /* StudyViewController.m */; };
 		30AA1CA81C06D34000CD94D5 /* TableViewHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AA1CA71C06D34000CD94D5 /* TableViewHeader.m */; };
+		30AA1CAD1C08168300CD94D5 /* ProblemReportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AA1CAC1C08168300CD94D5 /* ProblemReportViewController.m */; };
+		30AA1CB71C0816D400CD94D5 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AA1CB01C0816D400CD94D5 /* CollectionViewCell.m */; };
+		30AA1CB81C0816D400CD94D5 /* ProReportTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AA1CB21C0816D400CD94D5 /* ProReportTableViewCell.m */; };
+		30AA1CB91C0816D400CD94D5 /* ReportView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AA1CB41C0816D400CD94D5 /* ReportView.m */; };
+		30AA1CBA1C0816D400CD94D5 /* ReportProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AA1CB61C0816D400CD94D5 /* ReportProgressViewController.m */; };
+		30AA1CBD1C0816E000CD94D5 /* ReportModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AA1CBC1C0816E000CD94D5 /* ReportModel.m */; };
 		30AAE3BA1C02B5E100CD94D5 /* public_key.der in Resources */ = {isa = PBXBuildFile; fileRef = 30AAE3B91C02B5E100CD94D5 /* public_key.der */; };
 		30AAE3C21C02BA7F00CD94D5 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 30AAE3BD1C02BA7F00CD94D5 /* logo.png */; };
 		30AAE3C31C02BA7F00CD94D5 /* startImage1.png in Resources */ = {isa = PBXBuildFile; fileRef = 30AAE3BE1C02BA7F00CD94D5 /* startImage1.png */; };
@@ -562,6 +568,18 @@
 		30AA1C5E1C05C0C100CD94D5 /* StudyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudyViewController.m; sourceTree = "<group>"; };
 		30AA1CA61C06D34000CD94D5 /* TableViewHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewHeader.h; sourceTree = "<group>"; };
 		30AA1CA71C06D34000CD94D5 /* TableViewHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewHeader.m; sourceTree = "<group>"; };
+		30AA1CAB1C08168300CD94D5 /* ProblemReportViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProblemReportViewController.h; sourceTree = "<group>"; };
+		30AA1CAC1C08168300CD94D5 /* ProblemReportViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProblemReportViewController.m; sourceTree = "<group>"; };
+		30AA1CAF1C0816D400CD94D5 /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
+		30AA1CB01C0816D400CD94D5 /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
+		30AA1CB11C0816D400CD94D5 /* ProReportTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProReportTableViewCell.h; sourceTree = "<group>"; };
+		30AA1CB21C0816D400CD94D5 /* ProReportTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProReportTableViewCell.m; sourceTree = "<group>"; };
+		30AA1CB31C0816D400CD94D5 /* ReportView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportView.h; sourceTree = "<group>"; };
+		30AA1CB41C0816D400CD94D5 /* ReportView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportView.m; sourceTree = "<group>"; };
+		30AA1CB51C0816D400CD94D5 /* ReportProgressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportProgressViewController.h; sourceTree = "<group>"; };
+		30AA1CB61C0816D400CD94D5 /* ReportProgressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportProgressViewController.m; sourceTree = "<group>"; };
+		30AA1CBB1C0816E000CD94D5 /* ReportModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportModel.h; sourceTree = "<group>"; };
+		30AA1CBC1C0816E000CD94D5 /* ReportModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportModel.m; sourceTree = "<group>"; };
 		30AAE3B91C02B5E100CD94D5 /* public_key.der */ = {isa = PBXFileReference; lastKnownFileType = file; name = public_key.der; path = ../public_key.der; sourceTree = "<group>"; };
 		30AAE3BD1C02BA7F00CD94D5 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		30AAE3BE1C02BA7F00CD94D5 /* startImage1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = startImage1.png; sourceTree = "<group>"; };
@@ -1237,6 +1255,25 @@
 				30AA1C491C05A3AF00CD94D5 /* MZTimerLabel.m */,
 			);
 			path = MZTimerLabel;
+			sourceTree = "<group>";
+		};
+		30AA1CAE1C08168800CD94D5 /* ProblemReportView */ = {
+			isa = PBXGroup;
+			children = (
+				30AA1CBB1C0816E000CD94D5 /* ReportModel.h */,
+				30AA1CBC1C0816E000CD94D5 /* ReportModel.m */,
+				30AA1CAB1C08168300CD94D5 /* ProblemReportViewController.h */,
+				30AA1CAC1C08168300CD94D5 /* ProblemReportViewController.m */,
+				30AA1CAF1C0816D400CD94D5 /* CollectionViewCell.h */,
+				30AA1CB01C0816D400CD94D5 /* CollectionViewCell.m */,
+				30AA1CB11C0816D400CD94D5 /* ProReportTableViewCell.h */,
+				30AA1CB21C0816D400CD94D5 /* ProReportTableViewCell.m */,
+				30AA1CB31C0816D400CD94D5 /* ReportView.h */,
+				30AA1CB41C0816D400CD94D5 /* ReportView.m */,
+				30AA1CB51C0816D400CD94D5 /* ReportProgressViewController.h */,
+				30AA1CB61C0816D400CD94D5 /* ReportProgressViewController.m */,
+			);
+			name = ProblemReportView;
 			sourceTree = "<group>";
 		};
 		30AAE3BB1C02B79900CD94D5 /* AppDelegate */ = {
@@ -2238,6 +2275,7 @@
 				30AAFB421C058D4B00CD94D5 /* LeftView */,
 				30AAFBAC1C059CDE00CD94D5 /* ReportView */,
 				30AA1C231C05A29200CD94D5 /* StudyView */,
+				30AA1CAE1C08168800CD94D5 /* ProblemReportView */,
 			);
 			name = PresentationLayer;
 			sourceTree = "<group>";
@@ -2994,8 +3032,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				30AAFBA41C0595EC00CD94D5 /* MDRadialProgressTheme.m in Sources */,
+				30AA1CBA1C0816D400CD94D5 /* ReportProgressViewController.m in Sources */,
 				30AAE3CE1C02BBFB00CD94D5 /* StartButtomView.m in Sources */,
 				AC53B7921C0146FC007D3FE8 /* Record+CoreDataProperties.m in Sources */,
+				30AA1CB81C0816D400CD94D5 /* ProReportTableViewCell.m in Sources */,
 				30AA1C501C05A88500CD94D5 /* QuestionModel.m in Sources */,
 				30AA1C531C05A96D00CD94D5 /* TextStyle.m in Sources */,
 				30AAF80A1C047E4300CD94D5 /* UIButton+Bootstrap.m in Sources */,
@@ -3003,9 +3043,11 @@
 				30AA1C4A1C05A3AF00CD94D5 /* MZTimerLabel.m in Sources */,
 				30AAF8061C047B4300CD94D5 /* LoginViewController.m in Sources */,
 				AC53B78F1C0146FC007D3FE8 /* Practice.m in Sources */,
+				30AA1CAD1C08168300CD94D5 /* ProblemReportViewController.m in Sources */,
 				30AA1C361C05A2D600CD94D5 /* AKPickerView.m in Sources */,
 				AC53B7931C0146FC007D3FE8 /* Record.m in Sources */,
 				AC53B7A61C014AA8007D3FE8 /* UtilityBL.m in Sources */,
+				30AA1CBD1C0816E000CD94D5 /* ReportModel.m in Sources */,
 				30AA1C3E1C05A30A00CD94D5 /* PickerRightArrow.m in Sources */,
 				30AAE3C91C02BB7D00CD94D5 /* YFStartView.m in Sources */,
 				30AAFB3E1C05850500CD94D5 /* ProgressHUD.m in Sources */,
@@ -3013,6 +3055,7 @@
 				AC53B7B41C014BFE007D3FE8 /* ReportBL.m in Sources */,
 				30AA1C3D1C05A30A00CD94D5 /* PickerLeftArrow.m in Sources */,
 				AC74391C1C02B272004BE2A8 /* ThinkLabel.m in Sources */,
+				30AA1CB71C0816D400CD94D5 /* CollectionViewCell.m in Sources */,
 				30AAFB461C058D7500CD94D5 /* leftTableViewCell.m in Sources */,
 				AC53B7A11C01474B007D3FE8 /* DAOContext.m in Sources */,
 				30AAFB2C1C04A50100CD94D5 /* NewProjectTypeViewController.m in Sources */,
@@ -3045,6 +3088,7 @@
 				30AAFBA51C0595EC00CD94D5 /* MDRadialProgressView.m in Sources */,
 				AC74391D1C02B272004BE2A8 /* Note.m in Sources */,
 				30AAFBAB1C059CD600CD94D5 /* ReportViewController.m in Sources */,
+				30AA1CB91C0816D400CD94D5 /* ReportView.m in Sources */,
 				30AA1C461C05A37B00CD94D5 /* DXPopover.m in Sources */,
 				30AAFBA31C0595EC00CD94D5 /* MDRadialProgressLabel.m in Sources */,
 				30AA1C301C05A2A300CD94D5 /* ScrollerView.m in Sources */,
