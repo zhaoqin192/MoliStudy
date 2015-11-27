@@ -32,6 +32,7 @@
 @property (nonatomic, strong) NSArray *flagArray;//存储底部标签
 @property (nonatomic, assign) int questionId; //当前题号（0-4）
 @property (nonatomic, assign) int groupId; //用户选择的答案
+@property (nonatomic, strong) NSMutableArray *groupIdArray;
 @property (nonatomic, strong, readonly) NSArray *ABCDarray;
 @property (nonatomic, strong) NSArray *answers; //正确答案数组
 @property (nonatomic, strong) NSArray *noteArray; //样式数组
@@ -53,46 +54,51 @@
     _ABCDarray = @[@"A", @"B", @"C", @"D"];
     _isSubmit = NO;
     _timeArray = [[NSMutableArray alloc] init];
+    _groupIdArray = [[NSMutableArray alloc] init];
     [self loadTimeLabel];
     [self setScrollerView];
 }
 
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    _groupId = -1;
-    _tableHeadViewArray = [[NSMutableArray alloc] init];
-    _cicleButtonArray = [[NSMutableArray alloc] init];
     [NetworkManager getSubjects:^{
-        ModelManager *model = [ModelManager getInstance];
-        Subject *subject = model.subjectArray[self.questionId];
-        NSString *content = @"";
-        for(NSString *str in subject.content){
-            content = [[content stringByAppendingString:str] stringByAppendingString:@" "];
-        }
-        [_TextScrollerView updateScrollViewText:content AttributeString:nil];
-        _answers = subject.answers;
-        _answer = subject.correctAnswer;
-        NSMutableArray *tempArray = [[NSMutableArray alloc] init];
-        for (ThinkLabel* label in subject.thinkLabel) {
-            [tempArray addObject:label.name];
-        }
-        self.flagArray = tempArray;
-        
-        NSMutableArray *tempNoteArray = [[NSMutableArray alloc] init];
-        for (ThinkLabel* label in subject.thinkLabel) {
-            [tempNoteArray addObject:label.noteArray];
-        }
-        self.noteArray = tempNoteArray;
-        [self configureTableHeaderView];
-        [self configureTableView];
-        [self loadTabView];
-        [self loadAKPicker];
+        [self loadData];
     }];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)loadData{
+    _groupId = -1;
+    _tableHeadViewArray = [[NSMutableArray alloc] init];
+    _cicleButtonArray = [[NSMutableArray alloc] init];
+    ModelManager *model = [ModelManager getInstance];
+    Subject *subject = model.subjectArray[self.questionId];
+    NSString *content = @"";
+    for(NSString *str in subject.content){
+        content = [[content stringByAppendingString:str] stringByAppendingString:@" "];
+    }
+    [_TextScrollerView updateScrollViewText:content AttributeString:nil];
+    _answers = subject.answers;
+    _answer = subject.correctAnswer;
+    NSMutableArray *tempArray = [[NSMutableArray alloc] init];
+    for (ThinkLabel* label in subject.thinkLabel) {
+        [tempArray addObject:label.name];
+    }
+    self.flagArray = tempArray;
+    
+    NSMutableArray *tempNoteArray = [[NSMutableArray alloc] init];
+    for (ThinkLabel* label in subject.thinkLabel) {
+        [tempNoteArray addObject:label.noteArray];
+    }
+    self.noteArray = tempNoteArray;
+    [self configureTableHeaderView];
+    [self configureTableView];
+    [self loadTabView];
+    [self loadAKPicker];
 }
 
 #pragma mark timelabel
@@ -148,7 +154,7 @@
 }
 
 - (void)configureCicleButton{
-    if (_ABCDarray[_groupId] == _answer) {
+    if ([_ABCDarray[_groupId] isEqualToString:_answer]) {
         for (UIButton *button in _cicleButtonArray) {
             if (button.tag == _groupId){
                 [button setImage:[UIImage imageNamed:@"Correct"] forState:UIControlStateNormal];
@@ -301,6 +307,7 @@
     [_TimeCountLabel pause];
     //把做题时间时间数组
     [self.timeArray addObject:_TimeCountLabel.text];
+    [self.groupIdArray addObject:self.ABCDarray[_groupId]];
     [self configureCicleButton];
     [self loadTabView];
     [self loadAKPicker];
@@ -308,6 +315,13 @@
 
 - (void)nextButtonAction{
     _isSubmit = NO;
+    _questionId++;
+    if (_questionId > [_answers count]) {
+        NSLog(@"go into report view");
+    }
+    else{
+        [self loadData];
+    }
 }
 
 
