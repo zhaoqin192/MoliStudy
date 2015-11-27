@@ -21,7 +21,7 @@
 #import "TextStyle.h"
 #import "AnswerTableViewCell.h"
 #import "TableViewHeader.h"
-#import "LoginViewController.h"
+#import "IntroductionViewController.h"
 #import "ProblemReportViewController.h"
 @interface StudyViewController ()<UITableViewDelegate, UITableViewDataSource,MZTimerLabelDelegate,AKPickerViewDataSource, AKPickerViewDelegate,TableViewHeaderDelegate>
 
@@ -385,6 +385,7 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+
 - (void)pickerView:(AKPickerView *)pickerView didSelectItem:(NSInteger)item
 {
     UILabel *textSignLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 300/375. *ScreenWidth, 200/667. *ScreenHeight)];
@@ -456,9 +457,10 @@
 - (void)confiureNotification{
     [[[NSNotificationCenter defaultCenter] rac_addObserverForName:@"NETWORKREQUEST_REPORT_ERROR_INVALID" object:nil] subscribeNext:^(id x) {
         [ProgressHUD showError:@"用户ID错误，请重新登录"];
-        LoginViewController *vc = [[LoginViewController alloc] init];
-        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
-        [self presentViewController:nav animated:YES completion:nil];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            IntroductionViewController *vc = [[IntroductionViewController alloc] init];
+            [self presentViewController:vc animated:YES completion:nil];
+        });
     }];
     [[[NSNotificationCenter defaultCenter] rac_addObserverForName:@"NETWORKREQUEST_REPORT_FAILURE" object:nil] subscribeNext:^(id x) {
         [ProgressHUD showError:@"网络请求失败"];
@@ -466,9 +468,10 @@
 
     [[[NSNotificationCenter defaultCenter] rac_addObserverForName:@"NETWORKREQUEST_UPLOAD_ERROR_INVALID" object:nil] subscribeNext:^(id x) {
         [ProgressHUD showError:@"用户ID错误，请重新登录"];
-        LoginViewController *vc = [[LoginViewController alloc] init];
-        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
-        [self presentViewController:nav animated:YES completion:nil];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            IntroductionViewController *vc = [[IntroductionViewController alloc] init];
+            [self presentViewController:vc animated:YES completion:nil];
+        });
     }];
     [[[NSNotificationCenter defaultCenter] rac_addObserverForName:@"NETWORKREQUEST_UPLOAD_FAILURE" object:nil] subscribeNext:^(id x) {
         [ProgressHUD showError:@"网络请求失败"];

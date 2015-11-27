@@ -1183,6 +1183,8 @@
 		30AA1C231C05A29200CD94D5 /* StudyView */ = {
 			isa = PBXGroup;
 			children = (
+				30AA1C5D1C05C0C100CD94D5 /* StudyViewController.h */,
+				30AA1C5E1C05C0C100CD94D5 /* StudyViewController.m */,
 				30AA1C4E1C05A88500CD94D5 /* QuestionModel.h */,
 				30AA1C4F1C05A88500CD94D5 /* QuestionModel.m */,
 				30AA1C241C05A2A300CD94D5 /* AnswerTableViewCell.h */,
@@ -1195,8 +1197,6 @@
 				30AA1C2B1C05A2A300CD94D5 /* PickerView.m */,
 				30AA1C511C05A96D00CD94D5 /* TextStyle.h */,
 				30AA1C521C05A96D00CD94D5 /* TextStyle.m */,
-				30AA1C5D1C05C0C100CD94D5 /* StudyViewController.h */,
-				30AA1C5E1C05C0C100CD94D5 /* StudyViewController.m */,
 				30AA1CA61C06D34000CD94D5 /* TableViewHeader.h */,
 				30AA1CA71C06D34000CD94D5 /* TableViewHeader.m */,
 			);
@@ -1260,10 +1260,10 @@
 		30AA1CAE1C08168800CD94D5 /* ProblemReportView */ = {
 			isa = PBXGroup;
 			children = (
-				30AA1CBB1C0816E000CD94D5 /* ReportModel.h */,
-				30AA1CBC1C0816E000CD94D5 /* ReportModel.m */,
 				30AA1CAB1C08168300CD94D5 /* ProblemReportViewController.h */,
 				30AA1CAC1C08168300CD94D5 /* ProblemReportViewController.m */,
+				30AA1CBB1C0816E000CD94D5 /* ReportModel.h */,
+				30AA1CBC1C0816E000CD94D5 /* ReportModel.m */,
 				30AA1CAF1C0816D400CD94D5 /* CollectionViewCell.h */,
 				30AA1CB01C0816D400CD94D5 /* CollectionViewCell.m */,
 				30AA1CB11C0816D400CD94D5 /* ProReportTableViewCell.h */,
