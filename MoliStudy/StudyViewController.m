@@ -29,20 +29,19 @@
 @property (nonatomic, strong) UITableView *tableview;
 @property (nonatomic, strong) PickerView *pickerView;
 
-@property (nonatomic, strong) NSArray *flagArray;//存储底部标签
+@property (nonatomic, copy) NSArray *flagArray;//存储底部标签
 @property (nonatomic, assign) int questionId; //当前题号（0-4）
 @property (nonatomic, assign) int groupId; //用户选择的答案
-@property (nonatomic, strong) NSMutableArray *groupIdArray;
-@property (nonatomic, strong, readonly) NSArray *ABCDarray;
-@property (nonatomic, strong) NSArray *answers; //正确答案数组
-@property (nonatomic, strong) NSArray *noteArray; //样式数组
-@property (nonatomic, strong, readonly) NSString* answer; //正确答案
+@property (nonatomic, strong) NSMutableArray *groupIdArray;//用户选择答案数组
+@property (nonatomic, copy, readonly) NSArray *ABCDarray;//ABCD数组
+@property (nonatomic, copy, readonly) NSArray *answers; //正确答案数组
+@property (nonatomic, copy) NSArray *noteArray; //样式数组
+@property (nonatomic, copy, readonly) NSString* answer; //正确答案
 @property (nonatomic, strong) NSMutableArray *tableHeadViewArray;
 @property (nonatomic, assign) NSInteger currentSection;//当前选中的tableView的section
-@property (nonatomic, strong) NSMutableArray *cicleButtonArray;//选项按钮数组
-@property (nonatomic, assign) BOOL isSubmit;
-//记录时间数组
-@property (nonatomic, strong) NSMutableArray *timeArray;
+@property (nonatomic, strong) NSMutableArray *cicleButtonArray;//按钮数组
+@property (nonatomic, assign) BOOL isSubmit;//是否提交
+@property (nonatomic, strong) NSMutableArray *timeArray;//记录时间数组
 
 @end
 
