@@ -12,17 +12,12 @@
 #import "ScrollerView.h"
 #import "tabView.h"
 #import "PickerView.h"
-#import "NetworkManager.h"
-#import "ModelManager.h"
-#import "Subject.h"
-#import "ThinkLabel.h"
-#import "Note.h"
-#import "UtilityBL.h"
 #import "TextStyle.h"
 #import "AnswerTableViewCell.h"
 #import "TableViewHeader.h"
 #import "IntroductionViewController.h"
 #import "ProblemReportViewController.h"
+#import "UtilityManager.h"
 @interface StudyViewController ()<UITableViewDelegate, UITableViewDataSource,MZTimerLabelDelegate,AKPickerViewDataSource, AKPickerViewDelegate,TableViewHeaderDelegate>
 
 @property(nonatomic, strong) MZTimerLabel *TimeCountLabel;
@@ -73,8 +68,12 @@
     _groupId = -1;
     _tableHeadViewArray = [[NSMutableArray alloc] init];
     _cicleButtonArray = [[NSMutableArray alloc] init];
-    ModelManager *model = [ModelManager getInstance];
-    Subject *subject = model.subjectArray[self.questionId];
+//    ModelManager *model = [ModelManager getInstance];
+//    Subject *subject = model.subjectArray[self.questionId];
+    
+    NSArray *array = [[SubjectDAO sharedManager] findAll];
+    Subject *subject = array[self.questionId];
+
     NSString *content = @"";
     for(NSString *str in subject.content){
         content = [[content stringByAppendingString:str] stringByAppendingString:@" "];
@@ -319,10 +318,23 @@
 
     [_TimeCountLabel pause];
     int time = [self countTime:_TimeCountLabel.text];
-    ModelManager *model = [ModelManager getInstance];
-    Subject *subject = model.subjectArray[self.questionId];
+//    ModelManager *model = [ModelManager getInstance];
+//    Subject *subject = model.subjectArray[self.questionId];
+    NSArray *array = [[SubjectDAO sharedManager] findAll];
+    Subject *subject = array[self.questionId];
+    
     [_questionIdArray addObject:subject.questionID];
-    [NetworkManager uploadSubjectSituationWithQuestionID:subject.questionID withAnswer:self.ABCDarray[_groupId] withTime:time completion:^{
+//    [NetworkManager uploadSubjectSituationWithQuestionID:subject.questionID withAnswer:self.ABCDarray[_groupId] withTime:time completion:^{
+//        _isSubmit = YES;
+//        NSNumber *timeNumber = [NSNumber numberWithInt:time];
+//        [self.timeArray addObject:timeNumber];
+//        [self.groupIdArray addObject:self.ABCDarray[_groupId]];
+//        [self configureCicleButton];
+//        [self loadTabView];
+//        [self loadAKPicker];
+//    }];
+//    NetworkManager uploadSubjectAnswer:subject.questionID answer:self.ABCDarray[_groupId] time:time c
+    [NetworkManager uploadSubjectAnswer:subject.questionID answer:self.ABCDarray[_groupId] time:[NSNumber numberWithInt:time] completion:^{
         _isSubmit = YES;
         NSNumber *timeNumber = [NSNumber numberWithInt:time];
         [self.timeArray addObject:timeNumber];
@@ -337,10 +349,15 @@
     _isSubmit = NO;
     _questionId++;
     if (_questionId > [_answers count]) {
-        NSString *id = [_questionIdArray componentsJoinedByString:@","];
-        [NetworkManager getReportWithQuestionID:id completion:^{
+        NSString *ids = [_questionIdArray componentsJoinedByString:@","];
+//        [NetworkManager getReportWithQuestionID:id completion:^{
+//            ProblemReportViewController *proReportViewController = [[ProblemReportViewController alloc] init];
+//            [self.navigationController pushViewController:proReportViewController animated:YES];
+//        }];
+        [NetworkManager getReport:ids completion:^{
             ProblemReportViewController *proReportViewController = [[ProblemReportViewController alloc] init];
             [self.navigationController pushViewController:proReportViewController animated:YES];
+ 
         }];
     }
     else{
@@ -389,8 +406,10 @@
 - (void)pickerView:(AKPickerView *)pickerView didSelectItem:(NSInteger)item
 {
     UILabel *textSignLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 300/375. *ScreenWidth, 200/667. *ScreenHeight)];
-    ModelManager *model = [ModelManager getInstance];
-    Subject *subject = model.subjectArray[self.questionId];
+//    ModelManager *model = [ModelManager getInstance];
+    NSArray *model = [[SubjectDAO sharedManager] findAll];
+//    Subject *subject = model.subjectArray[self.questionId];
+    Subject *subject = model[self.questionId];
     NSString *content =@"";
     for (NSString* str in subject.content) {
         content = [[content stringByAppendingString:str] stringByAppendingString:@" "];
@@ -444,7 +463,9 @@
     [self.TextScrollerView updateScrollViewText:content AttributeString:attributeStr];
 
     textSignLabel.text = contentText;
-    textSignLabel.text = [UtilityBL removeHTMLTag:textSignLabel.text];
+//    textSignLabel.text = [UtilityManager removeHTMLTag:textSignLabel.text];
+//    textSignLabel.text = [Util]
+    textSignLabel.text = [UtilityManager removeHTMLTag:textSignLabel.text];
     textSignLabel.numberOfLines = 0;
     textSignLabel.backgroundColor = [UIColor whiteColor];
     

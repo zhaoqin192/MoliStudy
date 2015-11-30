@@ -8,85 +8,81 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>1</integer>
+		</dict>
+		<key>Alamofire.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>JazzHands.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>3</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Masonry.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>4</integer>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>NYXImagesKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>2</integer>
 		</dict>
 		<key>ReactiveCocoa.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>5</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>TPKeyboardAvoiding.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>6</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>13330E39CA7D8D65F07290FC697EE761</key>
+		<key>11FE2466C36A827FA18E5A8BA0BAE083</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>200EF4A3D61D2A90481ABC9F82654760</key>
+		<key>432ECC54282C84882B482CCB4CF227FC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>207FCA348A5C0F480C85BDC512E0E110</key>
+		<key>4878C70B21CA37D7CB8A476BF986741B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>29852B71914AA2E261D18F89DE5A907F</key>
+		<key>5B9BBA43F28E07D99FA035E7668B8731</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>410B25DF16EA5C5B3E2698F74F9625FB</key>
+		<key>94F4323895C5077F1D6F770863622F09</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>47308D215E955802E16DFACCBC62839E</key>
+		<key>B0E7ADB5E38C58CE3C812FB3A5367801</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6D1B9B94F00538AE97B00019F8F8B8C3</key>
+		<key>D4B9D133E1FDDB68F0583059DBDF952F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>949FBB4A8DE606BBEE66851211049E68</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>AE7578A3B03BBF99446255C4021F13FA</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>C6D66FE7D3AD8963382F17E79643E1B8</key>
+		<key>DDDC9383749D414B2CD69AAB9B4576A8</key>
 		<dict>
 			<key>primary</key>
 			<true/>

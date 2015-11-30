@@ -6,7 +6,7 @@
 //  Copyright © 2015年 neotel. All rights reserved.
 //
 
-#import <IFTTTJazzHands.h>
+#import "IFTTTJazzHands.h"
 
 @interface IntroductionViewController : IFTTTAnimatedPagingScrollViewController
 

@@ -82,3 +82,22 @@ strip_invalid_archs() {
   fi
 }
 
+
+if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods/AFNetworking.framework"
+  install_framework "Pods/Alamofire.framework"
+  install_framework "Pods/JazzHands.framework"
+  install_framework "Pods/Masonry.framework"
+  install_framework "Pods/NYXImagesKit.framework"
+  install_framework "Pods/ReactiveCocoa.framework"
+  install_framework "Pods/TPKeyboardAvoiding.framework"
+fi
+if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods/AFNetworking.framework"
+  install_framework "Pods/Alamofire.framework"
+  install_framework "Pods/JazzHands.framework"
+  install_framework "Pods/Masonry.framework"
+  install_framework "Pods/NYXImagesKit.framework"
+  install_framework "Pods/ReactiveCocoa.framework"
+  install_framework "Pods/TPKeyboardAvoiding.framework"
+fi

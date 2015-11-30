@@ -1,6 +1,9 @@
 inhibit_all_warnings!
-platform :ios, '7.0'
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '8.0'
+use_frameworks!
 
+pod "Alamofire", "~> 3.0"
 pod "AFNetworking", "~> 2.0"
 pod 'JazzHands', '2.0.0'
 pod 'Masonry', '0.5.3'

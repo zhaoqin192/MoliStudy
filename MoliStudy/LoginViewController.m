@@ -10,12 +10,9 @@
 #import "Input_OnlyText_Cell.h"
 #import <NYXImagesKit/NYXImagesKit.h>
 #import "Login.h"
-#import "NetworkManager.h"
 #import "LeftTableViewController.h"
 #import "DrawerViewController.h"
 #import "MainViewController.h"
-#import "AccountBL.h"
-#import "Account.h"
 
 @interface LoginViewController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -32,8 +29,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    AccountBL *accountBL = [[AccountBL alloc] init];
-    Account* account = [accountBL findAccount];
+    AccountDAO *dao = [AccountDAO sharedManager];
+    Account* account = [dao findAccount];
     self.myLogin = [[Login alloc] init];
     self.myLogin.email = account.accountName;
     self.myLogin.password = account.password;
@@ -246,7 +243,7 @@
     NSLog(@"btn clicked");
     [ProgressHUD show:@"Please wait..."];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-       [NetworkManager loginRequestWithUserName:self.myLogin.email withPassword:self.myLogin.password];
+        [NetworkManager login:self.myLogin.email password:self.myLogin.password];
     });
 }
 

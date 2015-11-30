@@ -53,7 +53,6 @@
                     <animations/>
                     <state key="normal" title="Send Verify"/>
                     <connections>
-                        <action selector="uploadSubject:" destination="-1" eventType="touchUpInside" id="7kP-ce-Fd7"/>
                         <action selector="verify:" destination="-1" eventType="touchUpInside" id="oJ7-1X-Nmx"/>
                     </connections>
                 </button>
@@ -78,7 +77,7 @@
                     <animations/>
                     <state key="normal" title="GetSubject"/>
                     <connections>
-                        <action selector="getSubject:" destination="-1" eventType="touchUpInside" id="8DT-db-bUP"/>
+                        <action selector="subject:" destination="-1" eventType="touchUpInside" id="xWh-UD-2Q0"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fx6-82-V6q">

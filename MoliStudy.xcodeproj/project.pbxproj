@@ -470,8 +470,7 @@
 		30AAFBA51C0595EC00CD94D5 /* MDRadialProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AAFBA21C0595EC00CD94D5 /* MDRadialProgressView.m */; };
 		30AAFBAB1C059CD600CD94D5 /* ReportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AAFBAA1C059CD600CD94D5 /* ReportViewController.m */; };
 		30AAFBAF1C059CED00CD94D5 /* ReportTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AAFBAE1C059CED00CD94D5 /* ReportTableViewCell.m */; };
-		7BFB8F4343390DAA1FE273AA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60A0CAC4C28DE69D69868F29 /* libPods.a */; };
-		AC18EA651BFF76960092F7D9 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AC18EA641BFF76960092F7D9 /* NetworkManager.m */; };
+		A79D7FCC6CBFC759D863B807 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C04AE670AA344195210BFE9 /* Pods.framework */; };
 		AC39B90B1BFF649A001CE453 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AC39B90A1BFF649A001CE453 /* main.m */; };
 		AC39B90E1BFF649A001CE453 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AC39B90D1BFF649A001CE453 /* AppDelegate.m */; };
 		AC39B9171BFF649A001CE453 /* MoliStudy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC39B9151BFF649A001CE453 /* MoliStudy.xcdatamodeld */; };
@@ -479,24 +478,7 @@
 		AC39B91C1BFF649A001CE453 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC39B91A1BFF649A001CE453 /* LaunchScreen.storyboard */; };
 		AC39B9271BFF649B001CE453 /* MoliStudyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AC39B9261BFF649B001CE453 /* MoliStudyTests.m */; };
 		AC39B9321BFF649B001CE453 /* MoliStudyUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AC39B9311BFF649B001CE453 /* MoliStudyUITests.m */; };
-		AC53B78C1C0146FC007D3FE8 /* Report+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = AC53B77D1C0146FC007D3FE8 /* Report+CoreDataProperties.m */; };
-		AC53B78D1C0146FC007D3FE8 /* Report.m in Sources */ = {isa = PBXBuildFile; fileRef = AC53B77F1C0146FC007D3FE8 /* Report.m */; };
-		AC53B78E1C0146FC007D3FE8 /* Practice+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = AC53B7811C0146FC007D3FE8 /* Practice+CoreDataProperties.m */; };
-		AC53B78F1C0146FC007D3FE8 /* Practice.m in Sources */ = {isa = PBXBuildFile; fileRef = AC53B7831C0146FC007D3FE8 /* Practice.m */; };
-		AC53B7901C0146FC007D3FE8 /* Account+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = AC53B7851C0146FC007D3FE8 /* Account+CoreDataProperties.m */; };
-		AC53B7911C0146FC007D3FE8 /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = AC53B7871C0146FC007D3FE8 /* Account.m */; };
-		AC53B7921C0146FC007D3FE8 /* Record+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = AC53B7891C0146FC007D3FE8 /* Record+CoreDataProperties.m */; };
-		AC53B7931C0146FC007D3FE8 /* Record.m in Sources */ = {isa = PBXBuildFile; fileRef = AC53B78B1C0146FC007D3FE8 /* Record.m */; };
-		AC53B79E1C01474B007D3FE8 /* PracticeDao.m in Sources */ = {isa = PBXBuildFile; fileRef = AC53B7951C01474B007D3FE8 /* PracticeDao.m */; };
-		AC53B79F1C01474B007D3FE8 /* RecordDao.m in Sources */ = {isa = PBXBuildFile; fileRef = AC53B7971C01474B007D3FE8 /* RecordDao.m */; };
-		AC53B7A01C01474B007D3FE8 /* AccountDao.m in Sources */ = {isa = PBXBuildFile; fileRef = AC53B7991C01474B007D3FE8 /* AccountDao.m */; };
-		AC53B7A11C01474B007D3FE8 /* DAOContext.m in Sources */ = {isa = PBXBuildFile; fileRef = AC53B79B1C01474B007D3FE8 /* DAOContext.m */; };
-		AC53B7A21C01474B007D3FE8 /* ReportDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = AC53B79D1C01474B007D3FE8 /* ReportDAO.m */; };
-		AC53B7A61C014AA8007D3FE8 /* UtilityBL.m in Sources */ = {isa = PBXBuildFile; fileRef = AC53B7A51C014AA8007D3FE8 /* UtilityBL.m */; };
-		AC53B7B11C014BFE007D3FE8 /* PracticeBL.m in Sources */ = {isa = PBXBuildFile; fileRef = AC53B7AA1C014BFE007D3FE8 /* PracticeBL.m */; };
-		AC53B7B21C014BFE007D3FE8 /* RecordBL.m in Sources */ = {isa = PBXBuildFile; fileRef = AC53B7AC1C014BFE007D3FE8 /* RecordBL.m */; };
-		AC53B7B31C014BFE007D3FE8 /* AccountBL.m in Sources */ = {isa = PBXBuildFile; fileRef = AC53B7AE1C014BFE007D3FE8 /* AccountBL.m */; };
-		AC53B7B41C014BFE007D3FE8 /* ReportBL.m in Sources */ = {isa = PBXBuildFile; fileRef = AC53B7B01C014BFE007D3FE8 /* ReportBL.m */; };
+		AC53B7A61C014AA8007D3FE8 /* UtilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AC53B7A51C014AA8007D3FE8 /* UtilityManager.m */; };
 		AC53B7B71C014C42007D3FE8 /* RSA.m in Sources */ = {isa = PBXBuildFile; fileRef = AC53B7B61C014C42007D3FE8 /* RSA.m */; };
 		AC53B7BB1C014CE7007D3FE8 /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = AC53B7B91C014CE7007D3FE8 /* GTMBase64.m */; };
 		AC53B7C11C014E26007D3FE8 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC53B7BF1C014E26007D3FE8 /* TestViewController.m */; };
@@ -510,13 +492,23 @@
 		AC53B7D91C016851007D3FE8 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AC53B7D81C016851007D3FE8 /* libicucore.tbd */; };
 		AC53B7DB1C01685E007D3FE8 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AC53B7DA1C01685E007D3FE8 /* libz.tbd */; };
 		AC53B7DD1C01686B007D3FE8 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AC53B7DC1C01686B007D3FE8 /* libstdc++.tbd */; };
-		AC7439171C02B272004BE2A8 /* Subject.m in Sources */ = {isa = PBXBuildFile; fileRef = AC74390A1C02B272004BE2A8 /* Subject.m */; };
-		AC7439191C02B272004BE2A8 /* Think-LabelModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AC74390E1C02B272004BE2A8 /* Think-LabelModel.m */; };
-		AC74391A1C02B272004BE2A8 /* thinklabellist_model.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7439101C02B272004BE2A8 /* thinklabellist_model.m */; };
-		AC74391B1C02B272004BE2A8 /* ModelManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7439121C02B272004BE2A8 /* ModelManager.m */; };
-		AC74391C1C02B272004BE2A8 /* ThinkLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7439141C02B272004BE2A8 /* ThinkLabel.m */; };
-		AC74391D1C02B272004BE2A8 /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7439161C02B272004BE2A8 /* Note.m */; };
-		AC901DF91C03F555001B8090 /* SubjectBL.m in Sources */ = {isa = PBXBuildFile; fileRef = AC901DF81C03F555001B8090 /* SubjectBL.m */; };
+		AC78CA2B1C0BF00200A9585F /* Practice+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC78CA251C0BF00200A9585F /* Practice+CoreDataProperties.swift */; };
+		AC78CA2C1C0BF00200A9585F /* Practice.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC78CA261C0BF00200A9585F /* Practice.swift */; };
+		AC78CA2D1C0BF00200A9585F /* Account+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC78CA271C0BF00200A9585F /* Account+CoreDataProperties.swift */; };
+		AC78CA2E1C0BF00200A9585F /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC78CA281C0BF00200A9585F /* Account.swift */; };
+		AC78CA2F1C0BF00200A9585F /* Record+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC78CA291C0BF00200A9585F /* Record+CoreDataProperties.swift */; };
+		AC78CA301C0BF00200A9585F /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC78CA2A1C0BF00200A9585F /* Record.swift */; };
+		AC78CA321C0BF03200A9585F /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC78CA311C0BF03200A9585F /* Subject.swift */; };
+		AC78CA341C0BF03B00A9585F /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC78CA331C0BF03B00A9585F /* Note.swift */; };
+		AC78CA361C0BF04700A9585F /* ThinkLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC78CA351C0BF04700A9585F /* ThinkLabel.swift */; };
+		AC78CA391C0BF0C700A9585F /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC78CA381C0BF0C700A9585F /* Report.swift */; };
+		AC78CA3B1C0BF29D00A9585F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC78CA3A1C0BF29D00A9585F /* NetworkManager.swift */; };
+		AC78CA3D1C0BF2B900A9585F /* AccountDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC78CA3C1C0BF2B900A9585F /* AccountDAO.swift */; };
+		AC78CA3F1C0BF2D100A9585F /* ContextDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC78CA3E1C0BF2D100A9585F /* ContextDAO.swift */; };
+		AC78CA411C0BF2E100A9585F /* PracticeDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC78CA401C0BF2E100A9585F /* PracticeDAO.swift */; };
+		AC78CA431C0BF2F000A9585F /* RecordDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC78CA421C0BF2F000A9585F /* RecordDAO.swift */; };
+		AC78CA451C0BF2FF00A9585F /* SubjectDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC78CA441C0BF2FF00A9585F /* SubjectDAO.swift */; };
+		AC78CA471C0BF30C00A9585F /* ReportDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC78CA461C0BF30C00A9585F /* ReportDAO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -538,6 +530,7 @@
 
 /* Begin PBXFileReference section */
 		023B0FA0A76EAEEB884B9ABD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		0C04AE670AA344195210BFE9 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		30AA1C241C05A2A300CD94D5 /* AnswerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnswerTableViewCell.h; sourceTree = "<group>"; };
 		30AA1C251C05A2A300CD94D5 /* AnswerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnswerTableViewCell.m; sourceTree = "<group>"; };
 		30AA1C261C05A2A300CD94D5 /* tabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tabView.h; sourceTree = "<group>"; };
@@ -1049,10 +1042,7 @@
 		30AAFBAA1C059CD600CD94D5 /* ReportViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportViewController.m; sourceTree = "<group>"; };
 		30AAFBAD1C059CED00CD94D5 /* ReportTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportTableViewCell.h; sourceTree = "<group>"; };
 		30AAFBAE1C059CED00CD94D5 /* ReportTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportTableViewCell.m; sourceTree = "<group>"; };
-		60A0CAC4C28DE69D69868F29 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		95456BA8E0DB14D551D3A063 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		AC18EA631BFF76960092F7D9 /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
-		AC18EA641BFF76960092F7D9 /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
 		AC39B9061BFF649A001CE453 /* MoliStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoliStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC39B90A1BFF649A001CE453 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AC39B90C1BFF649A001CE453 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -1067,42 +1057,8 @@
 		AC39B92D1BFF649B001CE453 /* MoliStudyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoliStudyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC39B9311BFF649B001CE453 /* MoliStudyUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoliStudyUITests.m; sourceTree = "<group>"; };
 		AC39B9331BFF649B001CE453 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AC53B77C1C0146FC007D3FE8 /* Report+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Report+CoreDataProperties.h"; sourceTree = "<group>"; };
-		AC53B77D1C0146FC007D3FE8 /* Report+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Report+CoreDataProperties.m"; sourceTree = "<group>"; };
-		AC53B77E1C0146FC007D3FE8 /* Report.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Report.h; sourceTree = "<group>"; };
-		AC53B77F1C0146FC007D3FE8 /* Report.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Report.m; sourceTree = "<group>"; };
-		AC53B7801C0146FC007D3FE8 /* Practice+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Practice+CoreDataProperties.h"; sourceTree = "<group>"; };
-		AC53B7811C0146FC007D3FE8 /* Practice+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Practice+CoreDataProperties.m"; sourceTree = "<group>"; };
-		AC53B7821C0146FC007D3FE8 /* Practice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Practice.h; sourceTree = "<group>"; };
-		AC53B7831C0146FC007D3FE8 /* Practice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Practice.m; sourceTree = "<group>"; };
-		AC53B7841C0146FC007D3FE8 /* Account+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Account+CoreDataProperties.h"; sourceTree = "<group>"; };
-		AC53B7851C0146FC007D3FE8 /* Account+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Account+CoreDataProperties.m"; sourceTree = "<group>"; };
-		AC53B7861C0146FC007D3FE8 /* Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Account.h; sourceTree = "<group>"; };
-		AC53B7871C0146FC007D3FE8 /* Account.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Account.m; sourceTree = "<group>"; };
-		AC53B7881C0146FC007D3FE8 /* Record+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Record+CoreDataProperties.h"; sourceTree = "<group>"; };
-		AC53B7891C0146FC007D3FE8 /* Record+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Record+CoreDataProperties.m"; sourceTree = "<group>"; };
-		AC53B78A1C0146FC007D3FE8 /* Record.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Record.h; sourceTree = "<group>"; };
-		AC53B78B1C0146FC007D3FE8 /* Record.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Record.m; sourceTree = "<group>"; };
-		AC53B7941C01474B007D3FE8 /* PracticeDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PracticeDao.h; sourceTree = "<group>"; };
-		AC53B7951C01474B007D3FE8 /* PracticeDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PracticeDao.m; sourceTree = "<group>"; };
-		AC53B7961C01474B007D3FE8 /* RecordDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordDao.h; sourceTree = "<group>"; };
-		AC53B7971C01474B007D3FE8 /* RecordDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordDao.m; sourceTree = "<group>"; };
-		AC53B7981C01474B007D3FE8 /* AccountDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountDao.h; sourceTree = "<group>"; };
-		AC53B7991C01474B007D3FE8 /* AccountDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountDao.m; sourceTree = "<group>"; };
-		AC53B79A1C01474B007D3FE8 /* DAOContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAOContext.h; sourceTree = "<group>"; };
-		AC53B79B1C01474B007D3FE8 /* DAOContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAOContext.m; sourceTree = "<group>"; };
-		AC53B79C1C01474B007D3FE8 /* ReportDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportDAO.h; sourceTree = "<group>"; };
-		AC53B79D1C01474B007D3FE8 /* ReportDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportDAO.m; sourceTree = "<group>"; };
-		AC53B7A41C014AA8007D3FE8 /* UtilityBL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UtilityBL.h; sourceTree = "<group>"; };
-		AC53B7A51C014AA8007D3FE8 /* UtilityBL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UtilityBL.m; sourceTree = "<group>"; };
-		AC53B7A91C014BFE007D3FE8 /* PracticeBL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PracticeBL.h; sourceTree = "<group>"; };
-		AC53B7AA1C014BFE007D3FE8 /* PracticeBL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PracticeBL.m; sourceTree = "<group>"; };
-		AC53B7AB1C014BFE007D3FE8 /* RecordBL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordBL.h; sourceTree = "<group>"; };
-		AC53B7AC1C014BFE007D3FE8 /* RecordBL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordBL.m; sourceTree = "<group>"; };
-		AC53B7AD1C014BFE007D3FE8 /* AccountBL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountBL.h; sourceTree = "<group>"; };
-		AC53B7AE1C014BFE007D3FE8 /* AccountBL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountBL.m; sourceTree = "<group>"; };
-		AC53B7AF1C014BFE007D3FE8 /* ReportBL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportBL.h; sourceTree = "<group>"; };
-		AC53B7B01C014BFE007D3FE8 /* ReportBL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportBL.m; sourceTree = "<group>"; };
+		AC53B7A41C014AA8007D3FE8 /* UtilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UtilityManager.h; sourceTree = "<group>"; };
+		AC53B7A51C014AA8007D3FE8 /* UtilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UtilityManager.m; sourceTree = "<group>"; };
 		AC53B7B51C014C42007D3FE8 /* RSA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSA.h; sourceTree = "<group>"; };
 		AC53B7B61C014C42007D3FE8 /* RSA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSA.m; sourceTree = "<group>"; };
 		AC53B7B81C014CE7007D3FE8 /* GTMBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMBase64.h; sourceTree = "<group>"; };
@@ -1121,20 +1077,24 @@
 		AC53B7D81C016851007D3FE8 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		AC53B7DA1C01685E007D3FE8 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		AC53B7DC1C01686B007D3FE8 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
-		AC7439091C02B272004BE2A8 /* Subject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Subject.h; sourceTree = "<group>"; };
-		AC74390A1C02B272004BE2A8 /* Subject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Subject.m; sourceTree = "<group>"; };
-		AC74390D1C02B272004BE2A8 /* Think-LabelModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Think-LabelModel.h"; sourceTree = "<group>"; };
-		AC74390E1C02B272004BE2A8 /* Think-LabelModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Think-LabelModel.m"; sourceTree = "<group>"; };
-		AC74390F1C02B272004BE2A8 /* thinklabellist_model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = thinklabellist_model.h; sourceTree = "<group>"; };
-		AC7439101C02B272004BE2A8 /* thinklabellist_model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = thinklabellist_model.m; sourceTree = "<group>"; };
-		AC7439111C02B272004BE2A8 /* ModelManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelManager.h; sourceTree = "<group>"; };
-		AC7439121C02B272004BE2A8 /* ModelManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelManager.m; sourceTree = "<group>"; };
-		AC7439131C02B272004BE2A8 /* ThinkLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThinkLabel.h; sourceTree = "<group>"; };
-		AC7439141C02B272004BE2A8 /* ThinkLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThinkLabel.m; sourceTree = "<group>"; };
-		AC7439151C02B272004BE2A8 /* Note.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Note.h; sourceTree = "<group>"; };
-		AC7439161C02B272004BE2A8 /* Note.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Note.m; sourceTree = "<group>"; };
-		AC901DF71C03F555001B8090 /* SubjectBL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubjectBL.h; sourceTree = "<group>"; };
-		AC901DF81C03F555001B8090 /* SubjectBL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubjectBL.m; sourceTree = "<group>"; };
+		AC78CA241C0BF00200A9585F /* MoliStudy-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MoliStudy-Bridging-Header.h"; sourceTree = "<group>"; };
+		AC78CA251C0BF00200A9585F /* Practice+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Practice+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AC78CA261C0BF00200A9585F /* Practice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Practice.swift; sourceTree = "<group>"; };
+		AC78CA271C0BF00200A9585F /* Account+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Account+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AC78CA281C0BF00200A9585F /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		AC78CA291C0BF00200A9585F /* Record+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Record+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AC78CA2A1C0BF00200A9585F /* Record.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
+		AC78CA311C0BF03200A9585F /* Subject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
+		AC78CA331C0BF03B00A9585F /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		AC78CA351C0BF04700A9585F /* ThinkLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThinkLabel.swift; sourceTree = "<group>"; };
+		AC78CA381C0BF0C700A9585F /* Report.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Report.swift; sourceTree = "<group>"; };
+		AC78CA3A1C0BF29D00A9585F /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		AC78CA3C1C0BF2B900A9585F /* AccountDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountDAO.swift; sourceTree = "<group>"; };
+		AC78CA3E1C0BF2D100A9585F /* ContextDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContextDAO.swift; sourceTree = "<group>"; };
+		AC78CA401C0BF2E100A9585F /* PracticeDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PracticeDAO.swift; sourceTree = "<group>"; };
+		AC78CA421C0BF2F000A9585F /* RecordDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordDAO.swift; sourceTree = "<group>"; };
+		AC78CA441C0BF2FF00A9585F /* SubjectDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubjectDAO.swift; sourceTree = "<group>"; };
+		AC78CA461C0BF30C00A9585F /* ReportDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportDAO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1150,7 +1110,7 @@
 				AC53B7D21C016122007D3FE8 /* MOBFoundation.framework in Frameworks */,
 				AC53B7D31C016122007D3FE8 /* SMS_SDK.framework in Frameworks */,
 				AC53B7C51C01518A007D3FE8 /* Security.framework in Frameworks */,
-				7BFB8F4343390DAA1FE273AA /* libPods.a in Frameworks */,
+				A79D7FCC6CBFC759D863B807 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2245,8 +2205,9 @@
 		AC39B93F1BFF67E8001CE453 /* BusinessLogicLayer */ = {
 			isa = PBXGroup;
 			children = (
-				AC53B7A81C014B7F007D3FE8 /* dataManager */,
-				AC53B7A71C014AB9007D3FE8 /* networkManager */,
+				AC78CA241C0BF00200A9585F /* MoliStudy-Bridging-Header.h */,
+				AC53B7A81C014B7F007D3FE8 /* dao */,
+				AC53B7A71C014AB9007D3FE8 /* manager */,
 				AC53B7A31C014A98007D3FE8 /* utility */,
 			);
 			name = BusinessLogicLayer;
@@ -2255,7 +2216,6 @@
 		AC39B9401BFF67F9001CE453 /* PersistenceLayer */ = {
 			isa = PBXGroup;
 			children = (
-				AC53B77B1C01456F007D3FE8 /* dao */,
 				AC53B77A1C014560007D3FE8 /* data */,
 			);
 			name = PersistenceLayer;
@@ -2283,27 +2243,11 @@
 		AC53B77A1C014560007D3FE8 /* data */ = {
 			isa = PBXGroup;
 			children = (
+				AC78CA371C0BF06600A9585F /* report */,
 				ACA5F2871C02FDBD0038243F /* subject */,
 				ACA5F2861C02FDAB0038243F /* coredata */,
 			);
 			name = data;
-			sourceTree = "<group>";
-		};
-		AC53B77B1C01456F007D3FE8 /* dao */ = {
-			isa = PBXGroup;
-			children = (
-				AC53B7941C01474B007D3FE8 /* PracticeDao.h */,
-				AC53B7951C01474B007D3FE8 /* PracticeDao.m */,
-				AC53B7961C01474B007D3FE8 /* RecordDao.h */,
-				AC53B7971C01474B007D3FE8 /* RecordDao.m */,
-				AC53B7981C01474B007D3FE8 /* AccountDao.h */,
-				AC53B7991C01474B007D3FE8 /* AccountDao.m */,
-				AC53B79A1C01474B007D3FE8 /* DAOContext.h */,
-				AC53B79B1C01474B007D3FE8 /* DAOContext.m */,
-				AC53B79C1C01474B007D3FE8 /* ReportDAO.h */,
-				AC53B79D1C01474B007D3FE8 /* ReportDAO.m */,
-			);
-			name = dao;
 			sourceTree = "<group>";
 		};
 		AC53B7A31C014A98007D3FE8 /* utility */ = {
@@ -2311,38 +2255,31 @@
 			children = (
 				AC53B7CB1C016122007D3FE8 /* SMS_SDK */,
 				AC53B7BC1C014DFC007D3FE8 /* rsa */,
-				AC53B7A41C014AA8007D3FE8 /* UtilityBL.h */,
-				AC53B7A51C014AA8007D3FE8 /* UtilityBL.m */,
+				AC53B7A41C014AA8007D3FE8 /* UtilityManager.h */,
+				AC53B7A51C014AA8007D3FE8 /* UtilityManager.m */,
 			);
 			name = utility;
 			sourceTree = "<group>";
 		};
-		AC53B7A71C014AB9007D3FE8 /* networkManager */ = {
+		AC53B7A71C014AB9007D3FE8 /* manager */ = {
 			isa = PBXGroup;
 			children = (
-				AC18EA631BFF76960092F7D9 /* NetworkManager.h */,
-				AC18EA641BFF76960092F7D9 /* NetworkManager.m */,
+				AC78CA3A1C0BF29D00A9585F /* NetworkManager.swift */,
 			);
-			name = networkManager;
+			name = manager;
 			sourceTree = "<group>";
 		};
-		AC53B7A81C014B7F007D3FE8 /* dataManager */ = {
+		AC53B7A81C014B7F007D3FE8 /* dao */ = {
 			isa = PBXGroup;
 			children = (
-				AC53B7A91C014BFE007D3FE8 /* PracticeBL.h */,
-				AC53B7AA1C014BFE007D3FE8 /* PracticeBL.m */,
-				AC53B7AB1C014BFE007D3FE8 /* RecordBL.h */,
-				AC53B7AC1C014BFE007D3FE8 /* RecordBL.m */,
-				AC53B7AD1C014BFE007D3FE8 /* AccountBL.h */,
-				AC53B7AE1C014BFE007D3FE8 /* AccountBL.m */,
-				AC53B7AF1C014BFE007D3FE8 /* ReportBL.h */,
-				AC53B7B01C014BFE007D3FE8 /* ReportBL.m */,
-				AC7439111C02B272004BE2A8 /* ModelManager.h */,
-				AC7439121C02B272004BE2A8 /* ModelManager.m */,
-				AC901DF71C03F555001B8090 /* SubjectBL.h */,
-				AC901DF81C03F555001B8090 /* SubjectBL.m */,
+				AC78CA3C1C0BF2B900A9585F /* AccountDAO.swift */,
+				AC78CA3E1C0BF2D100A9585F /* ContextDAO.swift */,
+				AC78CA401C0BF2E100A9585F /* PracticeDAO.swift */,
+				AC78CA421C0BF2F000A9585F /* RecordDAO.swift */,
+				AC78CA441C0BF2FF00A9585F /* SubjectDAO.swift */,
+				AC78CA461C0BF30C00A9585F /* ReportDAO.swift */,
 			);
-			name = dataManager;
+			name = dao;
 			sourceTree = "<group>";
 		};
 		AC53B7BC1C014DFC007D3FE8 /* rsa */ = {
@@ -2377,26 +2314,24 @@
 			path = SMS_SDK;
 			sourceTree = "<group>";
 		};
+		AC78CA371C0BF06600A9585F /* report */ = {
+			isa = PBXGroup;
+			children = (
+				AC78CA381C0BF0C700A9585F /* Report.swift */,
+			);
+			name = report;
+			sourceTree = "<group>";
+		};
 		ACA5F2861C02FDAB0038243F /* coredata */ = {
 			isa = PBXGroup;
 			children = (
 				AC39B9151BFF649A001CE453 /* MoliStudy.xcdatamodeld */,
-				AC53B77C1C0146FC007D3FE8 /* Report+CoreDataProperties.h */,
-				AC53B77D1C0146FC007D3FE8 /* Report+CoreDataProperties.m */,
-				AC53B77E1C0146FC007D3FE8 /* Report.h */,
-				AC53B77F1C0146FC007D3FE8 /* Report.m */,
-				AC53B7801C0146FC007D3FE8 /* Practice+CoreDataProperties.h */,
-				AC53B7811C0146FC007D3FE8 /* Practice+CoreDataProperties.m */,
-				AC53B7821C0146FC007D3FE8 /* Practice.h */,
-				AC53B7831C0146FC007D3FE8 /* Practice.m */,
-				AC53B7841C0146FC007D3FE8 /* Account+CoreDataProperties.h */,
-				AC53B7851C0146FC007D3FE8 /* Account+CoreDataProperties.m */,
-				AC53B7861C0146FC007D3FE8 /* Account.h */,
-				AC53B7871C0146FC007D3FE8 /* Account.m */,
-				AC53B7881C0146FC007D3FE8 /* Record+CoreDataProperties.h */,
-				AC53B7891C0146FC007D3FE8 /* Record+CoreDataProperties.m */,
-				AC53B78A1C0146FC007D3FE8 /* Record.h */,
-				AC53B78B1C0146FC007D3FE8 /* Record.m */,
+				AC78CA251C0BF00200A9585F /* Practice+CoreDataProperties.swift */,
+				AC78CA261C0BF00200A9585F /* Practice.swift */,
+				AC78CA271C0BF00200A9585F /* Account+CoreDataProperties.swift */,
+				AC78CA281C0BF00200A9585F /* Account.swift */,
+				AC78CA291C0BF00200A9585F /* Record+CoreDataProperties.swift */,
+				AC78CA2A1C0BF00200A9585F /* Record.swift */,
 			);
 			name = coredata;
 			sourceTree = "<group>";
@@ -2404,16 +2339,9 @@
 		ACA5F2871C02FDBD0038243F /* subject */ = {
 			isa = PBXGroup;
 			children = (
-				AC7439091C02B272004BE2A8 /* Subject.h */,
-				AC74390A1C02B272004BE2A8 /* Subject.m */,
-				AC74390D1C02B272004BE2A8 /* Think-LabelModel.h */,
-				AC74390E1C02B272004BE2A8 /* Think-LabelModel.m */,
-				AC74390F1C02B272004BE2A8 /* thinklabellist_model.h */,
-				AC7439101C02B272004BE2A8 /* thinklabellist_model.m */,
-				AC7439131C02B272004BE2A8 /* ThinkLabel.h */,
-				AC7439141C02B272004BE2A8 /* ThinkLabel.m */,
-				AC7439151C02B272004BE2A8 /* Note.h */,
-				AC7439161C02B272004BE2A8 /* Note.m */,
+				AC78CA311C0BF03200A9585F /* Subject.swift */,
+				AC78CA331C0BF03B00A9585F /* Note.swift */,
+				AC78CA351C0BF04700A9585F /* ThinkLabel.swift */,
 			);
 			name = subject;
 			sourceTree = "<group>";
@@ -2427,7 +2355,7 @@
 				AC53B7D61C016783007D3FE8 /* JavaScriptCore.framework */,
 				AC53B7D41C016777007D3FE8 /* MessageUI.framework */,
 				AC53B7C41C01518A007D3FE8 /* Security.framework */,
-				60A0CAC4C28DE69D69868F29 /* libPods.a */,
+				0C04AE670AA344195210BFE9 /* Pods.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -3031,84 +2959,76 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC78CA3B1C0BF29D00A9585F /* NetworkManager.swift in Sources */,
 				30AAFBA41C0595EC00CD94D5 /* MDRadialProgressTheme.m in Sources */,
 				30AA1CBA1C0816D400CD94D5 /* ReportProgressViewController.m in Sources */,
 				30AAE3CE1C02BBFB00CD94D5 /* StartButtomView.m in Sources */,
-				AC53B7921C0146FC007D3FE8 /* Record+CoreDataProperties.m in Sources */,
 				30AA1CB81C0816D400CD94D5 /* ProReportTableViewCell.m in Sources */,
+				AC78CA2F1C0BF00200A9585F /* Record+CoreDataProperties.swift in Sources */,
 				30AA1C501C05A88500CD94D5 /* QuestionModel.m in Sources */,
 				30AA1C531C05A96D00CD94D5 /* TextStyle.m in Sources */,
+				AC78CA3D1C0BF2B900A9585F /* AccountDAO.swift in Sources */,
+				AC78CA2B1C0BF00200A9585F /* Practice+CoreDataProperties.swift in Sources */,
 				30AAF80A1C047E4300CD94D5 /* UIButton+Bootstrap.m in Sources */,
 				30AAFB911C0594F600CD94D5 /* MainViewController.m in Sources */,
 				30AA1C4A1C05A3AF00CD94D5 /* MZTimerLabel.m in Sources */,
 				30AAF8061C047B4300CD94D5 /* LoginViewController.m in Sources */,
-				AC53B78F1C0146FC007D3FE8 /* Practice.m in Sources */,
 				30AA1CAD1C08168300CD94D5 /* ProblemReportViewController.m in Sources */,
+				AC78CA431C0BF2F000A9585F /* RecordDAO.swift in Sources */,
 				30AA1C361C05A2D600CD94D5 /* AKPickerView.m in Sources */,
-				AC53B7931C0146FC007D3FE8 /* Record.m in Sources */,
-				AC53B7A61C014AA8007D3FE8 /* UtilityBL.m in Sources */,
+				AC53B7A61C014AA8007D3FE8 /* UtilityManager.m in Sources */,
 				30AA1CBD1C0816E000CD94D5 /* ReportModel.m in Sources */,
 				30AA1C3E1C05A30A00CD94D5 /* PickerRightArrow.m in Sources */,
 				30AAE3C91C02BB7D00CD94D5 /* YFStartView.m in Sources */,
 				30AAFB3E1C05850500CD94D5 /* ProgressHUD.m in Sources */,
+				AC78CA471C0BF30C00A9585F /* ReportDAO.swift in Sources */,
 				30AAFB411C058D3800CD94D5 /* LeftTableViewController.m in Sources */,
-				AC53B7B41C014BFE007D3FE8 /* ReportBL.m in Sources */,
+				AC78CA2E1C0BF00200A9585F /* Account.swift in Sources */,
 				30AA1C3D1C05A30A00CD94D5 /* PickerLeftArrow.m in Sources */,
-				AC74391C1C02B272004BE2A8 /* ThinkLabel.m in Sources */,
 				30AA1CB71C0816D400CD94D5 /* CollectionViewCell.m in Sources */,
 				30AAFB461C058D7500CD94D5 /* leftTableViewCell.m in Sources */,
-				AC53B7A11C01474B007D3FE8 /* DAOContext.m in Sources */,
+				AC78CA361C0BF04700A9585F /* ThinkLabel.swift in Sources */,
 				30AAFB2C1C04A50100CD94D5 /* NewProjectTypeViewController.m in Sources */,
 				AC53B7B71C014C42007D3FE8 /* RSA.m in Sources */,
 				30AAFB301C04A78A00CD94D5 /* UIBarButtonItem+Common.m in Sources */,
 				30AA1C421C05A33A00CD94D5 /* MCTopAligningLabel.m in Sources */,
-				AC901DF91C03F555001B8090 /* SubjectBL.m in Sources */,
+				AC78CA321C0BF03200A9585F /* Subject.swift in Sources */,
 				30AAFB8D1C058F2A00CD94D5 /* DrawerViewController.m in Sources */,
-				AC53B7B21C014BFE007D3FE8 /* RecordBL.m in Sources */,
-				AC7439171C02B272004BE2A8 /* Subject.m in Sources */,
-				AC74391B1C02B272004BE2A8 /* ModelManager.m in Sources */,
+				AC78CA341C0BF03B00A9585F /* Note.swift in Sources */,
 				30AAE3D51C02C08F00CD94D5 /* UIColor+expanded.m in Sources */,
 				30AAF8021C047B2300CD94D5 /* Input_OnlyText_Cell.m in Sources */,
-				AC53B7901C0146FC007D3FE8 /* Account+CoreDataProperties.m in Sources */,
 				30AA1C2F1C05A2A300CD94D5 /* tabView.m in Sources */,
-				AC7439191C02B272004BE2A8 /* Think-LabelModel.m in Sources */,
+				AC78CA301C0BF00200A9585F /* Record.swift in Sources */,
+				AC78CA411C0BF2E100A9585F /* PracticeDAO.swift in Sources */,
 				30AAFB991C05959200CD94D5 /* MainTableViewCell.m in Sources */,
 				30AAFB381C0567E700CD94D5 /* PhoneRegisterController.m in Sources */,
-				AC74391A1C02B272004BE2A8 /* thinklabellist_model.m in Sources */,
 				30AAFB171C048D0200CD94D5 /* Login.m in Sources */,
 				30AA1C311C05A2A300CD94D5 /* PickerView.m in Sources */,
 				AC39B9171BFF649A001CE453 /* MoliStudy.xcdatamodeld in Sources */,
-				AC53B7A21C01474B007D3FE8 /* ReportDAO.m in Sources */,
+				AC78CA391C0BF0C700A9585F /* Report.swift in Sources */,
 				30AA1C2E1C05A2A300CD94D5 /* AnswerTableViewCell.m in Sources */,
-				AC53B79E1C01474B007D3FE8 /* PracticeDao.m in Sources */,
 				30AAE3D91C02C11100CD94D5 /* SMPageControl.m in Sources */,
+				AC78CA451C0BF2FF00A9585F /* SubjectDAO.swift in Sources */,
 				AC53B7BB1C014CE7007D3FE8 /* GTMBase64.m in Sources */,
-				AC53B78D1C0146FC007D3FE8 /* Report.m in Sources */,
+				AC78CA2C1C0BF00200A9585F /* Practice.swift in Sources */,
 				AC53B7C11C014E26007D3FE8 /* TestViewController.m in Sources */,
 				30AAFBA51C0595EC00CD94D5 /* MDRadialProgressView.m in Sources */,
-				AC74391D1C02B272004BE2A8 /* Note.m in Sources */,
+				AC78CA2D1C0BF00200A9585F /* Account+CoreDataProperties.swift in Sources */,
 				30AAFBAB1C059CD600CD94D5 /* ReportViewController.m in Sources */,
 				30AA1CB91C0816D400CD94D5 /* ReportView.m in Sources */,
 				30AA1C461C05A37B00CD94D5 /* DXPopover.m in Sources */,
 				30AAFBA31C0595EC00CD94D5 /* MDRadialProgressLabel.m in Sources */,
 				30AA1C301C05A2A300CD94D5 /* ScrollerView.m in Sources */,
 				30AA1C5F1C05C0C100CD94D5 /* StudyViewController.m in Sources */,
-				AC53B7A01C01474B007D3FE8 /* AccountDao.m in Sources */,
+				AC78CA3F1C0BF2D100A9585F /* ContextDAO.swift in Sources */,
 				AC39B90E1BFF649A001CE453 /* AppDelegate.m in Sources */,
 				30AAFB9B1C05959200CD94D5 /* HeadView.m in Sources */,
-				AC18EA651BFF76960092F7D9 /* NetworkManager.m in Sources */,
 				30AA1C5C1C05B39100CD94D5 /* UIView+Frame.m in Sources */,
 				AC39B90B1BFF649A001CE453 /* main.m in Sources */,
 				30AAFB9A1C05959200CD94D5 /* setFootView.m in Sources */,
 				30AA1CA81C06D34000CD94D5 /* TableViewHeader.m in Sources */,
-				AC53B78E1C0146FC007D3FE8 /* Practice+CoreDataProperties.m in Sources */,
-				AC53B7B11C014BFE007D3FE8 /* PracticeBL.m in Sources */,
-				AC53B7911C0146FC007D3FE8 /* Account.m in Sources */,
 				30AAE3DD1C02C15D00CD94D5 /* IntroductionViewController.m in Sources */,
-				AC53B78C1C0146FC007D3FE8 /* Report+CoreDataProperties.m in Sources */,
-				AC53B79F1C01474B007D3FE8 /* RecordDao.m in Sources */,
 				30AAFBAF1C059CED00CD94D5 /* ReportTableViewCell.m in Sources */,
-				AC53B7B31C014BFE007D3FE8 /* AccountBL.m in Sources */,
 				30AAFB2D1C04A50100CD94D5 /* NewProjectViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -3250,6 +3170,7 @@
 			baseConfigurationReference = 95456BA8E0DB14D551D3A063 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MoliStudy/SMS_SDK",
@@ -3259,6 +3180,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.molistudy.MoliStudy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MoliStudy/MoliStudy-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -3267,6 +3190,7 @@
 			baseConfigurationReference = 023B0FA0A76EAEEB884B9ABD /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MoliStudy/SMS_SDK",
@@ -3276,6 +3200,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.molistudy.MoliStudy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MoliStudy/MoliStudy-Bridging-Header.h";
 			};
 			name = Release;
 		};

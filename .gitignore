@@ -5,7 +5,7 @@ build/*
 *.xcodeproj/project.pbxproj
 *.xcworkspace/
 *.xcuserdata/
-project.xcworkspace/
+project.xcworkspace
 xcuserdata
 UserInterfaceState.xcuserstate
 UserInterface.xcuserstate

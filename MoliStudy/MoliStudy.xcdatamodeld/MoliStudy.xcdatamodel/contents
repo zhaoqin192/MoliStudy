@@ -10,7 +10,7 @@
     </entity>
     <entity name="Practice" representedClassName="Practice" syncable="YES">
         <attribute name="finished" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="itemID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="itemID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="total" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
     </entity>
@@ -19,16 +19,9 @@
         <attribute name="complete" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="forecast" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
     </entity>
-    <entity name="Report" representedClassName="Report" syncable="YES">
-        <attribute name="knowledgeID" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="score" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="variety" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-    </entity>
     <elements>
         <element name="Account" positionX="-63" positionY="-18" width="128" height="135"/>
         <element name="Practice" positionX="-54" positionY="36" width="128" height="105"/>
         <element name="Record" positionX="-36" positionY="54" width="128" height="90"/>
-        <element name="Report" positionX="-18" positionY="72" width="128" height="105"/>
     </elements>
 </model>
