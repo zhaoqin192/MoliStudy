@@ -13,7 +13,6 @@
 @interface Input_OnlyText_Cell : UITableViewCell
 
 @property (assign, nonatomic) BOOL isForLoginVC;
-@property (strong, nonatomic) UIView *lineView;
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 @property (nonatomic,copy) void(^textValueChangedBlock)(NSString*);
 @property (nonatomic,copy) void(^editDidEndBlock)(NSString*);

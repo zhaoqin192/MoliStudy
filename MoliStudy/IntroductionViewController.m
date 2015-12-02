@@ -10,6 +10,7 @@
 #import "SMPageControl.h"
 #import <NYXImagesKit/NYXImagesKit.h>
 #import "LoginViewController.h"
+#import "RegisterViewController.h"
 
 @interface IntroductionViewController ()
 
@@ -230,9 +231,9 @@
 
 #pragma mark Action
 - (void)registerButtonClicked{
-    UIStoryboard *newProjectStoryboard = [UIStoryboard storyboardWithName:@"NewProject" bundle:nil];
-    UINavigationController *newProjectVC = [newProjectStoryboard instantiateViewControllerWithIdentifier:@"NewProjectVC"];
-    [self presentViewController:newProjectVC animated:YES completion:nil];
+    RegisterViewController *vc = [[RegisterViewController alloc] init];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    [self presentViewController:nav animated:YES completion:nil];
 }
 
 - (void)loginButtonClicked{

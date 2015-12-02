@@ -21,11 +21,9 @@
 }
 
 - (IBAction)editDidBegin:(id)sender {
-    _lineView.backgroundColor = LoginBackgroundColor;
 }
 
 - (IBAction)editDidEnd:(id)sender {
-    _lineView.backgroundColor = [UIColor grayColor];
     if (self.editDidEndBlock) {
         self.editDidEndBlock(self.textField.text);
     }
@@ -41,20 +39,12 @@
     }
 }
 
-- (IBAction)clearBtnClicked:(id)sender {
-    self.textField.text = @"";
-    [self textValueChanged:nil];
-}
-
 #pragma mark - UIView
 - (void)layoutSubviews {
     [super layoutSubviews];
     self.backgroundColor = [UIColor clearColor];
     self.textField.font = [UIFont systemFontOfSize:17];
     self.textField.textColor = [UIColor blackColor];
-    _lineView = [[UIView alloc] initWithFrame:CGRectMake(kLoginPaddingLeftWidth, 43, kScreen_Width-2*kLoginPaddingLeftWidth, 1)];
-    _lineView.backgroundColor = [UIColor grayColor];
-    [self.contentView addSubview:_lineView];
     self.textField.clearButtonMode = UITextFieldViewModeWhileEditing;
 
 }

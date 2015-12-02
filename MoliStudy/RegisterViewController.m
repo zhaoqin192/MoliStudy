@@ -1,41 +1,36 @@
 //
-//  LoginViewController.m
-//  Coding_iOS
+//  RegisterViewController.m
+//  MoliStudy
 //
-//  Created by 王 原闯 on 14-7-31.
-//  Copyright (c) 2014年 Coding. All rights reserved.
+//  Created by 王霄 on 15/12/2.
+//  Copyright © 2015年 MoliStudy. All rights reserved.
 //
 
+#import "RegisterViewController.h"
 #import "LoginViewController.h"
 #import "Input_OnlyText_Cell.h"
 #import <NYXImagesKit/NYXImagesKit.h>
-#import "Login.h"
+#import "Register.h"
 #import "LeftTableViewController.h"
 #import "DrawerViewController.h"
 #import "MainViewController.h"
 
-@interface LoginViewController ()<UITableViewDataSource, UITableViewDelegate>
+@interface RegisterViewController ()<UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) TPKeyboardAvoidingTableView *myTableView;
 @property (strong, nonatomic) UIButton *loginBtn;
 @property (strong, nonatomic) UIImageView *iconUserView;
 @property (strong, nonatomic) UIButton *dismissButton;
-@property (strong, nonatomic) Login *myLogin;
+@property (strong, nonatomic) Register *myRegister;
 @property (nonatomic, strong) DrawerViewController *sideViewController;
 @end
 
-@implementation LoginViewController
+@implementation RegisterViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    AccountDAO *dao = [AccountDAO sharedManager];
-    self.myLogin = [[Login alloc] init];
-    if ([dao isExist]) {
-        Account *account = [dao findAccount];
-        self.myLogin.email = account.accountName;
-        self.myLogin.password = account.password;
-    }
+    self.myRegister = [[Register alloc] init];
     //    添加myTableView
     _myTableView = ({
         TPKeyboardAvoidingTableView *tableView = [[TPKeyboardAvoidingTableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
@@ -51,7 +46,7 @@
         tableView;
     });
     
-//    self.myTableView.contentInset = UIEdgeInsetsMake(-kHigher_iOS_6_1_DIS(20), 0, 0, 0);
+    //    self.myTableView.contentInset = UIEdgeInsetsMake(-kHigher_iOS_6_1_DIS(20), 0, 0, 0);
     self.myTableView.tableHeaderView = [self customHeaderView];
     self.myTableView.tableFooterView=[self customFooterView];
     [self showdismissButton:YES];
@@ -61,7 +56,7 @@
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES animated:YES];
-//    [self refreshIconUserImage];
+    //    [self refreshIconUserImage];
     [self configureNotification];
 }
 
@@ -89,7 +84,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 2;
+    return 3;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -98,34 +93,39 @@
     Input_OnlyText_Cell *cell = [tableView dequeueReusableCellWithIdentifier:kCellIdentifier_Input_OnlyText_Cell forIndexPath:indexPath];
     cell.isForLoginVC = YES;
     __weak typeof(self) weakSelf = self;
-        if (indexPath.row == 0) {
-            cell.textField.keyboardType = UIKeyboardTypeEmailAddress;
-            [cell configWithPlaceholder:@"  username" andValue:self.myLogin.email];
-            cell.textValueChangedBlock = ^(NSString *valueStr){
-                [weakSelf.iconUserView setImage:[UIImage imageNamed:@"icon_user_monkey"]];
-                weakSelf.myLogin.email = valueStr;
-            };
-            cell.editDidEndBlock = ^(NSString *textStr){
-                [weakSelf refreshIconUserImage];
-            };
-        }else if (indexPath.row == 1){
-            [cell configWithPlaceholder:@"  password" andValue:self.myLogin.password];
-            cell.textField.secureTextEntry = YES;
-            cell.textValueChangedBlock = ^(NSString *valueStr){
-                weakSelf.myLogin.password = valueStr;
-            };
-        }
+    if (indexPath.row == 0) {
+        cell.textField.keyboardType = UIKeyboardTypeEmailAddress;
+        [cell configWithPlaceholder:@"  +86" andValue:self.myRegister.phoneNumber];
+        cell.textValueChangedBlock = ^(NSString *valueStr){
+            [weakSelf.iconUserView setImage:[UIImage imageNamed:@"icon_user_monkey"]];
+            weakSelf.myRegister.phoneNumber = valueStr;
+        };
+//        cell.editDidEndBlock = ^(NSString *textStr){
+//            [weakSelf refreshIconUserImage];
+//        };
+    }else if (indexPath.row == 1){
+        [cell configWithPlaceholder:@"  验证码" andValue:self.myRegister.keyCode];
+        cell.textValueChangedBlock = ^(NSString *valueStr){
+            weakSelf.myRegister.keyCode = valueStr;
+        };
+    }
+    else if (indexPath.row == 2){
+        [cell configWithPlaceholder:@"  password" andValue:self.myRegister.password];
+        cell.textValueChangedBlock = ^(NSString *valueStr){
+            weakSelf.myRegister.password = valueStr;
+        };
+    }
     return cell;
 }
 
 - (void)refreshIconUserImage{
-//    NSString *textStr = self.myLogin.email;
-//    if (textStr) {
-//        User *curUser = [Login userWithGlobaykeyOrEmail:textStr];
-//        if (curUser && curUser.avatar) {
-//            [self.iconUserView sd_setImageWithURL:[curUser.avatar urlImageWithCodePathResizeToView:self.iconUserView] placeholderImage:[UIImage imageNamed:@"icon_user_monkey"]];
-//        }
-//    }
+    //    NSString *textStr = self.myLogin.email;
+    //    if (textStr) {
+    //        User *curUser = [Login userWithGlobaykeyOrEmail:textStr];
+    //        if (curUser && curUser.avatar) {
+    //            [self.iconUserView sd_setImageWithURL:[curUser.avatar urlImageWithCodePathResizeToView:self.iconUserView] placeholderImage:[UIImage imageNamed:@"icon_user_monkey"]];
+    //        }
+    //    }
 }
 
 #pragma mark - Register Notification
@@ -195,46 +195,12 @@
 
 - (UIView *)customFooterView{
     UIView *footerV = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreen_Width, 150)];
-    _loginBtn = [UIButton buttonWithStyle:StrapSuccessStyle andTitle:@"log in" andFrame:CGRectMake(kLoginPaddingLeftWidth, 20, kScreen_Width-kLoginPaddingLeftWidth*2, 45) target:self action:@selector(sendLogin)];
+    _loginBtn = [UIButton buttonWithStyle:StrapSuccessStyle andTitle:@"sign in" andFrame:CGRectMake(kLoginPaddingLeftWidth, 20, kScreen_Width-kLoginPaddingLeftWidth*2, 45) target:self action:@selector(sendLogin)];
     [footerV addSubview:_loginBtn];
     
-    RAC(self.loginBtn,enabled) = [RACSignal combineLatest:@[RACObserve(self.myLogin,email ),RACObserve(self.myLogin, password)] reduce:^id(NSString *email,NSString *password){
-        return @([email length] > 0 && [password length] > 0);
+    RAC(self.loginBtn,enabled) = [RACSignal combineLatest:@[RACObserve(self.myRegister,phoneNumber ),RACObserve(self.myRegister, keyCode),RACObserve(self.myRegister, password)] reduce:^id(NSString *email,NSString *keyCode,NSString *password){
+        return @([email length] > 0 && [keyCode length] > 0 && [password length] > 0);
     }];
-    
-    UIButton *cannotLoginBtn = ({
-        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 150, 30)];
-        [button.titleLabel setFont:[UIFont systemFontOfSize:14]];
-        [button setTitleColor:LoginButtonColor forState:UIControlStateNormal];
-        [button setTitleColor:LoginButtonColor forState:UIControlStateHighlighted];
-        
-        [button setTitle:@"forgot password" forState:UIControlStateNormal];
-        [footerV addSubview:button];
-        [button mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.size.mas_equalTo(CGSizeMake(150, 30));
-            make.left.equalTo(footerV).offset(kPaddingLeftWidth);
-            make.top.equalTo(_loginBtn.mas_bottom).offset(20);
-        }];
-        button;
-    });
-    [cannotLoginBtn addTarget:self action:@selector(cannotLoginBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
-    
-    UIButton *registerBtn = ({
-        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 150, 30)];
-        [button.titleLabel setFont:[UIFont systemFontOfSize:14]];
-        [button setTitleColor:LoginButtonColor forState:UIControlStateNormal];
-        [button setTitleColor:LoginButtonColor forState:UIControlStateHighlighted];
-        
-        [button setTitle:@"sign in" forState:UIControlStateNormal];
-        [footerV addSubview:button];
-        [button mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.size.mas_equalTo(CGSizeMake(150, 30));
-            make.right.equalTo(footerV).offset(-kPaddingLeftWidth);
-            make.top.equalTo(_loginBtn.mas_bottom).offset(20);
-        }];
-        button;
-    });
-    [registerBtn addTarget:self action:@selector(goRegisterVC:) forControlEvents:UIControlEventTouchUpInside];
     
     return footerV;
 }
@@ -243,17 +209,16 @@
 #pragma mark Btn Clicked
 - (void)sendLogin{
     NSLog(@"btn clicked");
-    [ProgressHUD show:@"Please wait..."];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//       [NetworkManager loginRequestWithUserName:self.myLogin.email withPassword:self.myLogin.password];
-        [NetworkManager login:self.myLogin.email password:self.myLogin.password];
-    });
+//    [ProgressHUD show:@"Please wait..."];
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        [NetworkManager loginRequestWithUserName:self.myLogin.email withPassword:self.myLogin.password];
+//    });
 }
 
 
 - (IBAction)goRegisterVC:(id)sender {
-//    RegisterViewController *vc = [[RegisterViewController alloc] init];    
-//    [self.navigationController pushViewController:vc animated:YES];
+    //    RegisterViewController *vc = [[RegisterViewController alloc] init];
+    //    [self.navigationController pushViewController:vc animated:YES];
     NSLog(@"goto register");
 }
 

@@ -1,5 +1,5 @@
 //
-//  Login.h
+//  Register.h
 //  MoliStudy
 //
 //  Created by 王霄 on 15/12/2.
@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Login : NSObject
+@interface Register : NSObject
 
-@property (readwrite, nonatomic, strong) NSString *email, *password;
+@property (nonatomic, strong) NSString *phoneNumber, *keyCode, *password;
 
 @end

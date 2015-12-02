@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		309C16C11C0F3C7C001A3B11 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 309C16C01C0F3C7C001A3B11 /* RegisterViewController.m */; };
+		309C16C41C0F3E0B001A3B11 /* Register.m in Sources */ = {isa = PBXBuildFile; fileRef = 309C16C31C0F3E0B001A3B11 /* Register.m */; };
 		30AA1C2E1C05A2A300CD94D5 /* AnswerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AA1C251C05A2A300CD94D5 /* AnswerTableViewCell.m */; };
 		30AA1C2F1C05A2A300CD94D5 /* tabView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AA1C271C05A2A300CD94D5 /* tabView.m */; };
 		30AA1C301C05A2A300CD94D5 /* ScrollerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AA1C291C05A2A300CD94D5 /* ScrollerView.m */; };
@@ -417,12 +419,8 @@
 		30AAFB131C04817600CD94D5 /* xtsegment_bordor_left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30AAF99F1C04817600CD94D5 /* xtsegment_bordor_left@2x.png */; };
 		30AAFB141C04817600CD94D5 /* xtsegment_bordor_right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30AAF9A01C04817600CD94D5 /* xtsegment_bordor_right@2x.png */; };
 		30AAFB171C048D0200CD94D5 /* Login.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AAFB161C048D0200CD94D5 /* Login.m */; };
-		30AAFB2B1C04A50100CD94D5 /* NewProject.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30AAFB261C04A50100CD94D5 /* NewProject.storyboard */; };
-		30AAFB2C1C04A50100CD94D5 /* NewProjectTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AAFB281C04A50100CD94D5 /* NewProjectTypeViewController.m */; };
-		30AAFB2D1C04A50100CD94D5 /* NewProjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AAFB2A1C04A50100CD94D5 /* NewProjectViewController.m */; };
 		30AAFB301C04A78A00CD94D5 /* UIBarButtonItem+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AAFB2F1C04A78A00CD94D5 /* UIBarButtonItem+Common.m */; };
 		30AAFB321C05400E00CD94D5 /* University.plist in Resources */ = {isa = PBXBuildFile; fileRef = 30AAFB311C05400E00CD94D5 /* University.plist */; };
-		30AAFB381C0567E700CD94D5 /* PhoneRegisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AAFB371C0567E700CD94D5 /* PhoneRegisterController.m */; };
 		30AAFB3D1C05850500CD94D5 /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 30AAFB3A1C05850500CD94D5 /* ProgressHUD.bundle */; };
 		30AAFB3E1C05850500CD94D5 /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AAFB3C1C05850500CD94D5 /* ProgressHUD.m */; };
 		30AAFB411C058D3800CD94D5 /* LeftTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AAFB401C058D3800CD94D5 /* LeftTableViewController.m */; };
@@ -531,6 +529,10 @@
 /* Begin PBXFileReference section */
 		023B0FA0A76EAEEB884B9ABD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		0C04AE670AA344195210BFE9 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		309C16BF1C0F3C7C001A3B11 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		309C16C01C0F3C7C001A3B11 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		309C16C21C0F3E0B001A3B11 /* Register.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Register.h; sourceTree = "<group>"; };
+		309C16C31C0F3E0B001A3B11 /* Register.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Register.m; sourceTree = "<group>"; };
 		30AA1C241C05A2A300CD94D5 /* AnswerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnswerTableViewCell.h; sourceTree = "<group>"; };
 		30AA1C251C05A2A300CD94D5 /* AnswerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnswerTableViewCell.m; sourceTree = "<group>"; };
 		30AA1C261C05A2A300CD94D5 /* tabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tabView.h; sourceTree = "<group>"; };
@@ -972,16 +974,9 @@
 		30AAF9A01C04817600CD94D5 /* xtsegment_bordor_right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "xtsegment_bordor_right@2x.png"; sourceTree = "<group>"; };
 		30AAFB151C048D0200CD94D5 /* Login.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Login.h; sourceTree = "<group>"; };
 		30AAFB161C048D0200CD94D5 /* Login.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Login.m; sourceTree = "<group>"; };
-		30AAFB261C04A50100CD94D5 /* NewProject.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NewProject.storyboard; sourceTree = "<group>"; };
-		30AAFB271C04A50100CD94D5 /* NewProjectTypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewProjectTypeViewController.h; sourceTree = "<group>"; };
-		30AAFB281C04A50100CD94D5 /* NewProjectTypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewProjectTypeViewController.m; sourceTree = "<group>"; };
-		30AAFB291C04A50100CD94D5 /* NewProjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewProjectViewController.h; sourceTree = "<group>"; };
-		30AAFB2A1C04A50100CD94D5 /* NewProjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewProjectViewController.m; sourceTree = "<group>"; };
 		30AAFB2E1C04A78A00CD94D5 /* UIBarButtonItem+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Common.h"; sourceTree = "<group>"; };
 		30AAFB2F1C04A78A00CD94D5 /* UIBarButtonItem+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Common.m"; sourceTree = "<group>"; };
 		30AAFB311C05400E00CD94D5 /* University.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = University.plist; sourceTree = "<group>"; };
-		30AAFB361C0567E700CD94D5 /* PhoneRegisterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneRegisterController.h; sourceTree = "<group>"; };
-		30AAFB371C0567E700CD94D5 /* PhoneRegisterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneRegisterController.m; sourceTree = "<group>"; };
 		30AAFB3A1C05850500CD94D5 /* ProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ProgressHUD.bundle; sourceTree = "<group>"; };
 		30AAFB3B1C05850500CD94D5 /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
 		30AAFB3C1C05850500CD94D5 /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
@@ -1998,13 +1993,10 @@
 		30AAFB1B1C049D1A00CD94D5 /* RegisterView */ = {
 			isa = PBXGroup;
 			children = (
-				30AAFB261C04A50100CD94D5 /* NewProject.storyboard */,
-				30AAFB291C04A50100CD94D5 /* NewProjectViewController.h */,
-				30AAFB2A1C04A50100CD94D5 /* NewProjectViewController.m */,
-				30AAFB271C04A50100CD94D5 /* NewProjectTypeViewController.h */,
-				30AAFB281C04A50100CD94D5 /* NewProjectTypeViewController.m */,
-				30AAFB361C0567E700CD94D5 /* PhoneRegisterController.h */,
-				30AAFB371C0567E700CD94D5 /* PhoneRegisterController.m */,
+				309C16BF1C0F3C7C001A3B11 /* RegisterViewController.h */,
+				309C16C01C0F3C7C001A3B11 /* RegisterViewController.m */,
+				309C16C21C0F3E0B001A3B11 /* Register.h */,
+				309C16C31C0F3E0B001A3B11 /* Register.m */,
 			);
 			name = RegisterView;
 			sourceTree = "<group>";
@@ -2729,7 +2721,6 @@
 				30AAFAD01C04817600CD94D5 /* checkbox_checked@2x.png in Resources */,
 				30AAFAA01C04817600CD94D5 /* project_item_readme@2x.png in Resources */,
 				30AAF9E91C04817600CD94D5 /* coding_emoji_22@2x.png in Resources */,
-				30AAFB2B1C04A50100CD94D5 /* NewProject.storyboard in Resources */,
 				30AAF9A41C04817600CD94D5 /* banner__page_unselected@2x.png in Resources */,
 				30AAFA041C04817600CD94D5 /* file_changeType_COPY@2x.png in Resources */,
 				30AAE3C41C02BA7F00CD94D5 /* startImage2.png in Resources */,
@@ -2988,12 +2979,12 @@
 				30AA1CB71C0816D400CD94D5 /* CollectionViewCell.m in Sources */,
 				30AAFB461C058D7500CD94D5 /* leftTableViewCell.m in Sources */,
 				AC78CA361C0BF04700A9585F /* ThinkLabel.swift in Sources */,
-				30AAFB2C1C04A50100CD94D5 /* NewProjectTypeViewController.m in Sources */,
 				AC53B7B71C014C42007D3FE8 /* RSA.m in Sources */,
 				30AAFB301C04A78A00CD94D5 /* UIBarButtonItem+Common.m in Sources */,
 				30AA1C421C05A33A00CD94D5 /* MCTopAligningLabel.m in Sources */,
 				AC78CA321C0BF03200A9585F /* Subject.swift in Sources */,
 				30AAFB8D1C058F2A00CD94D5 /* DrawerViewController.m in Sources */,
+				309C16C11C0F3C7C001A3B11 /* RegisterViewController.m in Sources */,
 				AC78CA341C0BF03B00A9585F /* Note.swift in Sources */,
 				30AAE3D51C02C08F00CD94D5 /* UIColor+expanded.m in Sources */,
 				30AAF8021C047B2300CD94D5 /* Input_OnlyText_Cell.m in Sources */,
@@ -3001,13 +2992,13 @@
 				AC78CA301C0BF00200A9585F /* Record.swift in Sources */,
 				AC78CA411C0BF2E100A9585F /* PracticeDAO.swift in Sources */,
 				30AAFB991C05959200CD94D5 /* MainTableViewCell.m in Sources */,
-				30AAFB381C0567E700CD94D5 /* PhoneRegisterController.m in Sources */,
 				30AAFB171C048D0200CD94D5 /* Login.m in Sources */,
 				30AA1C311C05A2A300CD94D5 /* PickerView.m in Sources */,
 				AC39B9171BFF649A001CE453 /* MoliStudy.xcdatamodeld in Sources */,
 				AC78CA391C0BF0C700A9585F /* Report.swift in Sources */,
 				30AA1C2E1C05A2A300CD94D5 /* AnswerTableViewCell.m in Sources */,
 				30AAE3D91C02C11100CD94D5 /* SMPageControl.m in Sources */,
+				309C16C41C0F3E0B001A3B11 /* Register.m in Sources */,
 				AC78CA451C0BF2FF00A9585F /* SubjectDAO.swift in Sources */,
 				AC53B7BB1C014CE7007D3FE8 /* GTMBase64.m in Sources */,
 				AC78CA2C1C0BF00200A9585F /* Practice.swift in Sources */,
@@ -3029,7 +3020,6 @@
 				30AA1CA81C06D34000CD94D5 /* TableViewHeader.m in Sources */,
 				30AAE3DD1C02C15D00CD94D5 /* IntroductionViewController.m in Sources */,
 				30AAFBAF1C059CED00CD94D5 /* ReportTableViewCell.m in Sources */,
-				30AAFB2D1C04A50100CD94D5 /* NewProjectViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
