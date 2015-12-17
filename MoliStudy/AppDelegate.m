@@ -40,6 +40,7 @@
 //    self.window.rootViewController = testViewContorller;
     
     [self configureStartView];
+    [self configureNavigationItem];
     return YES;
 }
 
@@ -51,6 +52,12 @@
     StartButtomView *startButtomView = [[[NSBundle mainBundle] loadNibNamed:@"StartButtomView" owner:self options:nil] lastObject];
     startView.logoView = startButtomView;
     [startView configYFStartView];
+}
+
+- (void)configureNavigationItem{
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithHexString:@"0x00AAEC"]];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

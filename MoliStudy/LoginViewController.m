@@ -38,9 +38,9 @@
     }
     //    添加myTableView
     _myTableView = ({
-        TPKeyboardAvoidingTableView *tableView = [[TPKeyboardAvoidingTableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+        TPKeyboardAvoidingTableView *tableView = [[TPKeyboardAvoidingTableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
         [tableView registerNib:[UINib nibWithNibName:kCellIdentifier_Input_OnlyText_Cell bundle:[NSBundle mainBundle]] forCellReuseIdentifier:kCellIdentifier_Input_OnlyText_Cell];
-        tableView.backgroundColor = LoginBackgroundColor;
+        tableView.backgroundColor = vcbackgroundColor;
         tableView.dataSource = self;
         tableView.delegate = self;
         tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -92,6 +92,10 @@
     return 2;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 60;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
@@ -100,7 +104,7 @@
     __weak typeof(self) weakSelf = self;
         if (indexPath.row == 0) {
             cell.textField.keyboardType = UIKeyboardTypeEmailAddress;
-            [cell configWithPlaceholder:@"  username" andValue:self.myLogin.email];
+            [cell configWithPlaceholder:@"  用户名" andValue:self.myLogin.email];
             cell.textValueChangedBlock = ^(NSString *valueStr){
                 [weakSelf.iconUserView setImage:[UIImage imageNamed:@"icon_user_monkey"]];
                 weakSelf.myLogin.email = valueStr;
@@ -109,7 +113,7 @@
                 [weakSelf refreshIconUserImage];
             };
         }else if (indexPath.row == 1){
-            [cell configWithPlaceholder:@"  password" andValue:self.myLogin.password];
+            [cell configWithPlaceholder:@"  密码" andValue:self.myLogin.password];
             cell.textField.secureTextEntry = YES;
             cell.textValueChangedBlock = ^(NSString *valueStr){
                 weakSelf.myLogin.password = valueStr;
@@ -195,7 +199,7 @@
 
 - (UIView *)customFooterView{
     UIView *footerV = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreen_Width, 150)];
-    _loginBtn = [UIButton buttonWithStyle:StrapSuccessStyle andTitle:@"log in" andFrame:CGRectMake(kLoginPaddingLeftWidth, 20, kScreen_Width-kLoginPaddingLeftWidth*2, 45) target:self action:@selector(sendLogin)];
+    _loginBtn = [UIButton buttonWithStyle:StrapInfoStyle andTitle:@"登录" andFrame:CGRectMake(kLoginPaddingLeftWidth, 20, kScreen_Width-kLoginPaddingLeftWidth*2, 45) target:self action:@selector(sendLogin)];
     [footerV addSubview:_loginBtn];
     
     RAC(self.loginBtn,enabled) = [RACSignal combineLatest:@[RACObserve(self.myLogin,email ),RACObserve(self.myLogin, password)] reduce:^id(NSString *email,NSString *password){
@@ -205,15 +209,15 @@
     UIButton *cannotLoginBtn = ({
         UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 150, 30)];
         [button.titleLabel setFont:[UIFont systemFontOfSize:14]];
-        [button setTitleColor:LoginButtonColor forState:UIControlStateNormal];
-        [button setTitleColor:LoginButtonColor forState:UIControlStateHighlighted];
+        [button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+        [button setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
         
-        [button setTitle:@"forgot password" forState:UIControlStateNormal];
+        [button setTitle:@"忘记密码" forState:UIControlStateNormal];
         [footerV addSubview:button];
         [button mas_makeConstraints:^(MASConstraintMaker *make) {
             make.size.mas_equalTo(CGSizeMake(150, 30));
             make.left.equalTo(footerV).offset(kPaddingLeftWidth);
-            make.top.equalTo(_loginBtn.mas_bottom).offset(20);
+            make.top.equalTo(_loginBtn.mas_bottom).offset(5);
         }];
         button;
     });
@@ -225,12 +229,12 @@
         [button setTitleColor:LoginButtonColor forState:UIControlStateNormal];
         [button setTitleColor:LoginButtonColor forState:UIControlStateHighlighted];
         
-        [button setTitle:@"sign in" forState:UIControlStateNormal];
+        [button setTitle:@"注册" forState:UIControlStateNormal];
         [footerV addSubview:button];
         [button mas_makeConstraints:^(MASConstraintMaker *make) {
             make.size.mas_equalTo(CGSizeMake(150, 30));
             make.right.equalTo(footerV).offset(-kPaddingLeftWidth);
-            make.top.equalTo(_loginBtn.mas_bottom).offset(20);
+            make.top.equalTo(_loginBtn.mas_bottom).offset(5);
         }];
         button;
     });

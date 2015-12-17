@@ -46,7 +46,8 @@
     self.textField.font = [UIFont systemFontOfSize:17];
     self.textField.textColor = [UIColor blackColor];
     self.textField.clearButtonMode = UITextFieldViewModeWhileEditing;
-
+    self.textField.layer.borderColor = [[UIColor grayColor] CGColor];
+    self.textField.layer.borderWidth = 1.0;
 }
 
 - (void)prepareForReuse{

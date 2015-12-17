@@ -11,6 +11,7 @@
 #import <NYXImagesKit/NYXImagesKit.h>
 #import "LoginViewController.h"
 #import "RegisterViewController.h"
+#import "Project_RootViewController.h"
 
 @interface IntroductionViewController ()
 
@@ -237,7 +238,10 @@
 }
 
 - (void)loginButtonClicked{
-    LoginViewController *vc = [[LoginViewController alloc] init];
+//    LoginViewController *vc = [[LoginViewController alloc] init];
+//    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+//    [self presentViewController:nav animated:YES completion:nil];
+    Project_RootViewController * vc = [[Project_RootViewController alloc] init];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
     [self presentViewController:nav animated:YES completion:nil];
 }

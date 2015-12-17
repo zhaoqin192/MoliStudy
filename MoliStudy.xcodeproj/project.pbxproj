@@ -468,6 +468,11 @@
 		30AAFBA51C0595EC00CD94D5 /* MDRadialProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AAFBA21C0595EC00CD94D5 /* MDRadialProgressView.m */; };
 		30AAFBAB1C059CD600CD94D5 /* ReportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AAFBAA1C059CD600CD94D5 /* ReportViewController.m */; };
 		30AAFBAF1C059CED00CD94D5 /* ReportTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AAFBAE1C059CED00CD94D5 /* ReportTableViewCell.m */; };
+		30CF64401C21491F0060B3B9 /* LoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30CF643F1C21491F0060B3B9 /* LoginStoryboard.storyboard */; };
+		30CF64421C214DB10060B3B9 /* RegisterStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30CF64411C214DB10060B3B9 /* RegisterStoryBoard.storyboard */; };
+		30CF645E1C2159270060B3B9 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 30CF645D1C2159270060B3B9 /* iCarousel.m */; };
+		30CF64641C2253A30060B3B9 /* Project_RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30CF64631C2253A30060B3B9 /* Project_RootViewController.m */; };
+		30CF64671C2260140060B3B9 /* XTSegmentControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 30CF64661C2260140060B3B9 /* XTSegmentControl.m */; };
 		A79D7FCC6CBFC759D863B807 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C04AE670AA344195210BFE9 /* Pods.framework */; };
 		AC39B90B1BFF649A001CE453 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AC39B90A1BFF649A001CE453 /* main.m */; };
 		AC39B90E1BFF649A001CE453 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AC39B90D1BFF649A001CE453 /* AppDelegate.m */; };
@@ -1037,6 +1042,14 @@
 		30AAFBAA1C059CD600CD94D5 /* ReportViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportViewController.m; sourceTree = "<group>"; };
 		30AAFBAD1C059CED00CD94D5 /* ReportTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportTableViewCell.h; sourceTree = "<group>"; };
 		30AAFBAE1C059CED00CD94D5 /* ReportTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportTableViewCell.m; sourceTree = "<group>"; };
+		30CF643F1C21491F0060B3B9 /* LoginStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginStoryboard.storyboard; sourceTree = "<group>"; };
+		30CF64411C214DB10060B3B9 /* RegisterStoryBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RegisterStoryBoard.storyboard; sourceTree = "<group>"; };
+		30CF645C1C2159270060B3B9 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
+		30CF645D1C2159270060B3B9 /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
+		30CF64621C2253A30060B3B9 /* Project_RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Project_RootViewController.h; sourceTree = "<group>"; };
+		30CF64631C2253A30060B3B9 /* Project_RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Project_RootViewController.m; sourceTree = "<group>"; };
+		30CF64651C2260140060B3B9 /* XTSegmentControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XTSegmentControl.h; sourceTree = "<group>"; };
+		30CF64661C2260140060B3B9 /* XTSegmentControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XTSegmentControl.m; sourceTree = "<group>"; };
 		95456BA8E0DB14D551D3A063 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		AC39B9061BFF649A001CE453 /* MoliStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoliStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC39B90A1BFF649A001CE453 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -1254,6 +1267,8 @@
 		30AAE3CA1C02BB9000CD94D5 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				30CF64551C2157030060B3B9 /* XTSegmentControl */,
+				30CF64461C2155410060B3B9 /* iCarousel */,
 				30AA1C471C05A3AF00CD94D5 /* MZTimerLabel */,
 				30AA1C431C05A37B00CD94D5 /* DXPopover */,
 				30AA1C3F1C05A33A00CD94D5 /* MCtopAligingLabel */,
@@ -1373,6 +1388,7 @@
 		30AAF8071C047B4B00CD94D5 /* LoginView */ = {
 			isa = PBXGroup;
 			children = (
+				30CF643F1C21491F0060B3B9 /* LoginStoryboard.storyboard */,
 				30AAF8041C047B4300CD94D5 /* LoginViewController.h */,
 				30AAF8051C047B4300CD94D5 /* LoginViewController.m */,
 				30AAF7FF1C047B2300CD94D5 /* Input_OnlyText_Cell.h */,
@@ -1997,6 +2013,7 @@
 				309C16C01C0F3C7C001A3B11 /* RegisterViewController.m */,
 				309C16C21C0F3E0B001A3B11 /* Register.h */,
 				309C16C31C0F3E0B001A3B11 /* Register.m */,
+				30CF64411C214DB10060B3B9 /* RegisterStoryBoard.storyboard */,
 			);
 			name = RegisterView;
 			sourceTree = "<group>";
@@ -2126,6 +2143,24 @@
 			name = ReportView;
 			sourceTree = "<group>";
 		};
+		30CF64461C2155410060B3B9 /* iCarousel */ = {
+			isa = PBXGroup;
+			children = (
+				30CF645C1C2159270060B3B9 /* iCarousel.h */,
+				30CF645D1C2159270060B3B9 /* iCarousel.m */,
+			);
+			path = iCarousel;
+			sourceTree = "<group>";
+		};
+		30CF64551C2157030060B3B9 /* XTSegmentControl */ = {
+			isa = PBXGroup;
+			children = (
+				30CF64651C2260140060B3B9 /* XTSegmentControl.h */,
+				30CF64661C2260140060B3B9 /* XTSegmentControl.m */,
+			);
+			name = XTSegmentControl;
+			sourceTree = "<group>";
+		};
 		AC39B8FD1BFF649A001CE453 = {
 			isa = PBXGroup;
 			children = (
@@ -2228,6 +2263,8 @@
 				30AAFBAC1C059CDE00CD94D5 /* ReportView */,
 				30AA1C231C05A29200CD94D5 /* StudyView */,
 				30AA1CAE1C08168800CD94D5 /* ProblemReportView */,
+				30CF64621C2253A30060B3B9 /* Project_RootViewController.h */,
+				30CF64631C2253A30060B3B9 /* Project_RootViewController.m */,
 			);
 			name = PresentationLayer;
 			sourceTree = "<group>";
@@ -2422,6 +2459,7 @@
 				TargetAttributes = {
 					AC39B9051BFF649A001CE453 = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 2R3U88FFZP;
 					};
 					AC39B9211BFF649B001CE453 = {
 						CreatedOnToolsVersion = 7.1;
@@ -2750,6 +2788,7 @@
 				30AAE4131C02C1F600CD94D5 /* intro_tip_1@3x.png in Resources */,
 				30AAFA621C04817600CD94D5 /* keyboard_emotion@2x.png in Resources */,
 				30AAFA0A1C04817600CD94D5 /* file_menu_icon_info@2x.png in Resources */,
+				30CF64401C21491F0060B3B9 /* LoginStoryboard.storyboard in Resources */,
 				30AAFA291C04817600CD94D5 /* icon_file_folder_normal@2x.png in Resources */,
 				30AAFA9B1C04817600CD94D5 /* project_item_activity@2x.png in Resources */,
 				30AAFB8A1C058EDD00CD94D5 /* 6.png in Resources */,
@@ -2852,6 +2891,7 @@
 				30AAF9FF1C04817600CD94D5 /* file_activity_icon_delete_history@2x.png in Resources */,
 				30AAE40A1C02C1F600CD94D5 /* intro_icon_4@2x.png in Resources */,
 				30AAFB6D1C058EDD00CD94D5 /* clear.png in Resources */,
+				30CF64421C214DB10060B3B9 /* RegisterStoryBoard.storyboard in Resources */,
 				30AAFA2A1C04817600CD94D5 /* icon_file_state_download@2x.png in Resources */,
 				30AAFAB81C04817600CD94D5 /* sex_man_icon@2x.png in Resources */,
 				30AAFAEC1C04817600CD94D5 /* time_clock_icon@2x.png in Resources */,
@@ -2954,6 +2994,7 @@
 				30AAFBA41C0595EC00CD94D5 /* MDRadialProgressTheme.m in Sources */,
 				30AA1CBA1C0816D400CD94D5 /* ReportProgressViewController.m in Sources */,
 				30AAE3CE1C02BBFB00CD94D5 /* StartButtomView.m in Sources */,
+				30CF64641C2253A30060B3B9 /* Project_RootViewController.m in Sources */,
 				30AA1CB81C0816D400CD94D5 /* ProReportTableViewCell.m in Sources */,
 				AC78CA2F1C0BF00200A9585F /* Record+CoreDataProperties.swift in Sources */,
 				30AA1C501C05A88500CD94D5 /* QuestionModel.m in Sources */,
@@ -2979,6 +3020,7 @@
 				30AA1CB71C0816D400CD94D5 /* CollectionViewCell.m in Sources */,
 				30AAFB461C058D7500CD94D5 /* leftTableViewCell.m in Sources */,
 				AC78CA361C0BF04700A9585F /* ThinkLabel.swift in Sources */,
+				30CF645E1C2159270060B3B9 /* iCarousel.m in Sources */,
 				AC53B7B71C014C42007D3FE8 /* RSA.m in Sources */,
 				30AAFB301C04A78A00CD94D5 /* UIBarButtonItem+Common.m in Sources */,
 				30AA1C421C05A33A00CD94D5 /* MCTopAligningLabel.m in Sources */,
@@ -3006,6 +3048,7 @@
 				30AAFBA51C0595EC00CD94D5 /* MDRadialProgressView.m in Sources */,
 				AC78CA2D1C0BF00200A9585F /* Account+CoreDataProperties.swift in Sources */,
 				30AAFBAB1C059CD600CD94D5 /* ReportViewController.m in Sources */,
+				30CF64671C2260140060B3B9 /* XTSegmentControl.m in Sources */,
 				30AA1CB91C0816D400CD94D5 /* ReportView.m in Sources */,
 				30AA1C461C05A37B00CD94D5 /* DXPopover.m in Sources */,
 				30AAFBA31C0595EC00CD94D5 /* MDRadialProgressLabel.m in Sources */,
@@ -3111,7 +3154,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -3148,7 +3191,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -3161,12 +3204,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MoliStudy/SMS_SDK",
 				);
 				GCC_PREFIX_HEADER = MoliStudy.pch;
 				INFOPLIST_FILE = MoliStudy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.molistudy.MoliStudy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -3181,12 +3226,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MoliStudy/SMS_SDK",
 				);
 				GCC_PREFIX_HEADER = MoliStudy.pch;
 				INFOPLIST_FILE = MoliStudy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.molistudy.MoliStudy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
