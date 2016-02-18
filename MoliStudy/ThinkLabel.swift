@@ -10,12 +10,12 @@ import UIKit
 
 class ThinkLabel: NSObject {
 
-    var labelID: NSNumber
+    var labelID: String
     var noteArray: [Note]
     var name: String
     
     override init() {
-        labelID = NSNumber()
+        labelID = String()
         noteArray = []
         name = String()
     }

@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9057" systemVersion="15B42" minimumToolsVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15D21" minimumToolsVersion="Automatic">
     <entity name="Account" representedClassName="Account" syncable="YES">
+        <attribute name="academy" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="accountName" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="currentAcademy" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="introduction" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="targetAcademy" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="qq" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sex" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="token" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="userID" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="userName" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
@@ -20,7 +23,7 @@
         <attribute name="forecast" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Account" positionX="-63" positionY="-18" width="128" height="135"/>
+        <element name="Account" positionX="-63" positionY="-18" width="128" height="180"/>
         <element name="Practice" positionX="-54" positionY="36" width="128" height="105"/>
         <element name="Record" positionX="-36" positionY="54" width="128" height="90"/>
     </elements>

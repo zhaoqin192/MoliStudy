@@ -19,12 +19,6 @@ class SubjectDAO: NSObject {
     
     func addSubject(response: NSArray){
         parseArray(response)
-        NSNotificationCenter.defaultCenter().postNotificationName("NETWORKREQUEST_SUBJECT_SUCCESS", object: nil)
-    }
-    
-    func addSubjectByID(response: NSArray){
-        parseArray(response)
-        NSNotificationCenter.defaultCenter().postNotificationName("NETWORKREQUEST_SUBJECTBYID_SUCCESS", object: nil)
     }
     
     func findAll() -> [Subject]{
@@ -40,7 +34,7 @@ class SubjectDAO: NSObject {
             let subject = Subject()
             let modelarray = array["modelarr"] as! NSArray
             let model = modelarray[0] as! NSDictionary
-            subject.questionID = model["question_total_id"] as! NSNumber
+            subject.questionID = model["id"] as! NSNumber
             let contents = model["name"] as! [String]
             for content in contents{
                 subject.content.append(content)
@@ -57,44 +51,35 @@ class SubjectDAO: NSObject {
             }
             subject.correctAnswer = model["correct_answer"] as! String
             
-            let thinklabellists = array["thinklabellist"] as! NSArray
-            let thinklabellist = thinklabellists[0] as! NSArray
-            for j in 0...thinklabellist.count - 1{
-                let label = thinklabellist[j] as! NSDictionary
-                if Int(label["id"] as! String) == 0{
-                    break
-                }
+            let thinkLabels = model["think_labels"] as! NSArray
+            for j in 0...thinkLabels.count - 1{
+                let labels = thinkLabels[j] as! NSArray
                 let thinkLabel = ThinkLabel()
-                thinkLabel.labelID = Int(label["id"] as! String)!
-                thinkLabel.name = label["name"] as! String
-                subject.thinkLabel.append(thinkLabel)
-            }
-            
-            let thinklabels = model["think_labels"] as! NSArray
-            for j in 0...thinklabels.count - 1{
-                let thinks = thinklabels[j] as! NSArray
-                for m in 0...thinks.count - 1{
-                    let notes = thinks[m] as! NSDictionary
+                for n in 0...labels.count - 1{
+                    let label = labels[n] as! NSDictionary
+                    if label["think_label_type_id"] as! NSNumber == 0{
+                        break
+                    }
+                    thinkLabel.labelID = String(label["think_label_type_id"] as! NSNumber)
+                    thinkLabel.name = label["name"] as! String
                     let note = Note()
-                    note.positionStart = notes["position_start"] as! NSNumber
-                    note.positionEnd = notes["position_end"] as! NSNumber
-                    note.style = notes["style"] as! String
-                    note.noteContent =  UtilityManager.removeHTMLTag(notes["note"] as! String)
-                    if notes["is_study"] as! NSNumber == 0{
+                    note.positionStart = label["position_start"] as! NSNumber
+                    note.positionEnd = label["position_end"] as! NSNumber
+                    note.style = label["style"] as! String
+                    note.noteContent = label["note"] as! String
+                    if label["is_study"] as! NSNumber == 0{
                         note.isStudied = false
                     }else{
                         note.isStudied = true
                     }
-                    for thinkLabelObject in subject.thinkLabel{
-                        if thinkLabelObject.labelID == notes["think_label_type_id"] as! NSNumber{
-                            thinkLabelObject.noteArray.append(note)
-                        }
-                    }
+                    thinkLabel.noteArray.append(note)
                 }
+                subject.thinkLabel.append(thinkLabel)
             }
             subjectsArray.append(subject)
         }
- 
+        
+        NSNotificationCenter.defaultCenter().postNotificationName("NETWORKREQUEST_SUBJECT_SUCCESS", object: nil) 
     }
     
 }

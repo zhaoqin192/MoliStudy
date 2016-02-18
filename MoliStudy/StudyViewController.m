@@ -58,10 +58,14 @@
 
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    [NetworkManager getSubjects:^{
-        [self loadData];
-        [self loadTimeLabel];
-    }];
+//    [NetworkManager getSubjects:1, ^{
+//        [self loadData];
+//        [self loadTimeLabel];
+//    }];
+//    [NetworkManager getSubjects:[NSNumber numberWithInt:1] completion:^{
+//        [self loadData];
+//        [self loadTimeLabel];
+//    }];
 }
 
 - (void)loadData{

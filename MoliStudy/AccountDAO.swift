@@ -37,7 +37,7 @@ class AccountDAO: NSObject {
         }
     }
     
-    func addAccount(accountName: String, password: String, userID: String){
+    func addAccount(accountName: String, password: String, userID: String, userToken: String){
         if !isExist{
             print("isExist")
             account = NSEntityDescription.insertNewObjectForEntityForName("Account", inManagedObjectContext: managedContext) as! Account
@@ -45,13 +45,16 @@ class AccountDAO: NSObject {
         account.accountName = accountName
         account.password = password
         account.userID = userID
+        account.token = userToken
         save()
     }
     
-    func completeInfo(userName: String, currentSchool: String, targetSchool: String){
+    func completeInfo(userName: String, sex: NSNumber, academy: String, qq: String, introduction: String){
         account.userName = userName
-        account.currentAcademy = currentSchool
-        account.targetAcademy = targetSchool
+        account.sex = sex
+        account.academy = academy
+        account.qq = qq
+        account.introduction = introduction
         save()
     }
     

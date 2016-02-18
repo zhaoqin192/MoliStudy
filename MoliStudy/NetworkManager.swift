@@ -27,7 +27,7 @@ class NetworkManager: NSObject {
     static func login(accountName: String, password: String){
         
         Alamofire.request(.POST,
-            "http://www.molistudy.com/frontend/IOSAPI/login",
+            "http://www.molistudy.com/api/apiUser/login",
             parameters:["user_name":accountName, "password":UtilityManager.encryptPassword(password)])
             .responseJSON{response in
                 switch response.result{
@@ -38,7 +38,7 @@ class NetworkManager: NSObject {
                     let errCode = JSON["err_code"] as! NSNumber
                     if errCode == 0{
                         
-                        AccountDAO.sharedManager.addAccount(accountName, password: password, userID:JSON["user_id"] as! String)
+                        AccountDAO.sharedManager.addAccount(accountName, password: password, userID:JSON["user_id"] as! String, userToken: JSON["user_token"] as! String)
                         
                         NSNotificationCenter.defaultCenter().postNotificationName("NETWORKREQUEST_LOGIN_SUCCESS", object: nil)
                         
@@ -73,7 +73,7 @@ class NetworkManager: NSObject {
     static func registerAccount(accountName: String, password: String){
         
         Alamofire.request(.POST,
-            "http://www.molistudy.com/frontend/IOSAPI/register",
+            "http://www.molistudy.com/api/apiUser/register",
             parameters:["phone":accountName, "password":UtilityManager.encryptPassword(password)])
             .responseJSON{response in
                 switch response.result{
@@ -84,10 +84,10 @@ class NetworkManager: NSObject {
                     let errCode = JSON["err_code"] as! NSNumber
                     if errCode == 0{
                         
-                        AccountDAO.sharedManager.addAccount(accountName, password: password, userID:JSON["user_id"] as! String)
+                        AccountDAO.sharedManager.addAccount(accountName, password: password, userID: JSON["user_id"] as! String, userToken: "")
                         
                         NSNotificationCenter.defaultCenter().postNotificationName("NETWORKREQUEST_REGISTER_SUCCESS", object: nil)
-                    }else if errCode == 40001{
+                    }else if errCode == 40000{
                         NSNotificationCenter.defaultCenter().postNotificationName("NETWORKREQUEST_REGISTER_ERROR_INVALID", object: nil)
                     }else{
                         NSNotificationCenter.defaultCenter().postNotificationName("NETWORKREQUEST_REGISTER_ERROR_DUPLICATE", object: nil)
@@ -98,6 +98,42 @@ class NetworkManager: NSObject {
                         print(error)
                     }
                     NSNotificationCenter.defaultCenter().postNotificationName("NETWORKREQUEST_REGISTER_FAILURE", object: nil)
+                    break
+                }
+        }
+    }
+    
+    /**
+     find password
+     
+     - parameter userName
+     - parameter password: new password
+     
+     success: NETWORKREQUEST_FIND_SUCCESS
+     error  a.NETWORKREQUEST_FIND_ERROR_INVALID
+            b.NETWORKREQUEST_FIND_ERROR
+     */
+    static func findPwd(userName: String, password: String){
+        Alamofire.request(.POST, "http://www.molistudy.com/api/apiUser/findPwd",
+            parameters:["user_name": userName, "password": UtilityManager.encryptPassword(password)])
+            .responseJSON{response in
+                switch response.result{
+                case .Success(let JSON):
+                    if debug{
+                        print(JSON)
+                    }
+                    let errCode = JSON["err_code"] as! NSNumber
+                    if errCode == 0{
+                        NSNotificationCenter.defaultCenter().postNotificationName("NETWORKREQUEST_FIND_SUCCESS", object: nil)
+                    }else{
+                        NSNotificationCenter.defaultCenter().postNotificationName("NETWORKREQEUST_FIND_ERROR_INVALID", object: nil)
+                    }
+                    break
+                case .Failure(let error):
+                    if debug{
+                        print(error)
+                    }
+                    NSNotificationCenter.defaultCenter().postNotificationName("NETWORKREQUEST_FIND_ERROR", object: nil)
                     break
                 }
         }
@@ -116,11 +152,11 @@ class NetworkManager: NSObject {
             b.NETWORKREQUEST_INFO_ERROR_USERNAME
             c.NETWORKREQUEST_INFO_FAILURE
      */
-    static func completeUserInfo(userName: String, currentSchool: String, targetSchool: String){
+    static func completeUserInfo(userName: String, sex: NSNumber, academy: String, qq: String, introduction: String){
         let account = AccountDAO.sharedManager.findAccount()
         Alamofire.request(.POST,
-            "http://www.molistudy.com/frontend/IOSAPI/completeInfo",
-            parameters:["user_name":userName, "user_id":account.userID!, "current_school":currentSchool, "target_school":targetSchool])
+            "http://www.molistudy.com/api/apiUser/completeInfo",
+            parameters:["nick_name":userName, "user_token":account.token!, "sex": sex, "school": academy, "qq": qq, "self_introduction": introduction])
             .responseJSON{response in
                 switch response.result{
                 case .Success(let JSON):
@@ -129,7 +165,7 @@ class NetworkManager: NSObject {
                     }
                     let errCode = JSON["err_code"] as! NSNumber
                     if errCode == 0{
-                        AccountDAO.sharedManager.completeInfo(userName, currentSchool: currentSchool, targetSchool: targetSchool)
+                        AccountDAO.sharedManager.completeInfo(userName, sex: sex, academy: academy, qq: qq, introduction: introduction)
                         NSNotificationCenter.defaultCenter().postNotificationName("NETWORKREQUEST_INFO_SUCCESS", object: nil)
                     }else if errCode == 40000{
                         NSNotificationCenter.defaultCenter().postNotificationName("NETWORKREQUEST_INFO_ERROR_INVALID", object: nil)
@@ -206,11 +242,11 @@ class NetworkManager: NSObject {
      error: a.NETWORKREQUEST_SUBJECT_ERROR_INVALID
             b.NETWORKREQUEST_SUBJECT_FAILURE
      */
-    static func getSubjects(completion:()->()){
+    static func getSubjects(viewID: String, course: String, completion:()->()){
         let account = AccountDAO.sharedManager.findAccount()
         Alamofire.request(.POST,
-            "http://www.molistudy.com/frontend/IOSAPI/getQuestion",
-            parameters:["user_id":account.userID!, "main_course_id":"1", "question_type":"1,11"])
+            "http://www.molistudy.com/api/apiStudy/getQuestion",
+            parameters:["user_token":account.token!, "view_id": viewID, "course": course])
             .responseJSON{response in
                 switch response.result{
                 case .Success(let JSON):
@@ -250,7 +286,7 @@ class NetworkManager: NSObject {
     static func uploadSubjectAnswer(questionID: NSNumber, answer: String, time: NSNumber, completion: () -> ()){
         let account = AccountDAO.sharedManager.findAccount()
         Alamofire.request(.POST,
-            "http://www.molistudy.com/frontend/IOSAPI/saveLog",
+            "http://www.molistudy.com/api/apiStudy/saveLog",
             parameters: ["user_id": account.userID!, "question_id": questionID, "choose_answer": answer, "study_time": time])
             .responseJSON{response in
                 switch response.result{
@@ -260,7 +296,6 @@ class NetworkManager: NSObject {
                     }
                     let errCode = JSON["err_code"] as! NSNumber
                     if errCode == 0{
-//                        NSNotificationCenter.defaultCenter().postNotificationName("NETWORKREQUEST_UPLOAD_SUCCESS", object: nil)
                         completion()
                     }else{
                         NSNotificationCenter.defaultCenter().postNotificationName("NETWORKREQUEST_UPLOAD_ERROR_INVALID", object: nil)
@@ -288,7 +323,7 @@ class NetworkManager: NSObject {
     static func getReport(questionIDs: String, completion: () -> ()){
         let account = AccountDAO.sharedManager.findAccount()
         Alamofire.request(.POST,
-            "http://www.molistudy.com/frontend/IOSAPI/getReport",
+            "http://www.molistudy.com/api/apiStudy/getReport",
             parameters: ["user_id": account.userID!, "question_id": questionIDs])
             .responseJSON{response in
                 switch response.result{
@@ -359,8 +394,8 @@ class NetworkManager: NSObject {
     static func requestTrainList(){
         let account = AccountDAO.sharedManager.findAccount()
         Alamofire.request(.POST,
-            "http://www.molistudy.com/frontend/IOSAPI/knowledgeTrain",
-            parameters: ["user_id": account.userID!, "main_course_id": "1"])
+            "http://www.molistudy.com/api/apiStudy/knowledgeTrain",
+            parameters: ["user_id": account.userID!, "main_course_id": 1])
             .responseJSON{response in
                 switch response.result{
                 case .Success(let JSON):
@@ -398,8 +433,8 @@ class NetworkManager: NSObject {
     static func requestSubjectByID(knowledgeID: NSNumber){
         let account = AccountDAO.sharedManager.findAccount()
         Alamofire.request(.POST,
-            "http://www.molistudy.com/frontend/IOSAPI/getQuesByKnowId",
-            parameters: ["user_id": account.userID!, "knowledge_id": knowledgeID, "question_type": "1,11"])
+            "http://www.molistudy.com/api/apiStudy/getQuesByKnowId",
+            parameters: ["user_id": account.userID!, "knowledge_id": knowledgeID, "question_type": 1])
             .responseJSON{response in
                 switch response.result{
                 case .Success(let JSON):
@@ -422,4 +457,106 @@ class NetworkManager: NSObject {
                 }
         }
     }
+    
+//    /**
+//     get the content of course
+//     
+//     - parameter course: the number of course
+//    
+//     success: NETWORKREQUEST_COURSEINDEX_SUCCESS
+//     error: a.NETWORKREQUEST_COURSEINDEX_ERROR
+//            b.NETWORKREQUEST_COURSEINDEX_FAILURE
+//     */
+//    static func getIndexCourse(course: String){
+//        let account = AccountDAO.sharedManager.findAccount()
+//        Alamofire.request(.POST,
+//            "http://www.molistudy.com/api/apiCourse/index/course/3",
+//            parameters: ["user_token": account.token!, "course": course])
+//            .responseJSON{response in
+//                switch response.result{
+//                case .Success(let JSON):
+//                    if debug{
+//                        print(JSON)
+//                    }
+//                    let errCode = JSON["err_code"] as! NSNumber
+//                    if errCode == 0{
+//                        NSNotificationCenter.defaultCenter().postNotificationName("NETWORKREQUEST_COURSEINDEX_SUCCESS", object: nil)
+//                    }else{
+//                        NSNotificationCenter.defaultCenter().postNotificationName("NETWORKREQUEST_COURSEINDEX_ERROR", object: nil)
+//                    }
+//                    break
+//                case .Failure(let error):
+//                    if debug{
+//                        print(error)
+//                    }
+//                    NSNotificationCenter.defaultCenter().postNotificationName("NETWORKREQUEST_COURSEINDEX_FAILURE", object: nil)
+//                    break
+//                }
+//                
+//        }
+//    }
+    
+    /**
+     click the detail of course, get the list for subject
+     
+     - parameter course: course id
+     - parameter mode:   mode number
+     
+     success: NETWORKREQUEST_COURSELIST_SUCCESS
+     error: a.NETWORKREQUEST_COURSELIST_ERROR
+            b.NETWORKREQUEST_COURSELIST_FAILURE
+     */
+    
+    static func getCourseList(course: String, mode: String){
+        let account = AccountDAO.sharedManager.findAccount()
+        print("token: " + account.token! + "course: " + course + "mode: " + mode)
+        Alamofire.request(.POST, "http://www.molistudy.com/api/apiCourse/getView",
+            parameters: ["user_token": account.token!, "course": course, "mode": mode])
+            .responseJSON{response in
+                switch response.result{
+                case .Success(let JSON):
+                    if debug{
+                        print(JSON)
+                    }
+                    let errCode = JSON["err_code"] as! NSNumber
+                    if errCode == 0{
+                        LevelDAO.sharedManager.addArray(JSON["viewList"] as! NSArray)
+                    }else{
+                        NSNotificationCenter.defaultCenter().postNotificationName("NETWORKREQUEST_COURSELIST_ERROR", object: nil)
+                    }
+                    break
+                case .Failure(let error):
+                    if debug{
+                        print(error)
+                    }
+                    NSNotificationCenter.defaultCenter().postNotificationName("NETWORKREQUEST_COURSELIST_FAILURE", object: nil)
+                    break
+                }
+        }
+    }
+    
+    static func getQuestion(course: String, viewID: String){
+        let account = AccountDAO.sharedManager.findAccount()
+        Alamofire.request(.POST, "http://www.molistudy.com/api/apiStudy/getQuestion",
+            parameters: ["user_token": account.token!, "course": course, "view_id": viewID])
+            .responseJSON{response in
+                switch response.result{
+                case .Success(let JSON):
+                    if debug{
+                        print(JSON)
+                    }
+                    let errCode = JSON["err_code"] as! NSNumber
+                    if errCode == 0{
+                        SubjectDAO.sharedManager.addSubject(JSON["question"] as! NSArray)
+                    }
+                    break
+                case .Failure(let error):
+                    if debug{
+                        print(error)
+                    }
+                }
+                
+        }
+    }
+
 }
