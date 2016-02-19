@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SubjectViewController">
+            <connections>
+                <outlet property="mainView" destination="c5P-b6-VJ3" id="VzT-ew-lVE"/>
+                <outlet property="requestButton" destination="Urb-n6-JAf" id="zQH-st-72R"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Urb-n6-JAf" userLabel="RequestButton">
+                    <rect key="frame" x="0.0" y="552" width="600" height="48"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="解题思路" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mxn-HO-qzf">
+                            <rect key="frame" x="260" y="12" width="80" height="24"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.2901960784" green="0.6705882353" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="Mxn-HO-qzf" firstAttribute="centerY" secondItem="Urb-n6-JAf" secondAttribute="centerY" id="K2V-c4-4E1"/>
+                        <constraint firstItem="Mxn-HO-qzf" firstAttribute="centerX" secondItem="Urb-n6-JAf" secondAttribute="centerX" id="Wuv-q1-LYY"/>
+                    </constraints>
+                </view>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c5P-b6-VJ3" userLabel="MainView">
+                    <rect key="frame" x="8" y="100" width="584" height="444"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Urb-n6-JAf" secondAttribute="bottom" id="7C2-wA-rKh"/>
+                <constraint firstItem="Urb-n6-JAf" firstAttribute="top" secondItem="c5P-b6-VJ3" secondAttribute="bottom" constant="8" id="Cw7-4d-iSt"/>
+                <constraint firstItem="Urb-n6-JAf" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.08" id="FPh-7l-CMy"/>
+                <constraint firstAttribute="trailing" secondItem="Urb-n6-JAf" secondAttribute="trailing" id="Jgt-6A-z8W"/>
+                <constraint firstItem="Urb-n6-JAf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="gI5-3F-snl"/>
+                <constraint firstAttribute="bottom" secondItem="c5P-b6-VJ3" secondAttribute="bottom" constant="56" id="jmh-NH-KSV"/>
+                <constraint firstAttribute="trailing" secondItem="c5P-b6-VJ3" secondAttribute="trailing" constant="8" id="qfu-bp-7Tk"/>
+                <constraint firstItem="c5P-b6-VJ3" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="wDJ-5n-Wwp"/>
+                <constraint firstItem="c5P-b6-VJ3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="x2G-VT-bL7"/>
+            </constraints>
+            <point key="canvasLocation" x="411" y="391"/>
+        </view>
+    </objects>
+</document>

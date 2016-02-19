@@ -9,6 +9,8 @@
 #import "Project_RootViewController.h"
 #import "iCarousel.h"
 #import "XTSegmentControl.h"
+#import "AnswerSheetViewController.h"
+#import "SubjectViewController.h"
 
 @interface Project_RootViewController ()<iCarouselDataSource,iCarouselDelegate>
 @property (strong, nonatomic) iCarousel *myCarousel;
@@ -64,7 +66,7 @@
     self.title = @"项目";
     [self.navigationItem setLeftBarButtonItem:[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"user"] style:UIBarButtonItemStylePlain target:self action:@selector(searchItemClicked:)] animated:NO];
     UIBarButtonItem* book = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"book"] style:UIBarButtonItemStylePlain target:self action:@selector(addItemClicked:)];
-    UIBarButtonItem* star = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"star"] style:UIBarButtonItemStylePlain target:self action:@selector(addItemClicked:)];
+    UIBarButtonItem* star = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"star"] style:UIBarButtonItemStylePlain target:self action:@selector(subjectClicked:)];
     [self.navigationItem setRightBarButtonItems:@[book,star]];
 }
 
@@ -73,7 +75,16 @@
 }
 
 - (void)addItemClicked:(UIBarButtonItem*)button{
-    NSLog(@"add");
+
+    AnswerSheetViewController *answerSheetViewController = [[AnswerSheetViewController alloc] initWithNibName:@"AnswerSheetViewController" bundle:nil];
+    [self.navigationController pushViewController:answerSheetViewController  animated:nil];
+    
+}
+
+- (void) subjectClicked:(UIBarButtonItem*)button{
+
+    SubjectViewController *subjectViewController = [[SubjectViewController alloc] initWithNibName:@"SubjectViewController" bundle:nil];
+    [self.navigationController pushViewController:subjectViewController animated:nil];
 }
 
 - (void)configSegmentItems{
