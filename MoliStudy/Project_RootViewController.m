@@ -9,7 +9,6 @@
 #import "Project_RootViewController.h"
 #import "iCarousel.h"
 #import "XTSegmentControl.h"
-#import "AnswerSheetViewController.h"
 #import "SubjectViewController.h"
 
 @interface Project_RootViewController ()<iCarouselDataSource,iCarouselDelegate>
@@ -76,8 +75,7 @@
 
 - (void)addItemClicked:(UIBarButtonItem*)button{
 
-    AnswerSheetViewController *answerSheetViewController = [[AnswerSheetViewController alloc] initWithNibName:@"AnswerSheetViewController" bundle:nil];
-    [self.navigationController pushViewController:answerSheetViewController  animated:nil];
+   
     
 }
 

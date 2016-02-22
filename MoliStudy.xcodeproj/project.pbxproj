@@ -474,6 +474,8 @@
 		30CF64641C2253A30060B3B9 /* Project_RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30CF64631C2253A30060B3B9 /* Project_RootViewController.m */; };
 		30CF64671C2260140060B3B9 /* XTSegmentControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 30CF64661C2260140060B3B9 /* XTSegmentControl.m */; };
 		A79D7FCC6CBFC759D863B807 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C04AE670AA344195210BFE9 /* Pods.framework */; };
+		AC25D3DD1C79516100920104 /* SubjectTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AC25D3DB1C79516100920104 /* SubjectTableViewCell.m */; };
+		AC25D3DE1C79516100920104 /* SubjectTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC25D3DC1C79516100920104 /* SubjectTableViewCell.xib */; };
 		AC353BAC1C755ABB00EB09C9 /* LevelDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC353BAB1C755ABB00EB09C9 /* LevelDAO.swift */; };
 		AC353BAE1C755CF600EB09C9 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC353BAD1C755CF600EB09C9 /* Level.swift */; };
 		AC39B90B1BFF649A001CE453 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AC39B90A1BFF649A001CE453 /* main.m */; };
@@ -514,8 +516,8 @@
 		AC78CA431C0BF2F000A9585F /* RecordDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC78CA421C0BF2F000A9585F /* RecordDAO.swift */; };
 		AC78CA451C0BF2FF00A9585F /* SubjectDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC78CA441C0BF2FF00A9585F /* SubjectDAO.swift */; };
 		AC78CA471C0BF30C00A9585F /* ReportDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC78CA461C0BF30C00A9585F /* ReportDAO.swift */; };
-		AC7DD1751C75A2BE00E1874C /* AnswerSheetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7DD1731C75A2BE00E1874C /* AnswerSheetViewController.m */; };
-		AC7DD1761C75A2BE00E1874C /* AnswerSheetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC7DD1741C75A2BE00E1874C /* AnswerSheetViewController.xib */; };
+		AC7D1F731C798E0B004021FA /* OptionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7D1F711C798E0B004021FA /* OptionTableViewCell.m */; };
+		AC7D1F741C798E0B004021FA /* OptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC7D1F721C798E0B004021FA /* OptionTableViewCell.xib */; };
 		AC7DD17B1C75AFBE00E1874C /* SubjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7DD1791C75AFBE00E1874C /* SubjectViewController.m */; };
 		AC7DD17C1C75AFBE00E1874C /* SubjectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC7DD17A1C75AFBE00E1874C /* SubjectViewController.xib */; };
 /* End PBXBuildFile section */
@@ -1057,6 +1059,9 @@
 		30CF64651C2260140060B3B9 /* XTSegmentControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XTSegmentControl.h; sourceTree = "<group>"; };
 		30CF64661C2260140060B3B9 /* XTSegmentControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XTSegmentControl.m; sourceTree = "<group>"; };
 		95456BA8E0DB14D551D3A063 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		AC25D3DA1C79516100920104 /* SubjectTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubjectTableViewCell.h; sourceTree = "<group>"; };
+		AC25D3DB1C79516100920104 /* SubjectTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubjectTableViewCell.m; sourceTree = "<group>"; };
+		AC25D3DC1C79516100920104 /* SubjectTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubjectTableViewCell.xib; sourceTree = "<group>"; };
 		AC353BAB1C755ABB00EB09C9 /* LevelDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelDAO.swift; sourceTree = "<group>"; };
 		AC353BAD1C755CF600EB09C9 /* Level.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		AC39B9061BFF649A001CE453 /* MoliStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoliStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1111,9 +1116,9 @@
 		AC78CA421C0BF2F000A9585F /* RecordDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordDAO.swift; sourceTree = "<group>"; };
 		AC78CA441C0BF2FF00A9585F /* SubjectDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubjectDAO.swift; sourceTree = "<group>"; };
 		AC78CA461C0BF30C00A9585F /* ReportDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportDAO.swift; sourceTree = "<group>"; };
-		AC7DD1721C75A2BE00E1874C /* AnswerSheetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnswerSheetViewController.h; sourceTree = "<group>"; };
-		AC7DD1731C75A2BE00E1874C /* AnswerSheetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnswerSheetViewController.m; sourceTree = "<group>"; };
-		AC7DD1741C75A2BE00E1874C /* AnswerSheetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnswerSheetViewController.xib; sourceTree = "<group>"; };
+		AC7D1F701C798E0B004021FA /* OptionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionTableViewCell.h; sourceTree = "<group>"; };
+		AC7D1F711C798E0B004021FA /* OptionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionTableViewCell.m; sourceTree = "<group>"; };
+		AC7D1F721C798E0B004021FA /* OptionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OptionTableViewCell.xib; sourceTree = "<group>"; };
 		AC7DD1781C75AFBE00E1874C /* SubjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubjectViewController.h; sourceTree = "<group>"; };
 		AC7DD1791C75AFBE00E1874C /* SubjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubjectViewController.m; sourceTree = "<group>"; };
 		AC7DD17A1C75AFBE00E1874C /* SubjectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubjectViewController.xib; sourceTree = "<group>"; };
@@ -2175,16 +2180,6 @@
 			name = XTSegmentControl;
 			sourceTree = "<group>";
 		};
-		AC353BAF1C75752400EB09C9 /* AnswerSheetView */ = {
-			isa = PBXGroup;
-			children = (
-				AC7DD1721C75A2BE00E1874C /* AnswerSheetViewController.h */,
-				AC7DD1731C75A2BE00E1874C /* AnswerSheetViewController.m */,
-				AC7DD1741C75A2BE00E1874C /* AnswerSheetViewController.xib */,
-			);
-			name = AnswerSheetView;
-			sourceTree = "<group>";
-		};
 		AC39B8FD1BFF649A001CE453 = {
 			isa = PBXGroup;
 			children = (
@@ -2276,7 +2271,6 @@
 			isa = PBXGroup;
 			children = (
 				AC7DD1771C75AFAD00E1874C /* SubjectView */,
-				AC353BAF1C75752400EB09C9 /* AnswerSheetView */,
 				AC53B7BD1C014E16007D3FE8 /* apiTest */,
 				30AAE3BB1C02B79900CD94D5 /* AppDelegate */,
 				30AAE3D01C02BC2300CD94D5 /* StartButtonView */,
@@ -2384,6 +2378,12 @@
 				AC7DD1781C75AFBE00E1874C /* SubjectViewController.h */,
 				AC7DD1791C75AFBE00E1874C /* SubjectViewController.m */,
 				AC7DD17A1C75AFBE00E1874C /* SubjectViewController.xib */,
+				AC25D3DA1C79516100920104 /* SubjectTableViewCell.h */,
+				AC25D3DB1C79516100920104 /* SubjectTableViewCell.m */,
+				AC25D3DC1C79516100920104 /* SubjectTableViewCell.xib */,
+				AC7D1F701C798E0B004021FA /* OptionTableViewCell.h */,
+				AC7D1F711C798E0B004021FA /* OptionTableViewCell.m */,
+				AC7D1F721C798E0B004021FA /* OptionTableViewCell.xib */,
 			);
 			name = SubjectView;
 			sourceTree = "<group>";
@@ -2651,6 +2651,7 @@
 				30AAE4031C02C1F600CD94D5 /* intro_icon_0@3x.png in Resources */,
 				30AAFA381C04817600CD94D5 /* icon_user_monkey_i6@2x.png in Resources */,
 				30AAFB7C1C058EDD00CD94D5 /* way.png in Resources */,
+				AC25D3DE1C79516100920104 /* SubjectTableViewCell.xib in Resources */,
 				30AAFAD21C04817600CD94D5 /* task_icon_arrow@2x.png in Resources */,
 				30AAFAE91C04817600CD94D5 /* task_description_icon@2x.png in Resources */,
 				30AAFA781C04817600CD94D5 /* messageComment@2x.png in Resources */,
@@ -2711,7 +2712,6 @@
 				30AAFA811C04817600CD94D5 /* mrpr_icon_commit@2x.png in Resources */,
 				30AAFAD61C04817600CD94D5 /* taskPriority0_small@2x.png in Resources */,
 				30AAFAE51C04817600CD94D5 /* task_activity_icon_update@2x.png in Resources */,
-				AC7DD1761C75A2BE00E1874C /* AnswerSheetViewController.xib in Resources */,
 				30AAFA881C04817600CD94D5 /* info_Nav@2x.png in Resources */,
 				30AAFA7F1C04817600CD94D5 /* mrpr_icon_accepted@2x.png in Resources */,
 				30AAFA341C04817600CD94D5 /* icon_search_clock@2x.png in Resources */,
@@ -2939,6 +2939,7 @@
 				30AAFB3D1C05850500CD94D5 /* ProgressHUD.bundle in Resources */,
 				30AAFAFF1C04817600CD94D5 /* tipIcon_TweetLike@2x.png in Resources */,
 				30AAFA791C04817600CD94D5 /* messageLeft_bg_highlight_img@2x.png in Resources */,
+				AC7D1F741C798E0B004021FA /* OptionTableViewCell.xib in Resources */,
 				30AAFB051C04817600CD94D5 /* tweet_btn_liked@2x.png in Resources */,
 				30AAFAF41C04817600CD94D5 /* tipIcon_Other@2x.png in Resources */,
 				30AAFA391C04817600CD94D5 /* icon_user_monkey_i6p@3x.png in Resources */,
@@ -3030,12 +3031,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC7D1F731C798E0B004021FA /* OptionTableViewCell.m in Sources */,
 				AC78CA3B1C0BF29D00A9585F /* NetworkManager.swift in Sources */,
 				30AAFBA41C0595EC00CD94D5 /* MDRadialProgressTheme.m in Sources */,
 				30AA1CBA1C0816D400CD94D5 /* ReportProgressViewController.m in Sources */,
 				30AAE3CE1C02BBFB00CD94D5 /* StartButtomView.m in Sources */,
 				30CF64641C2253A30060B3B9 /* Project_RootViewController.m in Sources */,
 				30AA1CB81C0816D400CD94D5 /* ProReportTableViewCell.m in Sources */,
+				AC25D3DD1C79516100920104 /* SubjectTableViewCell.m in Sources */,
 				AC78CA2F1C0BF00200A9585F /* Record+CoreDataProperties.swift in Sources */,
 				30AA1C501C05A88500CD94D5 /* QuestionModel.m in Sources */,
 				30AA1C531C05A96D00CD94D5 /* TextStyle.m in Sources */,
@@ -3052,7 +3055,6 @@
 				30AA1CBD1C0816E000CD94D5 /* ReportModel.m in Sources */,
 				30AA1C3E1C05A30A00CD94D5 /* PickerRightArrow.m in Sources */,
 				30AAE3C91C02BB7D00CD94D5 /* YFStartView.m in Sources */,
-				AC7DD1751C75A2BE00E1874C /* AnswerSheetViewController.m in Sources */,
 				30AAFB3E1C05850500CD94D5 /* ProgressHUD.m in Sources */,
 				AC78CA471C0BF30C00A9585F /* ReportDAO.swift in Sources */,
 				30AAFB411C058D3800CD94D5 /* LeftTableViewController.m in Sources */,

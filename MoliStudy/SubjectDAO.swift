@@ -55,16 +55,19 @@ class SubjectDAO: NSObject {
             for j in 0...thinkLabels.count - 1{
                 let labels = thinkLabels[j] as! NSArray
                 let thinkLabel = ThinkLabel()
+                var flag = false
                 for n in 0...labels.count - 1{
                     let label = labels[n] as! NSDictionary
                     if label["think_label_type_id"] as! NSNumber == 0{
+                        flag = true
                         break
                     }
                     thinkLabel.labelID = String(label["think_label_type_id"] as! NSNumber)
-                    thinkLabel.name = label["name"] as! String
+                    thinkLabel.name = label["type_name"] as! String
                     let note = Note()
                     note.positionStart = label["position_start"] as! NSNumber
                     note.positionEnd = label["position_end"] as! NSNumber
+                    note.positionEnd = Int(note.positionEnd) + 1
                     note.style = label["style"] as! String
                     note.noteContent = label["note"] as! String
                     if label["is_study"] as! NSNumber == 0{
@@ -74,11 +77,12 @@ class SubjectDAO: NSObject {
                     }
                     thinkLabel.noteArray.append(note)
                 }
-                subject.thinkLabel.append(thinkLabel)
+                if !flag{
+                    subject.thinkLabel.append(thinkLabel)
+                }
             }
             subjectsArray.append(subject)
         }
-        
         NSNotificationCenter.defaultCenter().postNotificationName("NETWORKREQUEST_SUBJECT_SUCCESS", object: nil) 
     }
     
