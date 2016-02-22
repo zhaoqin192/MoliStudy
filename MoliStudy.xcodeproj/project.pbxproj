@@ -474,8 +474,6 @@
 		30CF64641C2253A30060B3B9 /* Project_RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30CF64631C2253A30060B3B9 /* Project_RootViewController.m */; };
 		30CF64671C2260140060B3B9 /* XTSegmentControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 30CF64661C2260140060B3B9 /* XTSegmentControl.m */; };
 		A79D7FCC6CBFC759D863B807 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C04AE670AA344195210BFE9 /* Pods.framework */; };
-		AC25D3DD1C79516100920104 /* SubjectTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AC25D3DB1C79516100920104 /* SubjectTableViewCell.m */; };
-		AC25D3DE1C79516100920104 /* SubjectTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC25D3DC1C79516100920104 /* SubjectTableViewCell.xib */; };
 		AC353BAC1C755ABB00EB09C9 /* LevelDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC353BAB1C755ABB00EB09C9 /* LevelDAO.swift */; };
 		AC353BAE1C755CF600EB09C9 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC353BAD1C755CF600EB09C9 /* Level.swift */; };
 		AC39B90B1BFF649A001CE453 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AC39B90A1BFF649A001CE453 /* main.m */; };
@@ -516,6 +514,8 @@
 		AC78CA431C0BF2F000A9585F /* RecordDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC78CA421C0BF2F000A9585F /* RecordDAO.swift */; };
 		AC78CA451C0BF2FF00A9585F /* SubjectDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC78CA441C0BF2FF00A9585F /* SubjectDAO.swift */; };
 		AC78CA471C0BF30C00A9585F /* ReportDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC78CA461C0BF30C00A9585F /* ReportDAO.swift */; };
+		AC7A2B401C7AF13300BE100C /* SubjectHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7A2B3F1C7AF13300BE100C /* SubjectHeaderView.m */; };
+		AC7A2B421C7AF13E00BE100C /* SubjectHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC7A2B411C7AF13E00BE100C /* SubjectHeaderView.xib */; };
 		AC7D1F731C798E0B004021FA /* OptionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7D1F711C798E0B004021FA /* OptionTableViewCell.m */; };
 		AC7D1F741C798E0B004021FA /* OptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC7D1F721C798E0B004021FA /* OptionTableViewCell.xib */; };
 		AC7DD17B1C75AFBE00E1874C /* SubjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7DD1791C75AFBE00E1874C /* SubjectViewController.m */; };
@@ -1059,9 +1059,6 @@
 		30CF64651C2260140060B3B9 /* XTSegmentControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XTSegmentControl.h; sourceTree = "<group>"; };
 		30CF64661C2260140060B3B9 /* XTSegmentControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XTSegmentControl.m; sourceTree = "<group>"; };
 		95456BA8E0DB14D551D3A063 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		AC25D3DA1C79516100920104 /* SubjectTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubjectTableViewCell.h; sourceTree = "<group>"; };
-		AC25D3DB1C79516100920104 /* SubjectTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubjectTableViewCell.m; sourceTree = "<group>"; };
-		AC25D3DC1C79516100920104 /* SubjectTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubjectTableViewCell.xib; sourceTree = "<group>"; };
 		AC353BAB1C755ABB00EB09C9 /* LevelDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelDAO.swift; sourceTree = "<group>"; };
 		AC353BAD1C755CF600EB09C9 /* Level.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		AC39B9061BFF649A001CE453 /* MoliStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoliStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1116,6 +1113,9 @@
 		AC78CA421C0BF2F000A9585F /* RecordDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordDAO.swift; sourceTree = "<group>"; };
 		AC78CA441C0BF2FF00A9585F /* SubjectDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubjectDAO.swift; sourceTree = "<group>"; };
 		AC78CA461C0BF30C00A9585F /* ReportDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportDAO.swift; sourceTree = "<group>"; };
+		AC7A2B3E1C7AF13300BE100C /* SubjectHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubjectHeaderView.h; sourceTree = "<group>"; };
+		AC7A2B3F1C7AF13300BE100C /* SubjectHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubjectHeaderView.m; sourceTree = "<group>"; };
+		AC7A2B411C7AF13E00BE100C /* SubjectHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubjectHeaderView.xib; sourceTree = "<group>"; };
 		AC7D1F701C798E0B004021FA /* OptionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionTableViewCell.h; sourceTree = "<group>"; };
 		AC7D1F711C798E0B004021FA /* OptionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionTableViewCell.m; sourceTree = "<group>"; };
 		AC7D1F721C798E0B004021FA /* OptionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OptionTableViewCell.xib; sourceTree = "<group>"; };
@@ -2378,12 +2378,12 @@
 				AC7DD1781C75AFBE00E1874C /* SubjectViewController.h */,
 				AC7DD1791C75AFBE00E1874C /* SubjectViewController.m */,
 				AC7DD17A1C75AFBE00E1874C /* SubjectViewController.xib */,
-				AC25D3DA1C79516100920104 /* SubjectTableViewCell.h */,
-				AC25D3DB1C79516100920104 /* SubjectTableViewCell.m */,
-				AC25D3DC1C79516100920104 /* SubjectTableViewCell.xib */,
 				AC7D1F701C798E0B004021FA /* OptionTableViewCell.h */,
 				AC7D1F711C798E0B004021FA /* OptionTableViewCell.m */,
 				AC7D1F721C798E0B004021FA /* OptionTableViewCell.xib */,
+				AC7A2B3E1C7AF13300BE100C /* SubjectHeaderView.h */,
+				AC7A2B3F1C7AF13300BE100C /* SubjectHeaderView.m */,
+				AC7A2B411C7AF13E00BE100C /* SubjectHeaderView.xib */,
 			);
 			name = SubjectView;
 			sourceTree = "<group>";
@@ -2651,7 +2651,6 @@
 				30AAE4031C02C1F600CD94D5 /* intro_icon_0@3x.png in Resources */,
 				30AAFA381C04817600CD94D5 /* icon_user_monkey_i6@2x.png in Resources */,
 				30AAFB7C1C058EDD00CD94D5 /* way.png in Resources */,
-				AC25D3DE1C79516100920104 /* SubjectTableViewCell.xib in Resources */,
 				30AAFAD21C04817600CD94D5 /* task_icon_arrow@2x.png in Resources */,
 				30AAFAE91C04817600CD94D5 /* task_description_icon@2x.png in Resources */,
 				30AAFA781C04817600CD94D5 /* messageComment@2x.png in Resources */,
@@ -2847,6 +2846,7 @@
 				30AAFA361C04817600CD94D5 /* icon_triangle@2x.png in Resources */,
 				30AAFA1D1C04817600CD94D5 /* icon_file_music@2x.png in Resources */,
 				30AAFB101C04817600CD94D5 /* user_info_project@2x.png in Resources */,
+				AC7A2B421C7AF13E00BE100C /* SubjectHeaderView.xib in Resources */,
 				30AAF9F01C04817600CD94D5 /* coding_emoji_29@2x.png in Resources */,
 				30AAF9CB1C04817600CD94D5 /* comment_count_top_line@2x.png in Resources */,
 				30AAE4061C02C1F600CD94D5 /* intro_icon_2@2x.png in Resources */,
@@ -3038,7 +3038,6 @@
 				30AAE3CE1C02BBFB00CD94D5 /* StartButtomView.m in Sources */,
 				30CF64641C2253A30060B3B9 /* Project_RootViewController.m in Sources */,
 				30AA1CB81C0816D400CD94D5 /* ProReportTableViewCell.m in Sources */,
-				AC25D3DD1C79516100920104 /* SubjectTableViewCell.m in Sources */,
 				AC78CA2F1C0BF00200A9585F /* Record+CoreDataProperties.swift in Sources */,
 				30AA1C501C05A88500CD94D5 /* QuestionModel.m in Sources */,
 				30AA1C531C05A96D00CD94D5 /* TextStyle.m in Sources */,
@@ -3047,6 +3046,7 @@
 				30AAF80A1C047E4300CD94D5 /* UIButton+Bootstrap.m in Sources */,
 				30AAFB911C0594F600CD94D5 /* MainViewController.m in Sources */,
 				30AA1C4A1C05A3AF00CD94D5 /* MZTimerLabel.m in Sources */,
+				AC7A2B401C7AF13300BE100C /* SubjectHeaderView.m in Sources */,
 				30AAF8061C047B4300CD94D5 /* LoginViewController.m in Sources */,
 				30AA1CAD1C08168300CD94D5 /* ProblemReportViewController.m in Sources */,
 				AC78CA431C0BF2F000A9585F /* RecordDAO.swift in Sources */,
