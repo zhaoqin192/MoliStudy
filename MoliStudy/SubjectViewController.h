@@ -10,11 +10,12 @@
 #import "OptionTableViewCell.h"
 #import "SubjectHeaderView.h"
 #import "NoteView.h"
+#import "UtilityManager.h"
 
-#define FONT_SIZE 16.0f
-#define CELL_CONTENT_WIDTH ScreenWidth
-#define CELL_CONTENT_MARGIN 10.0f
-#define color [UIColor colorWithRed:0/255.0 green:175/255.0 blue:240/255.0 alpha:1]
+//#define FONT_SIZE 16.0f
+//#define CELL_CONTENT_WIDTH ScreenWidth
+//#define CELL_CONTENT_MARGIN 10.0f
+//#define color [UIColor colorWithRed:0/255.0 green:175/255.0 blue:240/255.0 alpha:1]
 
 @interface SubjectViewController : UIViewController
 

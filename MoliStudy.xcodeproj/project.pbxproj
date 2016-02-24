@@ -497,6 +497,8 @@
 		AC53B7D91C016851007D3FE8 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AC53B7D81C016851007D3FE8 /* libicucore.tbd */; };
 		AC53B7DB1C01685E007D3FE8 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AC53B7DA1C01685E007D3FE8 /* libz.tbd */; };
 		AC53B7DD1C01686B007D3FE8 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AC53B7DC1C01686B007D3FE8 /* libstdc++.tbd */; };
+		AC7835B31C7D469400BC9302 /* NoteContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7835B21C7D469400BC9302 /* NoteContentView.m */; };
+		AC7835B51C7D46AA00BC9302 /* NoteContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC7835B41C7D46AA00BC9302 /* NoteContentView.xib */; };
 		AC78CA2B1C0BF00200A9585F /* Practice+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC78CA251C0BF00200A9585F /* Practice+CoreDataProperties.swift */; };
 		AC78CA2C1C0BF00200A9585F /* Practice.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC78CA261C0BF00200A9585F /* Practice.swift */; };
 		AC78CA2D1C0BF00200A9585F /* Account+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC78CA271C0BF00200A9585F /* Account+CoreDataProperties.swift */; };
@@ -1100,6 +1102,9 @@
 		AC53B7D81C016851007D3FE8 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		AC53B7DA1C01685E007D3FE8 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		AC53B7DC1C01686B007D3FE8 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		AC7835B11C7D469400BC9302 /* NoteContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteContentView.h; sourceTree = "<group>"; };
+		AC7835B21C7D469400BC9302 /* NoteContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteContentView.m; sourceTree = "<group>"; };
+		AC7835B41C7D46AA00BC9302 /* NoteContentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoteContentView.xib; sourceTree = "<group>"; };
 		AC78CA241C0BF00200A9585F /* MoliStudy-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MoliStudy-Bridging-Header.h"; sourceTree = "<group>"; };
 		AC78CA251C0BF00200A9585F /* Practice+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Practice+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		AC78CA261C0BF00200A9585F /* Practice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Practice.swift; sourceTree = "<group>"; };
@@ -2402,6 +2407,9 @@
 				AC7A2B481C7BFCA400BE100C /* NoteTableViewCell.h */,
 				AC7A2B491C7BFCA400BE100C /* NoteTableViewCell.m */,
 				AC7A2B4A1C7BFCA400BE100C /* NoteTableViewCell.xib */,
+				AC7835B11C7D469400BC9302 /* NoteContentView.h */,
+				AC7835B21C7D469400BC9302 /* NoteContentView.m */,
+				AC7835B41C7D46AA00BC9302 /* NoteContentView.xib */,
 			);
 			name = SubjectView;
 			sourceTree = "<group>";
@@ -2592,6 +2600,7 @@
 				30AAF9F31C04817600CD94D5 /* coding_emoji_32@2x.png in Resources */,
 				30AAFAC61C04817600CD94D5 /* me_selected@2x.png in Resources */,
 				30AAFA201C04817600CD94D5 /* icon_file_psd@2x.png in Resources */,
+				AC7835B51C7D46AA00BC9302 /* NoteContentView.xib in Resources */,
 				30AAFA7D1C04817600CD94D5 /* messageSystem@2x.png in Resources */,
 				30AAFB7F1C058EDD00CD94D5 /* dwweewe.png in Resources */,
 				30AAF9EB1C04817600CD94D5 /* coding_emoji_24@2x.png in Resources */,
@@ -3078,6 +3087,7 @@
 				30AA1C3E1C05A30A00CD94D5 /* PickerRightArrow.m in Sources */,
 				30AAE3C91C02BB7D00CD94D5 /* YFStartView.m in Sources */,
 				30AAFB3E1C05850500CD94D5 /* ProgressHUD.m in Sources */,
+				AC7835B31C7D469400BC9302 /* NoteContentView.m in Sources */,
 				AC78CA471C0BF30C00A9585F /* ReportDAO.swift in Sources */,
 				30AAFB411C058D3800CD94D5 /* LeftTableViewController.m in Sources */,
 				AC78CA2E1C0BF00200A9585F /* Account.swift in Sources */,

@@ -7,6 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "RSA.h"
+
+#define FONT_SIZE 16.0f
+#define CELL_CONTENT_WIDTH ScreenWidth
+#define CELL_CONTENT_MARGIN 10.0f
+#define color [UIColor colorWithRed:0/255.0 green:175/255.0 blue:240/255.0 alpha:1]
 
 @interface UtilityManager : NSObject
 /**
@@ -19,6 +25,8 @@
 + (NSString *) encryptPassword:(NSString *)password;
 
 + (NSString *) removeHTMLTag:(NSString *)input;
+
++ (CGFloat) dynamicHeight:(NSString *)input;
 
 
 @end

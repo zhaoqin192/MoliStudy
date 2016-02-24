@@ -71,6 +71,7 @@ class SubjectDAO: NSObject {
                     note.positionEnd = note.positionEnd.integerValue - 1
                     note.style = label["style"] as! String
                     note.noteContent = label["note"] as! String
+                    note.noteContent =  UtilityManager.removeHTMLTag(note.noteContent)
                     if label["is_study"] as! NSNumber == 0{
                         note.isStudied = false
                     }else{

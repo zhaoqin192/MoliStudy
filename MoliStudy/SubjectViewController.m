@@ -44,6 +44,11 @@
     self.labelArray = [[NSMutableArray alloc] init];
 }
 
+- (void)viewWillDisappear:(BOOL)animated{
+    if ([self.noteView shown]) {
+        [self.noteView hide];
+    }
+}
 
 // 接收广播之后的回调方法，显示题目
 - (void)presentView{
@@ -69,22 +74,14 @@
     [self.tableView setTableHeaderView:self.headerView];
     
     //设置显示题目的高度
-    CGSize constraint = CGSizeMake(CELL_CONTENT_WIDTH - (CELL_CONTENT_MARGIN * 2), 20000.0f);
-    
-    NSAttributedString *attributedText = [[NSAttributedString alloc]initWithString:content attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:FONT_SIZE]}];
-    CGRect rect = [attributedText boundingRectWithSize:constraint
-                                                   options:NSStringDrawingUsesLineFragmentOrigin
-                                                   context:nil];
-    CGSize size = rect.size;
-    CGFloat height = MAX(size.height, 60.0f);
-    [self.headerView setHeight:height + CELL_CONTENT_MARGIN * 2];
+    [self.headerView setHeight:[UtilityManager dynamicHeight:content]];
     
     //设置标签栏高度
     self.noteView = [[[NSBundle mainBundle] loadNibNamed:@"NoteView" owner:self options:nil] lastObject];
     CGRect noteRect = self.noteButton.frame;
     CGFloat noteHeight = 44 * self.subject0.thinkLabel.count + 1;
     [self.noteView setFrame:CGRectMake(0, noteRect.origin.y - noteHeight, ScreenWidth, noteHeight)];
-    [self.noteView initHelper];
+    [self.noteView initHelper:noteHeight positionY:noteRect.origin.y];
 
 }
 
@@ -100,22 +97,16 @@
             return;
         }
 
-//        NSLog(@"length %lu", (unsigned long)self.subject0.allString.count);
         for(Note *note in self.think.noteArray){
-            NSLog(@"note %@", note.noteContent);
-//            NSLog(@"%@ %@", note.positionStart, note.positionEnd);
-//            NSLog(@"%@ %@", self.subject0.allString[[note.positionStart integerValue]], self.subject0.allString[[note.positionEnd integerValue]]);
             NSInteger calculate = self.dataList.count - 1;
             while (calculate >= 0) {
                 Label *label = [self.labelArray objectAtIndex:calculate];
                 NSNumber *location = label.positionStart;
-//                NSLog(@"position: %@\n   location: %@", note.positionStart, location);
                 if ([note.positionStart integerValue] >= [location integerValue]) {
                     [self messageHighlight:label.label startPosition:self.subject0.allString[[note.positionStart intValue]] endPosition:self.subject0.allString[[note.positionEnd intValue]]];
                     break;
                 }
                 calculate = calculate - 1;
-//                NSLog(@"calculate %ld", (long)calculate);
             }
             if (calculate == -1) {
                 [self messageHighlight:self.headerView.content startPosition:self.subject0.allString[[note.positionStart intValue]] endPosition:self.subject0.allString[[note.positionEnd intValue]]];
@@ -204,12 +195,6 @@
     return 1 + size.height;
 }
 
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-//    if ([indexPath row] == 0) {
-//        [self messageHighlight:self.headerView.content startPosition:self.subject0.content[0] endPosition:self.subject0.content[5]];
-//    }
-}
 
 - (void)noteRequest:(UITapGestureRecognizer *)recognizer{
     [self.noteView setData:self.subject0.thinkLabel];

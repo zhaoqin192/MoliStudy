@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "NoteTableViewCell.h"
+#import "NoteContentView.h"
+#import "UtilityManager.h"
 
 @interface NoteView : UIView<UITableViewDataSource, UITableViewDelegate>
 
@@ -16,9 +18,10 @@
 @property (nonatomic, strong) NoteTableViewCell *prototypeCell;
 @property (nonatomic, strong) ThinkLabel *think;
 @property BOOL shown;
+@property (nonatomic, strong) NoteContentView *noteContentView;
+@property CGFloat noteButtonPositionY;
 
-
-- (void) initHelper;
+- (void) initHelper:(CGFloat) height positionY:(CGFloat) positionY;
 - (void) show;
 - (void) hide;
 - (void) toggle;
