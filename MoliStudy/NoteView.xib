@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="xHl-t5-75m" customClass="NoteView">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XSB-FV-4Vz">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="1"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="z7q-d7-Acr"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qua-CS-CL4">
+                    <rect key="frame" x="0.0" y="1" width="600" height="599"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="qua-CS-CL4" firstAttribute="top" secondItem="XSB-FV-4Vz" secondAttribute="bottom" id="DiE-a4-g8N"/>
+                <constraint firstItem="XSB-FV-4Vz" firstAttribute="leading" secondItem="xHl-t5-75m" secondAttribute="leading" id="MYs-Eb-aTO"/>
+                <constraint firstItem="qua-CS-CL4" firstAttribute="leading" secondItem="xHl-t5-75m" secondAttribute="leading" id="Wlh-us-7x8"/>
+                <constraint firstAttribute="bottom" secondItem="qua-CS-CL4" secondAttribute="bottom" id="b5S-EV-g78"/>
+                <constraint firstAttribute="trailing" secondItem="qua-CS-CL4" secondAttribute="trailing" id="hbs-yr-CaX"/>
+                <constraint firstItem="qua-CS-CL4" firstAttribute="top" secondItem="xHl-t5-75m" secondAttribute="top" constant="1" id="iH3-vY-fmi"/>
+                <constraint firstAttribute="trailing" secondItem="XSB-FV-4Vz" secondAttribute="trailing" id="reS-h3-e93"/>
+            </constraints>
+            <connections>
+                <outlet property="tableView" destination="qua-CS-CL4" id="vwc-Dz-mcs"/>
+            </connections>
+            <point key="canvasLocation" x="345" y="372"/>
+        </view>
+    </objects>
+</document>

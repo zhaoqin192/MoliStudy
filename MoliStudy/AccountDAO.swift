@@ -29,8 +29,6 @@ class AccountDAO: NSObject {
                 self.account = results[0] as! Account
                 isExist = true
             }
-            print(results.count)
-            print(isExist)
         }catch let error as NSError{
             print("Could not fetch \(error), \(error.userInfo)")
             
@@ -39,7 +37,6 @@ class AccountDAO: NSObject {
     
     func addAccount(accountName: String, password: String, userID: String, userToken: String){
         if !isExist{
-            print("isExist")
             account = NSEntityDescription.insertNewObjectForEntityForName("Account", inManagedObjectContext: managedContext) as! Account
         }
         account.accountName = accountName

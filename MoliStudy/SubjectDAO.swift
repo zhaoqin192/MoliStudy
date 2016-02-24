@@ -38,16 +38,16 @@ class SubjectDAO: NSObject {
             let contents = model["name"] as! [String]
             for content in contents{
                 subject.content.append(content)
+                subject.allString.append(content)
             }
             let answers = model["answers"] as! NSArray
+            subject.answers = [[String]](count: answers.count, repeatedValue:[])
             for j in 0...answers.count - 1{
                 let answer = answers[j] as! NSArray
-                var detailstr = String()
                 for detail in answer{
-                    detailstr += detail as! String
-                    detailstr += " "
+                    subject.answers[j].append(detail as! String)
+                    subject.allString.append(detail as! String)
                 }
-                subject.answers.append(detailstr)
             }
             subject.correctAnswer = model["correct_answer"] as! String
             
@@ -66,8 +66,9 @@ class SubjectDAO: NSObject {
                     thinkLabel.name = label["type_name"] as! String
                     let note = Note()
                     note.positionStart = label["position_start"] as! NSNumber
+                    note.positionStart = note.positionStart.integerValue - 1
                     note.positionEnd = label["position_end"] as! NSNumber
-                    note.positionEnd = Int(note.positionEnd) + 1
+                    note.positionEnd = note.positionEnd.integerValue - 1
                     note.style = label["style"] as! String
                     note.noteContent = label["note"] as! String
                     if label["is_study"] as! NSNumber == 0{

@@ -516,6 +516,11 @@
 		AC78CA471C0BF30C00A9585F /* ReportDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC78CA461C0BF30C00A9585F /* ReportDAO.swift */; };
 		AC7A2B401C7AF13300BE100C /* SubjectHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7A2B3F1C7AF13300BE100C /* SubjectHeaderView.m */; };
 		AC7A2B421C7AF13E00BE100C /* SubjectHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC7A2B411C7AF13E00BE100C /* SubjectHeaderView.xib */; };
+		AC7A2B451C7B04BA00BE100C /* NoteView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7A2B441C7B04BA00BE100C /* NoteView.m */; };
+		AC7A2B471C7B04C600BE100C /* NoteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC7A2B461C7B04C600BE100C /* NoteView.xib */; };
+		AC7A2B4B1C7BFCA400BE100C /* NoteTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7A2B491C7BFCA400BE100C /* NoteTableViewCell.m */; };
+		AC7A2B4C1C7BFCA400BE100C /* NoteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC7A2B4A1C7BFCA400BE100C /* NoteTableViewCell.xib */; };
+		AC7A2B4E1C7C34FE00BE100C /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7A2B4D1C7C34FE00BE100C /* Label.swift */; };
 		AC7D1F731C798E0B004021FA /* OptionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7D1F711C798E0B004021FA /* OptionTableViewCell.m */; };
 		AC7D1F741C798E0B004021FA /* OptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC7D1F721C798E0B004021FA /* OptionTableViewCell.xib */; };
 		AC7DD17B1C75AFBE00E1874C /* SubjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7DD1791C75AFBE00E1874C /* SubjectViewController.m */; };
@@ -1116,6 +1121,13 @@
 		AC7A2B3E1C7AF13300BE100C /* SubjectHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubjectHeaderView.h; sourceTree = "<group>"; };
 		AC7A2B3F1C7AF13300BE100C /* SubjectHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubjectHeaderView.m; sourceTree = "<group>"; };
 		AC7A2B411C7AF13E00BE100C /* SubjectHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubjectHeaderView.xib; sourceTree = "<group>"; };
+		AC7A2B431C7B04BA00BE100C /* NoteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteView.h; sourceTree = "<group>"; };
+		AC7A2B441C7B04BA00BE100C /* NoteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteView.m; sourceTree = "<group>"; };
+		AC7A2B461C7B04C600BE100C /* NoteView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoteView.xib; sourceTree = "<group>"; };
+		AC7A2B481C7BFCA400BE100C /* NoteTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteTableViewCell.h; sourceTree = "<group>"; };
+		AC7A2B491C7BFCA400BE100C /* NoteTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteTableViewCell.m; sourceTree = "<group>"; };
+		AC7A2B4A1C7BFCA400BE100C /* NoteTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoteTableViewCell.xib; sourceTree = "<group>"; };
+		AC7A2B4D1C7C34FE00BE100C /* Label.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
 		AC7D1F701C798E0B004021FA /* OptionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionTableViewCell.h; sourceTree = "<group>"; };
 		AC7D1F711C798E0B004021FA /* OptionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionTableViewCell.m; sourceTree = "<group>"; };
 		AC7D1F721C798E0B004021FA /* OptionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OptionTableViewCell.xib; sourceTree = "<group>"; };
@@ -2384,6 +2396,12 @@
 				AC7A2B3E1C7AF13300BE100C /* SubjectHeaderView.h */,
 				AC7A2B3F1C7AF13300BE100C /* SubjectHeaderView.m */,
 				AC7A2B411C7AF13E00BE100C /* SubjectHeaderView.xib */,
+				AC7A2B431C7B04BA00BE100C /* NoteView.h */,
+				AC7A2B441C7B04BA00BE100C /* NoteView.m */,
+				AC7A2B461C7B04C600BE100C /* NoteView.xib */,
+				AC7A2B481C7BFCA400BE100C /* NoteTableViewCell.h */,
+				AC7A2B491C7BFCA400BE100C /* NoteTableViewCell.m */,
+				AC7A2B4A1C7BFCA400BE100C /* NoteTableViewCell.xib */,
 			);
 			name = SubjectView;
 			sourceTree = "<group>";
@@ -2409,6 +2427,7 @@
 				AC78CA331C0BF03B00A9585F /* Note.swift */,
 				AC78CA351C0BF04700A9585F /* ThinkLabel.swift */,
 				AC353BAD1C755CF600EB09C9 /* Level.swift */,
+				AC7A2B4D1C7C34FE00BE100C /* Label.swift */,
 			);
 			name = subject;
 			sourceTree = "<group>";
@@ -2795,6 +2814,7 @@
 				30AAFA661C04817600CD94D5 /* keyboard_keyboard@2x.png in Resources */,
 				30AAE3FE1C02C1F600CD94D5 /* intro_dot_selected@2x.png in Resources */,
 				30AAFA841C04817600CD94D5 /* nav_arrow_down@2x.png in Resources */,
+				AC7A2B471C7B04C600BE100C /* NoteView.xib in Resources */,
 				30AAFAD01C04817600CD94D5 /* checkbox_checked@2x.png in Resources */,
 				30AAFAA01C04817600CD94D5 /* project_item_readme@2x.png in Resources */,
 				30AAF9E91C04817600CD94D5 /* coding_emoji_22@2x.png in Resources */,
@@ -2939,6 +2959,7 @@
 				30AAFB3D1C05850500CD94D5 /* ProgressHUD.bundle in Resources */,
 				30AAFAFF1C04817600CD94D5 /* tipIcon_TweetLike@2x.png in Resources */,
 				30AAFA791C04817600CD94D5 /* messageLeft_bg_highlight_img@2x.png in Resources */,
+				AC7A2B4C1C7BFCA400BE100C /* NoteTableViewCell.xib in Resources */,
 				AC7D1F741C798E0B004021FA /* OptionTableViewCell.xib in Resources */,
 				30AAFB051C04817600CD94D5 /* tweet_btn_liked@2x.png in Resources */,
 				30AAFAF41C04817600CD94D5 /* tipIcon_Other@2x.png in Resources */,
@@ -3046,6 +3067,7 @@
 				30AAF80A1C047E4300CD94D5 /* UIButton+Bootstrap.m in Sources */,
 				30AAFB911C0594F600CD94D5 /* MainViewController.m in Sources */,
 				30AA1C4A1C05A3AF00CD94D5 /* MZTimerLabel.m in Sources */,
+				AC7A2B451C7B04BA00BE100C /* NoteView.m in Sources */,
 				AC7A2B401C7AF13300BE100C /* SubjectHeaderView.m in Sources */,
 				30AAF8061C047B4300CD94D5 /* LoginViewController.m in Sources */,
 				30AA1CAD1C08168300CD94D5 /* ProblemReportViewController.m in Sources */,
@@ -3069,6 +3091,7 @@
 				30AA1C421C05A33A00CD94D5 /* MCTopAligningLabel.m in Sources */,
 				AC78CA321C0BF03200A9585F /* Subject.swift in Sources */,
 				30AAFB8D1C058F2A00CD94D5 /* DrawerViewController.m in Sources */,
+				AC7A2B4B1C7BFCA400BE100C /* NoteTableViewCell.m in Sources */,
 				309C16C11C0F3C7C001A3B11 /* RegisterViewController.m in Sources */,
 				AC353BAC1C755ABB00EB09C9 /* LevelDAO.swift in Sources */,
 				AC78CA341C0BF03B00A9585F /* Note.swift in Sources */,
@@ -3106,6 +3129,7 @@
 				30AA1C5C1C05B39100CD94D5 /* UIView+Frame.m in Sources */,
 				AC39B90B1BFF649A001CE453 /* main.m in Sources */,
 				30AAFB9A1C05959200CD94D5 /* setFootView.m in Sources */,
+				AC7A2B4E1C7C34FE00BE100C /* Label.swift in Sources */,
 				30AA1CA81C06D34000CD94D5 /* TableViewHeader.m in Sources */,
 				30AAE3DD1C02C15D00CD94D5 /* IntroductionViewController.m in Sources */,
 				30AAFBAF1C059CED00CD94D5 /* ReportTableViewCell.m in Sources */,
