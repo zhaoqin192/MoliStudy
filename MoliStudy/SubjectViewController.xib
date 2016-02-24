@@ -7,7 +7,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SubjectViewController">
             <connections>
+                <outlet property="answerButton" destination="3HO-Nn-mwa" id="btB-Hu-p18"/>
+                <outlet property="answerLabel" destination="PKs-1z-W8U" id="v4P-Ji-Jls"/>
                 <outlet property="noteButton" destination="c3r-uo-Zuc" id="R4T-6O-Un6"/>
+                <outlet property="noteLabel" destination="xjn-Ib-ikJ" id="8h6-Ko-IjW"/>
                 <outlet property="tableView" destination="qTL-IX-NDd" id="hug-J6-kVU"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -21,11 +24,27 @@
                     <rect key="frame" x="0.0" y="0.0" width="600" height="555"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c3r-uo-Zuc" userLabel="Bottom View">
-                    <rect key="frame" x="0.0" y="555" width="600" height="45"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3HO-Nn-mwa" userLabel="CheckView">
+                    <rect key="frame" x="0.0" y="555" width="300" height="45"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="查看答案" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PKs-1z-W8U">
+                            <rect key="frame" x="114" y="11" width="72" height="21.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.96862745100000003" green="0.53538782710931698" blue="0.19074390409159761" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="PKs-1z-W8U" firstAttribute="centerY" secondItem="3HO-Nn-mwa" secondAttribute="centerY" id="tII-3l-eLu"/>
+                        <constraint firstItem="PKs-1z-W8U" firstAttribute="centerX" secondItem="3HO-Nn-mwa" secondAttribute="centerX" id="tkN-8d-mhJ"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c3r-uo-Zuc" userLabel="NoteView">
+                    <rect key="frame" x="300" y="555" width="300" height="45"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="解题思路" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xjn-Ib-ikJ">
-                            <rect key="frame" x="264" y="12" width="72" height="21.5"/>
+                            <rect key="frame" x="114" y="12" width="72" height="21.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
@@ -33,22 +52,33 @@
                     </subviews>
                     <color key="backgroundColor" red="0.2901960784" green="0.6705882353" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstItem="xjn-Ib-ikJ" firstAttribute="centerY" secondItem="c3r-uo-Zuc" secondAttribute="centerY" id="13d-HT-ORQ"/>
-                        <constraint firstItem="xjn-Ib-ikJ" firstAttribute="centerX" secondItem="c3r-uo-Zuc" secondAttribute="centerX" id="UeQ-Dd-9ZX"/>
+                        <constraint firstItem="xjn-Ib-ikJ" firstAttribute="centerY" secondItem="c3r-uo-Zuc" secondAttribute="centerY" id="2hc-18-NEF"/>
+                        <constraint firstItem="xjn-Ib-ikJ" firstAttribute="centerX" secondItem="c3r-uo-Zuc" secondAttribute="centerX" id="QsE-aB-3Gk"/>
                     </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="qTL-IX-NDd" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="3dY-cm-nqc"/>
-                <constraint firstItem="c3r-uo-Zuc" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.075" id="EGv-dl-x9H"/>
-                <constraint firstItem="c3r-uo-Zuc" firstAttribute="top" secondItem="qTL-IX-NDd" secondAttribute="bottom" id="FPL-s0-Yk1"/>
-                <constraint firstAttribute="bottom" secondItem="c3r-uo-Zuc" secondAttribute="bottom" id="Fds-Bh-Nsz"/>
-                <constraint firstAttribute="trailing" secondItem="qTL-IX-NDd" secondAttribute="trailing" id="LVz-Vn-G08"/>
-                <constraint firstItem="qTL-IX-NDd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="MkO-ZG-cwX"/>
-                <constraint firstItem="c3r-uo-Zuc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="g5P-3C-aZC"/>
-                <constraint firstAttribute="trailing" secondItem="c3r-uo-Zuc" secondAttribute="trailing" id="nfh-da-1U8"/>
+                <constraint firstItem="3HO-Nn-mwa" firstAttribute="top" secondItem="qTL-IX-NDd" secondAttribute="bottom" id="2uz-hv-pGG"/>
+                <constraint firstAttribute="trailing" secondItem="c3r-uo-Zuc" secondAttribute="trailing" id="3V2-3n-lBT"/>
+                <constraint firstItem="c3r-uo-Zuc" firstAttribute="top" secondItem="qTL-IX-NDd" secondAttribute="bottom" id="8bq-rK-FTQ"/>
+                <constraint firstItem="c3r-uo-Zuc" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.075" id="B4p-sS-T3O"/>
+                <constraint firstItem="3HO-Nn-mwa" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.075" id="DWF-lU-8Z6"/>
+                <constraint firstItem="qTL-IX-NDd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="I0G-BV-n3j"/>
+                <constraint firstItem="qTL-IX-NDd" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="KKJ-4l-1gw"/>
+                <constraint firstAttribute="bottom" secondItem="c3r-uo-Zuc" secondAttribute="bottom" id="R9G-RV-VE8"/>
+                <constraint firstItem="3HO-Nn-mwa" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Sv0-vb-azy"/>
+                <constraint firstItem="3HO-Nn-mwa" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.5" id="TL1-G4-kUQ"/>
+                <constraint firstItem="c3r-uo-Zuc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" symbolic="YES" id="VsH-Wp-iV0"/>
+                <constraint firstAttribute="trailing" secondItem="qTL-IX-NDd" secondAttribute="trailing" id="aAo-OV-QJy"/>
+                <constraint firstAttribute="bottom" secondItem="3HO-Nn-mwa" secondAttribute="bottom" id="bmc-dI-JCj"/>
+                <constraint firstItem="c3r-uo-Zuc" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.5" id="r0n-bW-hBI"/>
             </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="VsH-Wp-iV0"/>
+                </mask>
+            </variation>
             <point key="canvasLocation" x="411" y="391"/>
         </view>
     </objects>

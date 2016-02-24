@@ -12,6 +12,9 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIView *noteButton;
+@property (weak, nonatomic) IBOutlet UIView *answerButton;
+@property (weak, nonatomic) IBOutlet UILabel *answerLabel;
+@property (weak, nonatomic) IBOutlet UILabel *noteLabel;
 
 @end
 
@@ -42,12 +45,47 @@
     
     self.dataList = [[NSMutableArray alloc] init];
     self.labelArray = [[NSMutableArray alloc] init];
+    
+//    [self initButtons];
+
 }
+
 
 - (void)viewWillDisappear:(BOOL)animated{
     if ([self.noteView shown]) {
         [self.noteView hide];
     }
+}
+
+- (void) initButtons{
+    
+    [UIView animateWithDuration:0.5f animations:^{
+        self.answerButton.hidden = YES;
+        for(NSLayoutConstraint *constraint in self.noteButton.superview.constraints){
+            if (constraint.firstItem == self.noteButton && constraint.firstAttribute == NSLayoutAttributeWidth) {
+                constraint.constant = ScreenWidth;
+            }
+        }
+        for(NSLayoutConstraint *constraint in self.noteButton.constraints){
+            if (constraint.firstItem == self.noteLabel && constraint.firstAttribute == NSLayoutAttributeCenterX){
+                constraint.constant = NSLayoutAttributeCenterX;
+                NSLog(@"centerX");
+            
+            }
+            
+            NSLog(@"%@", constraint);
+        }
+        
+        [self.view layoutIfNeeded];
+    }];
+    
+}
+
+- (void) presentAnswerButton{
+//    self.answerButton.translatesAutoresizingMaskIntoConstraints = YES;
+//    self.answerButton.hidden = NO;
+//    [self.answerButton setFrame:CGRectMake(0, ScreenHeight - 45, ScreenWidth/2, 45)];
+//    [self.noteButton setFrame:CGRectMake(ScreenWidth/2, ScreenHeight - 45, ScreenWidth/2, 45)];
 }
 
 // 接收广播之后的回调方法，显示题目
@@ -195,6 +233,24 @@
     return 1 + size.height;
 }
 
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+//    [self presentAnswerButton];
+//    [self.view layoutIfNeeded];
+    [UIView animateWithDuration:1.0f
+                     animations:^{
+                         
+
+                         for(NSLayoutConstraint *constraint in self.noteButton.superview.constraints){
+                             if (constraint.firstItem == self.noteButton && constraint.firstAttribute == NSLayoutAttributeWidth) {
+                                 constraint.constant = 320;
+                             }
+                         }
+                         
+                         [self.view layoutIfNeeded];
+                     }];
+    
+}
 
 - (void)noteRequest:(UITapGestureRecognizer *)recognizer{
     [self.noteView setData:self.subject0.thinkLabel];
