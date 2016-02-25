@@ -28,19 +28,24 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    [self.window makeKeyAndVisible];
+//    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+//    [self.window makeKeyAndVisible];
     
     //短信验证
-    [SMSSDK registerApp:appKey withSecret:appSecret];
+   // [SMSSDK registerApp:appKey withSecret:appSecret];
     
-    IntroductionViewController *introductionVC = [[IntroductionViewController alloc] init];
-    self.window.rootViewController = introductionVC;
+    //引导页
+//    IntroductionViewController *introductionVC = [[IntroductionViewController alloc] init];
+//    self.window.rootViewController = introductionVC;
+    
+    //测试接口页面
 //    TestViewController *testViewContorller = [[TestViewController alloc] initWithNibName:@"TestViewController" bundle:nil];
 //    self.window.rootViewController = testViewContorller;
     
-    [self configureStartView];
-    [self configureNavigationItem];
+//    启动页
+//    [self configureStartView];
+    
+    //[self configureNavigationItem];
     return YES;
 }
 
