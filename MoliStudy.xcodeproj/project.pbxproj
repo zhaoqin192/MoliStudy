@@ -13,9 +13,7 @@
 		3088662D1C7EA6BB009042B6 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 308866291C7EA6BB009042B6 /* CollectionViewController.m */; };
 		3088662E1C7EA6BB009042B6 /* HJCarouselViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3088662B1C7EA6BB009042B6 /* HJCarouselViewCell.m */; };
 		3088662F1C7EA6BB009042B6 /* HJCarouselViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3088662C1C7EA6BB009042B6 /* HJCarouselViewCell.xib */; };
-		308866331C7EAB0B009042B6 /* 0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 308866301C7EAB0B009042B6 /* 0.jpg */; };
-		308866341C7EAB0B009042B6 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 308866311C7EAB0B009042B6 /* 1.jpg */; };
-		308866351C7EAB0B009042B6 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 308866321C7EAB0B009042B6 /* 2.jpg */; };
+		308866401C7EEB43009042B6 /* MLCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3088663F1C7EEB43009042B6 /* MLCardViewController.m */; };
 		309C16C11C0F3C7C001A3B11 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 309C16C01C0F3C7C001A3B11 /* RegisterViewController.m */; };
 		309C16C41C0F3E0B001A3B11 /* Register.m in Sources */ = {isa = PBXBuildFile; fileRef = 309C16C31C0F3E0B001A3B11 /* Register.m */; };
 		30AA1C2E1C05A2A300CD94D5 /* AnswerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AA1C251C05A2A300CD94D5 /* AnswerTableViewCell.m */; };
@@ -568,9 +566,8 @@
 		3088662A1C7EA6BB009042B6 /* HJCarouselViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJCarouselViewCell.h; sourceTree = "<group>"; };
 		3088662B1C7EA6BB009042B6 /* HJCarouselViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJCarouselViewCell.m; sourceTree = "<group>"; };
 		3088662C1C7EA6BB009042B6 /* HJCarouselViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HJCarouselViewCell.xib; sourceTree = "<group>"; };
-		308866301C7EAB0B009042B6 /* 0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 0.jpg; sourceTree = "<group>"; };
-		308866311C7EAB0B009042B6 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
-		308866321C7EAB0B009042B6 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
+		3088663E1C7EEB43009042B6 /* MLCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLCardViewController.h; sourceTree = "<group>"; };
+		3088663F1C7EEB43009042B6 /* MLCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLCardViewController.m; sourceTree = "<group>"; };
 		309C16BF1C0F3C7C001A3B11 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		309C16C01C0F3C7C001A3B11 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		309C16C21C0F3E0B001A3B11 /* Register.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Register.h; sourceTree = "<group>"; };
@@ -1212,14 +1209,13 @@
 				3088661E1C7E9DB3009042B6 /* MainView.storyboard */,
 				308866211C7E9F40009042B6 /* MLMainViewController.h */,
 				308866221C7E9F40009042B6 /* MLMainViewController.m */,
+				3088663E1C7EEB43009042B6 /* MLCardViewController.h */,
+				3088663F1C7EEB43009042B6 /* MLCardViewController.m */,
 				308866281C7EA6BB009042B6 /* CollectionViewController.h */,
 				308866291C7EA6BB009042B6 /* CollectionViewController.m */,
 				3088662A1C7EA6BB009042B6 /* HJCarouselViewCell.h */,
 				3088662B1C7EA6BB009042B6 /* HJCarouselViewCell.m */,
 				3088662C1C7EA6BB009042B6 /* HJCarouselViewCell.xib */,
-				308866301C7EAB0B009042B6 /* 0.jpg */,
-				308866311C7EAB0B009042B6 /* 1.jpg */,
-				308866321C7EAB0B009042B6 /* 2.jpg */,
 			);
 			name = MainView;
 			sourceTree = "<group>";
@@ -2680,7 +2676,6 @@
 				30AAFAFD1C04817600CD94D5 /* tipIcon_Tweet@2x.png in Resources */,
 				30AAFA821C04817600CD94D5 /* mrpr_icon_fileChange@2x.png in Resources */,
 				30AAF9C91C04817600CD94D5 /* btn_project_quit@2x.png in Resources */,
-				308866331C7EAB0B009042B6 /* 0.jpg in Resources */,
 				30AAFAB51C04817600CD94D5 /* search_tweet_like@2x.png in Resources */,
 				30AAF9C31C04817600CD94D5 /* btn_privateMsg_black@2x.png in Resources */,
 				30AAF9A51C04817600CD94D5 /* blankpage_button_reload@2x.png in Resources */,
@@ -2837,7 +2832,6 @@
 				30AAFA001C04817600CD94D5 /* file_activity_icon_move_file@2x.png in Resources */,
 				30AAFABE1C04817600CD94D5 /* share_btn_qzone@2x.png in Resources */,
 				30AAF9B61C04817600CD94D5 /* button_file_createFolder_unable@2x.png in Resources */,
-				308866341C7EAB0B009042B6 /* 1.jpg in Resources */,
 				30AAF9B11C04817600CD94D5 /* bubble_right_play_2@2x.png in Resources */,
 				30AAFA721C04817600CD94D5 /* logo_about@2x.png in Resources */,
 				30AAFAFA1C04817600CD94D5 /* tipIcon_QcTask@2x.png in Resources */,
@@ -3004,7 +2998,6 @@
 				30AAFB121C04817600CD94D5 /* user_info_tweet@2x.png in Resources */,
 				30AAFB031C04817600CD94D5 /* tweet_btn_comment@2x.png in Resources */,
 				30AAFA261C04817600CD94D5 /* icon_file_cell_move@2x.png in Resources */,
-				308866351C7EAB0B009042B6 /* 2.jpg in Resources */,
 				30AAFA0C1C04817600CD94D5 /* file_menu_icon_share@2x.png in Resources */,
 				30AAF9AB1C04817600CD94D5 /* btn_file_reDo@2x.png in Resources */,
 				30AAFAE01C04817600CD94D5 /* task_activity_icon_commit_refer@2x.png in Resources */,
@@ -3142,6 +3135,7 @@
 				30AA1C361C05A2D600CD94D5 /* AKPickerView.m in Sources */,
 				AC53B7A61C014AA8007D3FE8 /* UtilityManager.m in Sources */,
 				30AA1CBD1C0816E000CD94D5 /* ReportModel.m in Sources */,
+				308866401C7EEB43009042B6 /* MLCardViewController.m in Sources */,
 				30AA1C3E1C05A30A00CD94D5 /* PickerRightArrow.m in Sources */,
 				30AAE3C91C02BB7D00CD94D5 /* YFStartView.m in Sources */,
 				30AAFB3E1C05850500CD94D5 /* ProgressHUD.m in Sources */,

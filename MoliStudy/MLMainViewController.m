@@ -9,6 +9,7 @@
 #import "MLMainViewController.h"
 #import "CollectionViewController.h"
 #import "HJCarouselViewLayout.h"
+#import "MLCardViewController.h"
 
 @interface MLMainViewController ()
 
@@ -25,22 +26,17 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (IBAction)questionButtonClicked:(UIButton *)sender {
-    HJCarouselViewLayout *layout = nil;
-    switch (sender.tag) {
-        case 100:
-            NSLog(@"clicked 100");
-            break;
-        case 102:
-            NSLog(@"clicked 102");
-            break;
-        case 101:
-            layout = [[HJCarouselViewLayout alloc] initWithAnim:HJCarouselAnimLinear];
-            layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-            layout.itemSize = CGSizeMake(306,439);
-            CollectionViewController *vc = [[CollectionViewController alloc] initWithCollectionViewLayout:layout];
-           [self.navigationController pushViewController:vc animated:YES];
-            break;
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([segue.identifier isEqualToString:@"card"]) {
+        HJCarouselViewLayout *layout = nil;
+        layout = [[HJCarouselViewLayout alloc] initWithAnim:HJCarouselAnimLinear];
+        layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+        layout.itemSize = CGSizeMake(306,439);
+        CollectionViewController *vc = [[CollectionViewController alloc] initWithCollectionViewLayout:layout];
+        MLCardViewController *cardVc = (MLCardViewController*)segue.destinationViewController;
+        cardVc.collectionVC = vc;
     }
 }
 
