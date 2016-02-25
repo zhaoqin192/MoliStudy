@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface HJCarouselViewCell : UICollectionViewCell
-
-@property (nonatomic, weak) IBOutlet UIImageView *imageView;
-
+@property (copy, nonatomic) void(^continueStudyButtonClickedBlock)();
+@property (copy, nonatomic) void(^checkReportButtonClickedBlock)();
 @end

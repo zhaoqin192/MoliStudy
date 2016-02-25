@@ -13,5 +13,15 @@
 - (void)awakeFromNib {
     // Initialization code
 }
+- (IBAction)continueStudyButtonClicked {
+    if (self.continueStudyButtonClickedBlock) {
+        self.continueStudyButtonClickedBlock();
+    }
+}
+- (IBAction)checkReportButtonClicked {
+    if (self.checkReportButtonClickedBlock) {
+        self.checkReportButtonClickedBlock();
+    }
+}
 
 @end

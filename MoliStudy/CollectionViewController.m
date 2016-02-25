@@ -21,7 +21,8 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.collectionView.backgroundColor = [UIColor whiteColor];
+    self.navigationController.navigationBar.hidden = YES;
+    self.collectionView.backgroundColor = [UIColor grayColor];
     self.collectionView.showsHorizontalScrollIndicator = NO;
     self.collectionView.showsVerticalScrollIndicator = NO;
     [self.collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([HJCarouselViewCell class]) bundle:nil] forCellWithReuseIdentifier:reuseIdentifier];
@@ -47,41 +48,37 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 
 - (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    NSIndexPath *curIndexPath = [self curIndexPath];
-    if (indexPath.row == curIndexPath.row) {
-        return YES;
-    }
-    
-    [self.collectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionNone animated:YES];
-    
-//    HJCarouselViewLayout *layout = (HJCarouselViewLayout *)collectionView.collectionViewLayout;
-//    CGFloat cellHeight = layout.itemSize.height;
-//    CGRect visibleRect = CGRectZero;
-//    if (indexPath.row > curIndexPath.row) {
-//        visibleRect = CGRectMake(0, cellHeight * indexPath.row + cellHeight / 2, CGRectGetWidth(collectionView.frame), cellHeight / 2);
-//    } else {
-//        visibleRect = CGRectMake(0, cellHeight * indexPath.row, CGRectGetWidth(collectionView.frame), CGRectGetHeight(collectionView.frame));
+//    NSIndexPath *curIndexPath = [self curIndexPath];
+//    if (indexPath.row == curIndexPath.row) {
+//        return YES;
 //    }
-//    [self.collectionView scrollRectToVisible:visibleRect animated:YES];
+//    
+//    [self.collectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionNone animated:YES];
     
     return NO;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"click %ld", indexPath.row);
-    SubjectViewController *subjectViewController = [[SubjectViewController alloc] initWithNibName:@"SubjectViewController" bundle:nil];
-    [self.navigationController pushViewController:subjectViewController animated:YES];
    // [self presentViewController:subjectViewController animated:YES completion:nil];
 }
 
 #pragma mark <UICollectionViewDataSource>
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 20;
+    return 10;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     HJCarouselViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-    cell.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%ld.jpg", indexPath.row % 3]];
+    cell.continueStudyButtonClickedBlock = ^{
+        NSLog(@"continueStudy %zd",indexPath.row);
+        SubjectViewController *subjectViewController = [[SubjectViewController alloc] initWithNibName:@"SubjectViewController" bundle:nil];
+        [self.navigationController pushViewController:subjectViewController animated:YES];
+    };
+    cell.checkReportButtonClickedBlock = ^{
+        NSLog(@"checkReportButtonClickedBlock %zd",indexPath.row);
+    };
+
     return cell;
 }
 

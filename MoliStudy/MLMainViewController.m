@@ -39,8 +39,7 @@
             layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
             layout.itemSize = CGSizeMake(306,439);
             CollectionViewController *vc = [[CollectionViewController alloc] initWithCollectionViewLayout:layout];
-         //   [self presentViewController:vc animated:YES completion:nil];
-            [self.navigationController pushViewController:vc animated:YES];
+           [self.navigationController pushViewController:vc animated:YES];
             break;
     }
 }
