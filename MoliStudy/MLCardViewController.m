@@ -26,6 +26,10 @@
     self.bottomButton.layer.cornerRadius = self.bottomButton.frame.size.height/2;
     // Do any additional setup after loading the view.
 }
+- (void)viewDidAppear:(BOOL)animated{
+   // [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+}
+
 - (IBAction)backButtonClicked {
     [self.navigationController popViewControllerAnimated:YES];
    // NSLog(@"back");
