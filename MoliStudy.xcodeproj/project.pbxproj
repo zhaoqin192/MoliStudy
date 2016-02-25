@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3088661F1C7E9DB3009042B6 /* MainView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3088661E1C7E9DB3009042B6 /* MainView.storyboard */; };
 		308866231C7E9F40009042B6 /* MLMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 308866221C7E9F40009042B6 /* MLMainViewController.m */; };
 		308866261C7EA680009042B6 /* HJCarouselViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 308866251C7EA680009042B6 /* HJCarouselViewLayout.m */; };
 		3088662D1C7EA6BB009042B6 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 308866291C7EA6BB009042B6 /* CollectionViewController.m */; };
@@ -504,8 +503,10 @@
 		AC53B7D91C016851007D3FE8 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AC53B7D81C016851007D3FE8 /* libicucore.tbd */; };
 		AC53B7DB1C01685E007D3FE8 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AC53B7DA1C01685E007D3FE8 /* libz.tbd */; };
 		AC53B7DD1C01686B007D3FE8 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AC53B7DC1C01686B007D3FE8 /* libstdc++.tbd */; };
+		AC62560D1C7F258600CD083D /* MainView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC62560C1C7F258600CD083D /* MainView.storyboard */; };
 		AC7835B31C7D469400BC9302 /* NoteContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7835B21C7D469400BC9302 /* NoteContentView.m */; };
 		AC7835B51C7D46AA00BC9302 /* NoteContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC7835B41C7D46AA00BC9302 /* NoteContentView.xib */; };
+		AC7835BE1C7EA27400BC9302 /* Tinty.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7835BD1C7EA27400BC9302 /* Tinty.swift */; };
 		AC78CA2B1C0BF00200A9585F /* Practice+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC78CA251C0BF00200A9585F /* Practice+CoreDataProperties.swift */; };
 		AC78CA2C1C0BF00200A9585F /* Practice.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC78CA261C0BF00200A9585F /* Practice.swift */; };
 		AC78CA2D1C0BF00200A9585F /* Account+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC78CA271C0BF00200A9585F /* Account+CoreDataProperties.swift */; };
@@ -556,7 +557,6 @@
 /* Begin PBXFileReference section */
 		023B0FA0A76EAEEB884B9ABD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		0C04AE670AA344195210BFE9 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3088661E1C7E9DB3009042B6 /* MainView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainView.storyboard; sourceTree = "<group>"; };
 		308866211C7E9F40009042B6 /* MLMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLMainViewController.h; sourceTree = "<group>"; };
 		308866221C7E9F40009042B6 /* MLMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLMainViewController.m; sourceTree = "<group>"; };
 		308866241C7EA680009042B6 /* HJCarouselViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJCarouselViewLayout.h; sourceTree = "<group>"; };
@@ -1121,9 +1121,11 @@
 		AC53B7D81C016851007D3FE8 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		AC53B7DA1C01685E007D3FE8 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		AC53B7DC1C01686B007D3FE8 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		AC62560C1C7F258600CD083D /* MainView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainView.storyboard; sourceTree = "<group>"; };
 		AC7835B11C7D469400BC9302 /* NoteContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteContentView.h; sourceTree = "<group>"; };
 		AC7835B21C7D469400BC9302 /* NoteContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteContentView.m; sourceTree = "<group>"; };
 		AC7835B41C7D46AA00BC9302 /* NoteContentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoteContentView.xib; sourceTree = "<group>"; };
+		AC7835BD1C7EA27400BC9302 /* Tinty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tinty.swift; sourceTree = "<group>"; };
 		AC78CA241C0BF00200A9585F /* MoliStudy-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MoliStudy-Bridging-Header.h"; sourceTree = "<group>"; };
 		AC78CA251C0BF00200A9585F /* Practice+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Practice+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		AC78CA261C0BF00200A9585F /* Practice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Practice.swift; sourceTree = "<group>"; };
@@ -1206,7 +1208,7 @@
 		308866201C7E9DBB009042B6 /* MainView */ = {
 			isa = PBXGroup;
 			children = (
-				3088661E1C7E9DB3009042B6 /* MainView.storyboard */,
+				AC62560C1C7F258600CD083D /* MainView.storyboard */,
 				308866211C7E9F40009042B6 /* MLMainViewController.h */,
 				308866221C7E9F40009042B6 /* MLMainViewController.m */,
 				3088663E1C7EEB43009042B6 /* MLCardViewController.h */,
@@ -2356,6 +2358,7 @@
 		AC53B77A1C014560007D3FE8 /* data */ = {
 			isa = PBXGroup;
 			children = (
+				AC7835B81C7EA20500BC9302 /* color */,
 				AC78CA371C0BF06600A9585F /* report */,
 				ACA5F2871C02FDBD0038243F /* subject */,
 				ACA5F2861C02FDAB0038243F /* coredata */,
@@ -2426,6 +2429,14 @@
 				AC53B7CF1C016122007D3FE8 /* SMS_SDK.framework */,
 			);
 			path = SMS_SDK;
+			sourceTree = "<group>";
+		};
+		AC7835B81C7EA20500BC9302 /* color */ = {
+			isa = PBXGroup;
+			children = (
+				AC7835BD1C7EA27400BC9302 /* Tinty.swift */,
+			);
+			name = color;
 			sourceTree = "<group>";
 		};
 		AC78CA371C0BF06600A9585F /* report */ = {
@@ -2923,6 +2934,7 @@
 				30AAF9D91C04817600CD94D5 /* coding_emoji_06@2x.png in Resources */,
 				30AAFA361C04817600CD94D5 /* icon_triangle@2x.png in Resources */,
 				30AAFA1D1C04817600CD94D5 /* icon_file_music@2x.png in Resources */,
+				AC62560D1C7F258600CD083D /* MainView.storyboard in Resources */,
 				30AAFB101C04817600CD94D5 /* user_info_project@2x.png in Resources */,
 				AC7A2B421C7AF13E00BE100C /* SubjectHeaderView.xib in Resources */,
 				30AAF9F01C04817600CD94D5 /* coding_emoji_29@2x.png in Resources */,
@@ -3005,7 +3017,6 @@
 				30AAF9D21C04817600CD94D5 /* calendar_0xF5A523@2x.png in Resources */,
 				30AAFA8B1C04817600CD94D5 /* settingBtn_Nav@2x.png in Resources */,
 				30AAF9D61C04817600CD94D5 /* coding_emoji_03@2x.png in Resources */,
-				3088661F1C7E9DB3009042B6 /* MainView.storyboard in Resources */,
 				30AAE4051C02C1F600CD94D5 /* intro_icon_1@3x.png in Resources */,
 				30AAF9FF1C04817600CD94D5 /* file_activity_icon_delete_history@2x.png in Resources */,
 				30AAE40A1C02C1F600CD94D5 /* intro_icon_4@2x.png in Resources */,
@@ -3127,6 +3138,7 @@
 				30AAF80A1C047E4300CD94D5 /* UIButton+Bootstrap.m in Sources */,
 				30AAFB911C0594F600CD94D5 /* MainViewController.m in Sources */,
 				30AA1C4A1C05A3AF00CD94D5 /* MZTimerLabel.m in Sources */,
+				AC7835BE1C7EA27400BC9302 /* Tinty.swift in Sources */,
 				AC7A2B451C7B04BA00BE100C /* NoteView.m in Sources */,
 				AC7A2B401C7AF13300BE100C /* SubjectHeaderView.m in Sources */,
 				30AAF8061C047B4300CD94D5 /* LoginViewController.m in Sources */,

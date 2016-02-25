@@ -36,17 +36,23 @@
     self.tableView.delegate = self;
     self.tableView.separatorColor = [UIColor clearColor];
 
+
     self.prototypeCell = [self.tableView dequeueReusableCellWithIdentifier:@"option"];
 
     self.headerView = [[[NSBundle mainBundle] loadNibNamed:@"SubjectHeaderView" owner:self options:nil] lastObject];
     
     UITapGestureRecognizer *noteTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(noteRequest:)];
     [self.noteButton addGestureRecognizer:noteTap];
+    UITapGestureRecognizer *answerTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(answerRequest:)];
+    [self.answerButton addGestureRecognizer:answerTap];
     
     self.dataList = [[NSMutableArray alloc] init];
     self.labelArray = [[NSMutableArray alloc] init];
+    self.imageArray = [[NSMutableArray alloc] init];
+    self.thoughtNotes = [[NSMutableArray alloc] init];
+    self.answerNotes = [[NSMutableArray alloc] init];
     
-//    [self initButtons];
+    [self initButtons];
 
 }
 
@@ -63,17 +69,8 @@
         self.answerButton.hidden = YES;
         for(NSLayoutConstraint *constraint in self.noteButton.superview.constraints){
             if (constraint.firstItem == self.noteButton && constraint.firstAttribute == NSLayoutAttributeWidth) {
-                constraint.constant = ScreenWidth;
+                constraint.constant = ScreenWidth / 2;
             }
-        }
-        for(NSLayoutConstraint *constraint in self.noteButton.constraints){
-            if (constraint.firstItem == self.noteLabel && constraint.firstAttribute == NSLayoutAttributeCenterX){
-                constraint.constant = NSLayoutAttributeCenterX;
-                NSLog(@"centerX");
-            
-            }
-            
-            NSLog(@"%@", constraint);
         }
         
         [self.view layoutIfNeeded];
@@ -82,10 +79,17 @@
 }
 
 - (void) presentAnswerButton{
-//    self.answerButton.translatesAutoresizingMaskIntoConstraints = YES;
-//    self.answerButton.hidden = NO;
-//    [self.answerButton setFrame:CGRectMake(0, ScreenHeight - 45, ScreenWidth/2, 45)];
-//    [self.noteButton setFrame:CGRectMake(ScreenWidth/2, ScreenHeight - 45, ScreenWidth/2, 45)];
+    [UIView animateWithDuration:0.5f animations:^{
+        self.answerButton.hidden = NO;
+        for(NSLayoutConstraint *constraint in self.noteButton.superview.constraints){
+            if (constraint.firstItem == self.noteButton && constraint.firstAttribute == NSLayoutAttributeWidth) {
+                constraint.constant = 0;
+
+            }
+        }
+        
+        [self.view layoutIfNeeded];
+    }];
 }
 
 // 接收广播之后的回调方法，显示题目
@@ -111,16 +115,27 @@
     self.headerView.content.text = content;
     [self.tableView setTableHeaderView:self.headerView];
     
+    
+    for(ThinkLabel *thinkLabel in self.subject0.thinkLabel){
+        if (![thinkLabel.name isEqualToString:@"选项精析"]) {
+            [self.thoughtNotes addObject:thinkLabel];
+        }else{
+            [self.answerNotes addObject:thinkLabel];
+        }
+    }
+    
     //设置显示题目的高度
     [self.headerView setHeight:[UtilityManager dynamicHeight:content]];
     
-    //设置标签栏高度
+}
+
+// 设置标签栏高度
+- (void) setHeightForNoteView:(CGFloat) count{
     self.noteView = [[[NSBundle mainBundle] loadNibNamed:@"NoteView" owner:self options:nil] lastObject];
     CGRect noteRect = self.noteButton.frame;
-    CGFloat noteHeight = 44 * self.subject0.thinkLabel.count + 1;
+    CGFloat noteHeight = 44 * count + 1;
     [self.noteView setFrame:CGRectMake(0, noteRect.origin.y - noteHeight, ScreenWidth, noteHeight)];
     [self.noteView initHelper:noteHeight positionY:noteRect.origin.y];
-
 }
 
 -(void) receiveTestNotification:(NSNotification*)notification
@@ -130,12 +145,13 @@
         NSDictionary* userInfo = notification.userInfo;
         NSNumber* number = (NSNumber*)userInfo[@"thinkNumber"];
         [self clearHighlight];
-        self.think = self.subject0.thinkLabel[[number intValue]];
-        if ([self.think.name isEqualToString:@"选项精析"]) {
+        ThinkLabel *think = [[ThinkLabel alloc] init];
+        think = self.subject0.thinkLabel[[number intValue]];
+        if ([think.name isEqualToString:@"选项精析"]) {
             return;
         }
-
-        for(Note *note in self.think.noteArray){
+/** 逆序寻找Label，效率较低
+        for(Note *note in think.noteArray){
             NSInteger calculate = self.dataList.count - 1;
             while (calculate >= 0) {
                 Label *label = [self.labelArray objectAtIndex:calculate];
@@ -149,6 +165,29 @@
             if (calculate == -1) {
                 [self messageHighlight:self.headerView.content startPosition:self.subject0.allString[[note.positionStart intValue]] endPosition:self.subject0.allString[[note.positionEnd intValue]]];
             }
+        }
+**/
+    
+// 顺序寻找Label
+        for(Note *note in think.noteArray){
+
+            if ([note.positionEnd integerValue] < self.subject0.content.count) {
+                [self messageHighlight:self.headerView.content startPosition:self.subject0.allString[[note.positionStart intValue]] endPosition:self.subject0.allString[[note.positionEnd intValue]]];
+                continue;
+            }
+            
+            
+            NSInteger calculate = 0;
+            while (calculate < self.dataList.count) {
+                Label *label = [self.labelArray objectAtIndex:calculate];
+                
+                if ([note.positionEnd integerValue] <= [label.positionEnd integerValue]) {
+                    [self messageHighlight:label.label startPosition:self.subject0.allString[[note.positionStart intValue]] endPosition:self.subject0.allString[[note.positionEnd intValue]]];
+                    break;
+                }
+                calculate++;
+            }
+
         }
         
     }
@@ -210,17 +249,27 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-
+    
     OptionTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"option"];
     cell.content.text = [self.dataList objectAtIndex:indexPath.row];
+    
+    NSString *imageName = [[NSString stringWithFormat:@"%ld", (long)indexPath.row] stringByAppendingString:@"_default.png"];
+    cell.option.image  = [UIImage imageNamed:imageName];
+    
     
     Label *label = [[Label alloc] init];
     label.label = cell.content;
     for(int i = 0; i < indexPath.row; i++){
-        label.positionStart = [NSNumber numberWithInteger:[label.positionStart integerValue] + [self.subject0.answers[i] count]];
+        label.positionEnd = [NSNumber numberWithInteger:[label.positionEnd integerValue] + [self.subject0.answers[i] count]];
+
     }
-    label.positionStart = [NSNumber numberWithInteger:[label.positionStart integerValue] + self.subject0.content.count];
+    
+    label.positionEnd = [NSNumber numberWithInteger:[label.positionEnd integerValue] + self.subject0.content.count + [self.subject0.answers[indexPath.row] count] - 1];
+
     [self.labelArray addObject:label];
+    [self.imageArray addObject:cell.option];
+    
+    
     return cell;
     
 }
@@ -235,26 +284,59 @@
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-//    [self presentAnswerButton];
-//    [self.view layoutIfNeeded];
-    [UIView animateWithDuration:1.0f
-                     animations:^{
-                         
-
-                         for(NSLayoutConstraint *constraint in self.noteButton.superview.constraints){
-                             if (constraint.firstItem == self.noteButton && constraint.firstAttribute == NSLayoutAttributeWidth) {
-                                 constraint.constant = 320;
-                             }
-                         }
-                         
-                         [self.view layoutIfNeeded];
-                     }];
+    [self presentAnswerButton];
+    
+    OptionTableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+    
+    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    [self clearSelectImage];
+    
+    NSString *imageName = [[NSString stringWithFormat:@"%ld", (long)indexPath.row] stringByAppendingString:@"_select.png"];
+    cell.option.image  = [UIImage imageNamed:imageName];
+    
     
 }
 
+- (void)clearSelectImage{
+    for (int i = 0 ; i < self.imageArray.count; i++) {
+        UIImageView *imageView = self.imageArray[i];
+        NSString *imageName = [[NSString stringWithFormat:@"%d", i] stringByAppendingString:@"_default.png"];
+        imageView.image = [UIImage imageNamed:imageName];
+    }
+}
+
 - (void)noteRequest:(UITapGestureRecognizer *)recognizer{
-    [self.noteView setData:self.subject0.thinkLabel];
-    [self.noteView toggle];
+    if (self.isAnswerViewShow) {
+        [self.noteView hide];
+    }
+    
+    if ([self.noteView shown]) {
+        [self.noteView hide];
+        self.isThoughtViewShow = NO;
+    }else{
+        [self setHeightForNoteView:self.thoughtNotes.count];
+        [self.noteView setData:self.thoughtNotes];
+        [self.noteView show];
+        self.isThoughtViewShow = YES;
+    }
+    
+}
+
+- (void)answerRequest:(UITapGestureRecognizer *)recognizer{
+    if (self.isThoughtViewShow) {
+        [self.noteView hide];
+    }
+    
+    if ([self.noteView shown]) {
+        [self.noteView hide];
+        self.isAnswerViewShow = NO;
+    }else{
+        [self setHeightForNoteView:self.answerNotes.count];
+        [self.noteView setData:self.answerNotes];
+        [self.noteView show];
+        self.isAnswerViewShow = YES;
+    }
     
 }
 

@@ -11,8 +11,8 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ud3-zU-uwl">
-                    <rect key="frame" x="26" y="45" width="566" height="555"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <rect key="frame" x="10" y="45" width="580" height="555"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -25,7 +25,7 @@
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PRg-Sp-ZKU">
                             <rect key="frame" x="67" y="10" width="525" height="24"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -59,14 +59,14 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="Ud3-zU-uwl" secondAttribute="trailing" constant="8" id="3j0-sr-EBM"/>
+                <constraint firstAttribute="trailing" secondItem="Ud3-zU-uwl" secondAttribute="trailing" constant="10" id="3j0-sr-EBM"/>
                 <constraint firstItem="lAK-g3-w6b" firstAttribute="leading" secondItem="TzE-tb-Ztr" secondAttribute="leading" id="5HQ-TR-2XH"/>
                 <constraint firstAttribute="trailing" secondItem="33x-xg-zLo" secondAttribute="trailing" id="5hM-CZ-cgQ"/>
                 <constraint firstItem="33x-xg-zLo" firstAttribute="leading" secondItem="TzE-tb-Ztr" secondAttribute="leading" constant="10" id="AWy-lG-Dyy"/>
                 <constraint firstItem="Ud3-zU-uwl" firstAttribute="top" secondItem="TzE-tb-Ztr" secondAttribute="top" constant="45" id="Kvv-r3-vpb"/>
                 <constraint firstItem="Ud3-zU-uwl" firstAttribute="top" secondItem="33x-xg-zLo" secondAttribute="bottom" id="PWh-c3-1bh"/>
                 <constraint firstItem="33x-xg-zLo" firstAttribute="top" secondItem="lAK-g3-w6b" secondAttribute="bottom" id="SVR-qg-TZI"/>
-                <constraint firstItem="Ud3-zU-uwl" firstAttribute="leading" secondItem="TzE-tb-Ztr" secondAttribute="leading" constant="26" id="YhO-TA-gAr"/>
+                <constraint firstItem="Ud3-zU-uwl" firstAttribute="leading" secondItem="TzE-tb-Ztr" secondAttribute="leading" constant="10" id="YhO-TA-gAr"/>
                 <constraint firstItem="lAK-g3-w6b" firstAttribute="top" secondItem="TzE-tb-Ztr" secondAttribute="top" id="clK-us-zKu"/>
                 <constraint firstAttribute="bottom" secondItem="Ud3-zU-uwl" secondAttribute="bottom" id="lX9-KP-6Ah"/>
                 <constraint firstAttribute="trailing" secondItem="lAK-g3-w6b" secondAttribute="trailing" id="oFx-3g-Gzp"/>
