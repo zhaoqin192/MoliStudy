@@ -36,6 +36,7 @@
     self.tableView.delegate = self;
     self.tableView.separatorColor = [UIColor clearColor];
 
+
     self.prototypeCell = [self.tableView dequeueReusableCellWithIdentifier:@"option"];
 
     self.headerView = [[[NSBundle mainBundle] loadNibNamed:@"SubjectHeaderView" owner:self options:nil] lastObject];
@@ -47,6 +48,7 @@
     
     self.dataList = [[NSMutableArray alloc] init];
     self.labelArray = [[NSMutableArray alloc] init];
+    self.imageArray = [[NSMutableArray alloc] init];
     self.thoughtNotes = [[NSMutableArray alloc] init];
     self.answerNotes = [[NSMutableArray alloc] init];
     
@@ -124,11 +126,6 @@
     
     //设置显示题目的高度
     [self.headerView setHeight:[UtilityManager dynamicHeight:content]];
-
-    
-    for (int i = 0; i < [self.subject0.answers count]; i++) {
-        NSLog(@"answer number: %lu", (unsigned long)[self.subject0.answers[i] count]);
-    }
     
 }
 
@@ -153,25 +150,26 @@
         if ([think.name isEqualToString:@"选项精析"]) {
             return;
         }
-
-//        for(Note *note in think.noteArray){
-//            NSInteger calculate = self.dataList.count - 1;
-//            while (calculate >= 0) {
-//                Label *label = [self.labelArray objectAtIndex:calculate];
-//                NSNumber *location = label.positionStart;
-//                if ([note.positionStart integerValue] >= [location integerValue]) {
-//                    [self messageHighlight:label.label startPosition:self.subject0.allString[[note.positionStart intValue]] endPosition:self.subject0.allString[[note.positionEnd intValue]]];
-//                    break;
-//                }
-//                calculate = calculate - 1;
-//            }
-//            if (calculate == -1) {
-//                [self messageHighlight:self.headerView.content startPosition:self.subject0.allString[[note.positionStart intValue]] endPosition:self.subject0.allString[[note.positionEnd intValue]]];
-//            }
-//        }
-        
+/** 逆序寻找Label，效率较低
         for(Note *note in think.noteArray){
-            NSLog(@"note number %lu", (unsigned long)think.noteArray.count);
+            NSInteger calculate = self.dataList.count - 1;
+            while (calculate >= 0) {
+                Label *label = [self.labelArray objectAtIndex:calculate];
+                NSNumber *location = label.positionStart;
+                if ([note.positionStart integerValue] >= [location integerValue]) {
+                    [self messageHighlight:label.label startPosition:self.subject0.allString[[note.positionStart intValue]] endPosition:self.subject0.allString[[note.positionEnd intValue]]];
+                    break;
+                }
+                calculate = calculate - 1;
+            }
+            if (calculate == -1) {
+                [self messageHighlight:self.headerView.content startPosition:self.subject0.allString[[note.positionStart intValue]] endPosition:self.subject0.allString[[note.positionEnd intValue]]];
+            }
+        }
+**/
+    
+// 顺序寻找Label
+        for(Note *note in think.noteArray){
 
             if ([note.positionEnd integerValue] < self.subject0.content.count) {
                 [self messageHighlight:self.headerView.content startPosition:self.subject0.allString[[note.positionStart intValue]] endPosition:self.subject0.allString[[note.positionEnd intValue]]];
@@ -182,21 +180,14 @@
             NSInteger calculate = 0;
             while (calculate < self.dataList.count) {
                 Label *label = [self.labelArray objectAtIndex:calculate];
-
-
-//                NSLog(@"note %@", note.positionEnd);
-//                NSLog(@"label %@", label.positionEnd);
                 
                 if ([note.positionEnd integerValue] <= [label.positionEnd integerValue]) {
                     [self messageHighlight:label.label startPosition:self.subject0.allString[[note.positionStart intValue]] endPosition:self.subject0.allString[[note.positionEnd intValue]]];
                     break;
                 }
                 calculate++;
-//                NSLog(@"%ld", (long)calculate);
             }
-//            if (calculate == self.dataList.count) {
-//                [self messageHighlight:self.headerView.content startPosition:self.subject0.allString[[note.positionStart intValue]] endPosition:self.subject0.allString[[note.positionEnd intValue]]];
-//            }
+
         }
         
     }
@@ -262,6 +253,10 @@
     OptionTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"option"];
     cell.content.text = [self.dataList objectAtIndex:indexPath.row];
     
+    NSString *imageName = [[NSString stringWithFormat:@"%ld", (long)indexPath.row] stringByAppendingString:@"_default.png"];
+    cell.option.image  = [UIImage imageNamed:imageName];
+    
+    
     Label *label = [[Label alloc] init];
     label.label = cell.content;
     for(int i = 0; i < indexPath.row; i++){
@@ -269,13 +264,12 @@
 
     }
     
-//    NSLog(@"labelPositionEnd %@", label.positionEnd);
-    
     label.positionEnd = [NSNumber numberWithInteger:[label.positionEnd integerValue] + self.subject0.content.count + [self.subject0.answers[indexPath.row] count] - 1];
-//    NSLog(@"label.text.length %lu", [self.subject0.answers[indexPath.row] count]);
-//    NSLog(@"content %lu", (unsigned long)self.subject0.content.count);
-//    NSLog(@"cellFor %@", label.positionEnd);
+
     [self.labelArray addObject:label];
+    [self.imageArray addObject:cell.option];
+    
+    
     return cell;
     
 }
@@ -292,6 +286,24 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [self presentAnswerButton];
     
+    OptionTableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+    
+    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    [self clearSelectImage];
+    
+    NSString *imageName = [[NSString stringWithFormat:@"%ld", (long)indexPath.row] stringByAppendingString:@"_select.png"];
+    cell.option.image  = [UIImage imageNamed:imageName];
+    
+    
+}
+
+- (void)clearSelectImage{
+    for (int i = 0 ; i < self.imageArray.count; i++) {
+        UIImageView *imageView = self.imageArray[i];
+        NSString *imageName = [[NSString stringWithFormat:@"%d", i] stringByAppendingString:@"_default.png"];
+        imageView.image = [UIImage imageNamed:imageName];
+    }
 }
 
 - (void)noteRequest:(UITapGestureRecognizer *)recognizer{

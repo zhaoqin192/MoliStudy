@@ -30,6 +30,8 @@
 @property (nonatomic, strong) NoteView *noteView;
 //选项当中的UILabel列表
 @property (nonatomic, strong) NSMutableArray *labelArray;
+//选项当中的UIImage列表
+@property (nonatomic, strong) NSMutableArray *imageArray;
 //"选项精析"View是否已显示
 @property BOOL isAnswerViewShow;
 //"解题思路"View是否已显示
