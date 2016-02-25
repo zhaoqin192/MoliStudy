@@ -28,6 +28,10 @@ static NSString * const reuseIdentifier = @"Cell";
     [self.collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([HJCarouselViewCell class]) bundle:nil] forCellWithReuseIdentifier:reuseIdentifier];
 }
 
+- (void)viewDidAppear:(BOOL)animated{
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+}
+
 - (NSIndexPath *)curIndexPath {
     NSArray *indexPaths = [self.collectionView indexPathsForVisibleItems];
     NSIndexPath *curIndexPath = nil;
@@ -73,6 +77,7 @@ static NSString * const reuseIdentifier = @"Cell";
     cell.continueStudyButtonClickedBlock = ^{
         NSLog(@"continueStudy %zd",indexPath.row);
         SubjectViewController *subjectViewController = [[SubjectViewController alloc] initWithNibName:@"SubjectViewController" bundle:nil];
+        [self.navigationController setNavigationBarHidden:NO animated:YES];
         [self.navigationController pushViewController:subjectViewController animated:YES];
     };
     cell.checkReportButtonClickedBlock = ^{

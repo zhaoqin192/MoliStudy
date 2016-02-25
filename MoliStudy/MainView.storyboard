@@ -18,14 +18,14 @@
                         <subviews>
                             <button opaque="NO" clipsSubviews="YES" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JhH-Cv-aih">
                                 <rect key="frame" x="9" y="226" width="357" height="132"/>
-                                <state key="normal" title="Button" image="语法" backgroundImage="语法背景"/>
+                                <state key="normal" title="Button" image="语法"/>
                                 <connections>
                                     <segue destination="IwA-Yk-Dyh" kind="show" identifier="card" id="w6w-db-kxj"/>
                                 </connections>
                             </button>
                             <button opaque="NO" clipsSubviews="YES" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbZ-zq-80X">
                                 <rect key="frame" x="9" y="373" width="357" height="132"/>
-                                <state key="normal" title="Button" image="逻辑" backgroundImage="逻辑背景"/>
+                                <state key="normal" title="Button" image="逻辑"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j7Q-Lm-4ni">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
@@ -90,6 +90,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="语法背景" translatesAutoresizingMaskIntoConstraints="NO" id="oU7-gW-yOw">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k2s-LC-Nf6" userLabel="bottomView">
                                 <rect key="frame" x="0.0" y="607" width="375" height="60"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -117,7 +120,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GMAT 语法" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hFv-xq-JfM">
                                         <rect key="frame" x="145" y="12" width="86" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OAX-aW-AMX">
@@ -129,7 +132,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1/10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BSu-rz-xnT">
                                         <rect key="frame" x="334" y="11" width="31" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -156,11 +159,15 @@
                             <constraint firstAttribute="trailing" secondItem="PGn-VY-WYA" secondAttribute="trailing" id="I3d-G6-UvT"/>
                             <constraint firstItem="Xo7-Ow-jTF" firstAttribute="top" secondItem="PGn-VY-WYA" secondAttribute="bottom" id="IPx-1K-4BJ"/>
                             <constraint firstItem="k2s-LC-Nf6" firstAttribute="leading" secondItem="yIN-75-7Wj" secondAttribute="leading" id="U1m-sY-GWO"/>
+                            <constraint firstItem="wry-7E-Ix8" firstAttribute="top" secondItem="oU7-gW-yOw" secondAttribute="bottom" id="Ykq-bN-RVH"/>
                             <constraint firstItem="Xo7-Ow-jTF" firstAttribute="centerX" secondItem="yIN-75-7Wj" secondAttribute="centerX" id="gVk-4r-Fb0"/>
+                            <constraint firstItem="oU7-gW-yOw" firstAttribute="leading" secondItem="yIN-75-7Wj" secondAttribute="leading" id="gzd-QG-l67"/>
+                            <constraint firstItem="oU7-gW-yOw" firstAttribute="top" secondItem="yIN-75-7Wj" secondAttribute="top" id="hx9-JS-byP"/>
                             <constraint firstItem="wry-7E-Ix8" firstAttribute="top" secondItem="k2s-LC-Nf6" secondAttribute="bottom" id="i7Z-fy-hDJ"/>
                             <constraint firstAttribute="trailing" secondItem="scX-St-KyY" secondAttribute="trailing" id="iVT-rq-X0a"/>
                             <constraint firstAttribute="trailing" secondItem="k2s-LC-Nf6" secondAttribute="trailing" id="irN-Yf-t4T"/>
                             <constraint firstItem="wry-7E-Ix8" firstAttribute="top" secondItem="Xo7-Ow-jTF" secondAttribute="bottom" constant="45" id="lmU-zs-1N9"/>
+                            <constraint firstAttribute="trailing" secondItem="oU7-gW-yOw" secondAttribute="trailing" id="tZ6-Cq-C4q"/>
                             <constraint firstItem="scX-St-KyY" firstAttribute="top" secondItem="dyi-VK-eGF" secondAttribute="bottom" id="xhU-Em-0qy"/>
                             <constraint firstItem="scX-St-KyY" firstAttribute="leading" secondItem="yIN-75-7Wj" secondAttribute="leading" id="y6t-Am-Z3S"/>
                         </constraints>
@@ -198,6 +205,5 @@
         <image name="语法" width="357" height="132"/>
         <image name="语法背景" width="750" height="1334"/>
         <image name="逻辑" width="357" height="132"/>
-        <image name="逻辑背景" width="750" height="1334"/>
     </resources>
 </document>
