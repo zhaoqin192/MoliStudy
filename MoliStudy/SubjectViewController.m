@@ -172,7 +172,7 @@
         for(Note *note in think.noteArray){
 
             if ([note.positionEnd integerValue] < self.subject0.content.count) {
-                [self messageHighlight:self.headerView.content startPosition:self.subject0.allString[[note.positionStart intValue]] endPosition:self.subject0.allString[[note.positionEnd intValue]]];
+                [self messageHighlight:self.headerView.content startPosition:self.subject0.allString[[note.positionStart intValue]] endPosition:self.subject0.allString[[note.positionEnd intValue]] withStyle:note.style];
                 continue;
             }
             
@@ -182,7 +182,7 @@
                 Label *label = [self.labelArray objectAtIndex:calculate];
                 
                 if ([note.positionEnd integerValue] <= [label.positionEnd integerValue]) {
-                    [self messageHighlight:label.label startPosition:self.subject0.allString[[note.positionStart intValue]] endPosition:self.subject0.allString[[note.positionEnd intValue]]];
+                    [self messageHighlight:label.label startPosition:self.subject0.allString[[note.positionStart intValue]] endPosition:self.subject0.allString[[note.positionEnd intValue]] withStyle:note.style];
                     break;
                 }
                 calculate++;
@@ -201,25 +201,27 @@
 
 
 // 根据标签内容，范围高亮题目
-- (void)messageHighlight:(UILabel *)textView startPosition:(NSString *)start endPosition:(NSString *)end{
+- (void)messageHighlight:(UILabel *)textView startPosition:(NSString *)start endPosition:(NSString *)end withStyle:(NSString *) style{
     NSString *tempStr = textView.text;
     
     NSMutableAttributedString *strAtt = [[NSMutableAttributedString alloc] initWithString:tempStr];
     
-    [strAtt addAttribute:NSForegroundColorAttributeName value:[UIColor blackColor] range:NSMakeRange(0, [strAtt length])];
+    [strAtt addAttribute:NSForegroundColorAttributeName value:[UtilityManager colorFromHexString:[Tinty unSelectFontColor]] range:NSMakeRange(0, [strAtt length])];
+    
     
     //the range between start and end
     NSRange tempRange = [tempStr rangeOfString:start];
     NSRange tempRangeOne = [tempStr rangeOfString:end];
     //change character color
-    [strAtt addAttribute:NSForegroundColorAttributeName value:[UIColor whiteColor] range:NSMakeRange(tempRange.location, tempRangeOne.location - tempRange.location + [end length])];
-    [strAtt addAttribute:NSBackgroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(tempRange.location, tempRangeOne.location - tempRange.location + [end length])];
+    [strAtt addAttribute:NSForegroundColorAttributeName value:[UtilityManager colorFromHexString:[Tinty selectFontColor]] range:NSMakeRange(tempRange.location, tempRangeOne.location - tempRange.location + [end length])];
+    [strAtt addAttribute:NSBackgroundColorAttributeName value:[UtilityManager colorFromHexString:style] range:NSMakeRange(tempRange.location, tempRangeOne.location - tempRange.location + [end length])];
     
     //change font
 //    [strAtt addAttribute:NSFontAttributeName value:[UIFont fontWithName:@"HelveticaNeue-Bold" size:16] range:NSMakeRange(0, [strAtt length])];
     textView.attributedText = strAtt;
     
 }
+
 
 - (void)clearHighlight{
     

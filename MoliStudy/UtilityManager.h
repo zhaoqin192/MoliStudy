@@ -28,5 +28,6 @@
 
 + (CGFloat) dynamicHeight:(NSString *)input;
 
++ (UIColor *)colorFromHexString:(NSString *)hexString;
 
 @end

@@ -69,7 +69,7 @@ class SubjectDAO: NSObject {
                     note.positionStart = note.positionStart.integerValue - 1
                     note.positionEnd = label["position_end"] as! NSNumber
                     note.positionEnd = note.positionEnd.integerValue - 1
-                    note.style = label["style"] as! String
+                    note.style = parseStyle(label["style"] as! String)
                     note.noteContent = label["note"] as! String
                     note.noteContent =  UtilityManager.removeHTMLTag(note.noteContent)
                     if label["is_study"] as! NSNumber == 0{
@@ -86,6 +86,30 @@ class SubjectDAO: NSObject {
             subjectsArray.append(subject)
         }
         NSNotificationCenter.defaultCenter().postNotificationName("NETWORKREQUEST_SUBJECT_SUCCESS", object: nil) 
+    }
+    
+    func parseStyle(style: String) ->String{
+        let array = style.componentsSeparatedByString(",")
+        var result: String = ""
+        for str in array{
+            if str == "bg_red"{
+                result = Tinty.bg_red
+            }else if str == "bg_blue"{
+                result = Tinty.bg_blue
+            }else if str == "bg_green"{
+                result = Tinty.bg_green
+            }else if str == "bg_yellow"{
+                result = Tinty.bg_yellow
+            }else if str == "bg_orange"{
+                result = Tinty.bg_orange
+            }else if str == "bg_purple"{
+                result = Tinty.bg_purple
+            }else if str == "bg_gray"{
+                result = Tinty.bg_gray
+            }else{
+            }
+        }
+        return result
     }
     
 }
