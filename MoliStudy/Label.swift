@@ -11,10 +11,10 @@ import Foundation
 class Label: NSObject{
     
     var label: UILabel
-    var positionStart: NSNumber
+    var positionEnd: NSNumber
     
     override init(){
         label = UILabel.init();
-        positionStart = NSNumber();
+        positionEnd = NSNumber();
     }
 }

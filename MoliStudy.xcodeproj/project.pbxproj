@@ -499,6 +499,7 @@
 		AC53B7DD1C01686B007D3FE8 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AC53B7DC1C01686B007D3FE8 /* libstdc++.tbd */; };
 		AC7835B31C7D469400BC9302 /* NoteContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7835B21C7D469400BC9302 /* NoteContentView.m */; };
 		AC7835B51C7D46AA00BC9302 /* NoteContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC7835B41C7D46AA00BC9302 /* NoteContentView.xib */; };
+		AC7835BE1C7EA27400BC9302 /* Tinty.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7835BD1C7EA27400BC9302 /* Tinty.swift */; };
 		AC78CA2B1C0BF00200A9585F /* Practice+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC78CA251C0BF00200A9585F /* Practice+CoreDataProperties.swift */; };
 		AC78CA2C1C0BF00200A9585F /* Practice.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC78CA261C0BF00200A9585F /* Practice.swift */; };
 		AC78CA2D1C0BF00200A9585F /* Account+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC78CA271C0BF00200A9585F /* Account+CoreDataProperties.swift */; };
@@ -1105,6 +1106,7 @@
 		AC7835B11C7D469400BC9302 /* NoteContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteContentView.h; sourceTree = "<group>"; };
 		AC7835B21C7D469400BC9302 /* NoteContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteContentView.m; sourceTree = "<group>"; };
 		AC7835B41C7D46AA00BC9302 /* NoteContentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoteContentView.xib; sourceTree = "<group>"; };
+		AC7835BD1C7EA27400BC9302 /* Tinty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tinty.swift; sourceTree = "<group>"; };
 		AC78CA241C0BF00200A9585F /* MoliStudy-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MoliStudy-Bridging-Header.h"; sourceTree = "<group>"; };
 		AC78CA251C0BF00200A9585F /* Practice+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Practice+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		AC78CA261C0BF00200A9585F /* Practice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Practice.swift; sourceTree = "<group>"; };
@@ -2309,6 +2311,7 @@
 		AC53B77A1C014560007D3FE8 /* data */ = {
 			isa = PBXGroup;
 			children = (
+				AC7835B81C7EA20500BC9302 /* color */,
 				AC78CA371C0BF06600A9585F /* report */,
 				ACA5F2871C02FDBD0038243F /* subject */,
 				ACA5F2861C02FDAB0038243F /* coredata */,
@@ -2379,6 +2382,14 @@
 				AC53B7CF1C016122007D3FE8 /* SMS_SDK.framework */,
 			);
 			path = SMS_SDK;
+			sourceTree = "<group>";
+		};
+		AC7835B81C7EA20500BC9302 /* color */ = {
+			isa = PBXGroup;
+			children = (
+				AC7835BD1C7EA27400BC9302 /* Tinty.swift */,
+			);
+			name = color;
 			sourceTree = "<group>";
 		};
 		AC78CA371C0BF06600A9585F /* report */ = {
@@ -3076,6 +3087,7 @@
 				30AAF80A1C047E4300CD94D5 /* UIButton+Bootstrap.m in Sources */,
 				30AAFB911C0594F600CD94D5 /* MainViewController.m in Sources */,
 				30AA1C4A1C05A3AF00CD94D5 /* MZTimerLabel.m in Sources */,
+				AC7835BE1C7EA27400BC9302 /* Tinty.swift in Sources */,
 				AC7A2B451C7B04BA00BE100C /* NoteView.m in Sources */,
 				AC7A2B401C7AF13300BE100C /* SubjectHeaderView.m in Sources */,
 				30AAF8061C047B4300CD94D5 /* LoginViewController.m in Sources */,

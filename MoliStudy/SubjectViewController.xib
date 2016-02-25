@@ -28,7 +28,7 @@
                     <rect key="frame" x="0.0" y="555" width="300" height="45"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="查看答案" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PKs-1z-W8U">
-                            <rect key="frame" x="114" y="11" width="72" height="21.5"/>
+                            <rect key="frame" x="114" y="12" width="72" height="21.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
@@ -44,7 +44,7 @@
                     <rect key="frame" x="300" y="555" width="300" height="45"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="解题思路" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xjn-Ib-ikJ">
-                            <rect key="frame" x="114" y="12" width="72" height="21.5"/>
+                            <rect key="frame" x="114" y="11" width="72" height="21.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
@@ -69,16 +69,10 @@
                 <constraint firstAttribute="bottom" secondItem="c3r-uo-Zuc" secondAttribute="bottom" id="R9G-RV-VE8"/>
                 <constraint firstItem="3HO-Nn-mwa" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Sv0-vb-azy"/>
                 <constraint firstItem="3HO-Nn-mwa" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.5" id="TL1-G4-kUQ"/>
-                <constraint firstItem="c3r-uo-Zuc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" symbolic="YES" id="VsH-Wp-iV0"/>
                 <constraint firstAttribute="trailing" secondItem="qTL-IX-NDd" secondAttribute="trailing" id="aAo-OV-QJy"/>
                 <constraint firstAttribute="bottom" secondItem="3HO-Nn-mwa" secondAttribute="bottom" id="bmc-dI-JCj"/>
                 <constraint firstItem="c3r-uo-Zuc" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.5" id="r0n-bW-hBI"/>
             </constraints>
-            <variation key="default">
-                <mask key="constraints">
-                    <exclude reference="VsH-Wp-iV0"/>
-                </mask>
-            </variation>
             <point key="canvasLocation" x="411" y="391"/>
         </view>
     </objects>

@@ -42,11 +42,15 @@
     
     UITapGestureRecognizer *noteTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(noteRequest:)];
     [self.noteButton addGestureRecognizer:noteTap];
+    UITapGestureRecognizer *answerTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(answerRequest:)];
+    [self.answerButton addGestureRecognizer:answerTap];
     
     self.dataList = [[NSMutableArray alloc] init];
     self.labelArray = [[NSMutableArray alloc] init];
+    self.thoughtNotes = [[NSMutableArray alloc] init];
+    self.answerNotes = [[NSMutableArray alloc] init];
     
-//    [self initButtons];
+    [self initButtons];
 
 }
 
@@ -63,17 +67,8 @@
         self.answerButton.hidden = YES;
         for(NSLayoutConstraint *constraint in self.noteButton.superview.constraints){
             if (constraint.firstItem == self.noteButton && constraint.firstAttribute == NSLayoutAttributeWidth) {
-                constraint.constant = ScreenWidth;
+                constraint.constant = ScreenWidth / 2;
             }
-        }
-        for(NSLayoutConstraint *constraint in self.noteButton.constraints){
-            if (constraint.firstItem == self.noteLabel && constraint.firstAttribute == NSLayoutAttributeCenterX){
-                constraint.constant = NSLayoutAttributeCenterX;
-                NSLog(@"centerX");
-            
-            }
-            
-            NSLog(@"%@", constraint);
         }
         
         [self.view layoutIfNeeded];
@@ -82,10 +77,17 @@
 }
 
 - (void) presentAnswerButton{
-//    self.answerButton.translatesAutoresizingMaskIntoConstraints = YES;
-//    self.answerButton.hidden = NO;
-//    [self.answerButton setFrame:CGRectMake(0, ScreenHeight - 45, ScreenWidth/2, 45)];
-//    [self.noteButton setFrame:CGRectMake(ScreenWidth/2, ScreenHeight - 45, ScreenWidth/2, 45)];
+    [UIView animateWithDuration:0.5f animations:^{
+        self.answerButton.hidden = NO;
+        for(NSLayoutConstraint *constraint in self.noteButton.superview.constraints){
+            if (constraint.firstItem == self.noteButton && constraint.firstAttribute == NSLayoutAttributeWidth) {
+                constraint.constant = 0;
+
+            }
+        }
+        
+        [self.view layoutIfNeeded];
+    }];
 }
 
 // 接收广播之后的回调方法，显示题目
@@ -111,16 +113,32 @@
     self.headerView.content.text = content;
     [self.tableView setTableHeaderView:self.headerView];
     
+    
+    for(ThinkLabel *thinkLabel in self.subject0.thinkLabel){
+        if (![thinkLabel.name isEqualToString:@"选项精析"]) {
+            [self.thoughtNotes addObject:thinkLabel];
+        }else{
+            [self.answerNotes addObject:thinkLabel];
+        }
+    }
+    
     //设置显示题目的高度
     [self.headerView setHeight:[UtilityManager dynamicHeight:content]];
+
     
-    //设置标签栏高度
+    for (int i = 0; i < [self.subject0.answers count]; i++) {
+        NSLog(@"answer number: %lu", (unsigned long)[self.subject0.answers[i] count]);
+    }
+    
+}
+
+// 设置标签栏高度
+- (void) setHeightForNoteView:(CGFloat) count{
     self.noteView = [[[NSBundle mainBundle] loadNibNamed:@"NoteView" owner:self options:nil] lastObject];
     CGRect noteRect = self.noteButton.frame;
-    CGFloat noteHeight = 44 * self.subject0.thinkLabel.count + 1;
+    CGFloat noteHeight = 44 * count + 1;
     [self.noteView setFrame:CGRectMake(0, noteRect.origin.y - noteHeight, ScreenWidth, noteHeight)];
     [self.noteView initHelper:noteHeight positionY:noteRect.origin.y];
-
 }
 
 -(void) receiveTestNotification:(NSNotification*)notification
@@ -130,25 +148,55 @@
         NSDictionary* userInfo = notification.userInfo;
         NSNumber* number = (NSNumber*)userInfo[@"thinkNumber"];
         [self clearHighlight];
-        self.think = self.subject0.thinkLabel[[number intValue]];
-        if ([self.think.name isEqualToString:@"选项精析"]) {
+        ThinkLabel *think = [[ThinkLabel alloc] init];
+        think = self.subject0.thinkLabel[[number intValue]];
+        if ([think.name isEqualToString:@"选项精析"]) {
             return;
         }
 
-        for(Note *note in self.think.noteArray){
-            NSInteger calculate = self.dataList.count - 1;
-            while (calculate >= 0) {
+//        for(Note *note in think.noteArray){
+//            NSInteger calculate = self.dataList.count - 1;
+//            while (calculate >= 0) {
+//                Label *label = [self.labelArray objectAtIndex:calculate];
+//                NSNumber *location = label.positionStart;
+//                if ([note.positionStart integerValue] >= [location integerValue]) {
+//                    [self messageHighlight:label.label startPosition:self.subject0.allString[[note.positionStart intValue]] endPosition:self.subject0.allString[[note.positionEnd intValue]]];
+//                    break;
+//                }
+//                calculate = calculate - 1;
+//            }
+//            if (calculate == -1) {
+//                [self messageHighlight:self.headerView.content startPosition:self.subject0.allString[[note.positionStart intValue]] endPosition:self.subject0.allString[[note.positionEnd intValue]]];
+//            }
+//        }
+        
+        for(Note *note in think.noteArray){
+            NSLog(@"note number %lu", (unsigned long)think.noteArray.count);
+
+            if ([note.positionEnd integerValue] < self.subject0.content.count) {
+                [self messageHighlight:self.headerView.content startPosition:self.subject0.allString[[note.positionStart intValue]] endPosition:self.subject0.allString[[note.positionEnd intValue]]];
+                continue;
+            }
+            
+            
+            NSInteger calculate = 0;
+            while (calculate < self.dataList.count) {
                 Label *label = [self.labelArray objectAtIndex:calculate];
-                NSNumber *location = label.positionStart;
-                if ([note.positionStart integerValue] >= [location integerValue]) {
+
+
+//                NSLog(@"note %@", note.positionEnd);
+//                NSLog(@"label %@", label.positionEnd);
+                
+                if ([note.positionEnd integerValue] <= [label.positionEnd integerValue]) {
                     [self messageHighlight:label.label startPosition:self.subject0.allString[[note.positionStart intValue]] endPosition:self.subject0.allString[[note.positionEnd intValue]]];
                     break;
                 }
-                calculate = calculate - 1;
+                calculate++;
+//                NSLog(@"%ld", (long)calculate);
             }
-            if (calculate == -1) {
-                [self messageHighlight:self.headerView.content startPosition:self.subject0.allString[[note.positionStart intValue]] endPosition:self.subject0.allString[[note.positionEnd intValue]]];
-            }
+//            if (calculate == self.dataList.count) {
+//                [self messageHighlight:self.headerView.content startPosition:self.subject0.allString[[note.positionStart intValue]] endPosition:self.subject0.allString[[note.positionEnd intValue]]];
+//            }
         }
         
     }
@@ -210,16 +258,23 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-
+    
     OptionTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"option"];
     cell.content.text = [self.dataList objectAtIndex:indexPath.row];
     
     Label *label = [[Label alloc] init];
     label.label = cell.content;
     for(int i = 0; i < indexPath.row; i++){
-        label.positionStart = [NSNumber numberWithInteger:[label.positionStart integerValue] + [self.subject0.answers[i] count]];
+        label.positionEnd = [NSNumber numberWithInteger:[label.positionEnd integerValue] + [self.subject0.answers[i] count]];
+
     }
-    label.positionStart = [NSNumber numberWithInteger:[label.positionStart integerValue] + self.subject0.content.count];
+    
+//    NSLog(@"labelPositionEnd %@", label.positionEnd);
+    
+    label.positionEnd = [NSNumber numberWithInteger:[label.positionEnd integerValue] + self.subject0.content.count + [self.subject0.answers[indexPath.row] count] - 1];
+//    NSLog(@"label.text.length %lu", [self.subject0.answers[indexPath.row] count]);
+//    NSLog(@"content %lu", (unsigned long)self.subject0.content.count);
+//    NSLog(@"cellFor %@", label.positionEnd);
     [self.labelArray addObject:label];
     return cell;
     
@@ -235,26 +290,41 @@
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-//    [self presentAnswerButton];
-//    [self.view layoutIfNeeded];
-    [UIView animateWithDuration:1.0f
-                     animations:^{
-                         
-
-                         for(NSLayoutConstraint *constraint in self.noteButton.superview.constraints){
-                             if (constraint.firstItem == self.noteButton && constraint.firstAttribute == NSLayoutAttributeWidth) {
-                                 constraint.constant = 320;
-                             }
-                         }
-                         
-                         [self.view layoutIfNeeded];
-                     }];
+    [self presentAnswerButton];
     
 }
 
 - (void)noteRequest:(UITapGestureRecognizer *)recognizer{
-    [self.noteView setData:self.subject0.thinkLabel];
-    [self.noteView toggle];
+    if (self.isAnswerViewShow) {
+        [self.noteView hide];
+    }
+    
+    if ([self.noteView shown]) {
+        [self.noteView hide];
+        self.isThoughtViewShow = NO;
+    }else{
+        [self setHeightForNoteView:self.thoughtNotes.count];
+        [self.noteView setData:self.thoughtNotes];
+        [self.noteView show];
+        self.isThoughtViewShow = YES;
+    }
+    
+}
+
+- (void)answerRequest:(UITapGestureRecognizer *)recognizer{
+    if (self.isThoughtViewShow) {
+        [self.noteView hide];
+    }
+    
+    if ([self.noteView shown]) {
+        [self.noteView hide];
+        self.isAnswerViewShow = NO;
+    }else{
+        [self setHeightForNoteView:self.answerNotes.count];
+        [self.noteView setData:self.answerNotes];
+        [self.noteView show];
+        self.isAnswerViewShow = YES;
+    }
     
 }
 

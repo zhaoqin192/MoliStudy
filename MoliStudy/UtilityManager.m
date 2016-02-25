@@ -22,7 +22,7 @@
     NSString *pattern = @"(<.*?>)";
     NSRegularExpression *regular;
     regular = [[NSRegularExpression alloc] initWithPattern:pattern options:NSRegularExpressionCaseInsensitive error:nil];
-    result = [regular stringByReplacingMatchesInString:input options:NSRegularExpressionCaseInsensitive range:NSMakeRange(0, [input length]) withTemplate:@"-"];
+    result = [regular stringByReplacingMatchesInString:input options:NSMatchingReportProgress range:NSMakeRange(0, [input length]) withTemplate:@""];
     return result;
 }
 
@@ -35,7 +35,7 @@
                                                options:NSStringDrawingUsesLineFragmentOrigin
                                                context:nil];
     CGSize size = rect.size;
-    CGFloat height = MAX(size.height, 60.0f);
+    CGFloat height = MAX(size.height, 30.0f);
     return height + CELL_CONTENT_MARGIN * 2;
 }
 

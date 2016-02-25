@@ -11,7 +11,7 @@ import Alamofire
 
 class NetworkManager: NSObject {
 
-    static let debug = false
+    static let debug = true
    
     /**
      login API

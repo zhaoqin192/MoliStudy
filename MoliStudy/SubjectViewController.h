@@ -12,19 +12,27 @@
 #import "NoteView.h"
 #import "UtilityManager.h"
 
-//#define FONT_SIZE 16.0f
-//#define CELL_CONTENT_WIDTH ScreenWidth
-//#define CELL_CONTENT_MARGIN 10.0f
-//#define color [UIColor colorWithRed:0/255.0 green:175/255.0 blue:240/255.0 alpha:1]
-
 @interface SubjectViewController : UIViewController
 
+//题目
 @property (nonatomic, strong) Subject *subject0;
+//选项列表
 @property (nonatomic, retain) NSMutableArray *dataList;
+//“选项精析”标签内容
+@property (nonatomic, retain) NSMutableArray *answerNotes;
+//“解题思路”标签内容
+@property (nonatomic, retain) NSMutableArray *thoughtNotes;
+//答案Cell
 @property (nonatomic, strong) OptionTableViewCell *prototypeCell;
+//题目View
 @property (nonatomic, strong) SubjectHeaderView *headerView;
+//点击按钮弹出标签View
 @property (nonatomic, strong) NoteView *noteView;
-@property (nonatomic, strong) ThinkLabel *think;
+//选项当中的UILabel列表
 @property (nonatomic, strong) NSMutableArray *labelArray;
+//"选项精析"View是否已显示
+@property BOOL isAnswerViewShow;
+//"解题思路"View是否已显示
+@property BOOL isThoughtViewShow;
 
 @end
