@@ -12,13 +12,16 @@
 #import "MLCardViewController.h"
 
 @interface MLMainViewController ()
-
+@property (weak, nonatomic) IBOutlet UIButton *grammarButton;
+@property (weak, nonatomic) IBOutlet UIButton *logicButton;
 @end
 
 @implementation MLMainViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.grammarButton.layer.cornerRadius = 10;
+    self.logicButton.layer.cornerRadius = 10;
     // Do any additional setup after loading the view.
 }
 
