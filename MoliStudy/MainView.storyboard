@@ -37,7 +37,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="c1L-N4-afI"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <state key="normal" title="继续做题">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -71,11 +71,15 @@
                             <constraint firstItem="JhH-Cv-aih" firstAttribute="height" secondItem="k2f-KO-K2r" secondAttribute="height" id="uzB-mf-3pi"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Moli GMAT" id="aa1-wm-Gvr"/>
+                    <navigationItem key="navigationItem" title="Moli GMAT" id="aa1-wm-Gvr">
+                        <barButtonItem key="leftBarButtonItem" image="star-1" id="9uK-PB-Sri"/>
+                        <barButtonItem key="rightBarButtonItem" image="book" id="vxY-k3-Uaz"/>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="grammarButton" destination="JhH-Cv-aih" id="ffW-DY-xep"/>
                         <outlet property="logicButton" destination="lbZ-zq-80X" id="aBW-oq-hTU"/>
+                        <outlet property="titleButton" destination="k2f-KO-K2r" id="Vt0-TU-0TR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -121,21 +125,22 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="scX-St-KyY" userLabel="topView">
                                 <rect key="frame" x="0.0" y="64" width="375" height="44"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GMAT 语法" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hFv-xq-JfM">
-                                        <rect key="frame" x="145" y="12" width="86" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OAX-aW-AMX">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OAX-aW-AMX">
                                         <rect key="frame" x="10" y="11" width="22" height="22"/>
+                                        <state key="normal" image="back"/>
                                         <connections>
                                             <action selector="backButtonClicked" destination="IwA-Yk-Dyh" eventType="touchUpInside" id="8xW-gW-krj"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1/10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BSu-rz-xnT">
-                                        <rect key="frame" x="334" y="11" width="31" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="332" y="11" width="33" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GMAT 语法" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hFv-xq-JfM">
+                                        <rect key="frame" x="137" y="10" width="102" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -289,7 +294,10 @@
     </scenes>
     <resources>
         <image name="0_default" width="22" height="22"/>
+        <image name="back" width="22" height="22"/>
+        <image name="book" width="22" height="22"/>
         <image name="nature-1" width="1000" height="667"/>
+        <image name="star-1" width="19" height="19"/>
         <image name="语法" width="357" height="132"/>
         <image name="语法背景" width="750" height="1334"/>
         <image name="逻辑" width="357" height="132"/>

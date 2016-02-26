@@ -12,6 +12,7 @@
 #import "MLCardViewController.h"
 
 @interface MLMainViewController ()
+@property (weak, nonatomic) IBOutlet UIButton *titleButton;
 @property (weak, nonatomic) IBOutlet UIButton *grammarButton;
 @property (weak, nonatomic) IBOutlet UIButton *logicButton;
 @end
@@ -20,6 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.titleButton.layer.cornerRadius = 10;
     self.grammarButton.layer.cornerRadius = 10;
     self.logicButton.layer.cornerRadius = 10;
     // Do any additional setup after loading the view.
