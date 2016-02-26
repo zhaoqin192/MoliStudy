@@ -49,7 +49,29 @@ class SubjectDAO: NSObject {
                     subject.allString.append(detail as! String)
                 }
             }
-            subject.correctAnswer = model["correct_answer"] as! String
+            
+            switch(model["correct_answer"] as! String){
+                case "A":
+                    subject.correctAnswer = 0
+                    break
+                case "B":
+                    subject.correctAnswer = 1
+                    break
+                case "C":
+                    subject.correctAnswer = 2
+                    break
+                case "D":
+                    subject.correctAnswer = 3
+                    break
+                case "E":
+                    subject.correctAnswer = 4
+                    break
+            default:
+                    subject.correctAnswer = 5
+                break
+            }
+            
+            
             
             let thinkLabels = model["think_labels"] as! NSArray
             for j in 0...thinkLabels.count - 1{

@@ -84,7 +84,7 @@
     }
     [_TextScrollerView updateScrollViewText:content AttributeString:nil];
     _answers = subject.answers;
-    _answer = subject.correctAnswer;
+//    _answer = subject.correctAnswer;
     NSMutableArray *tempArray = [[NSMutableArray alloc] init];
     for (ThinkLabel* label in subject.thinkLabel) {
         [tempArray addObject:label.name];

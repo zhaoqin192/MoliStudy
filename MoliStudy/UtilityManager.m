@@ -35,7 +35,7 @@
                                                options:NSStringDrawingUsesLineFragmentOrigin
                                                context:nil];
     CGSize size = rect.size;
-    CGFloat height = MAX(size.height, 30.0f);
+    CGFloat height = MAX(size.height, 45.0f);
     return height + CELL_CONTENT_MARGIN * 2;
 }
 

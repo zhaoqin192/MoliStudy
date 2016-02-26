@@ -504,6 +504,7 @@
 		AC53B7DB1C01685E007D3FE8 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AC53B7DA1C01685E007D3FE8 /* libz.tbd */; };
 		AC53B7DD1C01686B007D3FE8 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AC53B7DC1C01686B007D3FE8 /* libstdc++.tbd */; };
 		AC62560D1C7F258600CD083D /* MainView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC62560C1C7F258600CD083D /* MainView.storyboard */; };
+		AC62560F1C801B7900CD083D /* SubjectRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC62560E1C801B7900CD083D /* SubjectRecord.swift */; };
 		AC7835B31C7D469400BC9302 /* NoteContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7835B21C7D469400BC9302 /* NoteContentView.m */; };
 		AC7835B51C7D46AA00BC9302 /* NoteContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC7835B41C7D46AA00BC9302 /* NoteContentView.xib */; };
 		AC7835BE1C7EA27400BC9302 /* Tinty.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7835BD1C7EA27400BC9302 /* Tinty.swift */; };
@@ -1122,6 +1123,7 @@
 		AC53B7DA1C01685E007D3FE8 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		AC53B7DC1C01686B007D3FE8 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		AC62560C1C7F258600CD083D /* MainView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainView.storyboard; sourceTree = "<group>"; };
+		AC62560E1C801B7900CD083D /* SubjectRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubjectRecord.swift; sourceTree = "<group>"; };
 		AC7835B11C7D469400BC9302 /* NoteContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteContentView.h; sourceTree = "<group>"; };
 		AC7835B21C7D469400BC9302 /* NoteContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteContentView.m; sourceTree = "<group>"; };
 		AC7835B41C7D46AA00BC9302 /* NoteContentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoteContentView.xib; sourceTree = "<group>"; };
@@ -2494,6 +2496,7 @@
 				AC78CA351C0BF04700A9585F /* ThinkLabel.swift */,
 				AC353BAD1C755CF600EB09C9 /* Level.swift */,
 				AC7A2B4D1C7C34FE00BE100C /* Label.swift */,
+				AC62560E1C801B7900CD083D /* SubjectRecord.swift */,
 			);
 			name = subject;
 			sourceTree = "<group>";
@@ -3198,6 +3201,7 @@
 				30AA1C461C05A37B00CD94D5 /* DXPopover.m in Sources */,
 				30AAFBA31C0595EC00CD94D5 /* MDRadialProgressLabel.m in Sources */,
 				AC353BAE1C755CF600EB09C9 /* Level.swift in Sources */,
+				AC62560F1C801B7900CD083D /* SubjectRecord.swift in Sources */,
 				30AA1C301C05A2A300CD94D5 /* ScrollerView.m in Sources */,
 				30AA1C5F1C05C0C100CD94D5 /* StudyViewController.m in Sources */,
 				AC78CA3F1C0BF2D100A9585F /* ContextDAO.swift in Sources */,

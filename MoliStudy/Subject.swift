@@ -12,7 +12,7 @@ class Subject: NSObject {
 
     var content: [String]
     var answers: [[String]]
-    var correctAnswer: String
+    var correctAnswer: NSInteger
     var questionID: NSNumber
     var thinkLabel: [ThinkLabel]
     var allString: [String]
@@ -20,7 +20,7 @@ class Subject: NSObject {
     override init() {
         content = []
         answers = []
-        correctAnswer = String()
+        correctAnswer = -1
         questionID = NSNumber()
         thinkLabel = []
         allString = []

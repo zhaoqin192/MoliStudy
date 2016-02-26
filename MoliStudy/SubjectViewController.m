@@ -16,9 +16,12 @@
 @property (weak, nonatomic) IBOutlet UILabel *answerLabel;
 @property (weak, nonatomic) IBOutlet UILabel *noteLabel;
 
+
 @end
 
 @implementation SubjectViewController
+
+@synthesize leftSwipeGestureRecognizer, rightSwipeGestureRecognizer;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -35,7 +38,8 @@
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     self.tableView.separatorColor = [UIColor clearColor];
-
+    
+    self.index = 0;
 
     self.prototypeCell = [self.tableView dequeueReusableCellWithIdentifier:@"option"];
 
@@ -51,8 +55,9 @@
     self.imageArray = [[NSMutableArray alloc] init];
     self.thoughtNotes = [[NSMutableArray alloc] init];
     self.answerNotes = [[NSMutableArray alloc] init];
+    self.subjectRecordArray = [[NSMutableArray alloc] init];
     
-    [self initButtons];
+    [self initSwipeGesture];
 
 }
 
@@ -64,18 +69,135 @@
 }
 
 - (void) initButtons{
-    
-    [UIView animateWithDuration:0.5f animations:^{
-        self.answerButton.hidden = YES;
-        for(NSLayoutConstraint *constraint in self.noteButton.superview.constraints){
-            if (constraint.firstItem == self.noteButton && constraint.firstAttribute == NSLayoutAttributeWidth) {
-                constraint.constant = ScreenWidth / 2;
+    self.record = self.subjectRecordArray[self.index];
+    if ([self.record option] == -1) {
+        [UIView animateWithDuration:0.5f animations:^{
+            self.answerButton.hidden = YES;
+            for(NSLayoutConstraint *constraint in self.noteButton.superview.constraints){
+                if (constraint.firstItem == self.noteButton && constraint.firstAttribute == NSLayoutAttributeWidth) {
+                    constraint.constant = ScreenWidth / 2;
+                }
             }
-        }
-        
-        [self.view layoutIfNeeded];
-    }];
+
+            [self.view layoutIfNeeded];
+        }];
+    }else{
+        [UIView animateWithDuration:0.5f animations:^{
+            self.answerButton.hidden = NO;
+            for(NSLayoutConstraint *constraint in self.noteButton.superview.constraints){
+                if (constraint.firstItem == self.noteButton && constraint.firstAttribute == NSLayoutAttributeWidth) {
+                    constraint.constant = 0;
+                }
+            }
+            
+            [self.view layoutIfNeeded];
+        }];
+    }
+}
+
+- (void) initSwipeGesture{
+    self.navigationController.interactivePopGestureRecognizer.enabled = NO;
     
+    self.leftSwipeGestureRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipes:)];
+    self.rightSwipeGestureRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipes:)];
+    
+    self.leftSwipeGestureRecognizer.direction = UISwipeGestureRecognizerDirectionLeft;
+    self.rightSwipeGestureRecognizer.direction = UISwipeGestureRecognizerDirectionRight;
+    
+    [self.view addGestureRecognizer:self.leftSwipeGestureRecognizer];
+    [self.view addGestureRecognizer:self.rightSwipeGestureRecognizer];
+}
+
+- (void)handleSwipes:(UISwipeGestureRecognizer *)sender
+{
+    if (sender.direction == UISwipeGestureRecognizerDirectionLeft) {
+        if (self.index < self.subjectArray.count - 1) {
+            self.index++;
+        }
+    }
+    
+    if (sender.direction == UISwipeGestureRecognizerDirectionRight) {
+        if (self.index >0) {
+            self.index--;
+        }
+    }
+    self.subject = self.subjectArray[self.index];
+    
+    [self initSubjectContent];
+    
+    [self initButtons];
+    [self clearSelectImage];
+    
+    if ([self.noteView shown]) {
+        [self.noteView hide];
+        self.isAnswerViewShow = NO;
+        self.isThoughtViewShow = NO;
+    }
+    
+    if (self.record.option != -1) {
+        [self selectImage:self.record.option];
+    }
+    
+    if (self.record.isChosen) {
+        [self modifiedAnaswerButton];
+        self.isChecked = YES;
+        self.tableView.allowsSelection = NO;
+        
+        [self setHeightForNoteView:self.answerNotes.count];
+        [self.noteView setData:self.answerNotes];
+        [self.noteView show];
+        self.isAnswerViewShow = YES;
+    }else{
+        [self restoreAnswerButton];
+        self.isChecked = NO;
+        self.tableView.allowsSelection = YES;
+    }
+    
+    
+}
+
+- (void) initSubjectContent{
+    
+    [self.dataList removeObjectsInRange:NSMakeRange(0, self.dataList.count)];
+    [self.thoughtNotes removeObjectsInRange:NSMakeRange(0, self.thoughtNotes.count)];
+    [self.answerNotes removeObjectsInRange:NSMakeRange(0, self.answerNotes.count)];
+    [self.labelArray removeObjectsInRange:NSMakeRange(0, self.labelArray.count)];
+    [self.imageArray removeObjectsInRange:NSMakeRange(0, self.imageArray.count)];
+    
+    for(NSArray *strArray in self.subject.answers){
+        NSString *tempStr = @"";
+        for(NSString *str in strArray) {
+            tempStr = [[tempStr stringByAppendingString:str] stringByAppendingString:@" "];
+        }
+        [self.dataList addObject:tempStr];
+    }
+    
+    [self.tableView reloadData];
+    
+    NSString *content = @"";
+    for (NSString *str in self.subject.content) {
+        content = [content stringByAppendingString:str];
+        content = [content stringByAppendingString:@" "];
+    }
+    self.headerView.content.text = content;
+//    NSString *title = [@"OG-Level1 " stringByAppendingString:[NSString stringWithFormat:@"%ld/%ld", (long)self.index + 1, self.subjectArray.count]];
+
+//    self.headerView.titleText.text = title;
+    
+    [self.tableView setTableHeaderView:self.headerView];
+    
+    
+    for(ThinkLabel *thinkLabel in self.subject.thinkLabel){
+        if (![thinkLabel.name isEqualToString:@"选项精析"]) {
+            [self.thoughtNotes addObject:thinkLabel];
+        }else{
+            [self.answerNotes addObject:thinkLabel];
+        }
+    }
+    
+    //设置显示题目的高度
+    [self.headerView setHeight:[UtilityManager dynamicHeight:content] + 35];
+ 
 }
 
 - (void) presentAnswerButton{
@@ -84,7 +206,6 @@
         for(NSLayoutConstraint *constraint in self.noteButton.superview.constraints){
             if (constraint.firstItem == self.noteButton && constraint.firstAttribute == NSLayoutAttributeWidth) {
                 constraint.constant = 0;
-
             }
         }
         
@@ -94,39 +215,18 @@
 
 // 接收广播之后的回调方法，显示题目
 - (void)presentView{
-    NSArray *array = [[SubjectDAO sharedManager] findAll];
-    self.subject0 = array[0];
-    
-    for(NSArray *strArray in self.subject0.answers){
-        NSString *tempStr = @"";
-        for(NSString *str in strArray) {
-            tempStr = [[tempStr stringByAppendingString:str] stringByAppendingString:@" "];
-        }
-        [self.dataList addObject:tempStr];
+    self.subjectArray = [[SubjectDAO sharedManager] findAll];
+    self.subject = self.subjectArray[self.index];
+   
+    for (int i = 0; i < self.subjectArray.count; i++) {
+        SubjectRecord *record = [[SubjectRecord alloc] init];
+        [self.subjectRecordArray addObject:record];
     }
- 
-    [self.tableView reloadData];
+    
+    [self initSubjectContent];
+    
+    [self initButtons];
 
-    NSString *content = @"";
-    for (NSString *str in self.subject0.content) {
-        content = [content stringByAppendingString:str];
-        content = [content stringByAppendingString:@" "];
-    }
-    self.headerView.content.text = content;
-    [self.tableView setTableHeaderView:self.headerView];
-    
-    
-    for(ThinkLabel *thinkLabel in self.subject0.thinkLabel){
-        if (![thinkLabel.name isEqualToString:@"选项精析"]) {
-            [self.thoughtNotes addObject:thinkLabel];
-        }else{
-            [self.answerNotes addObject:thinkLabel];
-        }
-    }
-    
-    //设置显示题目的高度
-    [self.headerView setHeight:[UtilityManager dynamicHeight:content]];
-    
 }
 
 // 设置标签栏高度
@@ -142,11 +242,9 @@
 {
     if ([notification.name isEqualToString:@"NOTEHIGHLIGHT"])
     {
-        NSDictionary* userInfo = notification.userInfo;
-        NSNumber* number = (NSNumber*)userInfo[@"thinkNumber"];
+        
+        ThinkLabel *think = (ThinkLabel*) notification.object;
         [self clearHighlight];
-        ThinkLabel *think = [[ThinkLabel alloc] init];
-        think = self.subject0.thinkLabel[[number intValue]];
         if ([think.name isEqualToString:@"选项精析"]) {
             return;
         }
@@ -157,13 +255,13 @@
                 Label *label = [self.labelArray objectAtIndex:calculate];
                 NSNumber *location = label.positionStart;
                 if ([note.positionStart integerValue] >= [location integerValue]) {
-                    [self messageHighlight:label.label startPosition:self.subject0.allString[[note.positionStart intValue]] endPosition:self.subject0.allString[[note.positionEnd intValue]]];
+                    [self messageHighlight:label.label startPosition:self.subject.allString[[note.positionStart intValue]] endPosition:self.subject.allString[[note.positionEnd intValue]]];
                     break;
                 }
                 calculate = calculate - 1;
             }
             if (calculate == -1) {
-                [self messageHighlight:self.headerView.content startPosition:self.subject0.allString[[note.positionStart intValue]] endPosition:self.subject0.allString[[note.positionEnd intValue]]];
+                [self messageHighlight:self.headerView.content startPosition:self.subject.allString[[note.positionStart intValue]] endPosition:self.subject.allString[[note.positionEnd intValue]]];
             }
         }
 **/
@@ -171,8 +269,8 @@
 // 顺序寻找Label
         for(Note *note in think.noteArray){
 
-            if ([note.positionEnd integerValue] < self.subject0.content.count) {
-                [self messageHighlight:self.headerView.content startPosition:self.subject0.allString[[note.positionStart intValue]] endPosition:self.subject0.allString[[note.positionEnd intValue]] withStyle:note.style];
+            if ([note.positionEnd integerValue] < self.subject.content.count) {
+                [self messageHighlight:self.headerView.content startPosition:self.subject.allString[[note.positionStart intValue]] endPosition:self.subject.allString[[note.positionEnd intValue]] withStyle:note.style];
                 continue;
             }
             
@@ -182,7 +280,7 @@
                 Label *label = [self.labelArray objectAtIndex:calculate];
                 
                 if ([note.positionEnd integerValue] <= [label.positionEnd integerValue]) {
-                    [self messageHighlight:label.label startPosition:self.subject0.allString[[note.positionStart intValue]] endPosition:self.subject0.allString[[note.positionEnd intValue]] withStyle:note.style];
+                    [self messageHighlight:label.label startPosition:self.subject.allString[[note.positionStart intValue]] endPosition:self.subject.allString[[note.positionEnd intValue]] withStyle:note.style];
                     break;
                 }
                 calculate++;
@@ -247,7 +345,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
-    return self.subject0.answers.count;
+    return self.subject.answers.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -262,11 +360,11 @@
     Label *label = [[Label alloc] init];
     label.label = cell.content;
     for(int i = 0; i < indexPath.row; i++){
-        label.positionEnd = [NSNumber numberWithInteger:[label.positionEnd integerValue] + [self.subject0.answers[i] count]];
+        label.positionEnd = [NSNumber numberWithInteger:[label.positionEnd integerValue] + [self.subject.answers[i] count]];
 
     }
     
-    label.positionEnd = [NSNumber numberWithInteger:[label.positionEnd integerValue] + self.subject0.content.count + [self.subject0.answers[indexPath.row] count] - 1];
+    label.positionEnd = [NSNumber numberWithInteger:[label.positionEnd integerValue] + self.subject.content.count + [self.subject.answers[indexPath.row] count] - 1];
 
     [self.labelArray addObject:label];
     [self.imageArray addObject:cell.option];
@@ -288,16 +386,13 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [self presentAnswerButton];
     
-    OptionTableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
-    
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     [self clearSelectImage];
     
-    NSString *imageName = [[NSString stringWithFormat:@"%ld", (long)indexPath.row] stringByAppendingString:@"_select.png"];
-    cell.option.image  = [UIImage imageNamed:imageName];
+    [self selectImage:indexPath.row];
     
-    
+    self.record.option = indexPath.row;
 }
 
 - (void)clearSelectImage{
@@ -308,9 +403,16 @@
     }
 }
 
+- (void)selectImage:(NSInteger) select{
+    UIImageView *imageView = self.imageArray[select];
+    NSString *imageName = [[NSString stringWithFormat:@"%ld", (long)select] stringByAppendingString:@"_select.png"];
+    imageView.image = [UIImage imageNamed:imageName];
+}
+
 - (void)noteRequest:(UITapGestureRecognizer *)recognizer{
     if (self.isAnswerViewShow) {
         [self.noteView hide];
+        self.isAnswerViewShow = NO;
     }
     
     if ([self.noteView shown]) {
@@ -326,8 +428,12 @@
 }
 
 - (void)answerRequest:(UITapGestureRecognizer *)recognizer{
+    self.record.isChosen = YES;
+    [self modifiedAnaswerButton];
+    
     if (self.isThoughtViewShow) {
         [self.noteView hide];
+        self.isThoughtViewShow = NO;
     }
     
     if ([self.noteView shown]) {
@@ -340,6 +446,34 @@
         self.isAnswerViewShow = YES;
     }
     
+    self.isChecked = YES;
+    if (self.isChecked) {
+        self.tableView.allowsSelection = NO;
+    }
+    
+}
+
+- (void) modifiedAnaswerButton{
+    self.answerLabel.text = @"选项精析";
+    
+    if (self.record.option == self.subject.correctAnswer) {
+        UIImageView *imageView = self.imageArray[self.record.option];
+        imageView.image = [UIImage imageNamed:@"right.png"];
+    }else{
+        UIImageView *rightOption = self.imageArray[self.subject.correctAnswer];
+        rightOption.image = [UIImage imageNamed:@"right.png"];
+        UIImageView *faultOption = self.imageArray[self.record.option];
+        faultOption.image = [UIImage imageNamed:@"fault"];
+    }
+    
+    self.answerLabel.textColor = [UtilityManager colorFromHexString:[Tinty bg_orange]];
+    self.answerButton.backgroundColor = [UtilityManager colorFromHexString:@"#ffffff"];
+}
+
+- (void) restoreAnswerButton{
+    self.answerLabel.text = @"查看答案";
+    self.answerLabel.textColor = [UtilityManager colorFromHexString:@"#ffffff"];
+    self.answerButton.backgroundColor = [UtilityManager colorFromHexString:[Tinty bg_orange]];
 }
 
 @end

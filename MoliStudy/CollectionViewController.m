@@ -63,7 +63,7 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"click %ld", indexPath.row);
+//    NSLog(@"click %ld", indexPath.row);
    // [self presentViewController:subjectViewController animated:YES completion:nil];
 }
 
@@ -75,7 +75,7 @@ static NSString * const reuseIdentifier = @"Cell";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     HJCarouselViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     cell.continueStudyButtonClickedBlock = ^{
-        NSLog(@"continueStudy %zd",indexPath.row);
+//        NSLog(@"continueStudy %zd",indexPath.row);
         SubjectViewController *subjectViewController = [[SubjectViewController alloc] initWithNibName:@"SubjectViewController" bundle:nil];
         [self.navigationController setNavigationBarHidden:NO animated:YES];
         [self.navigationController pushViewController:subjectViewController animated:YES];

@@ -62,10 +62,11 @@
                 <constraint firstItem="3HO-Nn-mwa" firstAttribute="top" secondItem="qTL-IX-NDd" secondAttribute="bottom" id="2uz-hv-pGG"/>
                 <constraint firstAttribute="trailing" secondItem="c3r-uo-Zuc" secondAttribute="trailing" id="3V2-3n-lBT"/>
                 <constraint firstItem="c3r-uo-Zuc" firstAttribute="top" secondItem="qTL-IX-NDd" secondAttribute="bottom" id="8bq-rK-FTQ"/>
+                <constraint firstItem="qTL-IX-NDd" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="8gt-WK-hme"/>
                 <constraint firstItem="c3r-uo-Zuc" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.075" id="B4p-sS-T3O"/>
                 <constraint firstItem="3HO-Nn-mwa" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.075" id="DWF-lU-8Z6"/>
                 <constraint firstItem="qTL-IX-NDd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="I0G-BV-n3j"/>
-                <constraint firstItem="qTL-IX-NDd" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="KKJ-4l-1gw"/>
+                <constraint firstItem="qTL-IX-NDd" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="45" id="KKJ-4l-1gw"/>
                 <constraint firstAttribute="bottom" secondItem="c3r-uo-Zuc" secondAttribute="bottom" id="R9G-RV-VE8"/>
                 <constraint firstItem="3HO-Nn-mwa" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Sv0-vb-azy"/>
                 <constraint firstItem="3HO-Nn-mwa" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.5" id="TL1-G4-kUQ"/>
@@ -73,6 +74,11 @@
                 <constraint firstAttribute="bottom" secondItem="3HO-Nn-mwa" secondAttribute="bottom" id="bmc-dI-JCj"/>
                 <constraint firstItem="c3r-uo-Zuc" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.5" id="r0n-bW-hBI"/>
             </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="KKJ-4l-1gw"/>
+                </mask>
+            </variation>
             <point key="canvasLocation" x="411" y="391"/>
         </view>
     </objects>

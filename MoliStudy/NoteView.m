@@ -36,7 +36,32 @@
     NoteTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"note"];
 
     self.think = [self.dataList objectAtIndex:indexPath.row];
+    
+    if ([self.think.name isEqualToString:@"选项精析"]) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"NOTEHIGHLIGHT" object:self.think];
+        
+        NSMutableDictionary *dictionary = [NSMutableDictionary dictionaryWithCapacity:2];
+        [dictionary setObject:self.think.name forKey:@"content"];
+        NSString *noteText = @"";
+        for(Note *note in self.think.noteArray){
+            if (![note.noteContent isEqualToString:@""]) {
+                noteText = note.noteContent;
+                break;
+            }
+        }
+        [dictionary setObject:noteText forKey:@"noteText"];
+        
+        CGFloat height = [UtilityManager dynamicHeight:noteText] + 44;
+        [self.noteContentView setFrame:CGRectMake(0, self.noteButtonPositionY - height, ScreenWidth, height)];
+        
+        [self.noteContentView setData:dictionary];
+        [self.noteContentView show];
+        
+        self.hidden = YES;
+    }
+    
     cell.content.text = self.think.name;
+    
     return cell;
 }
 
@@ -47,8 +72,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     self.think = [self.dataList objectAtIndex:indexPath.row];
    
-    NSDictionary *userInfo = @{@"thinkNumber": @(indexPath.row)};
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"NOTEHIGHLIGHT" object:self userInfo:userInfo];
+    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"NOTEHIGHLIGHT" object:self.think];
     
     NSMutableDictionary *dictionary = [NSMutableDictionary dictionaryWithCapacity:2];
     [dictionary setObject:self.think.name forKey:@"content"];
