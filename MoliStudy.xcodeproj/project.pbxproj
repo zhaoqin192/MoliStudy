@@ -13,6 +13,7 @@
 		3088662E1C7EA6BB009042B6 /* HJCarouselViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3088662B1C7EA6BB009042B6 /* HJCarouselViewCell.m */; };
 		3088662F1C7EA6BB009042B6 /* HJCarouselViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3088662C1C7EA6BB009042B6 /* HJCarouselViewCell.xib */; };
 		308866401C7EEB43009042B6 /* MLCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3088663F1C7EEB43009042B6 /* MLCardViewController.m */; };
+		308866461C80A27A009042B6 /* MLQuestionCardCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 308866451C80A27A009042B6 /* MLQuestionCardCollectionViewController.m */; };
 		309C16C11C0F3C7C001A3B11 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 309C16C01C0F3C7C001A3B11 /* RegisterViewController.m */; };
 		309C16C41C0F3E0B001A3B11 /* Register.m in Sources */ = {isa = PBXBuildFile; fileRef = 309C16C31C0F3E0B001A3B11 /* Register.m */; };
 		30AA1C2E1C05A2A300CD94D5 /* AnswerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AA1C251C05A2A300CD94D5 /* AnswerTableViewCell.m */; };
@@ -569,6 +570,8 @@
 		3088662C1C7EA6BB009042B6 /* HJCarouselViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HJCarouselViewCell.xib; sourceTree = "<group>"; };
 		3088663E1C7EEB43009042B6 /* MLCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLCardViewController.h; sourceTree = "<group>"; };
 		3088663F1C7EEB43009042B6 /* MLCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLCardViewController.m; sourceTree = "<group>"; };
+		308866441C80A27A009042B6 /* MLQuestionCardCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLQuestionCardCollectionViewController.h; sourceTree = "<group>"; };
+		308866451C80A27A009042B6 /* MLQuestionCardCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLQuestionCardCollectionViewController.m; sourceTree = "<group>"; };
 		309C16BF1C0F3C7C001A3B11 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		309C16C01C0F3C7C001A3B11 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		309C16C21C0F3E0B001A3B11 /* Register.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Register.h; sourceTree = "<group>"; };
@@ -1213,10 +1216,12 @@
 				AC62560C1C7F258600CD083D /* MainView.storyboard */,
 				308866211C7E9F40009042B6 /* MLMainViewController.h */,
 				308866221C7E9F40009042B6 /* MLMainViewController.m */,
-				3088663E1C7EEB43009042B6 /* MLCardViewController.h */,
-				3088663F1C7EEB43009042B6 /* MLCardViewController.m */,
+				308866441C80A27A009042B6 /* MLQuestionCardCollectionViewController.h */,
+				308866451C80A27A009042B6 /* MLQuestionCardCollectionViewController.m */,
 				308866281C7EA6BB009042B6 /* CollectionViewController.h */,
 				308866291C7EA6BB009042B6 /* CollectionViewController.m */,
+				3088663E1C7EEB43009042B6 /* MLCardViewController.h */,
+				3088663F1C7EEB43009042B6 /* MLCardViewController.m */,
 				3088662A1C7EA6BB009042B6 /* HJCarouselViewCell.h */,
 				3088662B1C7EA6BB009042B6 /* HJCarouselViewCell.m */,
 				3088662C1C7EA6BB009042B6 /* HJCarouselViewCell.xib */,
@@ -3150,6 +3155,7 @@
 				30AA1C361C05A2D600CD94D5 /* AKPickerView.m in Sources */,
 				AC53B7A61C014AA8007D3FE8 /* UtilityManager.m in Sources */,
 				30AA1CBD1C0816E000CD94D5 /* ReportModel.m in Sources */,
+				308866461C80A27A009042B6 /* MLQuestionCardCollectionViewController.m in Sources */,
 				308866401C7EEB43009042B6 /* MLCardViewController.m in Sources */,
 				30AA1C3E1C05A30A00CD94D5 /* PickerRightArrow.m in Sources */,
 				30AAE3C91C02BB7D00CD94D5 /* YFStartView.m in Sources */,
