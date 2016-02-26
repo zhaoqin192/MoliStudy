@@ -26,8 +26,7 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated{
-  //  [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
-    [self.navigationController setNavigationBarHidden:NO animated:YES];
+   // [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

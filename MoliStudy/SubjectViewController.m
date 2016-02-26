@@ -25,7 +25,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+//    [[UIApplication sharedApplication]setStatusBarHidden:YES withAnimation:UIStatusBarAnimationFade];
     // Do any additional setup after loading the view from its nib.
+    UIBarButtonItem* book = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"book"] style:UIBarButtonItemStylePlain target:self action:@selector(addItemClicked:)];
+    UIBarButtonItem* star = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"star"] style:UIBarButtonItemStylePlain target:self action:@selector(subjectClicked:)];
+    [self.navigationItem setRightBarButtonItems:@[book,star]];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(presentView) name:@"NETWORKREQUEST_SUBJECT_SUCCESS" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveTestNotification:) name:@"NOTEHIGHLIGHT" object:nil];
@@ -66,7 +70,17 @@
     if ([self.noteView shown]) {
         [self.noteView hide];
     }
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
 }
+
+- (void)addItemClicked:(UIBarButtonItem*)button{
+    NSLog(@"addItemClicked");
+}
+
+- (void) subjectClicked:(UIBarButtonItem*)button{
+    NSLog(@"subjectClicked");
+}
+
 
 - (void) initButtons{
     self.record = self.subjectRecordArray[self.index];
@@ -475,5 +489,6 @@
     self.answerLabel.textColor = [UtilityManager colorFromHexString:@"#ffffff"];
     self.answerButton.backgroundColor = [UtilityManager colorFromHexString:[Tinty bg_orange]];
 }
+
 
 @end

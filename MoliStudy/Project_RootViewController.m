@@ -75,8 +75,6 @@
 
 - (void)addItemClicked:(UIBarButtonItem*)button{
 
-   
-    
 }
 
 - (void) subjectClicked:(UIBarButtonItem*)button{

@@ -26,8 +26,9 @@
     self.bottomButton.layer.cornerRadius = self.bottomButton.frame.size.height/2;
     // Do any additional setup after loading the view.
 }
-- (void)viewDidAppear:(BOOL)animated{
-   // [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+
+- (void)viewWillDisappear:(BOOL)animated{
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
 - (IBAction)backButtonClicked {

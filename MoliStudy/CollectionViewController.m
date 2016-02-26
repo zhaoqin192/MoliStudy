@@ -29,7 +29,11 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 
 - (void)viewDidAppear:(BOOL)animated{
-    [self.navigationController setNavigationBarHidden:YES animated:YES];
+   // [self.navigationController setNavigationBarHidden:YES animated:YES];
+}
+
+- (void)viewWillDisappear:(BOOL)animated{
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
 - (NSIndexPath *)curIndexPath {
