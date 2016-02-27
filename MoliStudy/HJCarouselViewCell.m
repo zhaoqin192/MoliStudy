@@ -12,6 +12,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *continueStudyButton;
 @property (weak, nonatomic) IBOutlet UIButton *checkReportButton;
 @property (weak, nonatomic) IBOutlet UIView *backView;
+@property (weak, nonatomic) IBOutlet MBCircularProgressBarView *progressBarView;
 
 
 @end
@@ -24,6 +25,7 @@
     self.bottomView.backgroundColor = [UIColor whiteColor];
     self.continueStudyButton.backgroundColor = ButtonOrange;
     self.checkReportButton.backgroundColor = highGreen;
+    self.progressBarView.backgroundColor = highBlue;
 }
 - (IBAction)continueStudyButtonClicked {
     if (self.continueStudyButtonClickedBlock) {

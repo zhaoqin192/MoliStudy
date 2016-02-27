@@ -24,6 +24,7 @@
     self.collectionVC.view.frame = self.middleView.bounds;
     //NSLog(@"%@",NSStringFromCGRect(self.middleView.frame));
     self.bottomButton.layer.cornerRadius = self.bottomButton.frame.size.height/2;
+    self.bottomButton.backgroundColor = highBlue;
     // Do any additional setup after loading the view.
 }
 

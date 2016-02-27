@@ -9,7 +9,22 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Alamofire.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>JazzHands.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>MBCircularProgressBar-MBCircularProgressBar.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>MBCircularProgressBar.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -42,32 +57,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>11FE2466C36A827FA18E5A8BA0BAE083</key>
+		<key>036EB906780295B6C8A80B3D1D0064CA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>13330E39CA7D8D65F07290FC697EE761</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>200EF4A3D61D2A90481ABC9F82654760</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>207FCA348A5C0F480C85BDC512E0E110</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>29852B71914AA2E261D18F89DE5A907F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>410B25DF16EA5C5B3E2698F74F9625FB</key>
+		<key>17966BACAA4F822AD0C36F70F9BA8DC6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -82,27 +77,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5B9BBA43F28E07D99FA035E7668B8731</key>
+		<key>860A9179BCFD9F1C616D8653DB2B4F91</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6D1B9B94F00538AE97B00019F8F8B8C3</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>949FBB4A8DE606BBEE66851211049E68</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>94F4323895C5077F1D6F770863622F09</key>
+		<key>8FC4B2785BB68892651401B8A26A15AD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>B0E7ADB5E38C58CE3C812FB3A5367801</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BFFC458E92BA75FE9EDCC6BE9E4BB665</key>
 		<dict>
 			<key>primary</key>
 			<true/>
