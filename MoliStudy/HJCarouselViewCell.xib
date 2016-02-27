@@ -57,6 +57,11 @@
                                         <state key="normal" title="查看报告">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="checkReportButtonClicked" destination="gTV-IL-0wX" eventType="touchUpInside" id="POE-DM-Ci7"/>
                                         </connections>
@@ -72,6 +77,11 @@
                                         <state key="normal" title="继续学习">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="continueStudyButtonClicked" destination="gTV-IL-0wX" eventType="touchUpInside" id="Buk-dh-rR8"/>
                                         </connections>
@@ -116,6 +126,12 @@
                 <constraint firstItem="pZJ-eS-cKn" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="nb1-Li-O1A"/>
             </constraints>
             <size key="customSize" width="306" height="439"/>
+            <connections>
+                <outlet property="backView" destination="FH9-yz-1KQ" id="AAn-9f-cdF"/>
+                <outlet property="bottomView" destination="rUG-e2-Rv2" id="Bvg-wV-ssG"/>
+                <outlet property="checkReportButton" destination="LRe-xg-mon" id="YSk-Cd-BxA"/>
+                <outlet property="continueStudyButton" destination="VZo-io-whQ" id="DrX-XR-aWU"/>
+            </connections>
             <point key="canvasLocation" x="387" y="398.5"/>
         </collectionViewCell>
     </objects>

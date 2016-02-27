@@ -7,11 +7,23 @@
 //
 
 #import "HJCarouselViewCell.h"
+@interface HJCarouselViewCell()
+@property (weak, nonatomic) IBOutlet UIView *bottomView;
+@property (weak, nonatomic) IBOutlet UIButton *continueStudyButton;
+@property (weak, nonatomic) IBOutlet UIButton *checkReportButton;
+@property (weak, nonatomic) IBOutlet UIView *backView;
+
+
+@end
 
 @implementation HJCarouselViewCell
 
 - (void)awakeFromNib {
     // Initialization code
+    self.backView.backgroundColor = highBlue;
+    self.bottomView.backgroundColor = [UIColor whiteColor];
+    self.continueStudyButton.backgroundColor = ButtonOrange;
+    self.checkReportButton.backgroundColor = highGreen;
 }
 - (IBAction)continueStudyButtonClicked {
     if (self.continueStudyButtonClickedBlock) {
