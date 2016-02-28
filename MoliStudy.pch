@@ -39,7 +39,7 @@
 #define highRed [UIColor colorWithRed:232./256 green:54./256 blue:5./256 alpha:1.0]
 #define highBlue [UIColor colorWithRed:97./256 green:168./256 blue:250./256 alpha:1.0]
 #define ButtonOrange [UIColor colorWithRed:231./256 green:153./256 blue:24./256 alpha:1.0]
-#define ButtonBlue [UIColor colorWithRed:74./256 green:144./256 blue:226./256 alpha:1.0]
+#define ButtonBlue [UIColor colorWithRed:97./256 green:168./256 blue:250./256 alpha:1.0]
 #define AnswerHigh [UIColor whiteColor]
 
 

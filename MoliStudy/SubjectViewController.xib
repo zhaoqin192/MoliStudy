@@ -20,9 +20,9 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qTL-IX-NDd">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qTL-IX-NDd">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="555"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
                 </tableView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3HO-Nn-mwa" userLabel="CheckView">
                     <rect key="frame" x="0.0" y="555" width="300" height="45"/>
@@ -34,7 +34,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" red="0.96862745100000003" green="0.53538782710931698" blue="0.19074390409159761" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.90588235294117647" green="0.59999999999999998" blue="0.094117647058823528" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstItem="PKs-1z-W8U" firstAttribute="centerY" secondItem="3HO-Nn-mwa" secondAttribute="centerY" id="tII-3l-eLu"/>
                         <constraint firstItem="PKs-1z-W8U" firstAttribute="centerX" secondItem="3HO-Nn-mwa" secondAttribute="centerX" id="tkN-8d-mhJ"/>
@@ -50,14 +50,14 @@
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" red="0.2901960784" green="0.6705882353" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.38039215686274508" green="0.6588235294117647" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstItem="xjn-Ib-ikJ" firstAttribute="centerY" secondItem="c3r-uo-Zuc" secondAttribute="centerY" id="2hc-18-NEF"/>
                         <constraint firstItem="xjn-Ib-ikJ" firstAttribute="centerX" secondItem="c3r-uo-Zuc" secondAttribute="centerX" id="QsE-aB-3Gk"/>
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="3HO-Nn-mwa" firstAttribute="top" secondItem="qTL-IX-NDd" secondAttribute="bottom" id="2uz-hv-pGG"/>
                 <constraint firstAttribute="trailing" secondItem="c3r-uo-Zuc" secondAttribute="trailing" id="3V2-3n-lBT"/>

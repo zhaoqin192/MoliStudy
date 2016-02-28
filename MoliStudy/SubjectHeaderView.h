@@ -10,5 +10,6 @@
 
 @interface SubjectHeaderView : UIView
 @property (weak, nonatomic) IBOutlet UILabel *content;
+@property (weak, nonatomic) IBOutlet UILabel *levelTitle;
 
 @end

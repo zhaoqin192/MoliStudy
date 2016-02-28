@@ -23,11 +23,13 @@
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="buA-Bd-uHc" userLabel="content">
                         <rect key="frame" x="42" y="4" width="270" height="22.5"/>
+                        <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <color key="backgroundColor" red="0.95782039141414144" green="0.95782039141414144" blue="0.95782039141414144" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
                     <constraint firstItem="bdu-z8-d63" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-5" id="3sl-SL-v9x"/>
                     <constraint firstAttribute="trailingMargin" secondItem="buA-Bd-uHc" secondAttribute="trailing" id="Ap5-CA-Yd5"/>

@@ -61,7 +61,7 @@
 
 - (void)configureNavigationItem{
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
-    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithHexString:@"0x00AAEC"]];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithHexString:[Tinty bg_blue]]];
     [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
 }
 

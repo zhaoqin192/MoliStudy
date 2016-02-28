@@ -16,7 +16,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *answerLabel;
 @property (weak, nonatomic) IBOutlet UILabel *noteLabel;
 
-
 @end
 
 @implementation SubjectViewController
@@ -25,7 +24,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    [[UIApplication sharedApplication]setStatusBarHidden:YES withAnimation:UIStatusBarAnimationFade];
     // Do any additional setup after loading the view from its nib.
     UIBarButtonItem* book = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"book"] style:UIBarButtonItemStylePlain target:self action:@selector(addItemClicked:)];
     UIBarButtonItem* star = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"star"] style:UIBarButtonItemStylePlain target:self action:@selector(subjectClicked:)];
@@ -41,18 +39,17 @@
     
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
-    self.tableView.separatorColor = [UIColor clearColor];
-    
-    self.index = 0;
-
+    self.tableView.separatorColor = [UtilityManager colorFromHexString:@"#F4F4F4"];
+    //选项cell
     self.prototypeCell = [self.tableView dequeueReusableCellWithIdentifier:@"option"];
-
+    //题目内容
     self.headerView = [[[NSBundle mainBundle] loadNibNamed:@"SubjectHeaderView" owner:self options:nil] lastObject];
-    
+    //底部按钮
     UITapGestureRecognizer *noteTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(noteRequest:)];
     [self.noteButton addGestureRecognizer:noteTap];
     UITapGestureRecognizer *answerTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(answerRequest:)];
     [self.answerButton addGestureRecognizer:answerTap];
+    
     
     self.dataList = [[NSMutableArray alloc] init];
     self.labelArray = [[NSMutableArray alloc] init];
@@ -60,13 +57,16 @@
     self.thoughtNotes = [[NSMutableArray alloc] init];
     self.answerNotes = [[NSMutableArray alloc] init];
     self.subjectRecordArray = [[NSMutableArray alloc] init];
+    self.index = 0;
+    self.record = [[SubjectRecord alloc] init];
     
     [self initSwipeGesture];
-
+    [self initButtons];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
     [[UIApplication sharedApplication] setStatusBarHidden:YES animated:YES];
+    //    [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationNone];
 }
 
 - (void)viewWillDisappear:(BOOL)animated{
@@ -77,42 +77,12 @@
     [[UIApplication sharedApplication] setStatusBarHidden:NO animated:YES];
 }
 
-- (void)addItemClicked:(UIBarButtonItem*)button{
-    NSLog(@"addItemClicked");
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
-- (void) subjectClicked:(UIBarButtonItem*)button{
-    NSLog(@"subjectClicked");
-}
-
-
-- (void) initButtons{
-    self.record = self.subjectRecordArray[self.index];
-    if ([self.record option] == -1) {
-        [UIView animateWithDuration:0.5f animations:^{
-            self.answerButton.hidden = YES;
-            for(NSLayoutConstraint *constraint in self.noteButton.superview.constraints){
-                if (constraint.firstItem == self.noteButton && constraint.firstAttribute == NSLayoutAttributeWidth) {
-                    constraint.constant = ScreenWidth / 2;
-                }
-            }
-
-            [self.view layoutIfNeeded];
-        }];
-    }else{
-        [UIView animateWithDuration:0.5f animations:^{
-            self.answerButton.hidden = NO;
-            for(NSLayoutConstraint *constraint in self.noteButton.superview.constraints){
-                if (constraint.firstItem == self.noteButton && constraint.firstAttribute == NSLayoutAttributeWidth) {
-                    constraint.constant = 0;
-                }
-            }
-            
-            [self.view layoutIfNeeded];
-        }];
-    }
-}
-
+//初始化做题页面左右滑动手势
 - (void) initSwipeGesture{
     self.navigationController.interactivePopGestureRecognizer.enabled = NO;
     
@@ -126,8 +96,24 @@
     [self.view addGestureRecognizer:self.rightSwipeGestureRecognizer];
 }
 
-- (void)handleSwipes:(UISwipeGestureRecognizer *)sender
-{
+
+// 接收广播之后的回调方法，显示题目
+- (void)presentView{
+    self.subjectArray = [[SubjectDAO sharedManager] findAll];
+    
+    for (int i = 0; i < self.subjectArray.count; i++) {
+        SubjectRecord *record = [[SubjectRecord alloc] init];
+        [self.subjectRecordArray addObject:record];
+    }
+    
+    [self initSubjectContent];
+    
+    
+}
+
+//当左右滑动的时候更新题目和UI
+- (void)handleSwipes:(UISwipeGestureRecognizer *)sender{
+    //根据当前手势动作，更改当前记录index
     if (sender.direction == UISwipeGestureRecognizerDirectionLeft) {
         if (self.index < self.subjectArray.count - 1) {
             self.index++;
@@ -139,23 +125,29 @@
             self.index--;
         }
     }
-    self.subject = self.subjectArray[self.index];
-    
+
+    //初始化当前所有数据
     [self initSubjectContent];
-    
+    //初始化按钮
     [self initButtons];
+
+    
+    //清楚标签图标
     [self clearSelectImage];
     
+    //假如标签View显示，隐藏
     if ([self.noteView shown]) {
         [self.noteView hide];
         self.isAnswerViewShow = NO;
         self.isThoughtViewShow = NO;
     }
     
+    //设置已经选择的选项
     if (self.record.option != -1) {
         [self selectImage:self.record.option];
     }
     
+    //若已经查看了答案，修改按钮内容，并设置tableView不可点击
     if (self.record.isChosen) {
         [self modifiedAnaswerButton];
         self.isChecked = YES;
@@ -171,17 +163,54 @@
         self.tableView.allowsSelection = YES;
     }
     
-    
 }
 
+
+//显示题目的时候判答题和解题思路按钮
+- (void) initButtons{
+    
+    if ([self.record option] == -1) {
+        [UIView animateWithDuration:0.5f animations:^{
+            self.answerButton.hidden = YES;
+            for(NSLayoutConstraint *constraint in self.noteButton.superview.constraints){
+                if (constraint.firstItem == self.noteButton && constraint.firstAttribute == NSLayoutAttributeWidth) {
+                    constraint.constant = ScreenWidth / 2;
+                    [self.view layoutIfNeeded];
+                }
+            }
+
+        }];
+    }else{
+        [UIView animateWithDuration:0.5f animations:^{
+            self.answerButton.hidden = NO;
+            for(NSLayoutConstraint *constraint in self.noteButton.superview.constraints){
+                if (constraint.firstItem == self.noteButton && constraint.firstAttribute == NSLayoutAttributeWidth) {
+                    constraint.constant = 0;
+                    [self.view layoutIfNeeded];
+                }
+            }
+            
+        }];
+    }
+}
+
+//初始化题目内容
 - (void) initSubjectContent{
     
+    //清除数组，以便重新添加内容
     [self.dataList removeObjectsInRange:NSMakeRange(0, self.dataList.count)];
     [self.thoughtNotes removeObjectsInRange:NSMakeRange(0, self.thoughtNotes.count)];
     [self.answerNotes removeObjectsInRange:NSMakeRange(0, self.answerNotes.count)];
     [self.labelArray removeObjectsInRange:NSMakeRange(0, self.labelArray.count)];
     [self.imageArray removeObjectsInRange:NSMakeRange(0, self.imageArray.count)];
     
+    //设置当前记录
+    self.record = self.subjectRecordArray[self.index];
+    
+    //获取当前题目所有内容
+    self.subject = self.subjectArray[self.index];
+    
+    //添加选项内容
     for(NSArray *strArray in self.subject.answers){
         NSString *tempStr = @"";
         for(NSString *str in strArray) {
@@ -190,21 +219,19 @@
         [self.dataList addObject:tempStr];
     }
     
-    [self.tableView reloadData];
-    
+    //设置标题内容
     NSString *content = @"";
     for (NSString *str in self.subject.content) {
         content = [content stringByAppendingString:str];
         content = [content stringByAppendingString:@" "];
     }
     self.headerView.content.text = content;
-//    NSString *title = [@"OG-Level1 " stringByAppendingString:[NSString stringWithFormat:@"%ld/%ld", (long)self.index + 1, self.subjectArray.count]];
-
-//    self.headerView.titleText.text = title;
-    
+    self.headerView.levelTitle.text = [@"OG-Level1  " stringByAppendingString:[NSString stringWithFormat:@"%ld/%lu", (long)self.index + 1, (unsigned long)self.subjectRecordArray.count]];
     [self.tableView setTableHeaderView:self.headerView];
+    //设置显示题目的高度
+    [self.headerView setHeight:[UtilityManager dynamicHeight:content] + 30];
     
-    
+    //设置标签内容
     for(ThinkLabel *thinkLabel in self.subject.thinkLabel){
         if (![thinkLabel.name isEqualToString:@"选项精析"]) {
             [self.thoughtNotes addObject:thinkLabel];
@@ -213,39 +240,27 @@
         }
     }
     
-    //设置显示题目的高度
-    [self.headerView setHeight:[UtilityManager dynamicHeight:content] + 35];
- 
+    
+    
+    [self.tableView reloadData];
+    [self.view layoutIfNeeded];
+    
 }
 
+//显示“查看答案”按钮
 - (void) presentAnswerButton{
     [UIView animateWithDuration:0.5f animations:^{
         self.answerButton.hidden = NO;
         for(NSLayoutConstraint *constraint in self.noteButton.superview.constraints){
             if (constraint.firstItem == self.noteButton && constraint.firstAttribute == NSLayoutAttributeWidth) {
                 constraint.constant = 0;
+                [self.view layoutIfNeeded];
             }
         }
         
-        [self.view layoutIfNeeded];
     }];
 }
 
-// 接收广播之后的回调方法，显示题目
-- (void)presentView{
-    self.subjectArray = [[SubjectDAO sharedManager] findAll];
-    self.subject = self.subjectArray[self.index];
-   
-    for (int i = 0; i < self.subjectArray.count; i++) {
-        SubjectRecord *record = [[SubjectRecord alloc] init];
-        [self.subjectRecordArray addObject:record];
-    }
-    
-    [self initSubjectContent];
-    
-    [self initButtons];
-
-}
 
 // 设置标签栏高度
 - (void) setHeightForNoteView:(CGFloat) count{
@@ -299,6 +314,7 @@
                 
                 if ([note.positionEnd integerValue] <= [label.positionEnd integerValue]) {
                     [self messageHighlight:label.label startPosition:self.subject.allString[[note.positionStart intValue]] endPosition:self.subject.allString[[note.positionEnd intValue]] withStyle:note.style];
+                    
                     break;
                 }
                 calculate++;
@@ -309,20 +325,17 @@
     }
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-
 // 根据标签内容，范围高亮题目
 - (void)messageHighlight:(UILabel *)textView startPosition:(NSString *)start endPosition:(NSString *)end withStyle:(NSString *) style{
     NSString *tempStr = textView.text;
     
     NSMutableAttributedString *strAtt = [[NSMutableAttributedString alloc] initWithString:tempStr];
     
-    [strAtt addAttribute:NSForegroundColorAttributeName value:[UtilityManager colorFromHexString:[Tinty unSelectFontColor]] range:NSMakeRange(0, [strAtt length])];
+    if (textView != self.headerView.content) {
+        [strAtt addAttribute:NSForegroundColorAttributeName value:[UtilityManager colorFromHexString:@"#979797"] range:NSMakeRange(0, [strAtt length])];
+    }else{
+       [strAtt addAttribute:NSForegroundColorAttributeName value:[UtilityManager colorFromHexString:[Tinty unSelectFontColor]] range:NSMakeRange(0, [strAtt length])];
+    }
     
     
     //the range between start and end
@@ -338,7 +351,7 @@
     
 }
 
-
+//清楚所有的高亮效果
 - (void)clearHighlight{
     
     for (Label *label in self.labelArray) {
@@ -346,17 +359,18 @@
         
         NSMutableAttributedString *strAtt = [[NSMutableAttributedString alloc] initWithString:tempStr];
         
-        [strAtt addAttribute:NSForegroundColorAttributeName value:[UIColor blackColor] range:NSMakeRange(0, [strAtt length])];
-        [strAtt addAttribute:NSBackgroundColorAttributeName value:[UIColor whiteColor] range:NSMakeRange(0, [strAtt length])];
+        [strAtt addAttribute:NSForegroundColorAttributeName value:[UtilityManager colorFromHexString:@"#979797"] range:NSMakeRange(0, [strAtt length])];
+        [strAtt addAttribute:NSBackgroundColorAttributeName value:[UtilityManager colorFromHexString:@"#F4F4F4"] range:NSMakeRange(0, [strAtt length])];
         label.label.attributedText = strAtt;
+//        label.label.textColor = [UtilityManager colorFromHexString:@"#979797"];
     }
     
     NSString *tempStr = self.headerView.content.text;
 
     NSMutableAttributedString *strAtt = [[NSMutableAttributedString alloc] initWithString:tempStr];
 
-    [strAtt addAttribute:NSForegroundColorAttributeName value:[UIColor blackColor] range:NSMakeRange(0, [strAtt length])];
-    [strAtt addAttribute:NSBackgroundColorAttributeName value:[UIColor whiteColor] range:NSMakeRange(0, [strAtt length])];
+    [strAtt addAttribute:NSForegroundColorAttributeName value:[UtilityManager colorFromHexString:[Tinty unSelectFontColor]] range:NSMakeRange(0, [strAtt length])];
+    [strAtt addAttribute:NSBackgroundColorAttributeName value:[UtilityManager colorFromHexString:@"#F4F4F4"] range:NSMakeRange(0, [strAtt length])];
     self.headerView.content.attributedText = strAtt;
  
 }
@@ -370,6 +384,7 @@
     
     OptionTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"option"];
     cell.content.text = [self.dataList objectAtIndex:indexPath.row];
+    cell.content.textColor = [UtilityManager colorFromHexString:@"#979797"];
     
     NSString *imageName = [[NSString stringWithFormat:@"%ld", (long)indexPath.row] stringByAppendingString:@"_default.png"];
     cell.option.image  = [UIImage imageNamed:imageName];
@@ -387,12 +402,16 @@
     [self.labelArray addObject:label];
     [self.imageArray addObject:cell.option];
     
+//    cell.selectedBackgroundView.backgroundColor = [UtilityManager colorFromHexString:@"#FFFFFF"];
+    UIView *bgColorView = [[UIView alloc] init];
+    bgColorView.backgroundColor = [UtilityManager colorFromHexString:@"#FFFFFF"];
+    [cell setSelectedBackgroundView:bgColorView];
     
     return cell;
     
 }
 
-// 根据答案内容改变cell高度
+// 根据答案内容改变cell（选项内容）高度
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath{
     OptionTableViewCell *cell = (OptionTableViewCell *)self.prototypeCell;
     cell.content.text = [self.dataList objectAtIndex:indexPath.row];
@@ -413,7 +432,10 @@
     self.record.option = indexPath.row;
 }
 
+//还原选项中的图标
 - (void)clearSelectImage{
+    [self.tableView layoutIfNeeded];
+
     for (int i = 0 ; i < self.imageArray.count; i++) {
         UIImageView *imageView = self.imageArray[i];
         NSString *imageName = [[NSString stringWithFormat:@"%d", i] stringByAppendingString:@"_default.png"];
@@ -421,12 +443,15 @@
     }
 }
 
+//更改选项中的图标
 - (void)selectImage:(NSInteger) select{
+    
     UIImageView *imageView = self.imageArray[select];
     NSString *imageName = [[NSString stringWithFormat:@"%ld", (long)select] stringByAppendingString:@"_select.png"];
     imageView.image = [UIImage imageNamed:imageName];
 }
 
+//“解题思路”触发事件
 - (void)noteRequest:(UITapGestureRecognizer *)recognizer{
     if (self.isAnswerViewShow) {
         [self.noteView hide];
@@ -445,6 +470,7 @@
     
 }
 
+//“查看答案”触发事件
 - (void)answerRequest:(UITapGestureRecognizer *)recognizer{
     self.record.isChosen = YES;
     [self modifiedAnaswerButton];
@@ -471,6 +497,7 @@
     
 }
 
+//点击“查看答案”之后修改按钮UI
 - (void) modifiedAnaswerButton{
     self.answerLabel.text = @"选项精析";
     
@@ -488,11 +515,19 @@
     self.answerButton.backgroundColor = [UtilityManager colorFromHexString:@"#ffffff"];
 }
 
+//恢复“查看答案”按钮
 - (void) restoreAnswerButton{
     self.answerLabel.text = @"查看答案";
     self.answerLabel.textColor = [UtilityManager colorFromHexString:@"#ffffff"];
     self.answerButton.backgroundColor = [UtilityManager colorFromHexString:[Tinty bg_orange]];
 }
 
+- (void)addItemClicked:(UIBarButtonItem*)button{
+    NSLog(@"addItemClicked");
+}
+
+- (void) subjectClicked:(UIBarButtonItem*)button{
+    NSLog(@"subjectClicked");
+}
 
 @end

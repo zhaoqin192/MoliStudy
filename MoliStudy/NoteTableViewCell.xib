@@ -15,7 +15,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Vu-Fq-cBE">
-                        <rect key="frame" x="8" y="11" width="42" height="21"/>
+                        <rect key="frame" x="19" y="11" width="193" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -24,8 +24,8 @@
                 <constraints>
                     <constraint firstAttribute="bottomMargin" secondItem="4Vu-Fq-cBE" secondAttribute="bottom" constant="3.5" id="6AH-Gv-haD"/>
                     <constraint firstItem="4Vu-Fq-cBE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="3" id="8pf-3I-7BG"/>
-                    <constraint firstAttribute="leadingMargin" secondItem="4Vu-Fq-cBE" secondAttribute="leading" id="bfi-Xp-1M5"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="4Vu-Fq-cBE" secondAttribute="trailing" constant="262" id="bmh-lE-HDq"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="4Vu-Fq-cBE" secondAttribute="leading" constant="-11" id="bfi-Xp-1M5"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="4Vu-Fq-cBE" secondAttribute="trailing" constant="100" id="bmh-lE-HDq"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
