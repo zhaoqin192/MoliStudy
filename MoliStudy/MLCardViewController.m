@@ -26,6 +26,9 @@
     self.bottomButton.layer.cornerRadius = self.bottomButton.frame.size.height/2;
     self.bottomButton.backgroundColor = highBlue;
     // Do any additional setup after loading the view.
+    
+    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
+    [self.navigationItem setBackBarButtonItem:backItem];
 }
 
 - (void)viewWillDisappear:(BOOL)animated{

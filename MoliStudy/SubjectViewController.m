@@ -7,7 +7,7 @@
 //
 
 #import "SubjectViewController.h"
-
+#import "MLQuestionCardCollectionViewController.h"
 @interface SubjectViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -25,8 +25,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    UIBarButtonItem* book = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"book"] style:UIBarButtonItemStylePlain target:self action:@selector(addItemClicked:)];
-    UIBarButtonItem* star = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"star"] style:UIBarButtonItemStylePlain target:self action:@selector(subjectClicked:)];
+    UIBarButtonItem* book = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"book"] style:UIBarButtonItemStylePlain target:self action:@selector(subjectClicked:)];
+    UIBarButtonItem* star = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"star"] style:UIBarButtonItemStylePlain target:self action:@selector(addItemClicked:)];
     [self.navigationItem setRightBarButtonItems:@[book,star]];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(presentView) name:@"NETWORKREQUEST_SUBJECT_SUCCESS" object:nil];
@@ -62,6 +62,9 @@
     
     [self initSwipeGesture];
     [self initButtons];
+    
+    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
+    [self.navigationItem setBackBarButtonItem:backItem];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -81,6 +84,8 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
 
 //初始化做题页面左右滑动手势
 - (void) initSwipeGesture{
@@ -362,7 +367,6 @@
         [strAtt addAttribute:NSForegroundColorAttributeName value:[UtilityManager colorFromHexString:@"#979797"] range:NSMakeRange(0, [strAtt length])];
         [strAtt addAttribute:NSBackgroundColorAttributeName value:[UtilityManager colorFromHexString:@"#F4F4F4"] range:NSMakeRange(0, [strAtt length])];
         label.label.attributedText = strAtt;
-//        label.label.textColor = [UtilityManager colorFromHexString:@"#979797"];
     }
     
     NSString *tempStr = self.headerView.content.text;
@@ -402,7 +406,6 @@
     [self.labelArray addObject:label];
     [self.imageArray addObject:cell.option];
     
-//    cell.selectedBackgroundView.backgroundColor = [UtilityManager colorFromHexString:@"#FFFFFF"];
     UIView *bgColorView = [[UIView alloc] init];
     bgColorView.backgroundColor = [UtilityManager colorFromHexString:@"#FFFFFF"];
     [cell setSelectedBackgroundView:bgColorView];
@@ -527,7 +530,10 @@
 }
 
 - (void) subjectClicked:(UIBarButtonItem*)button{
-    NSLog(@"subjectClicked");
+    UIStoryboard *mainViewSB = [UIStoryboard storyboardWithName:@"MainView" bundle:nil];
+    MLQuestionCardCollectionViewController *questionvc = [mainViewSB instantiateViewControllerWithIdentifier:@"MLQuestionCardCollectionViewController"];
+    [self.navigationController pushViewController:questionvc animated:YES];
 }
+
 
 @end
