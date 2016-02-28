@@ -7,7 +7,7 @@
 //
 
 #import "SubjectViewController.h"
-
+#import "MLQuestionCardCollectionViewController.h"
 @interface SubjectViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -27,8 +27,8 @@
     [super viewDidLoad];
 //    [[UIApplication sharedApplication]setStatusBarHidden:YES withAnimation:UIStatusBarAnimationFade];
     // Do any additional setup after loading the view from its nib.
-    UIBarButtonItem* book = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"book"] style:UIBarButtonItemStylePlain target:self action:@selector(addItemClicked:)];
-    UIBarButtonItem* star = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"star"] style:UIBarButtonItemStylePlain target:self action:@selector(subjectClicked:)];
+    UIBarButtonItem* book = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"book"] style:UIBarButtonItemStylePlain target:self action:@selector(subjectClicked:)];
+    UIBarButtonItem* star = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"star"] style:UIBarButtonItemStylePlain target:self action:@selector(addItemClicked:)];
     [self.navigationItem setRightBarButtonItems:@[book,star]];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(presentView) name:@"NETWORKREQUEST_SUBJECT_SUCCESS" object:nil];
@@ -62,7 +62,9 @@
     self.subjectRecordArray = [[NSMutableArray alloc] init];
     
     [self initSwipeGesture];
-
+    
+    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
+    [self.navigationItem setBackBarButtonItem:backItem];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -82,7 +84,9 @@
 }
 
 - (void) subjectClicked:(UIBarButtonItem*)button{
-    NSLog(@"subjectClicked");
+    UIStoryboard *mainViewSB = [UIStoryboard storyboardWithName:@"MainView" bundle:nil];
+    MLQuestionCardCollectionViewController *questionvc = [mainViewSB instantiateViewControllerWithIdentifier:@"MLQuestionCardCollectionViewController"];
+    [self.navigationController pushViewController:questionvc animated:YES];
 }
 
 

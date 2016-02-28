@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *titleButton;
 @property (weak, nonatomic) IBOutlet UIButton *grammarButton;
 @property (weak, nonatomic) IBOutlet UIButton *logicButton;
+@property (weak, nonatomic) IBOutlet UIButton *bottomButton;
 @end
 
 @implementation MLMainViewController
@@ -24,6 +25,10 @@
     self.titleButton.layer.cornerRadius = 10;
     self.grammarButton.layer.cornerRadius = 10;
     self.logicButton.layer.cornerRadius = 10;
+    self.bottomButton.backgroundColor = highBlue;
+    [self.navigationController.navigationBar setBarTintColor:highBlue];
+    [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
+    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
     // Do any additional setup after loading the view.
 }
 

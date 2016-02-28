@@ -27,9 +27,6 @@
                             <button opaque="NO" clipsSubviews="YES" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbZ-zq-80X">
                                 <rect key="frame" x="9" y="373" width="357" height="132"/>
                                 <state key="normal" title="Button" image="逻辑"/>
-                                <connections>
-                                    <segue destination="Nvk-i4-meZ" kind="show" id="oF1-LP-FWc"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j7Q-Lm-4ni">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
@@ -72,11 +69,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Moli GMAT" id="aa1-wm-Gvr">
-                        <barButtonItem key="leftBarButtonItem" image="star-1" id="9uK-PB-Sri"/>
-                        <barButtonItem key="rightBarButtonItem" image="book" id="vxY-k3-Uaz"/>
+                        <barButtonItem key="leftBarButtonItem" image="ic_face_white" id="9uK-PB-Sri"/>
+                        <barButtonItem key="rightBarButtonItem" image="ic_brightness_high_white" id="vxY-k3-Uaz"/>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="bottomButton" destination="j7Q-Lm-4ni" id="Ezy-KU-kpV"/>
                         <outlet property="grammarButton" destination="JhH-Cv-aih" id="ffW-DY-xep"/>
                         <outlet property="logicButton" destination="lbZ-zq-80X" id="aBW-oq-hTU"/>
                         <outlet property="titleButton" destination="k2f-KO-K2r" id="Vt0-TU-0TR"/>
@@ -193,7 +191,7 @@
         <!--Question Card Collection View Controller-->
         <scene sceneID="zen-YF-ibT">
             <objects>
-                <collectionViewController id="Nvk-i4-meZ" customClass="MLQuestionCardCollectionViewController" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="MLQuestionCardCollectionViewController" id="Nvk-i4-meZ" customClass="MLQuestionCardCollectionViewController" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Ctm-T6-hZx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -205,7 +203,7 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="iFM-de-IpP">
-                                <rect key="frame" x="0.0" y="133" width="50" height="50"/>
+                                <rect key="frame" x="0.0" y="69" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -226,7 +224,7 @@
                             </collectionViewCell>
                         </cells>
                         <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ReusableView" id="NUq-9A-wxz">
-                            <rect key="frame" x="0.0" y="64" width="375" height="69"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="69"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OG-Level 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="to1-Cl-teb">
@@ -295,9 +293,9 @@
     <resources>
         <image name="0_default" width="22" height="22"/>
         <image name="back" width="22" height="22"/>
-        <image name="book" width="22" height="22"/>
+        <image name="ic_brightness_high_white" width="24" height="24"/>
+        <image name="ic_face_white" width="24" height="24"/>
         <image name="nature-1" width="1000" height="667"/>
-        <image name="star-1" width="19" height="19"/>
         <image name="语法" width="357" height="132"/>
         <image name="语法背景" width="750" height="1334"/>
         <image name="逻辑" width="357" height="132"/>
