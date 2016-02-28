@@ -38,7 +38,7 @@
 //    IntroductionViewController *introductionVC = [[IntroductionViewController alloc] init];
 //    self.window.rootViewController = introductionVC;
     
-    //测试接口页面
+//    测试接口页面
 //    TestViewController *testViewContorller = [[TestViewController alloc] initWithNibName:@"TestViewController" bundle:nil];
 //    self.window.rootViewController = testViewContorller;
     

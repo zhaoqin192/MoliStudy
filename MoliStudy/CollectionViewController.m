@@ -28,14 +28,6 @@ static NSString * const reuseIdentifier = @"Cell";
     [self.collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([HJCarouselViewCell class]) bundle:nil] forCellWithReuseIdentifier:reuseIdentifier];
 }
 
-- (void)viewDidAppear:(BOOL)animated{
-   // [self.navigationController setNavigationBarHidden:YES animated:YES];
-}
-
-- (void)viewWillDisappear:(BOOL)animated{
-    [self.navigationController setNavigationBarHidden:NO animated:YES];
-}
-
 - (NSIndexPath *)curIndexPath {
     NSArray *indexPaths = [self.collectionView indexPathsForVisibleItems];
     NSIndexPath *curIndexPath = nil;

@@ -68,8 +68,8 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated{
-    [[UIApplication sharedApplication] setStatusBarHidden:YES animated:YES];
-    //    [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationNone];
+   // [[UIApplication sharedApplication] setStatusBarHidden:YES animated:YES];
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
 - (void)viewWillDisappear:(BOOL)animated{
@@ -77,7 +77,7 @@
         [self.noteView hide];
     }
     [self.navigationController setNavigationBarHidden:YES animated:YES];
-    [[UIApplication sharedApplication] setStatusBarHidden:NO animated:YES];
+   // [[UIApplication sharedApplication] setStatusBarHidden:NO animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
