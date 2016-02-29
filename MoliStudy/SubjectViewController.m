@@ -76,7 +76,7 @@
     if ([self.noteView shown]) {
         [self.noteView hide];
     }
-    [self.navigationController setNavigationBarHidden:YES animated:YES];
+//    [self.navigationController setNavigationBarHidden:YES animated:YES];
    // [[UIApplication sharedApplication] setStatusBarHidden:NO animated:YES];
 }
 
