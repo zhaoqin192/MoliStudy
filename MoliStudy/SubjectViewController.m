@@ -67,17 +67,10 @@
     [self.navigationItem setBackBarButtonItem:backItem];
 }
 
-- (void)viewWillAppear:(BOOL)animated{
-   // [[UIApplication sharedApplication] setStatusBarHidden:YES animated:YES];
-    [self.navigationController setNavigationBarHidden:NO animated:YES];
-}
-
 - (void)viewWillDisappear:(BOOL)animated{
     if ([self.noteView shown]) {
         [self.noteView hide];
     }
-//    [self.navigationController setNavigationBarHidden:YES animated:YES];
-   // [[UIApplication sharedApplication] setStatusBarHidden:NO animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

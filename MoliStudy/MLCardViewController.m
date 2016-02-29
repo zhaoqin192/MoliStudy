@@ -41,7 +41,6 @@
 
 - (IBAction)backButtonClicked {
     [self.navigationController popViewControllerAnimated:YES];
-   // NSLog(@"back");
 }
 
 - (void)didReceiveMemoryWarning {

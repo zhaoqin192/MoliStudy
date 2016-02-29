@@ -72,7 +72,6 @@ static NSString * const reuseIdentifier = @"Cell";
     cell.continueStudyButtonClickedBlock = ^{
 //        NSLog(@"continueStudy %zd",indexPath.row);
         SubjectViewController *subjectViewController = [[SubjectViewController alloc] initWithNibName:@"SubjectViewController" bundle:nil];
-        [self.navigationController setNavigationBarHidden:NO animated:YES];
         [self.navigationController pushViewController:subjectViewController animated:YES];
     };
     cell.checkReportButtonClickedBlock = ^{

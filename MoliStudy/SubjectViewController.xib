@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
@@ -28,7 +28,7 @@
                     <rect key="frame" x="0.0" y="555" width="300" height="45"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="查看答案" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PKs-1z-W8U">
-                            <rect key="frame" x="114" y="12" width="72" height="21.5"/>
+                            <rect key="frame" x="114" y="12" width="72" height="22"/>
                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
@@ -44,7 +44,7 @@
                     <rect key="frame" x="300" y="555" width="300" height="45"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="解题思路" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xjn-Ib-ikJ">
-                            <rect key="frame" x="114" y="11" width="72" height="21.5"/>
+                            <rect key="frame" x="114" y="11" width="72" height="22"/>
                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
@@ -73,9 +73,11 @@
                 <constraint firstAttribute="trailing" secondItem="qTL-IX-NDd" secondAttribute="trailing" id="aAo-OV-QJy"/>
                 <constraint firstAttribute="bottom" secondItem="3HO-Nn-mwa" secondAttribute="bottom" id="bmc-dI-JCj"/>
                 <constraint firstItem="c3r-uo-Zuc" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.5" id="r0n-bW-hBI"/>
+                <constraint firstItem="qTL-IX-NDd" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="zXP-hk-CvB"/>
             </constraints>
             <variation key="default">
                 <mask key="constraints">
+                    <exclude reference="8gt-WK-hme"/>
                     <exclude reference="KKJ-4l-1gw"/>
                 </mask>
             </variation>
