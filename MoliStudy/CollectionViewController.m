@@ -79,6 +79,7 @@ static NSString * const reuseIdentifier = @"Cell";
     cell.checkReportButtonClickedBlock = ^{
         NSLog(@"checkReportButtonClickedBlock %zd",indexPath.row);
     };
+    cell.levelLabel.text = [NSString stringWithFormat:@"OG-Level %zd",indexPath.row + 1];
 
     return cell;
 }

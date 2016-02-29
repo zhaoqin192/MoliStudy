@@ -9,6 +9,7 @@
 #import "HJCarouselViewCell.h"
 @interface HJCarouselViewCell()
 @property (weak, nonatomic) IBOutlet UIView *bottomView;
+@property (weak, nonatomic) IBOutlet UILabel *countLabel;
 @property (weak, nonatomic) IBOutlet UIButton *continueStudyButton;
 @property (weak, nonatomic) IBOutlet UIButton *checkReportButton;
 @property (weak, nonatomic) IBOutlet UIView *backView;

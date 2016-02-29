@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface HJCarouselViewCell : UICollectionViewCell
+@property (weak, nonatomic) IBOutlet UILabel *levelLabel;
 @property (copy, nonatomic) void(^continueStudyButtonClickedBlock)();
 @property (copy, nonatomic) void(^checkReportButtonClickedBlock)();
 @end
