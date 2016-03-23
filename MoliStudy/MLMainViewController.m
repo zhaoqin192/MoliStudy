@@ -27,9 +27,6 @@
     self.grammarButton.layer.cornerRadius = 10;
     self.logicButton.layer.cornerRadius = 10;
     self.bottomButton.backgroundColor = highBlue;
-    [self.navigationController.navigationBar setBarTintColor:highBlue];
-    [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
-    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
     // Do any additional setup after loading the view.
 }
 

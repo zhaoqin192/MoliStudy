@@ -12,6 +12,7 @@
 #import "LoginViewController.h"
 #import "RegisterViewController.h"
 #import "Project_RootViewController.h"
+#import "MLMainViewController.h"
 
 @interface IntroductionViewController ()
 
@@ -232,18 +233,19 @@
 
 #pragma mark Action
 - (void)registerButtonClicked{
-    RegisterViewController *vc = [[RegisterViewController alloc] init];
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
-    [self presentViewController:nav animated:YES completion:nil];
+//    RegisterViewController *vc = [[RegisterViewController alloc] init];
+//    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+//    [self presentViewController:nav animated:YES completion:nil];
 }
 
 - (void)loginButtonClicked{
+   MLMainViewController *vc = [[UIStoryboard storyboardWithName:@"MainView" bundle:nil] instantiateInitialViewController];
 //    LoginViewController *vc = [[LoginViewController alloc] init];
 //    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
 //    [self presentViewController:nav animated:YES completion:nil];
-    Project_RootViewController * vc = [[Project_RootViewController alloc] init];
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
-    [self presentViewController:nav animated:YES completion:nil];
+//    Project_RootViewController * vc = [[Project_RootViewController alloc] init];
+//    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 #pragma mark Super

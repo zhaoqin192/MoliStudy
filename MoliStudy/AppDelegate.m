@@ -28,24 +28,24 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-//    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-//    [self.window makeKeyAndVisible];
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    [self.window makeKeyAndVisible];
     
     //短信验证
-   // [SMSSDK registerApp:appKey withSecret:appSecret];
+    [SMSSDK registerApp:appKey withSecret:appSecret];
     
     //引导页
-//    IntroductionViewController *introductionVC = [[IntroductionViewController alloc] init];
-//    self.window.rootViewController = introductionVC;
+    IntroductionViewController *introductionVC = [[IntroductionViewController alloc] init];
+    self.window.rootViewController = introductionVC;
     
 //    测试接口页面
 //    TestViewController *testViewContorller = [[TestViewController alloc] initWithNibName:@"TestViewController" bundle:nil];
 //    self.window.rootViewController = testViewContorller;
     
 //    启动页
-//    [self configureStartView];
+    [self configureStartView];
     
-    //[self configureNavigationItem];
+    [self configureNavigationItem];
     return YES;
 }
 
@@ -60,9 +60,9 @@
 }
 
 - (void)configureNavigationItem{
-    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
-    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithHexString:[Tinty bg_blue]]];
-    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
+    [[UINavigationBar appearance]  setBarTintColor:highBlue];
+    [[UINavigationBar appearance]  setTintColor:[UIColor whiteColor]];
+    [[UINavigationBar appearance]  setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
