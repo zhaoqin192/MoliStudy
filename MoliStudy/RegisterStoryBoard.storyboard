@@ -122,6 +122,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="codeButton" destination="ySQ-AG-0Us" id="btj-zO-c5b"/>
                         <outlet property="codeTextField" destination="MJG-bd-TYp" id="Ml9-vu-raS"/>
                         <outlet property="headImageView" destination="fwB-Tf-6aT" id="3Rh-hg-vpI"/>
                         <outlet property="loginLabel" destination="UC9-Td-2Q2" id="etB-qE-hB7"/>
