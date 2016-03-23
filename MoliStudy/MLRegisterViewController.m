@@ -46,7 +46,7 @@
         return;
     }
     [SVProgressHUD show];
-    [NetworkManager registerAccount:self.phoneNumberTextField.text password:self.passwordTextField.text];
+    [NetworkManager verify:self.codeTextField.text phone:self.phoneNumberTextField.text];
 }
 
 - (IBAction)getCodeButtonClicked {
@@ -57,6 +57,7 @@
         return;
     }
     [NetworkManager sendVerficationCode:self.phoneNumberTextField.text];
+    
     [self.codeButton setTitle:@"已发送验证码" forState:UIControlStateNormal];
     //60秒倒计时和按钮的disable
 }
@@ -133,6 +134,14 @@
     }];
     [[[NSNotificationCenter defaultCenter] rac_addObserverForName:@"NETWORKREQUEST_REGISTER_FAILURE" object:nil] subscribeNext:^(id x) {
         [SVProgressHUD showErrorWithStatus:@"网络请求失败"];
+        [self performSelector:@selector(dismiss) withObject:nil afterDelay:0.5f];
+    }];
+    
+    [[[NSNotificationCenter defaultCenter] rac_addObserverForName:@"NETWORKREQUEST_VERIFY_SUCCESS" object:nil] subscribeNext:^(id x) {
+        [NetworkManager registerAccount:self.phoneNumberTextField.text password:self.passwordTextField.text];
+    }];
+    [[[NSNotificationCenter defaultCenter] rac_addObserverForName:@"NETWORKREQUEST_VERIFY_FAILURE" object:nil] subscribeNext:^(id x) {
+        [SVProgressHUD showErrorWithStatus:@"验证码输入错误，请重新输入"];
         [self performSelector:@selector(dismiss) withObject:nil afterDelay:0.5f];
     }];
 }
