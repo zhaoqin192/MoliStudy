@@ -34,7 +34,7 @@
 }
 
 - (IBAction)configureButtonClicked {
-    NSLog(@"configure");
+  //  NSLog(@"configure");
 }
 
 - (void)configureNavagationItem{
