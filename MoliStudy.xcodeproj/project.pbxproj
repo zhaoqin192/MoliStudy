@@ -481,6 +481,7 @@
 		30ACF6061CA25C29005B56EC /* MLMeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 30ACF6041CA25C29005B56EC /* MLMeCell.m */; };
 		30ACF6071CA25C29005B56EC /* MLMeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30ACF6051CA25C29005B56EC /* MLMeCell.xib */; };
 		30ACF60A1CA264A0005B56EC /* MLLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30ACF6091CA264A0005B56EC /* MLLoginViewController.m */; };
+		30ACF60D1CA28375005B56EC /* MLRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30ACF60C1CA28375005B56EC /* MLRegisterViewController.m */; };
 		30CF64401C21491F0060B3B9 /* LoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30CF643F1C21491F0060B3B9 /* LoginStoryboard.storyboard */; };
 		30CF64421C214DB10060B3B9 /* RegisterStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30CF64411C214DB10060B3B9 /* RegisterStoryBoard.storyboard */; };
 		30CF645E1C2159270060B3B9 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 30CF645D1C2159270060B3B9 /* iCarousel.m */; };
@@ -1096,6 +1097,8 @@
 		30ACF6051CA25C29005B56EC /* MLMeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MLMeCell.xib; sourceTree = "<group>"; };
 		30ACF6081CA264A0005B56EC /* MLLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLLoginViewController.h; sourceTree = "<group>"; };
 		30ACF6091CA264A0005B56EC /* MLLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLLoginViewController.m; sourceTree = "<group>"; };
+		30ACF60B1CA28375005B56EC /* MLRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLRegisterViewController.h; sourceTree = "<group>"; };
+		30ACF60C1CA28375005B56EC /* MLRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLRegisterViewController.m; sourceTree = "<group>"; };
 		30CF643F1C21491F0060B3B9 /* LoginStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginStoryboard.storyboard; sourceTree = "<group>"; };
 		30CF64411C214DB10060B3B9 /* RegisterStoryBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RegisterStoryBoard.storyboard; sourceTree = "<group>"; };
 		30CF645C1C2159270060B3B9 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
@@ -2123,6 +2126,8 @@
 				309C16C21C0F3E0B001A3B11 /* Register.h */,
 				309C16C31C0F3E0B001A3B11 /* Register.m */,
 				30CF64411C214DB10060B3B9 /* RegisterStoryBoard.storyboard */,
+				30ACF60B1CA28375005B56EC /* MLRegisterViewController.h */,
+				30ACF60C1CA28375005B56EC /* MLRegisterViewController.m */,
 			);
 			name = RegisterView;
 			sourceTree = "<group>";
@@ -3244,6 +3249,7 @@
 				30AAFBAB1C059CD600CD94D5 /* ReportViewController.m in Sources */,
 				30CF64671C2260140060B3B9 /* XTSegmentControl.m in Sources */,
 				30AA1CB91C0816D400CD94D5 /* ReportView.m in Sources */,
+				30ACF60D1CA28375005B56EC /* MLRegisterViewController.m in Sources */,
 				30AA1C461C05A37B00CD94D5 /* DXPopover.m in Sources */,
 				30AAFBA31C0595EC00CD94D5 /* MDRadialProgressLabel.m in Sources */,
 				AC353BAE1C755CF600EB09C9 /* Level.swift in Sources */,

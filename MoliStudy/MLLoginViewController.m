@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
+@property (strong, nonatomic) UIButton *dismissButton;
 @end
 
 @implementation MLLoginViewController
@@ -22,6 +23,7 @@
     [super viewDidLoad];
     [self configureNotifcation];
     [self configureTextField];
+    [self showdismissButton:YES];
 }
 
 - (void)configureTextField{
@@ -31,6 +33,20 @@
         self.nameTextField.text = account.accountName;
         self.passwordTextField.text = account.password;
     };
+}
+
+- (void)showdismissButton:(BOOL)willShow{
+    self.dismissButton.hidden = !willShow;
+    if (!self.dismissButton && willShow) {
+        self.dismissButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 20, 50, 50)];
+        [self.dismissButton setImage:[UIImage imageNamed:@"close"] forState:UIControlStateNormal];
+        [self.dismissButton addTarget:self action:@selector(dismissButtonClicked) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:self.dismissButton];
+    }
+}
+
+- (void)dismissButtonClicked{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (IBAction)forgetPasswordButtonClicked {
