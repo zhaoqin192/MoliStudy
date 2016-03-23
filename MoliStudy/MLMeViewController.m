@@ -7,10 +7,11 @@
 //
 
 #import "MLMeViewController.h"
+#import "MLMeCell.h"
 
-@interface MLMeViewController ()
+@interface MLMeViewController () <UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UIView *headView;
-
+@property (weak, nonatomic) IBOutlet UITableView *myTableView;
 @end
 
 @implementation MLMeViewController
@@ -19,6 +20,11 @@
     [super viewDidLoad];
     self.headView.backgroundColor = highBlue;
     [self configureNavagationItem];
+    [self.myTableView registerNib:[UINib nibWithNibName:@"MLMeCell" bundle:nil] forCellReuseIdentifier:@"MLMeCell"];
+}
+
+- (void)viewDidAppear:(BOOL)animated{
+    [self.myTableView reloadData];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -45,14 +51,19 @@
     [self.navigationItem setBackBarButtonItem:backItem];
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark - <UITableView>
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 2;
 }
-*/
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 4;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    MLMeCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MLMeCell"];
+    return cell;
+}
 
 @end

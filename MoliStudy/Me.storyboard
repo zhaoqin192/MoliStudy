@@ -85,13 +85,25 @@
                                     <constraint firstItem="3Od-Pq-tyP" firstAttribute="centerY" secondItem="WaD-b2-sar" secondAttribute="centerY" id="tgf-un-FSg"/>
                                 </constraints>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ydm-d8-uLf">
+                                <rect key="frame" x="0.0" y="180" width="375" height="487"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="9sE-ZD-Jdp" id="Dve-sk-npJ"/>
+                                    <outlet property="delegate" destination="9sE-ZD-Jdp" id="BEQ-JP-1Yr"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="WaD-b2-sar" firstAttribute="leading" secondItem="Ln2-sv-6k0" secondAttribute="leading" id="168-oI-kXR"/>
+                            <constraint firstAttribute="trailing" secondItem="ydm-d8-uLf" secondAttribute="trailing" id="4DC-KN-i4i"/>
+                            <constraint firstItem="ydm-d8-uLf" firstAttribute="top" secondItem="WaD-b2-sar" secondAttribute="bottom" id="OOz-Q0-JYJ"/>
                             <constraint firstItem="WaD-b2-sar" firstAttribute="top" secondItem="Ln2-sv-6k0" secondAttribute="top" id="Qfw-yc-0vx"/>
                             <constraint firstAttribute="trailing" secondItem="WaD-b2-sar" secondAttribute="trailing" id="UA7-EX-peg"/>
+                            <constraint firstItem="0sz-MX-fiI" firstAttribute="top" secondItem="ydm-d8-uLf" secondAttribute="bottom" id="Xms-wC-euf"/>
                             <constraint firstItem="WaD-b2-sar" firstAttribute="top" secondItem="g4P-3f-ydp" secondAttribute="bottom" id="aOA-G8-yvn"/>
+                            <constraint firstItem="ydm-d8-uLf" firstAttribute="leading" secondItem="Ln2-sv-6k0" secondAttribute="leading" id="uch-LI-nAL"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -103,6 +115,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="headView" destination="WaD-b2-sar" id="B4v-ea-4sb"/>
+                        <outlet property="myTableView" destination="ydm-d8-uLf" id="ClX-jD-i9t"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sjM-VZ-DUY" userLabel="First Responder" sceneMemberID="firstResponder"/>

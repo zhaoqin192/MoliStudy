@@ -478,6 +478,8 @@
 		30ACF5FC1CA23BF9005B56EC /* MLMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30ACF5FB1CA23BF9005B56EC /* MLMeViewController.m */; };
 		30ACF5FF1CA23C5E005B56EC /* Me.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30ACF5FE1CA23C5E005B56EC /* Me.storyboard */; };
 		30ACF6021CA246D9005B56EC /* MLConfigureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30ACF6011CA246D9005B56EC /* MLConfigureViewController.m */; };
+		30ACF6061CA25C29005B56EC /* MLMeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 30ACF6041CA25C29005B56EC /* MLMeCell.m */; };
+		30ACF6071CA25C29005B56EC /* MLMeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30ACF6051CA25C29005B56EC /* MLMeCell.xib */; };
 		30CF64401C21491F0060B3B9 /* LoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30CF643F1C21491F0060B3B9 /* LoginStoryboard.storyboard */; };
 		30CF64421C214DB10060B3B9 /* RegisterStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30CF64411C214DB10060B3B9 /* RegisterStoryBoard.storyboard */; };
 		30CF645E1C2159270060B3B9 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 30CF645D1C2159270060B3B9 /* iCarousel.m */; };
@@ -1088,6 +1090,9 @@
 		30ACF5FE1CA23C5E005B56EC /* Me.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Me.storyboard; sourceTree = "<group>"; };
 		30ACF6001CA246D9005B56EC /* MLConfigureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLConfigureViewController.h; sourceTree = "<group>"; };
 		30ACF6011CA246D9005B56EC /* MLConfigureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLConfigureViewController.m; sourceTree = "<group>"; };
+		30ACF6031CA25C29005B56EC /* MLMeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLMeCell.h; sourceTree = "<group>"; };
+		30ACF6041CA25C29005B56EC /* MLMeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLMeCell.m; sourceTree = "<group>"; };
+		30ACF6051CA25C29005B56EC /* MLMeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MLMeCell.xib; sourceTree = "<group>"; };
 		30CF643F1C21491F0060B3B9 /* LoginStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginStoryboard.storyboard; sourceTree = "<group>"; };
 		30CF64411C214DB10060B3B9 /* RegisterStoryBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RegisterStoryBoard.storyboard; sourceTree = "<group>"; };
 		30CF645C1C2159270060B3B9 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
@@ -2247,6 +2252,9 @@
 			children = (
 				30ACF5FA1CA23BF9005B56EC /* MLMeViewController.h */,
 				30ACF5FB1CA23BF9005B56EC /* MLMeViewController.m */,
+				30ACF6031CA25C29005B56EC /* MLMeCell.h */,
+				30ACF6041CA25C29005B56EC /* MLMeCell.m */,
+				30ACF6051CA25C29005B56EC /* MLMeCell.xib */,
 				30ACF5FE1CA23C5E005B56EC /* Me.storyboard */,
 				30ACF6001CA246D9005B56EC /* MLConfigureViewController.h */,
 				30ACF6011CA246D9005B56EC /* MLConfigureViewController.m */,
@@ -2687,6 +2695,7 @@
 				30AAFB851C058EDD00CD94D5 /* 1.png in Resources */,
 				30AAF9F31C04817600CD94D5 /* coding_emoji_32@2x.png in Resources */,
 				30AAFAC61C04817600CD94D5 /* me_selected@2x.png in Resources */,
+				30ACF6071CA25C29005B56EC /* MLMeCell.xib in Resources */,
 				30AAFA201C04817600CD94D5 /* icon_file_psd@2x.png in Resources */,
 				AC7835B51C7D46AA00BC9302 /* NoteContentView.xib in Resources */,
 				30AAFA7D1C04817600CD94D5 /* messageSystem@2x.png in Resources */,
@@ -3160,6 +3169,7 @@
 				30AAE3CE1C02BBFB00CD94D5 /* StartButtomView.m in Sources */,
 				30CF64641C2253A30060B3B9 /* Project_RootViewController.m in Sources */,
 				30AA1CB81C0816D400CD94D5 /* ProReportTableViewCell.m in Sources */,
+				30ACF6061CA25C29005B56EC /* MLMeCell.m in Sources */,
 				AC78CA2F1C0BF00200A9585F /* Record+CoreDataProperties.swift in Sources */,
 				30AA1C501C05A88500CD94D5 /* QuestionModel.m in Sources */,
 				30AA1C531C05A96D00CD94D5 /* TextStyle.m in Sources */,
