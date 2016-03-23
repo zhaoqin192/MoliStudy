@@ -480,6 +480,7 @@
 		30ACF6021CA246D9005B56EC /* MLConfigureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30ACF6011CA246D9005B56EC /* MLConfigureViewController.m */; };
 		30ACF6061CA25C29005B56EC /* MLMeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 30ACF6041CA25C29005B56EC /* MLMeCell.m */; };
 		30ACF6071CA25C29005B56EC /* MLMeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30ACF6051CA25C29005B56EC /* MLMeCell.xib */; };
+		30ACF60A1CA264A0005B56EC /* MLLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30ACF6091CA264A0005B56EC /* MLLoginViewController.m */; };
 		30CF64401C21491F0060B3B9 /* LoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30CF643F1C21491F0060B3B9 /* LoginStoryboard.storyboard */; };
 		30CF64421C214DB10060B3B9 /* RegisterStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30CF64411C214DB10060B3B9 /* RegisterStoryBoard.storyboard */; };
 		30CF645E1C2159270060B3B9 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 30CF645D1C2159270060B3B9 /* iCarousel.m */; };
@@ -1093,6 +1094,8 @@
 		30ACF6031CA25C29005B56EC /* MLMeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLMeCell.h; sourceTree = "<group>"; };
 		30ACF6041CA25C29005B56EC /* MLMeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLMeCell.m; sourceTree = "<group>"; };
 		30ACF6051CA25C29005B56EC /* MLMeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MLMeCell.xib; sourceTree = "<group>"; };
+		30ACF6081CA264A0005B56EC /* MLLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLLoginViewController.h; sourceTree = "<group>"; };
+		30ACF6091CA264A0005B56EC /* MLLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLLoginViewController.m; sourceTree = "<group>"; };
 		30CF643F1C21491F0060B3B9 /* LoginStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginStoryboard.storyboard; sourceTree = "<group>"; };
 		30CF64411C214DB10060B3B9 /* RegisterStoryBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RegisterStoryBoard.storyboard; sourceTree = "<group>"; };
 		30CF645C1C2159270060B3B9 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
@@ -1493,6 +1496,8 @@
 			isa = PBXGroup;
 			children = (
 				30CF643F1C21491F0060B3B9 /* LoginStoryboard.storyboard */,
+				30ACF6081CA264A0005B56EC /* MLLoginViewController.h */,
+				30ACF6091CA264A0005B56EC /* MLLoginViewController.m */,
 				30AAF8041C047B4300CD94D5 /* LoginViewController.h */,
 				30AAF8051C047B4300CD94D5 /* LoginViewController.m */,
 				30AAF7FF1C047B2300CD94D5 /* Input_OnlyText_Cell.h */,
@@ -3220,6 +3225,7 @@
 				AC78CA411C0BF2E100A9585F /* PracticeDAO.swift in Sources */,
 				30ACF6021CA246D9005B56EC /* MLConfigureViewController.m in Sources */,
 				30AAFB991C05959200CD94D5 /* MainTableViewCell.m in Sources */,
+				30ACF60A1CA264A0005B56EC /* MLLoginViewController.m in Sources */,
 				30AAFB171C048D0200CD94D5 /* Login.m in Sources */,
 				30AA1C311C05A2A300CD94D5 /* PickerView.m in Sources */,
 				AC39B9171BFF649A001CE453 /* MoliStudy.xcdatamodeld in Sources */,

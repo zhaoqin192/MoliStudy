@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="f7g-VR-fho">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="gyJ-V2-4GR">
             <objects>
-                <viewController storyboardIdentifier="LoginViewController" id="f7g-VR-fho" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="f7g-VR-fho" customClass="MLLoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DHm-0y-Yq1"/>
                         <viewControllerLayoutGuide type="bottom" id="i5T-eZ-nA7"/>
@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0MF-4Z-oPv">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_account_circle" translatesAutoresizingMaskIntoConstraints="NO" id="0MF-4Z-oPv">
                                 <rect key="frame" x="142" y="110" width="90" height="90"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="LAJ-XH-kZ3"/>
@@ -51,16 +51,25 @@
                                 <state key="normal" title="登录">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginButtonClicked" destination="f7g-VR-fho" eventType="touchUpInside" id="31O-jf-VdT"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L5D-PB-9Vk">
                                 <rect key="frame" x="42" y="562" width="75" height="30"/>
                                 <state key="normal" title="忘记密码？">
                                     <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="forgetPasswordButtonClicked" destination="f7g-VR-fho" eventType="touchUpInside" id="4hW-It-NkP"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J1L-qc-ZgA">
                                 <rect key="frame" x="302" y="562" width="30" height="30"/>
                                 <state key="normal" title="注册"/>
+                                <connections>
+                                    <action selector="registerButtonClicked" destination="f7g-VR-fho" eventType="touchUpInside" id="pkC-1I-CF0"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -88,10 +97,19 @@
                         </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="loginButton" destination="ghd-Nm-3fI" id="q3g-uC-q5j"/>
+                        <outlet property="nameTextField" destination="hFs-ed-rJV" id="FHS-bi-M0b"/>
+                        <outlet property="passwordTextField" destination="tDW-ZQ-AfT" id="4sd-GD-fjg"/>
+                        <outlet property="titleImageView" destination="0MF-4Z-oPv" id="50N-mC-yn6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gnT-ta-qxe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="464.5" y="357.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ic_account_circle" width="24" height="24"/>
+    </resources>
 </document>

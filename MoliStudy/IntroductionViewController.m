@@ -9,7 +9,8 @@
 #import "IntroductionViewController.h"
 #import "SMPageControl.h"
 #import <NYXImagesKit/NYXImagesKit.h>
-#import "LoginViewController.h"
+#import "MLLoginViewController.h"
+
 #import "RegisterViewController.h"
 #import "Project_RootViewController.h"
 #import "MLMainViewController.h"
@@ -239,13 +240,12 @@
 }
 
 - (void)loginButtonClicked{
-   MLMainViewController *vc = [[UIStoryboard storyboardWithName:@"MainView" bundle:nil] instantiateInitialViewController];
-//    LoginViewController *vc = [[LoginViewController alloc] init];
-//    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
-//    [self presentViewController:nav animated:YES completion:nil];
-//    Project_RootViewController * vc = [[Project_RootViewController alloc] init];
-//    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    MLLoginViewController *vc = [[UIStoryboard storyboardWithName:@"LoginStoryboard" bundle:nil] instantiateInitialViewController];
     [self presentViewController:vc animated:YES completion:nil];
+    
+//   MLMainViewController *vc = [[UIStoryboard storyboardWithName:@"MainView" bundle:nil] instantiateInitialViewController];
+//    [self presentViewController:vc animated:YES completion:nil];
+    
 }
 
 #pragma mark Super
