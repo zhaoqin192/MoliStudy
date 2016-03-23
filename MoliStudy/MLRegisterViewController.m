@@ -8,15 +8,16 @@
 
 #import "MLRegisterViewController.h"
 #import "MLMainViewController.h"
+#import "MLLoginViewController.h"
 
 @interface MLRegisterViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *headImageView;
 @property (weak, nonatomic) IBOutlet UITextField *phoneNumberTextField;
 @property (weak, nonatomic) IBOutlet UITextField *codeTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
-@property (weak, nonatomic) IBOutlet UILabel *loginLabel;
 @property (strong, nonatomic) UIButton *dismissButton;
 @property (weak, nonatomic) IBOutlet UIButton *codeButton;
+@property (strong, nonatomic) NSTimer *timer;
 @end
 
 @implementation MLRegisterViewController
@@ -27,6 +28,12 @@
     [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
     [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeClear];
     [self configureNotifcation];
+    self.codeButton.titleLabel.font = [UIFont systemFontOfSize:13];
+}
+
+- (IBAction)loginLabelClicked{
+    MLLoginViewController *vc = [[UIStoryboard storyboardWithName:@"LoginStoryboard" bundle:nil] instantiateInitialViewController];
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 - (IBAction)registerButtonClicked {
@@ -57,9 +64,24 @@
         return;
     }
     [NetworkManager sendVerficationCode:self.phoneNumberTextField.text];
-    
-    [self.codeButton setTitle:@"已发送验证码" forState:UIControlStateNormal];
-    //60秒倒计时和按钮的disable
+    [self beginTimer];
+}
+
+- (void)beginTimer{
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(configureCodeButtonStatus) userInfo:nil repeats:YES];
+    self.codeButton.enabled = NO;
+}
+
+- (void)configureCodeButtonStatus{
+    static NSInteger time = 60;
+    [self.codeButton setTitle:[NSString stringWithFormat:@"%@ %ld",@"重新发送",(long)time] forState:UIControlStateNormal];
+    time = time - 1;
+    if (time == 0) {
+        time = 60;
+        [self.timer invalidate];
+        [self.codeButton setTitle:@"获取验证码" forState:UIControlStateNormal];
+        self.codeButton.enabled = YES;
+    }
 }
 
 - (void)dismiss {
@@ -91,6 +113,7 @@
 
 - (void)dealloc{
     [self removeNotification];
+    [self.timer invalidate];
 }
 
 #pragma mark -<VerficationCode>

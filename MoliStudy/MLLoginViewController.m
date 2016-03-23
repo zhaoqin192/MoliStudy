@@ -8,6 +8,7 @@
 
 #import "MLLoginViewController.h"
 #import "MLMainViewController.h"
+#import "MLRegisterViewController.h"
 
 @interface MLLoginViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *titleImageView;
@@ -54,7 +55,8 @@
 }
 
 - (IBAction)registerButtonClicked {
-    NSLog(@"register");
+    MLRegisterViewController *vc = [[UIStoryboard storyboardWithName:@"RegisterStoryBoard" bundle:nil] instantiateInitialViewController];
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 

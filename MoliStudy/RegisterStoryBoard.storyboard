@@ -73,7 +73,7 @@
                                     <action selector="registerButtonClicked" destination="ahP-sz-cD6" eventType="touchUpInside" id="Xqt-Ek-5tU"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ySQ-AG-0Us">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ySQ-AG-0Us">
                                 <rect key="frame" x="222" y="329" width="110" height="44"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="获取验证码">
@@ -83,12 +83,15 @@
                                     <action selector="getCodeButtonClicked" destination="ahP-sz-cD6" eventType="touchUpInside" id="K77-0S-Rxo"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="已注册用户登录" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UC9-Td-2Q2">
-                                <rect key="frame" x="128" y="606" width="119" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SSq-vz-2IG">
+                                <rect key="frame" x="135" y="587" width="105" height="30"/>
+                                <state key="normal" title="已注册用户登录">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginLabelClicked" destination="ahP-sz-cD6" eventType="touchUpInside" id="Hsg-2Y-GSD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -97,26 +100,24 @@
                             <constraint firstItem="ySQ-AG-0Us" firstAttribute="top" secondItem="MJG-bd-TYp" secondAttribute="top" id="6LP-JM-xEA"/>
                             <constraint firstItem="r67-vm-OQa" firstAttribute="centerX" secondItem="9id-Mn-WF3" secondAttribute="centerX" id="6Yg-Os-VwP"/>
                             <constraint firstItem="ySQ-AG-0Us" firstAttribute="trailing" secondItem="e0Q-gh-ng7" secondAttribute="trailing" id="BMM-NS-EjE"/>
+                            <constraint firstItem="SSq-vz-2IG" firstAttribute="centerX" secondItem="9id-Mn-WF3" secondAttribute="centerX" id="EiI-l9-v6k"/>
                             <constraint firstItem="e0Q-gh-ng7" firstAttribute="top" secondItem="fwB-Tf-6aT" secondAttribute="bottom" constant="100" id="HwV-7O-SNb"/>
-                            <constraint firstAttribute="bottom" secondItem="UC9-Td-2Q2" secondAttribute="bottom" constant="40" id="KQO-o6-C5k"/>
                             <constraint firstItem="ySQ-AG-0Us" firstAttribute="leading" secondItem="MJG-bd-TYp" secondAttribute="trailing" constant="10" id="QIY-AB-Ani"/>
                             <constraint firstItem="6ej-Wn-vHN" firstAttribute="centerX" secondItem="9id-Mn-WF3" secondAttribute="centerX" id="Ur2-tb-DTG"/>
                             <constraint firstItem="fwB-Tf-6aT" firstAttribute="top" secondItem="Hyf-eA-I4x" secondAttribute="bottom" constant="90" id="c0f-Pn-QOW"/>
                             <constraint firstItem="e0Q-gh-ng7" firstAttribute="centerX" secondItem="9id-Mn-WF3" secondAttribute="centerX" id="fpr-KE-oR9"/>
                             <constraint firstItem="fwB-Tf-6aT" firstAttribute="centerX" secondItem="9id-Mn-WF3" secondAttribute="centerX" id="grR-i6-wNq"/>
-                            <constraint firstItem="UC9-Td-2Q2" firstAttribute="centerX" secondItem="6ej-Wn-vHN" secondAttribute="centerX" id="hZ9-Cm-fhq"/>
                             <constraint firstItem="MJG-bd-TYp" firstAttribute="centerX" secondItem="9id-Mn-WF3" secondAttribute="centerX" id="mAM-vu-myG"/>
-                            <constraint firstItem="UC9-Td-2Q2" firstAttribute="centerX" secondItem="9id-Mn-WF3" secondAttribute="centerX" id="oPw-cV-fyw"/>
                             <constraint firstItem="e0Q-gh-ng7" firstAttribute="centerY" secondItem="9id-Mn-WF3" secondAttribute="centerY" id="qVl-Zo-QrY"/>
                             <constraint firstItem="MJG-bd-TYp" firstAttribute="leading" secondItem="r67-vm-OQa" secondAttribute="leading" id="qaZ-t7-Omx"/>
                             <constraint firstItem="6ej-Wn-vHN" firstAttribute="top" secondItem="r67-vm-OQa" secondAttribute="bottom" constant="30" id="rnv-Vc-Y70"/>
+                            <constraint firstItem="GGI-Dx-RsY" firstAttribute="top" secondItem="SSq-vz-2IG" secondAttribute="bottom" constant="50" id="uaI-z5-5k0"/>
                             <constraint firstItem="MJG-bd-TYp" firstAttribute="top" secondItem="e0Q-gh-ng7" secondAttribute="bottom" constant="25" id="zE7-xd-0ik"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="qVl-Zo-QrY"/>
                                 <exclude reference="mAM-vu-myG"/>
-                                <exclude reference="oPw-cV-fyw"/>
                             </mask>
                         </variation>
                     </view>
@@ -125,7 +126,6 @@
                         <outlet property="codeButton" destination="ySQ-AG-0Us" id="btj-zO-c5b"/>
                         <outlet property="codeTextField" destination="MJG-bd-TYp" id="Ml9-vu-raS"/>
                         <outlet property="headImageView" destination="fwB-Tf-6aT" id="3Rh-hg-vpI"/>
-                        <outlet property="loginLabel" destination="UC9-Td-2Q2" id="etB-qE-hB7"/>
                         <outlet property="passwordTextField" destination="r67-vm-OQa" id="nk5-l4-WT9"/>
                         <outlet property="phoneNumberTextField" destination="e0Q-gh-ng7" id="3hf-FB-DmF"/>
                     </connections>
