@@ -49,6 +49,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SVProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>TPKeyboardAvoiding.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -57,12 +62,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>036EB906780295B6C8A80B3D1D0064CA</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>17966BACAA4F822AD0C36F70F9BA8DC6</key>
+		<key>35A3E6AFF06E578FABB31CAE20E41938</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -92,7 +92,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BFFC458E92BA75FE9EDCC6BE9E4BB665</key>
+		<key>CBD11F05D29BF0B1522F0FFFCE99BFF0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -103,6 +103,16 @@
 			<true/>
 		</dict>
 		<key>DDDC9383749D414B2CD69AAB9B4576A8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EB94EAD4D2C87A93986523E2D35AC2BB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>ED8FB7F01BCBEE65A99A352B0565C9A1</key>
 		<dict>
 			<key>primary</key>
 			<true/>

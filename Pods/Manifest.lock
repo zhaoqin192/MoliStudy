@@ -32,6 +32,7 @@ PODS:
   - ReactiveCocoa/no-arc (2.3.1)
   - ReactiveCocoa/UI (2.3.1):
     - ReactiveCocoa/Core
+  - SVProgressHUD (2.0)
   - TPKeyboardAvoiding (1.2.4)
 
 DEPENDENCIES:
@@ -42,6 +43,7 @@ DEPENDENCIES:
   - MBCircularProgressBar
   - NYXImagesKit (= 2.3)
   - ReactiveCocoa (= 2.3.1)
+  - SVProgressHUD
   - TPKeyboardAvoiding (= 1.2.4)
 
 SPEC CHECKSUMS:
@@ -52,6 +54,7 @@ SPEC CHECKSUMS:
   MBCircularProgressBar: ff3b8e2f441214d9ee122a24ba0d4d00cc7de881
   NYXImagesKit: 8163e3335a40eaa173ca5bbbf81fafb57d3947eb
   ReactiveCocoa: 3fe9b233ca6db810e86681b5749488564c1179a1
+  SVProgressHUD: e9e7c893686a20da55a28015ed384d9425e15479
   TPKeyboardAvoiding: 0a40dfbb0af7c8bdae1dd457496dccfd217d85f6
 
 COCOAPODS: 0.39.0

@@ -19,6 +19,7 @@
 #import "UIView+Frame.h"
 #import "MoliStudy-Swift.h"
 #import "MBCircularProgressBarView.h"
+#import "SVProgressHUD.h"
 
 #define kScreen_Bounds [UIScreen mainScreen].bounds
 #define ScreenHeight    [UIScreen mainScreen].bounds.size.height

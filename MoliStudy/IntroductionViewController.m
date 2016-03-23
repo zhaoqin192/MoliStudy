@@ -13,7 +13,6 @@
 
 #import "RegisterViewController.h"
 #import "Project_RootViewController.h"
-#import "MLMainViewController.h"
 
 @interface IntroductionViewController ()
 
@@ -242,10 +241,6 @@
 - (void)loginButtonClicked{
     MLLoginViewController *vc = [[UIStoryboard storyboardWithName:@"LoginStoryboard" bundle:nil] instantiateInitialViewController];
     [self presentViewController:vc animated:YES completion:nil];
-    
-//   MLMainViewController *vc = [[UIStoryboard storyboardWithName:@"MainView" bundle:nil] instantiateInitialViewController];
-//    [self presentViewController:vc animated:YES completion:nil];
-    
 }
 
 #pragma mark Super
