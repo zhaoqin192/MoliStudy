@@ -10,6 +10,7 @@
 #import "CollectionViewController.h"
 #import "HJCarouselViewLayout.h"
 #import "MLCardViewController.h"
+#import "MLMeViewController.h"
 
 @interface MLMainViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *titleButton;
@@ -52,6 +53,14 @@
 
 - (IBAction)BottomButtonClicked {
     NSLog(@"BottomButtonClicked");
+}
+- (IBAction)leftBarButtonClicked:(UIBarButtonItem *)sender {
+    MLMeViewController *vc = [[UIStoryboard storyboardWithName:@"Me" bundle:nil] instantiateInitialViewController];
+    [self presentViewController:vc animated:YES completion:nil];
+   // [self.navigationController pushViewController:vc animated:YES];
+}
+- (IBAction)rightBarButtonClicked:(UIBarButtonItem *)sender {
+    NSLog(@"right");
 }
 
 /*

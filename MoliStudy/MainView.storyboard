@@ -69,8 +69,16 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Moli GMAT" id="aa1-wm-Gvr">
-                        <barButtonItem key="leftBarButtonItem" image="ic_face_white" id="9uK-PB-Sri"/>
-                        <barButtonItem key="rightBarButtonItem" image="ic_brightness_high_white" id="vxY-k3-Uaz"/>
+                        <barButtonItem key="leftBarButtonItem" image="ic_face_white" id="9uK-PB-Sri">
+                            <connections>
+                                <action selector="leftBarButtonClicked:" destination="BYZ-38-t0r" id="Ajj-Hy-gmi"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="ic_brightness_high_white" id="vxY-k3-Uaz">
+                            <connections>
+                                <action selector="rightBarButtonClicked:" destination="BYZ-38-t0r" id="KhQ-qE-YPP"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>

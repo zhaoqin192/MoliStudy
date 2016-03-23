@@ -475,6 +475,9 @@
 		30AAFBA51C0595EC00CD94D5 /* MDRadialProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AAFBA21C0595EC00CD94D5 /* MDRadialProgressView.m */; };
 		30AAFBAB1C059CD600CD94D5 /* ReportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AAFBAA1C059CD600CD94D5 /* ReportViewController.m */; };
 		30AAFBAF1C059CED00CD94D5 /* ReportTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AAFBAE1C059CED00CD94D5 /* ReportTableViewCell.m */; };
+		30ACF5FC1CA23BF9005B56EC /* MLMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30ACF5FB1CA23BF9005B56EC /* MLMeViewController.m */; };
+		30ACF5FF1CA23C5E005B56EC /* Me.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30ACF5FE1CA23C5E005B56EC /* Me.storyboard */; };
+		30ACF6021CA246D9005B56EC /* MLConfigureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30ACF6011CA246D9005B56EC /* MLConfigureViewController.m */; };
 		30CF64401C21491F0060B3B9 /* LoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30CF643F1C21491F0060B3B9 /* LoginStoryboard.storyboard */; };
 		30CF64421C214DB10060B3B9 /* RegisterStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30CF64411C214DB10060B3B9 /* RegisterStoryBoard.storyboard */; };
 		30CF645E1C2159270060B3B9 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 30CF645D1C2159270060B3B9 /* iCarousel.m */; };
@@ -1080,6 +1083,11 @@
 		30AAFBAA1C059CD600CD94D5 /* ReportViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportViewController.m; sourceTree = "<group>"; };
 		30AAFBAD1C059CED00CD94D5 /* ReportTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportTableViewCell.h; sourceTree = "<group>"; };
 		30AAFBAE1C059CED00CD94D5 /* ReportTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportTableViewCell.m; sourceTree = "<group>"; };
+		30ACF5FA1CA23BF9005B56EC /* MLMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLMeViewController.h; sourceTree = "<group>"; };
+		30ACF5FB1CA23BF9005B56EC /* MLMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLMeViewController.m; sourceTree = "<group>"; };
+		30ACF5FE1CA23C5E005B56EC /* Me.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Me.storyboard; sourceTree = "<group>"; };
+		30ACF6001CA246D9005B56EC /* MLConfigureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLConfigureViewController.h; sourceTree = "<group>"; };
+		30ACF6011CA246D9005B56EC /* MLConfigureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLConfigureViewController.m; sourceTree = "<group>"; };
 		30CF643F1C21491F0060B3B9 /* LoginStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginStoryboard.storyboard; sourceTree = "<group>"; };
 		30CF64411C214DB10060B3B9 /* RegisterStoryBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RegisterStoryBoard.storyboard; sourceTree = "<group>"; };
 		30CF645C1C2159270060B3B9 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
@@ -2234,6 +2242,18 @@
 			name = ReportView;
 			sourceTree = "<group>";
 		};
+		30ACF5FD1CA23C01005B56EC /* MeView */ = {
+			isa = PBXGroup;
+			children = (
+				30ACF5FA1CA23BF9005B56EC /* MLMeViewController.h */,
+				30ACF5FB1CA23BF9005B56EC /* MLMeViewController.m */,
+				30ACF5FE1CA23C5E005B56EC /* Me.storyboard */,
+				30ACF6001CA246D9005B56EC /* MLConfigureViewController.h */,
+				30ACF6011CA246D9005B56EC /* MLConfigureViewController.m */,
+			);
+			name = MeView;
+			sourceTree = "<group>";
+		};
 		30CF64461C2155410060B3B9 /* iCarousel */ = {
 			isa = PBXGroup;
 			children = (
@@ -2343,6 +2363,7 @@
 			isa = PBXGroup;
 			children = (
 				308866201C7E9DBB009042B6 /* MainView */,
+				30ACF5FD1CA23C01005B56EC /* MeView */,
 				AC7DD1771C75AFAD00E1874C /* SubjectView */,
 				AC53B7BD1C014E16007D3FE8 /* apiTest */,
 				30AAE3BB1C02B79900CD94D5 /* AppDelegate */,
@@ -2871,6 +2892,7 @@
 				30AAFB751C058EDD00CD94D5 /* menu.png in Resources */,
 				30AAFB141C04817600CD94D5 /* xtsegment_bordor_right@2x.png in Resources */,
 				30AAFAEE1C04817600CD94D5 /* timeline_icon_unread@2x.png in Resources */,
+				30ACF5FF1CA23C5E005B56EC /* Me.storyboard in Resources */,
 				30AAFB001C04817600CD94D5 /* tipIcon_User@2x.png in Resources */,
 				30AAFB7B1C058EDD00CD94D5 /* touxiang.png in Resources */,
 				30AAFB871C058EDD00CD94D5 /* 3.png in Resources */,
@@ -3133,6 +3155,7 @@
 				AC7D1F731C798E0B004021FA /* OptionTableViewCell.m in Sources */,
 				AC78CA3B1C0BF29D00A9585F /* NetworkManager.swift in Sources */,
 				30AAFBA41C0595EC00CD94D5 /* MDRadialProgressTheme.m in Sources */,
+				30ACF5FC1CA23BF9005B56EC /* MLMeViewController.m in Sources */,
 				30AA1CBA1C0816D400CD94D5 /* ReportProgressViewController.m in Sources */,
 				30AAE3CE1C02BBFB00CD94D5 /* StartButtomView.m in Sources */,
 				30CF64641C2253A30060B3B9 /* Project_RootViewController.m in Sources */,
@@ -3185,6 +3208,7 @@
 				30AA1C2F1C05A2A300CD94D5 /* tabView.m in Sources */,
 				AC78CA301C0BF00200A9585F /* Record.swift in Sources */,
 				AC78CA411C0BF2E100A9585F /* PracticeDAO.swift in Sources */,
+				30ACF6021CA246D9005B56EC /* MLConfigureViewController.m in Sources */,
 				30AAFB991C05959200CD94D5 /* MainTableViewCell.m in Sources */,
 				30AAFB171C048D0200CD94D5 /* Login.m in Sources */,
 				30AA1C311C05A2A300CD94D5 /* PickerView.m in Sources */,
@@ -3376,6 +3400,7 @@
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "MoliStudy/MoliStudy-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -3399,6 +3424,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "MoliStudy/MoliStudy-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
