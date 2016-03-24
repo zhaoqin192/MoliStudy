@@ -18,6 +18,7 @@
 @property (strong, nonatomic) UIButton *dismissButton;
 @property (weak, nonatomic) IBOutlet UIButton *codeButton;
 @property (strong, nonatomic) NSTimer *timer;
+@property (weak, nonatomic) IBOutlet UIButton *registerButton;
 @end
 
 @implementation MLRegisterViewController
@@ -29,6 +30,17 @@
     [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeClear];
     [self configureNotifcation];
     self.codeButton.titleLabel.font = [UIFont systemFontOfSize:13];
+    if (self.isForgetPassword) {
+        self.phoneNumberTextField.placeholder = @"注册时使用的电话号码";
+        self.passwordTextField.placeholder = @"新密码";
+        self.codeTextField.placeholder = @"验证码";
+        [self.registerButton setTitle:@"修改密码" forState:UIControlStateNormal];
+    }else{
+        self.phoneNumberTextField.placeholder = @"电话号码";
+        self.passwordTextField.placeholder = @"密码";
+        self.codeTextField.placeholder = @"验证码";
+        [self.registerButton setTitle:@"注册" forState:UIControlStateNormal];
+    }
 }
 
 - (IBAction)loginLabelClicked{
@@ -160,11 +172,33 @@
         [self performSelector:@selector(dismiss) withObject:nil afterDelay:0.5f];
     }];
     
+    
     [[[NSNotificationCenter defaultCenter] rac_addObserverForName:@"NETWORKREQUEST_VERIFY_SUCCESS" object:nil] subscribeNext:^(id x) {
-        [NetworkManager registerAccount:self.phoneNumberTextField.text password:self.passwordTextField.text];
+        if(!self.isForgetPassword){
+            [NetworkManager registerAccount:self.phoneNumberTextField.text password:self.passwordTextField.text];
+            NSLog(@"!is");
+        }
+        else{
+            [NetworkManager findPwd:self.phoneNumberTextField.text password:self.passwordTextField.text];
+            NSLog(@"is");
+        }
     }];
     [[[NSNotificationCenter defaultCenter] rac_addObserverForName:@"NETWORKREQUEST_VERIFY_FAILURE" object:nil] subscribeNext:^(id x) {
         [SVProgressHUD showErrorWithStatus:@"验证码输入错误，请重新输入"];
+        [self performSelector:@selector(dismiss) withObject:nil afterDelay:0.5f];
+    }];
+    
+    
+    [[[NSNotificationCenter defaultCenter] rac_addObserverForName:@"NETWORKREQUEST_FIND_SUCCESS" object:nil] subscribeNext:^(id x) {
+        [SVProgressHUD showSuccessWithStatus:@"修改密码成功，请重新登录"];
+        [self performSelector:@selector(dismissButtonClicked) withObject:nil afterDelay:0.5f];
+    }];
+    [[[NSNotificationCenter defaultCenter] rac_addObserverForName:@"NETWORKREQUEST_FIND_ERROR_INVALID" object:nil] subscribeNext:^(id x) {
+        [SVProgressHUD showErrorWithStatus:@"修改密码失败，请重新输入"];
+        [self performSelector:@selector(dismiss) withObject:nil afterDelay:0.5f];
+    }];
+    [[[NSNotificationCenter defaultCenter] rac_addObserverForName:@"NETWORKREQUEST_FIND_ERROR" object:nil] subscribeNext:^(id x) {
+        [SVProgressHUD showErrorWithStatus:@"修改密码失败，请重新输入"];
         [self performSelector:@selector(dismiss) withObject:nil afterDelay:0.5f];
     }];
 }

@@ -51,7 +51,9 @@
 }
 
 - (IBAction)forgetPasswordButtonClicked {
-    NSLog(@"forget");
+    MLRegisterViewController *vc = [[UIStoryboard storyboardWithName:@"RegisterStoryBoard" bundle:nil] instantiateInitialViewController];
+    vc.isForgetPassword = YES;
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 - (IBAction)registerButtonClicked {

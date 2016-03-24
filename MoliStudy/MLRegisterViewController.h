@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface MLRegisterViewController : UIViewController
-
+@property (nonatomic, assign) BOOL isForgetPassword;
 @end

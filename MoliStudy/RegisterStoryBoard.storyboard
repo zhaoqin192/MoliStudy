@@ -23,7 +23,7 @@
                                     <constraint firstAttribute="width" constant="160" id="s1c-ZV-qN9"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="电话号码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e0Q-gh-ng7">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e0Q-gh-ng7">
                                 <rect key="frame" x="42" y="260" width="290" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="Mot-5s-QKo"/>
@@ -35,7 +35,7 @@
                                     <action selector="KeyBoardEnter" destination="ahP-sz-cD6" eventType="editingDidEndOnExit" id="398-Iv-RAx"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="验证码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MJG-bd-TYp">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MJG-bd-TYp">
                                 <rect key="frame" x="42" y="329" width="170" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="170" id="1DQ-xl-q0A"/>
@@ -47,7 +47,7 @@
                                     <action selector="KeyBoardEnter" destination="ahP-sz-cD6" eventType="editingDidEndOnExit" id="7qS-Gm-gPL"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r67-vm-OQa">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r67-vm-OQa">
                                 <rect key="frame" x="42" y="398" width="290" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="Iuw-Oo-8pC"/>
@@ -128,6 +128,7 @@
                         <outlet property="headImageView" destination="fwB-Tf-6aT" id="3Rh-hg-vpI"/>
                         <outlet property="passwordTextField" destination="r67-vm-OQa" id="nk5-l4-WT9"/>
                         <outlet property="phoneNumberTextField" destination="e0Q-gh-ng7" id="3hf-FB-DmF"/>
+                        <outlet property="registerButton" destination="6ej-Wn-vHN" id="hJN-Gw-pkC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dyB-dC-Sz7" userLabel="First Responder" sceneMemberID="firstResponder"/>
