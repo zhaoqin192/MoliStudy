@@ -7,6 +7,7 @@
 //
 
 #import "MLConfigureViewController.h"
+#import "IntroductionViewController.h"
 
 @interface MLConfigureViewController ()
 
@@ -37,7 +38,15 @@
 }
 
 - (void)logoutButtonClicked{
-    NSLog(@"logout");
+    UIAlertController *alertvc = [UIAlertController alertControllerWithTitle:@"确定要退出登录吗" message:@"" preferredStyle:UIAlertControllerStyleActionSheet];
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+    [alertvc addAction:cancel];
+    UIAlertAction *sure = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+        IntroductionViewController *vc = [[IntroductionViewController alloc] init];
+        [self presentViewController:vc animated:NO completion:nil];
+    }];
+    [alertvc addAction:sure];
+    [self presentViewController:alertvc animated:YES completion:nil];
 }
 
 @end
