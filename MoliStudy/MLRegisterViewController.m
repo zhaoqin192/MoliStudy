@@ -69,7 +69,7 @@
 }
 
 - (IBAction)getCodeButtonClicked {
-    [self.view endEditing:YES];
+    [self.codeTextField becomeFirstResponder];
     if (![self isValidPhoneNumber:self.phoneNumberTextField.text]) {
         [SVProgressHUD showErrorWithStatus:@"请输入正确的电话号码"];
         [self performSelector:@selector(dismiss) withObject:nil afterDelay:0.5f];
@@ -190,7 +190,7 @@
     
     
     [[[NSNotificationCenter defaultCenter] rac_addObserverForName:@"NETWORKREQUEST_FIND_SUCCESS" object:nil] subscribeNext:^(id x) {
-        [SVProgressHUD showSuccessWithStatus:@"修改密码成功，请重新登录"];
+        [SVProgressHUD showSuccessWithStatus:@"修改密码成功"];
         [self performSelector:@selector(dismissButtonClicked) withObject:nil afterDelay:0.5f];
     }];
     [[[NSNotificationCenter defaultCenter] rac_addObserverForName:@"NETWORKREQUEST_FIND_ERROR_INVALID" object:nil] subscribeNext:^(id x) {

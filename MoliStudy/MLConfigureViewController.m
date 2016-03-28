@@ -8,6 +8,7 @@
 
 #import "MLConfigureViewController.h"
 #import "IntroductionViewController.h"
+#import "MLRegisterViewController.h"
 
 @interface MLConfigureViewController ()
 
@@ -21,7 +22,16 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSLog(@"%zd",indexPath.row);
+    switch (indexPath.row) {
+        case 6:{
+            MLRegisterViewController *vc = [[UIStoryboard storyboardWithName:@"RegisterStoryBoard" bundle:nil] instantiateInitialViewController];
+            vc.isForgetPassword = YES;
+            [self.navigationController pushViewController:vc animated:YES];
+            break;
+        }
+        default:
+            break;
+    }
 }
 
 - (UIView *)myFootView{
