@@ -91,17 +91,17 @@
         switch (indexPath.row) {
             case 0:{
                 cell.titleLabel.text = @"手机号";
-                cell.contentLabel.text = @"18888888888";
+                cell.contentLabel.text = @"18810541278";
                 break;
             }
             case 1:{
                 cell.titleLabel.text = @"QQ号码";
-                cell.contentLabel.text = @"88888888";
+                cell.contentLabel.text = @"3782098212";
                 break;
             }
             case 2:{
                 cell.titleLabel.text = @"邮箱";
-                cell.contentLabel.text = @"88888888@qq.com";
+                cell.contentLabel.text = @"3782098212@qq.com";
                 break;
             }
             case 3:{
