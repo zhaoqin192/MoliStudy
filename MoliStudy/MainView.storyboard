@@ -217,7 +217,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0_default" translatesAutoresizingMaskIntoConstraints="NO" id="CO3-ZP-cDc">
+                                        <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0_default" translatesAutoresizingMaskIntoConstraints="NO" id="CO3-ZP-cDc">
                                             <rect key="frame" x="13" y="13" width="25" height="25"/>
                                         </imageView>
                                     </subviews>

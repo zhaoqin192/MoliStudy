@@ -9,7 +9,7 @@
 #import "MLQuestionCardCollectionViewController.h"
 
 @interface MLQuestionCardCollectionViewController ()
-
+@property (nonatomic, copy) NSArray *answers;
 @end
 
 @implementation MLQuestionCardCollectionViewController
@@ -26,6 +26,8 @@
     self.collectionView.dataSource = self;
     [self.view addSubview:self.collectionView];
     self.collectionView.backgroundColor = [UIColor whiteColor];
+    
+    self.answers = [[SubjectDAO sharedManager] findAll];
 }
 
 #pragma mark -- UICollectionViewDataSource
@@ -48,7 +50,12 @@
     if (!cell) {
         NSLog(@"无法创建CollectionViewCell时打印，自定义的cell就不可能进来了。");
     }
-    //cell.backgroundColor = [UIColor redColor];
+    Subject *sub = self.answers[indexPath.row];
+    NSLog(@"%d",sub.correctAnswer);
+    if (sub.correctAnswer != -1) {
+        UIImageView *imageView = [cell viewWithTag:100];
+        imageView.image = [UIImage imageNamed:@"0_select"];
+    }
     return cell;
 }
 //头部显示的内容
