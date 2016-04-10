@@ -20,6 +20,7 @@
     [super viewDidLoad];
     self.headView.backgroundColor = highBlue;
     [self configureNavagationItem];
+    self.myTableView.rowHeight = 50;
     [self.myTableView registerNib:[UINib nibWithNibName:@"MLMeCell" bundle:nil] forCellReuseIdentifier:@"MLMeCell"];
 }
 
@@ -60,6 +61,56 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     MLMeCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MLMeCell"];
+    if (indexPath.section == 0){
+        switch (indexPath.row) {
+            case 0:{
+                cell.titleLabel.text = @"用户名";
+                cell.contentLabel.text = @"sun";
+                break;
+            }
+            case 1:{
+                cell.titleLabel.text = @"真实姓名";
+                cell.contentLabel.text = @"孙正心";
+                break;
+            }
+            case 2:{
+                cell.titleLabel.text = @"性别";
+                cell.contentLabel.text = @"男";
+                break;
+            }
+            case 3:{
+                cell.titleLabel.text = @"学校";
+                cell.contentLabel.text = @"北京邮电大学";
+                break;
+            }
+            default:
+                break;
+        }
+    }
+    else{
+        switch (indexPath.row) {
+            case 0:{
+                cell.titleLabel.text = @"手机号";
+                cell.contentLabel.text = @"18888888888";
+                break;
+            }
+            case 1:{
+                cell.titleLabel.text = @"QQ号码";
+                cell.contentLabel.text = @"88888888";
+                break;
+            }
+            case 2:{
+                cell.titleLabel.text = @"邮箱";
+                cell.contentLabel.text = @"88888888@qq.com";
+                break;
+            }
+            case 3:{
+                cell.titleLabel.text = @"个人介绍";
+                cell.contentLabel.text = @"帅B";
+                break;
+            }
+        }
+    }
     return cell;
 }
 

@@ -9,8 +9,6 @@
 #import "MLMeCell.h"
 
 @interface MLMeCell ()
-@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
-@property (weak, nonatomic) IBOutlet UILabel *contentLabel;
 @end
 
 @implementation MLMeCell
