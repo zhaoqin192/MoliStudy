@@ -24,6 +24,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"viewDidload");
     // Do any additional setup after loading the view from its nib.
     UIBarButtonItem* book = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"book"] style:UIBarButtonItemStylePlain target:self action:@selector(subjectClicked:)];
     UIBarButtonItem* star = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"star"] style:UIBarButtonItemStylePlain target:self action:@selector(addItemClicked:)];
@@ -66,6 +67,7 @@
     UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
     [self.navigationItem setBackBarButtonItem:backItem];
 }
+
 
 - (void)viewWillDisappear:(BOOL)animated{
     if ([self.noteView shown]) {
@@ -469,6 +471,7 @@
 //“查看答案”触发事件
 - (void)answerRequest:(UITapGestureRecognizer *)recognizer{
     self.record.isChosen = YES;
+    self.subject.isAnswered = YES;
     [self modifiedAnaswerButton];
     
     if (self.isThoughtViewShow) {
@@ -526,6 +529,49 @@
     UIStoryboard *mainViewSB = [UIStoryboard storyboardWithName:@"MainView" bundle:nil];
     MLQuestionCardCollectionViewController *questionvc = [mainViewSB instantiateViewControllerWithIdentifier:@"MLQuestionCardCollectionViewController"];
     [self.navigationController pushViewController:questionvc animated:YES];
+}
+
+- (void) clickCardSuccessful:(NSNumber *)number{
+    
+    self.index = [number intValue];
+    
+    //初始化当前所有数据
+    [self initSubjectContent];
+    //初始化按钮
+    [self initButtons];
+    
+    
+    //清楚标签图标
+    [self clearSelectImage];
+    
+    //假如标签View显示，隐藏
+    if ([self.noteView shown]) {
+        [self.noteView hide];
+        self.isAnswerViewShow = NO;
+        self.isThoughtViewShow = NO;
+    }
+    
+    //设置已经选择的选项
+    if (self.record.option != -1) {
+        [self selectImage:self.record.option];
+    }
+    
+    //若已经查看了答案，修改按钮内容，并设置tableView不可点击
+    if (self.record.isChosen) {
+        [self modifiedAnaswerButton];
+        self.isChecked = YES;
+        self.tableView.allowsSelection = NO;
+        
+        [self setHeightForNoteView:self.answerNotes.count];
+        [self.noteView setData:self.answerNotes];
+        [self.noteView show];
+        self.isAnswerViewShow = YES;
+    }else{
+        [self restoreAnswerButton];
+        self.isChecked = NO;
+        self.tableView.allowsSelection = YES;
+    }
+
 }
 
 

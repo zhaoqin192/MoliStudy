@@ -51,8 +51,8 @@
         NSLog(@"无法创建CollectionViewCell时打印，自定义的cell就不可能进来了。");
     }
     Subject *sub = self.answers[indexPath.row];
-    NSLog(@"%d",sub.correctAnswer);
-    if (sub.correctAnswer != -1) {
+//    NSLog(@"%d",sub.correctAns);
+    if (sub.isAnswered) {
         UIImageView *imageView = [cell viewWithTag:100];
         imageView.image = [UIImage imageNamed:@"0_select"];
     }
@@ -89,9 +89,17 @@
 //UICollectionView被选中时调用的方法
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    //    UICollectionViewCell * cell = (UICollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
-    //    cell.backgroundColor = [UIColor redColor];
-    NSLog(@"选择%ld",indexPath.row);
+    //获取parentViewController
+    NSInteger numberOfViewControllers = self.navigationController.viewControllers.count;
+    
+    if (numberOfViewControllers < 2){
+        return;
+    }else{
+        
+        SubjectViewController *subjectVC = [self.navigationController.viewControllers objectAtIndex:numberOfViewControllers -2];
+        [subjectVC clickCardSuccessful:[NSNumber numberWithInteger:indexPath.row]];
+        [self.navigationController popViewControllerAnimated:YES];
+    }
 }
 //返回这个UICollectionView是否可以被选择
 -(BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath

@@ -6,7 +6,8 @@
 //  Copyright © 2016年 MoliStudy. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <UIKit/UIKit.h> 
+#import "SubjectViewController.h"
 
 @interface MLQuestionCardCollectionViewController : UICollectionViewController
 

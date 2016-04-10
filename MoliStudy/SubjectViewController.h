@@ -11,8 +11,9 @@
 #import "SubjectHeaderView.h"
 #import "NoteView.h"
 #import "UtilityManager.h"
+#import "SubjectDelegate.h"
 
-@interface SubjectViewController : UIViewController
+@interface SubjectViewController : UIViewController<SubjectDelegate>
 
 //题目
 @property (nonatomic, strong) Subject *subject;

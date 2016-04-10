@@ -1184,6 +1184,7 @@
 		AC7DD1781C75AFBE00E1874C /* SubjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubjectViewController.h; sourceTree = "<group>"; };
 		AC7DD1791C75AFBE00E1874C /* SubjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubjectViewController.m; sourceTree = "<group>"; };
 		AC7DD17A1C75AFBE00E1874C /* SubjectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubjectViewController.xib; sourceTree = "<group>"; };
+		ACE8C8381CBA754700037426 /* SubjectDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubjectDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2514,6 +2515,7 @@
 				AC7835B11C7D469400BC9302 /* NoteContentView.h */,
 				AC7835B21C7D469400BC9302 /* NoteContentView.m */,
 				AC7835B41C7D46AA00BC9302 /* NoteContentView.xib */,
+				ACE8C8381CBA754700037426 /* SubjectDelegate.h */,
 			);
 			name = SubjectView;
 			sourceTree = "<group>";

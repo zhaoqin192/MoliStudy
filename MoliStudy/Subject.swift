@@ -16,6 +16,7 @@ class Subject: NSObject {
     var questionID: NSNumber
     var thinkLabel: [ThinkLabel]
     var allString: [String]
+    var isAnswered: Bool
     
     override init() {
         content = []
@@ -24,6 +25,7 @@ class Subject: NSObject {
         questionID = NSNumber()
         thinkLabel = []
         allString = []
+        isAnswered = false
     }
     
     
